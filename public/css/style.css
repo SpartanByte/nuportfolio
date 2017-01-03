@@ -1,0 +1,177 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
+
+html{
+    background-color: #b3ccff;
+}
+.container{
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #b3ccff;
+}
+
+
+
+header.row{
+    min-width: 100%;
+    position: fixed;
+    z-index: 3;
+}
+.title-container{
+    background-color: #666666;
+    width: 110%;
+    padding-top: 10px;
+    margin-top: 60px;
+}
+
+div#main.row{
+
+    margin-bottom: 60px;
+    padding-bottom: 0px;
+}
+
+
+
+#footer{
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    font-stretch: extra-expanded;
+    background-color: black;
+    width: 100%;
+    color: white;
+    bottom: 0;
+    position: relative;
+    padding: 5px 30px 0px px;
+    height: 80px;
+}
+#footer a{
+    color: #A30000;
+    font-size: 16px;
+
+}
+.footer-left{
+    list-style-type: none;
+    font-size: 16px;
+}
+.footer-right{
+    text-align: right;
+    list-style-type: none;
+    font-size: 16px;
+}
+
+
+
+/*
+#sidebar-nav{
+    
+    font-weight: 600;
+    color: #23527c;
+} */
+
+.static-content{
+    background-color: rgba(192,192,192,.8);
+    padding-left: 10px;
+    border: 1px solid rgba(128,128,128,.2);
+    border-radius: 5px;
+    width: 50%;
+}
+.static-content p, h1, h3, h4{
+    margin-left: 20px;
+}
+#content{
+    min-width:100%;
+
+}
+.page-title{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 40px;
+    color: white;
+    margin-left: 15px;
+    padding-bottom: 5px;
+}
+.site-description{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+.landing-image {
+    margin-top: 10px;
+    float: left;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.right-home{
+    /*right-home border*/
+    border: 2px solid rgba(128,128,128,.2);
+    border-radius: 5px;
+    background-color: rgba(128,128,128,.2);
+    float: left;
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 50%;
+    font-family: 'Open Sans', sans-serif;
+    text-align: right;
+}
+.right-home h1{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.right-home p{
+    padding-top: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.secure h3{
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 600;
+    background-color: #666666;
+    width: 110%;
+    padding-top: 10px;
+    margin-top: -20px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    color: white;
+}
+
+.upload-form-container button{
+    min-width: 200px;
+    text-transform: uppercase;
+}
+.control-group{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.send-btn{
+    margin-left: 15px;
+}
+.controls input{
+    margin-left: 15px;
+    border: 2px solid rgba(128,128,128,.2);
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+/* Gallery Styles */
+#gallery-thumbnails{
+    margin-left: 20px;
+}
+
+#gallery-thumbnails img{
+    padding: 10px;
+}
+.alert-box h2{
+    top-margin: 200px;
+    color: green;
+
+}
+.secure h3{
+    top-margin: 150px;
+}
