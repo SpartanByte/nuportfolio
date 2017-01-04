@@ -1,25 +1,23 @@
-@extends('layouts.gallery')
+    @extends('layouts.default')
 
-    {{-- I am testing comments in Blade that should not be seen in inspect page --}}
+    @section('content')
+    <div class="static-content">
 
-
-
-@section('gallery')
 
 <div id="gallery-thumbnails">
     <h1>Testing Title Header</h1>
-        <img src="https://images.jacobinmag.com/2012/02/technology-innovation.png" width="300px" height="300px" />
-        <img src="https://images.jacobinmag.com/2012/02/technology-innovation.png" width="300px" height="300px" />
-        <img src="https://images.jacobinmag.com/2012/02/technology-innovation.png" width="300px" height="300px" />
-        <img src="https://images.jacobinmag.com/2012/02/technology-innovation.png" width="300px" height="300px" />
-        <img src="https://images.jacobinmag.com/2012/02/technology-innovation.png" width="300px" height="300px" />
-        <img src="https://images.jacobinmag.com/2012/02/technology-innovation.png" width="300px" height="300px" />
-        <img src="https://images.jacobinmag.com/2012/02/technology-innovation.png" width="300px" height="300px" />
-        <img src=" {{ url('/uploads/24791.jpg') }} " width="300px" height="300px" />
+        <img src="https://dummyimage.com/300x200/000/fff" />
+        <img src="https://dummyimage.com/300x200/000/fff" />
+        <img src="https://dummyimage.com/300x200/000/fff" />
+        <img src="https://dummyimage.com/300x200/000/fff" />
+        <img src="https://dummyimage.com/300x200/000/fff" />
+        <img src="https://dummyimage.com/300x200/000/fff" />
+        <img src="https://dummyimage.com/300x200/000/fff" />
+        <img src="https://dummyimage.com/300x200/000/fff" />
     </div>
 
 
-
+</div>
 
 
 @stop
