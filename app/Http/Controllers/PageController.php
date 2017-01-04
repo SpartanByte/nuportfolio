@@ -45,7 +45,9 @@ class PageController extends BaseController
     public function intervention(){
         return view('photos.create');
     }
-
+    public function photoshop(){
+        return view('pages.photoshop-gallery');
+    }
     
     public function interventionExample(){
 

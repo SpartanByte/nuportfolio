@@ -68,7 +68,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galleries<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Adobe Photoshop</a></li>
+                                <li><a href="{{ url('pages.photoshop-gallery') }}">Photoshop Gallery</a></li>
                                 <li><a href="#">Photography</a></li>
                             </ul>
                         </li>

@@ -32,6 +32,7 @@ Route::get('pages.java-samples', 'PageController@showJava');
 Route::get('pages.picturetest', 'PageController@pictureTest');
 Route::get('photos.create', 'PageController@intervention');
 Route::get('photos.image_example', 'PageController@interventionExample');
+Route::get('pages.photoshop-gallery', 'PageController@photoshop');
 
 
 /**
