@@ -34,6 +34,10 @@ Route::get('photos.create', 'PageController@intervention');
 Route::get('photos.image_example', 'PageController@interventionExample');
 
 
+/**
+ * Start of Coding Samples and Information Pages
+ */
+Route::get('code_pages.code-information', 'CodeController@info');
 
 /**
  * Form Routes
@@ -71,6 +75,8 @@ Route::get('/pictures', function() {
 	
 	return view('/pictures', $image);
 });
+
+
 
 /**
  * The following is a tutorial from Laracasts Image Manipulation tutorial

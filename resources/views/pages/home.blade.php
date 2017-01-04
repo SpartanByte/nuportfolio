@@ -36,7 +36,6 @@
     <div class="title-container">
     <header class="page-title">Title of Site</header>
     </div>
-        <section class="site-description">Web Development: Skill 1, Skill 2, Skill 3</section>
 
         <div class="landing-image">
             <img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=800%C3%97640&w=800&h=640" />
