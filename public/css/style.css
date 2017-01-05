@@ -33,7 +33,9 @@ div#main.row{
 }
 
 
-
+/**
+ * ANY STYLES REGARDING THE FOOTER ARE HERE
+ */
 #footer{
     font-family: 'Oxygen', sans-serif;
     font-weight: 300;
@@ -63,14 +65,9 @@ div#main.row{
 }
 
 
-
-/*
-#sidebar-nav{
-    
-    font-weight: 600;
-    color: #23527c;
-} */
-
+/**
+ * STANDARD PAGES: TEMPLATED STYLES
+ */
 .static-content{
     margin: auto;
     background-color: rgba(192,192,192,.8);
@@ -95,13 +92,10 @@ div#main.row{
     margin-left: 15px;
     padding-bottom: 5px;
 }
-.site-description{
-    font-family: 'Julius Sans One', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    padding-top: 10px;
-}
 
+/**
+ * ANY STYLES DESIGNED EXCLUSIVELY FOR THE HOME PAGE ARE HERE
+ */
 .landing-image {
     margin-top: 10px;
     float: left;
@@ -129,6 +123,10 @@ div#main.row{
     font-size: 16px;
     margin-right: 10px;
 }
+
+
+
+
 .secure h3{
     font-family: 'Julius Sans One', sans-serif;
     font-weight: 600;
@@ -162,7 +160,7 @@ div#main.row{
     padding-left: 5px;
 }
 
-/* Gallery Styles */
+/* GALLERY PAGE STYLES */
 #gallery-thumbnails{
     margin-left: 20px;
 }
@@ -178,3 +176,22 @@ div#main.row{
 .secure h3{
     top-margin: 150px;
 }
+
+
+
+
+/*
+#sidebar-nav{
+    
+    font-weight: 600;
+    color: #23527c;
+} 
+
+.site-description{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+*/

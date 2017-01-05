@@ -22,19 +22,6 @@
                         </li>
                     </ul>
 
-                    {{-- Galleries Dropdown  --}}
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Img CRUD Testing<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{{ url('photos.image_example') }}">Example Result of Intervention Image</a></li>
-                                <li><a href="{{ url('photos.create') }}">Test the Upload/Display Intervention Image Functionality</a></li>
-                                <li><a href="{{ url('upload') }}">Image Uploader</a></li>
-                                <li><a href="{{ url('pages.gallery-test') }}">Gallery Test</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
                     {{-- Code Samples Dropdo  --}}
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
@@ -81,6 +68,19 @@
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('pages.about') }}">About</a></li>
                         <li><a href="#">Contact</a></li>
+                    </ul>
+
+                    {{-- Galleries Dropdown  --}}
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Img CRUD Testing<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ url('photos.image_example') }}">Example Result of Intervention Image</a></li>
+                                <li><a href="{{ url('photos.create') }}">Test the Upload/Display Intervention Image Functionality</a></li>
+                                <li><a href="{{ url('upload') }}">Image Uploader</a></li>
+                                <li><a href="{{ url('pages.gallery-test') }}">Gallery Test</a></li>
+                            </ul>
+                        </li>
                     </ul>
 
             </ul>{{-- End of left side menu  --}}
