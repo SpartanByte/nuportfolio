@@ -21,10 +21,6 @@
 
         <img src="https://dummyimage.com/450x300/000/fff" />
         <h3>Subject Header 1</h3>
-            <p>Subject Description1</p>
-
-
-
-        
+            <p>Subject Description1</p>       
     </div>
 @stop

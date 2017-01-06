@@ -53,30 +53,8 @@ Route::post('apply/upload', 'UploadController@upload');
  * ROUTE RETURNING UPLOADED IMAGES
  */
 
-Route::get('/image/{path}/{file}', ['as'=>'image', 'uses'=>'GalleryManagerController@getImage']);
-
-
  Route::get('intervention-resizeImage',['as'=>'intervention.getresizeimage','uses'=>'FileController@getResizeImage']);
  Route::post('intervention-resizeImage',['as'=>'intervention.postresizeimage','uses'=>'FileController@postResizeImage']);
-
-/**
- * FUNCTION FOR IMAGES PATH
- */
-Route::post('/pictures', function(Request $request){
-
-	// Image code
-	
-	return redirect('/pictures');
-});
-
-Route::get('/pictures', function() {
-
-	// Image code
-	// $image = 
-	
-	return view('/pictures', $image);
-});
-
 
 
 /**
