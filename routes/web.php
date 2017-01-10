@@ -12,6 +12,15 @@
 */
 
 
+
+/*
+  |--------------------------------------------------------------------------
+  | PAGE ROUTES
+  |--------------------------------------------------------------------------
+  | Main routes to pages using the PageController
+  |
+ */
+
 /**
  * Page Routes 
  */
@@ -19,9 +28,6 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-/**
- * Main routes to pages using the PageController
- */
 Route::get('welcome', 'PageController@welcome');
 Route::get('pages.about', 'PageController@about' );
 Route::get('pages.upload', 'PageController@upload');
@@ -35,13 +41,20 @@ Route::get('photos.image_example', 'PageController@interventionExample');
 Route::get('pages.photoshop-gallery', 'PageController@photoshop');
 
 
+// * Gallery Template, will eventually move to a TemplateController when Admin Panel is built
+Route::get('templates.gallery-template', 'PageController@galleryTemplate');
+
 /**
  * Start of Coding Samples and Information Pages
  */
 Route::get('code_pages.code-information', 'CodeController@info');
 
-/**
- * Form Routes
+
+/*
+  |--------------------------------------------------------------------------
+  | FORM ROUTES
+  |--------------------------------------------------------------------------
+  |
  */
 Route::get('upload', function(){
     return View::make('pages.upload');
@@ -81,3 +94,4 @@ Route::post('/photos/show', function(){
 	return redirect('photos/index');
 
 });
+

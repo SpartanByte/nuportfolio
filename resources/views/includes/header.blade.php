@@ -57,6 +57,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="{{ url('pages.photoshop-gallery') }}">Photoshop Gallery</a></li>
                                 <li><a href="#">Photography</a></li>
+                                <li><a href="{{ url('templates.gallery-template') }}">Gallery Template</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -78,7 +79,6 @@
                                 <li><a href="{{ url('photos.image_example') }}">Example Result of Intervention Image</a></li>
                                 <li><a href="{{ url('photos.create') }}">Test the Upload/Display Intervention Image Functionality</a></li>
                                 <li><a href="{{ url('upload') }}">Image Uploader</a></li>
-                                <li><a href="{{ url('pages.gallery-test') }}">Gallery Test</a></li>
                             </ul>
                         </li>
                     </ul>

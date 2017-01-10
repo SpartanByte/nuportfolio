@@ -91,6 +91,7 @@ div#main.row{
  * Setting up these styles to go into the auto-generated image gallery by Javascript
  * Direction for this using Javascript/AJAX is at https://davidwalsh.name/generate-photo-gallery
  * However, the PHP code may need some planning in order to integrate it properly into Laravel (and in an auto-generation Controller?)
+ * There is an alternative example using Javascript/AJAX entirely at: http://www.codechewing.com/library/automatic-reloading-image-gallery-with-ajax-jquery/
  */
 .clear { clear:both; }
 .photo-link {padding:5px; margin:5px; border:1px solid #ccc; display:block; 
