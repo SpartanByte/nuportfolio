@@ -28,8 +28,8 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Code Samples<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="{{ url('code_pages.code-information') }}">Index & Information</a></li>
-                                <li><a href="#" title="Javascript Code Examples">JavaScript</a></li>
-                                <li><a href="{{ url('pages.java-samples') }}">Java Code Samples</a></li>
+                                <li><a href="{{ url('code_pages.javascript-examples') }}">Javascript</a></li>
+                                <li><a href="{{ url('pages.java-samples') }}">Java</a></li>
                                 <li><a href="#" title="Python Code Examples">Python</a></li>
                                 <li><a href="#" title="PHP Code Examples">PHP</a></li>
                                 <li><a href="#" title="C# Code Examples">C#</a></li>

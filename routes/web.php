@@ -45,10 +45,10 @@ Route::get('pages.photoshop-gallery', 'PageController@photoshop');
 Route::get('templates.gallery-template', 'PageController@galleryTemplate');
 
 /**
- * Start of Coding Samples and Information Pages
+ * CODE PAGE CONTROLLER ROUTES
  */
-Route::get('code_pages.code-information', 'CodeController@info');
-
+Route::get('code_pages.code-information', 'CodePageController@info');
+Route::get('code_pages.javascript-examples', 'CodePageController@javascriptPage');
 
 /*
   |--------------------------------------------------------------------------
