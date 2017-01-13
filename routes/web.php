@@ -12,7 +12,6 @@
 */
 
 
-
 /*
   |--------------------------------------------------------------------------
   | PAGE ROUTES
@@ -24,11 +23,6 @@
 /**
  * Page Routes 
  */
-Route::get('/', function () {
-    return view('pages.home');
-});
-
-Route::get('welcome', 'PageController@welcome');
 Route::get('pages.about', 'PageController@about' );
 Route::get('pages.upload', 'PageController@upload');
 Route::get('pages.gallery-test', 'PageController@gallery');
@@ -39,6 +33,22 @@ Route::get('pages.picturetest', 'PageController@pictureTest');
 Route::get('photos.create', 'PageController@intervention');
 Route::get('photos.image_example', 'PageController@interventionExample');
 Route::get('pages.photoshop-gallery', 'PageController@photoshop');
+
+
+/**
+ * MOVING STATIC PAGE ROUTES TO A GROUP
+ * 
+ */
+Route::group(['prefix' => 'static-pages'], function (){
+    Route::get('/', 'PageController@home');
+    Route::get('pages.about', 'PageController@about');
+    Route::get('pages.gallery-test', 'PageController@gallery');
+    // Visual content static pages
+    Route::get('pages.photoshop-gallery', 'PageController@photoshop');
+    Route::get('pages.picturetest', 'PageController@pictureTest');
+    
+
+})
 
 
 // * Gallery Template, will eventually move to a TemplateController when Admin Panel is built
@@ -65,7 +75,6 @@ Route::post('apply/upload', 'UploadController@upload');
 /**
  * ROUTE RETURNING UPLOADED IMAGES
  */
-
  Route::get('intervention-resizeImage',['as'=>'intervention.getresizeimage','uses'=>'FileController@getResizeImage']);
  Route::post('intervention-resizeImage',['as'=>'intervention.postresizeimage','uses'=>'FileController@postResizeImage']);
 
@@ -92,6 +101,5 @@ Route::post('/photos/show', function(){
 	$imageName->save();
 
 	return redirect('photos/index');
-
 });
 

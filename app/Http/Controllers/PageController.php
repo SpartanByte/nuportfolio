@@ -15,9 +15,8 @@ class PageController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function welcome()
-    {
-    	return view('pages.home');
+    public function home(){
+        return view('pages.home')
     }
     public function about()
     {
