@@ -6,14 +6,17 @@
 
 <div id="gallery-thumbnails" style="padding-bottom:15px;">
     <h1>Photoshop Composites</h1>
-        <img src="https://dummyimage.com/300x200/000/fff" />
-        <img src="https://dummyimage.com/300x200/000/fff" />
-        <img src="https://dummyimage.com/300x200/000/fff" />
-        <img src="https://dummyimage.com/300x200/000/fff" />
-        <img src="https://dummyimage.com/300x200/000/fff" />
-        <img src="https://dummyimage.com/300x200/000/fff" />
-        <img src="https://dummyimage.com/300x200/000/fff" />
-        <img src="https://dummyimage.com/300x200/000/fff" />
+        <div id="photo-container">
+            <ul class="photo-list">
+                <li><img src="http://placehold.it/400x300" /></li>
+                <li><img src="http://placehold.it/400x300" /></li>
+                <li><img src="http://placehold.it/400x300" /></li>
+                <li><img src="http://placehold.it/400x300" /></li>
+                <li><img src="http://placehold.it/400x300" /></li>
+                <li><img src="http://placehold.it/400x300" /></li>
+                <li><img src="http://placehold.it/400x300" /></li>
+            </ul>
+        </div>
     </div>
 
 

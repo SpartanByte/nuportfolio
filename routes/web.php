@@ -23,6 +23,7 @@
 /**
  * Page Routes 
  */
+Route::get('/', 'PageController@home');
 Route::get('pages.about', 'PageController@about' );
 Route::get('pages.upload', 'PageController@upload');
 Route::get('pages.gallery-test', 'PageController@gallery');
@@ -35,20 +36,6 @@ Route::get('photos.image_example', 'PageController@interventionExample');
 Route::get('pages.photoshop-gallery', 'PageController@photoshop');
 
 
-/**
- * MOVING STATIC PAGE ROUTES TO A GROUP
- * 
- */
-Route::group(['prefix' => 'static-pages'], function (){
-    Route::get('/', 'PageController@home');
-    Route::get('pages.about', 'PageController@about');
-    Route::get('pages.gallery-test', 'PageController@gallery');
-    // Visual content static pages
-    Route::get('pages.photoshop-gallery', 'PageController@photoshop');
-    Route::get('pages.picturetest', 'PageController@pictureTest');
-    
-
-})
 
 
 // * Gallery Template, will eventually move to a TemplateController when Admin Panel is built
@@ -103,3 +90,12 @@ Route::post('/photos/show', function(){
 	return redirect('photos/index');
 });
 
+
+/**
+ *  Contact Form Routes
+ */
+
+Route::get('contact',
+  ['as' => 'contact', 'uses' => 'ContactController@create']);
+Route::post('contact',
+  ['as' => 'contact_store', 'uses' => 'ContactController@store']);

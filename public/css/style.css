@@ -9,7 +9,7 @@ html{
 .container{
     min-width: 100%;
     min-height: 100%;
-    background-color: #b3ccff;
+    background-color: #083450;
 }
 header.row{
     min-width: 100%;
@@ -18,15 +18,23 @@ header.row{
 }
 .title-container{
     background-color: #666666;
-    width: 110%;
+    width: 100%;
     padding-top: 10px;
     margin-top: 60px;
+    height: auto;
 }
 
 div#main.row{
     margin-bottom: 60px;
     padding-bottom: 0px;
 }
+
+nav.navbar.navbar-default{
+    background-color: white;
+    color: white;
+    border: solid #083450 1px;
+}
+
 
 /**
  * ANY STYLES REGARDING THE FOOTER ARE HERE
@@ -64,11 +72,12 @@ div#main.row{
  */
 .static-content{
     margin: auto;
-    background-color: rgba(192,192,192,.8);
+    /* background-color: rgba(192,192,192,.8); */
+    background-color: rgba(255,255,255, .25);
     padding-left: 10px;
     border: 1px solid rgba(128,128,128,.2);
     border-radius: 5px;
-    width: 90%;
+    width: 80%;
     margin-top: 60px;
     margin-bottom: 60px;
 
@@ -134,11 +143,23 @@ div#main.row{
 
 /* GALLERY PAGE STYLES */
 #gallery-thumbnails{
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    display: inline;
+    margin: auto;
 }
 
 #gallery-thumbnails img{
     padding: 10px;
+
+}
+.photo-list{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+}
+.photo-list li{
+    float:left;
 }
 .alert-box h2{
     top-margin: 200px;

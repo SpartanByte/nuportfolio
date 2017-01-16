@@ -2,7 +2,7 @@
 <meta name="description" content="">
 <meta name="author" content="NuWebsite">
 
-<title>NuWebsite 2.0</title>
+<title>NuWebsite</title>
 
 <!-- resetting css -->
 <link rel="stylesheet" href="{{ URL::asset('css/reset.css') }}" />
