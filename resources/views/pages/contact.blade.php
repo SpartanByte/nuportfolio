@@ -3,6 +3,7 @@
     {{-- I am testing comments in Blade that should not be seen in inspect page --}}
 
 @section('content')
+<div class="static-content">
     <h2>Contact Us!</h2>
         <ul>
             @foreach($errors->all() as $error)
@@ -42,5 +43,5 @@
         </div>
 
         {!! Form::close() !!}
-
+</div>
 @stop

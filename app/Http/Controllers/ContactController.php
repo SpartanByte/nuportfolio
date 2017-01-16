@@ -15,7 +15,7 @@ class ContactController extends Controller
 
     public function store(ContactFormRequest $request){
 
-    	\Mail::send('pages.contact',
+    	\Mail::send('emails.contact',
         array(
             'name' => $request->get('name'),
             'email' => $request->get('email'),

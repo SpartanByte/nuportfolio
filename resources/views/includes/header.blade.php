@@ -62,13 +62,10 @@
                         </li>
                     </ul>
 
-
-
-
                     {{-- NON-dropdown menu items  --}}
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('pages.about') }}">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="{{ url('contact') }}">Contact</a></li>
                     </ul>
 
                     {{-- Galleries Dropdown  --}}
@@ -84,7 +81,6 @@
                     </ul>
 
             </ul>{{-- End of left side menu  --}}
-
 
             {{-- Start of right side search  --}}
             <form class="navbar-form navbar-right">
