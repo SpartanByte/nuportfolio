@@ -79,11 +79,19 @@ nav.navbar.navbar-default{
     border-radius: 5px;
     width: 80%;
     margin-top: 60px;
-    margin-bottom: 60px;
-
+    margin-bottom: 80px;
 }
-.static-content p, h1, h3, h4{
+.static-content p, h1, h3, h4, h5{
     margin-left: 20px;
+}
+.static-content a{
+    color: #A7BAAF;
+}
+.static-content a:hover{
+    color: white;
+}
+.static-content ul{
+    list-style: none;
 }
 #content{
     min-width:100%;
