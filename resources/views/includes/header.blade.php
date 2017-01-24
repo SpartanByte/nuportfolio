@@ -31,7 +31,7 @@
                                 <li><a href="{{ url('code_pages.javascript-examples') }}">Javascript</a></li>
                                 <li><a href="{{ url('pages.java-samples') }}">Java</a></li>
                                 <li><a href="#" title="Python Code Examples">Python</a></li>
-                                <li><a href="#" title="PHP Code Examples">PHP</a></li>
+                                <li><a href="{{ url('code_pages.php-samples')  }}" title="PHP Code Examples">PHP</a></li>
                                 <li><a href="#" title="C# Code Examples">C#</a></li>
                             </ul>
                         </li>

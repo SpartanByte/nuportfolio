@@ -34,8 +34,18 @@ nav.navbar.navbar-default{
     color: white;
     border: solid #083450 1px;
 }
-
-
+#content-links h1, h2, h3, h4{
+    color: white;
+}
+#content-links a{
+    color: white;
+    font-size: 18px;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: bold;
+}
+#content-links a:hover{
+    color: #770000;
+}
 /**
  * ANY STYLES REGARDING THE FOOTER ARE HERE
  */
