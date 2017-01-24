@@ -27,4 +27,8 @@ class CodePageController extends Controller
     {
     	return view('code_pages.javascript-examples');
     }
+    public function phpSamples(){
+
+        return view('code_pages.php-samples');
+    }
 }
