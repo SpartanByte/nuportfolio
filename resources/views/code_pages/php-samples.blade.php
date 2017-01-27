@@ -1,10 +1,10 @@
     @extends('layouts.default')
 
     @section('content')
-    <div class="static-content" id="content-links">
+    <div class="static-content" id="code-content">
 
         {{-- Current CSS isn't showing anything above the following H1, will need to fix this  --}}
-        <h1>PHP Code Samples</h1>
+        <h1 class="page-header">PHP Code Samples</h1>
         <hr />
 
         <img src="https://dummyimage.com/450x300/000/fff" />

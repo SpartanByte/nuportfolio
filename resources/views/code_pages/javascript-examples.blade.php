@@ -4,7 +4,7 @@
     <div class="static-content">
 
         {{-- Current CSS isn't showing anything above the following H1, will need to fix this  --}}
-        <h1>JavaScript</h1>
+        <h1 class="page-header">JavaScript</h1>
         <hr />
 
         <img src="https://dummyimage.com/450x300/000/fff" />

@@ -5,7 +5,7 @@
         <section>
             <!-- Java logo will go in this section and moved to the right -->
         </section>
-        <h2>Java Code Samples</h2>
+        <h2 class="page-header">Java Code Samples</h2>
 
         <section>
             <ul>
