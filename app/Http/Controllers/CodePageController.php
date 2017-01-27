@@ -31,4 +31,7 @@ class CodePageController extends Controller
 
         return view('code_pages.php-samples');
     }
+    public function pythonSamples(){
+        return view('code_pages.python-samples');
+    }
 }

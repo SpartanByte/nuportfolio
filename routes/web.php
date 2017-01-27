@@ -47,6 +47,7 @@ Route::get('templates.gallery-template', 'PageController@galleryTemplate');
 Route::get('code_pages.code-information', 'CodePageController@info');
 Route::get('code_pages.javascript-examples', 'CodePageController@javascriptPage');
 Route::get('code_pages.php-samples', 'CodePageController@phpSamples');
+Route::get('code_pages.python-samples', 'CodePageController@pythonSamples');
 
 /*
   |--------------------------------------------------------------------------

@@ -9,21 +9,19 @@
         @include('includes.header')
     </header>
 
-    <div id="main" class="row">
+    {{-- <div id="main" class="row">  --}}
 
-    <div id="gallery-main">
+        <div id="gallery-main">
 
-    <!-- Gallery Grid System -->
-    <div id="gallery-columns" class=".col-md-4">
-        @yield('gallery')
-    </div>
-
-    </div>{{-- end of gallery-main --}}
-
-    </div>
+            <!-- Gallery Grid System -->
+            <div id="gallery-columns" class=".col-md-4">
+                @yield('gallery')
+            </div>
+                
+        </div>{{-- end of gallery-main --}}
 
     <!-- footer content -->
-    <footer class="row" id="gallery-footer">
+    <footer class="row">
         @include('includes.footer')
     </footer>
 </div>
