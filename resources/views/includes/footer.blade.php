@@ -9,8 +9,14 @@
 					<li><a href="https://www.facebook.com/briantwardwell">facebook.com/briantwardwell</a><strong> || </strong>
 						<a href="https://twitter.com/spartanbyte">twitter.com/spartanbyte</a><strong> || </strong>
 						<a href="https://github.com/spartanbyte">github.com/spartanbyte</a><strong> || </strong>
-
 				</ul>
+
+			<ul class="footer-right">
+				<li><a href="#"><img src="/images/icons/linkedin.png" width="75" height="75" /></a></li>
+				<li><a href="#"><img src="/images/icons/facebook.png" width="75" height="75" /></a></li>
+				<li><a href="#"><img src="/images/icons/twitter.png" width="75" height="75" /></a></li>
+                <li><a href="#"><img src="/images/icons/spotify.png" width="75" height="75" /></a></li>
+			</ul>
 							
 
 			
