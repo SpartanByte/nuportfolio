@@ -51,6 +51,9 @@ class PageController extends BaseController
     public function galleryTemplate(){
         return view('templates.gallery-template');
     }
+    public function slideshow(){
+        return view('pages.slideshow');
+    }
 
     
     public function interventionExample(){
