@@ -8,7 +8,7 @@
             </div> --}}
 
         <div class="landing-image">
-            <img src="https://dummyimage.com/700x540/000/fff" />
+            <img src="/images/stock/laptop_time.jpg" />
 
         </div>
 
@@ -16,8 +16,7 @@
             <section>
             <h1>Brian Wardwell, Web Developer</h1>
             <p>Innovation With Focus on Aesthetics, User Experience and Functionality.</p>
-            <p>I was born and raised in Fargo, ND and graduated in 2015 from Minnesota State Community and Technical College
-                with an Associates of Applied Science in Web Development.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius pharetra dui, placerat ultricies magna lacinia nec. Nulla sollicitudin tempus purus, sit amet placerat erat volutpat a. Praesent molestie, orci sed lacinia efficitur, arcu ligula cursus quam, vitae lobortis lacus nulla ullamcorper ipsum. Integer et turpis orci. Suspendisse sed nisi ultrices, euismod velit eget, finibus eros. Duis scelerisque est id aliquam pulvinar. Nulla sit amet elit eleifend, scelerisque lectus vel, suscipit libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis quam feugiat, finibus tellus vitae, aliquet tortor. Ut aliquet id enim sed molestie. Cras a mi non orci malesuada molestie. Ut pretium, nisl non finibus sollicitudin, ligula massa tempor tortor, non tincidunt odio augue ut velit. Fusce elit felis, pulvinar id euismod ut, facilisis consequat sapien. </p>
 
                 
                 <p><img src="https://dummyimage.com/600x350/000/fff" /></p>
