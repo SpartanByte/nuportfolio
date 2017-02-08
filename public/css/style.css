@@ -212,7 +212,7 @@ nav.navbar.navbar-default{
     float: left;
     margin-top: 80px;
     margin-left: 40px;
-    width: 50%;
+    width: 40%;
     font-family: 'Open Sans', sans-serif;
     text-align: right;
     height: 500px;
@@ -220,7 +220,7 @@ nav.navbar.navbar-default{
 }
 
 #right-home h1{
-    font-size: 22px;
+    font-size: 28px;
     margin-right: 10px;
 }
 
