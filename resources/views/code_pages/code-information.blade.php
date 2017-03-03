@@ -26,4 +26,5 @@
         <h3>Subject Header 1</h3>
             <p>Subject Description1</p>       
     </div>
+    <div class="bottom-spacer"></div>
 @stop

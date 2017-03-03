@@ -86,7 +86,6 @@ nav.navbar.navbar-default{
     color: #770000;
 }
 
-
 /**
  * ANY STYLES REGARDING THE FOOTER ARE HERE
  */
@@ -94,16 +93,16 @@ nav.navbar.navbar-default{
     clear: both;
     font-family: 'Oxygen', sans-serif;
     font-weight: 300;
-    font-size: 16px;
-    font-stretch: extra-expanded;
     background-color: black;
     color: white;
     margin-bottom: 0;
-    margin-top: 40px;
-    position: relative;
-    padding-bottom: 80px; 
-    padding-top: 0px;
-    height: 70px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 6%;
+    padding-top: -10px;
+    margin-top: 80px !important;
+    height: 75px;;
 }
 
 .footer-left{
@@ -111,6 +110,11 @@ nav.navbar.navbar-default{
     font-size: 16px;
     width: 45%;
     float:left;
+    position: relative;
+    top: 10px;
+}
+.footer-left a{
+    
 }
 .footer-right{
     text-align: right;
@@ -118,6 +122,9 @@ nav.navbar.navbar-default{
     font-size: 16px;
     float: left;
     width: 45%;
+    position: absolute;
+    right: 5px;;
+    top: 10px;
 }
 .footer-right a {
     float: right;
@@ -125,7 +132,7 @@ nav.navbar.navbar-default{
 }
 .footer-right a, .footer-left a{
     color: #337ab7 !important;
-    font-size: 20px !important;
+    font-size: 18px !important;
 }
 .footer-right a:hover, .footer-left a:hover{
     background-color: #337ab7; /* Adds a near-white background to the dropdown itself (not the parent link causing the dropdown) */
@@ -135,6 +142,9 @@ nav.navbar.navbar-default{
     color: #fff !important;
 }
 
+.bottom-spacer{
+    margin-bottom: 200px;
+}
 
 /**
  * STANDARD PAGES: TEMPLATED STYLES
@@ -205,17 +215,13 @@ nav.navbar.navbar-default{
 }
 
 #right-home{
-    /*right-home border*/
-   /* border: 2px solid rgba(128,128,128,.2);
-    border-radius: 5px; */
-    /* background-color: rgba(128,128,128,.2); */
     float: left;
     margin-top: 80px;
     margin-left: 40px;
     width: 40%;
     font-family: 'Open Sans', sans-serif;
     text-align: right;
-    height: 500px;
+    height: 15%;
     display:inline;
 }
 
@@ -232,12 +238,7 @@ nav.navbar.navbar-default{
 #right-home img{
     margin-bottom: 20px;
 }
-#social-corner{
-    margin-bottom: 120px;
-    height: 90%;
-    clear:both;
-    float:right;
-}
+
 
 
 /* GALLERY PAGE STYLES */
