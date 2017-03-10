@@ -174,10 +174,10 @@ nav.navbar.navbar-default{
     margin-left: 20px;
 }
 .static-content a{
-    color: #A7BAAF;
+    color: #ED1C26;
 }
 .static-content a:hover{
-    color: white;
+    color: #252525;
 }
 .static-content ul{
     list-style: none;
