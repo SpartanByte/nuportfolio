@@ -22,17 +22,18 @@
                         </li>
                     </ul>
 
-                    {{-- Code Samples Dropdo  --}}
+                    {{-- Code Samples Dropdown --}}
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Code Samples<span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coding<span class="caret"></span></a>
                             <ul class="dropdown-menu" id="navbar-dropdown-override">
-                                <li><a href="{{ url('code_pages.code-information') }}">Index & Information</a></li>
+                                <li><a href="{{ url('code_pages.code-information') }}">General Information</a></li>
                                 <li><a href="{{ url('code_pages.javascript-examples') }}">Javascript</a></li>
-                                <li><a href="{{ url('pages.java-samples') }}">Java</a></li>
-                                <li><a href="{{ url('code_pages.python-samples') }}">Python</a></li>
+                                <li><a href="{{ url('pages.java-samples') }}">Java (Coming Soon)</a></li>
+                                <li><a href="{{ url('code_pages.python-samples') }}">Python (Coming Soon)</a></li>
                                 <li><a href="{{ url('code_pages.php-samples')  }}" title="PHP Code Examples">PHP</a></li>
-                                <li><a href="#" title="C# Code Examples">C#</a></li>
+                                <li><a href="#" title="C# Code Examples">C# (Coming Soon)</a></li>
+                                <li><a href="#" title="Umbraco ASP.NET CMS">Umbraco CMS</a></li>
                             </ul>
                         </li>
                     </ul>

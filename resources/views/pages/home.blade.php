@@ -16,15 +16,15 @@
             <section>
             <h1>Brian Wardwell, Web Developer</h1>
             <p>Innovation With Focus on Aesthetics, User Experience and Functionality.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius pharetra dui, placerat ultricies magna lacinia nec. Nulla sollicitudin tempus purus, sit amet placerat erat volutpat a. Praesent molestie, orci sed lacinia efficitur, arcu ligula cursus quam, vitae lobortis lacus nulla ullamcorper ipsum. Integer et turpis orci. Suspendisse sed nisi ultrices, euismod velit eget, finibus eros. Duis scelerisque est id aliquam pulvinar. Nulla sit amet elit eleifend, scelerisque lectus vel, suscipit libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis quam feugiat, finibus tellus vitae, aliquet tortor. Ut aliquet id enim sed molestie. Cras a mi non orci malesuada molestie. Ut pretium, nisl non finibus sollicitudin, ligula massa tempor tortor, non tincidunt odio augue ut velit. Fusce elit felis, pulvinar id euismod ut, facilisis consequat sapien. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius pharetra dui, placerat ultricies magna lacinia nec. Nulla sollicitudin tempus purus, sit amet placerat erat volutpat a. Praesent molestie, orci sed lacinia efficitur, arcu ligula cursus quam, vitae lobortis lacus nulla ullamcorper ipsum. Integer et turpis orci. Suspendisse sed nisi ultrices, euismod velit eget, finibus eros. Duis scelerisque est id aliquam pulvinar. Nulla sit amet elit eleifend, scelerisque lectus vel, suscipit libero. </p>
 
                 
-                <p><img src="https://dummyimage.com/600x350/000/fff" /></p>
+                <p><img src="https://dummyimage.com/460x308/000/fff" /></p>
                 {{--
-                <img src="/images/icons/facebook.png" width="75" height="75" />
-                <img src="/images/icons/linkedin.png" width="75" height="75" />
-                <img src="/images/icons/twitter.png" width="75" height="75" />
-                <img src="/images/icons/spotify.png" width="75" height="75" />
+                <img src="/images/icons/facebook.png" width="50" height="50" />
+                <img src="/images/icons/linkedin.png" width="50" height="50" />
+                <img src="/images/icons/twitter.png" width="50" height="50" />
+                <img src="/images/icons/spotify.png" width="50" height="50" />
                 --}}
 
             </section>

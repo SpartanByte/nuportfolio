@@ -65,4 +65,10 @@ class PageController extends BaseController
         return view('photos.image_example', ['fileName' => $fileName, 'uploadedImage' => $image, 'imageTitle' => $imageTitle]);
     }
 
+    public function currentPage(){
+
+        $currentPage = url()->current();
+        return view('code_pages.code-information', $currentPage);
+    }
+
 }

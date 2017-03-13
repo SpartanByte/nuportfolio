@@ -27,8 +27,8 @@
 	<img src="/images/slide/yellow.jpg" alt="yellow.jpg"><p>This color is yellow.</p>
 	</div>
 </div>
-
-    <div id="gallery-clear-bottom"></div>
+	
+    <div id="gallery-clear-bottom"><button type="button" class="btn-primary btn-lg"><a href="#">Back To Home</a></button></div>
 </div>
     
 
