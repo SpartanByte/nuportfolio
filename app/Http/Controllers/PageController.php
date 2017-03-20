@@ -47,6 +47,9 @@ class PageController extends BaseController
     public function photoshop(){
         return view('pages.photoshop-gallery');
     }
+    public function photography(){
+        return view('pages.photography-gallery');
+    }
     // new method for gallery page template
     public function galleryTemplate(){
         return view('templates.gallery-template');
@@ -55,7 +58,6 @@ class PageController extends BaseController
         return view('pages.slideshow');
     }
 
-    
     public function interventionExample(){
 
     // These are temporary static values until the "pull each image from folder and display" issue is solved

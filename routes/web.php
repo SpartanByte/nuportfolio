@@ -34,6 +34,7 @@ Route::get('pages.picturetest', 'PageController@pictureTest');
 Route::get('photos.create', 'PageController@intervention');
 Route::get('photos.image_example', 'PageController@interventionExample');
 Route::get('pages.photoshop-gallery', 'PageController@photoshop');
+Route::get('pages.photography-gallery', 'PageController@photography');
 Route::get('pages.slideshow', 'PageController@slideshow');
 
 

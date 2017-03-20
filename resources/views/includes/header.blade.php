@@ -57,7 +57,7 @@
                             <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galleries<span class="caret"></span></a>
                             <ul class="dropdown-menu" id="navbar-dropdown-override">
                                 <li><a href="{{ url('pages.photoshop-gallery') }}">Photoshop Gallery</a></li>
-                                <li><a href="#">Photography</a></li>
+                                <li><a href="{{ url('pages.photography-gallery') }}">Photography</a></li>
                                 <li><a href="{{ url('templates.gallery-template') }}">Gallery Template</a></li>
                             </ul>
                         </li>
