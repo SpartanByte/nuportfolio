@@ -134,11 +134,8 @@ nav.navbar.navbar-default{
     font-size: 18px !important;
 }
 .footer-right a:hover, .footer-left a:hover{
-    background-color: #337ab7; /* Adds a near-white background to the dropdown itself (not the parent link causing the dropdown) */
-    border: 1px #337ab7 solid;
-    border-radius: 10px;
-    padding: 2px 2px 2px 2px;
-    color: #fff !important;
+    color: #252525 !important;
+    filter: grayscale(100%);
 }
 .footer-right > li > a > img{width: 3em; height: 3em;}
 .bottom-spacer{
@@ -240,8 +237,10 @@ nav.navbar.navbar-default{
 }
 
 #right-home h1{
-    margin-right: 10px; 
+    margin-right: 10px; font-size: 4em; font-weight: 600; text-transform: uppercase;
 }
+#right-home h2{font-size: 1.5em; font-weight: 600; letter-spacing: 0.5px;}
+#right-home h3{font-size: 1em; letter-spacing: 0.5px;}
 
 #right-home p{
     padding-top: 10px;

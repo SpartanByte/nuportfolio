@@ -14,9 +14,12 @@
 
         <div id="right-home">
             <section>
-            <h1>Brian Wardwell, Web Developer</h1>
-            <p>Innovation With Focus on Aesthetics, User Experience and Functionality.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius pharetra dui, placerat ultricies magna lacinia nec. Nulla sollicitudin tempus purus, sit amet placerat erat volutpat a. Praesent molestie, orci sed lacinia efficitur, arcu ligula cursus quam, vitae lobortis lacus nulla ullamcorper ipsum. Integer et turpis orci. Suspendisse sed nisi ultrices, euismod velit eget, finibus eros. Duis scelerisque est id aliquam pulvinar. Nulla sit amet elit eleifend, scelerisque lectus vel, suscipit libero. </p>
+            <h1>Brian Wardwell</h1>
+            <h2>Web Developer | Musician | Amateur Photographer | Writer</h2>
+            <h3>Web Development focusing on innovation, aesthetics, user experience and custom functionality</h3>
+            <p>Sole musician in musical project, <a href="#">Battle Cry</a> (Recorded from 1997-2012) | Vocals, Guitar, Bass, Keyboards <br />
+            Sole administrator and writer for entertainment website, <a href="#">MusicBytes</a> (launched in January 2015) <br />
+            Also an amateur photographer and graphics manipulator</p>
 
                 
                 <p><img src="https://dummyimage.com/460x308/000/fff" /></p>
@@ -32,8 +35,6 @@
                 </div>
 
             <div id="social-corner">
-                
-
                 <script>
                     image01 = new Image()
                     image01.src ="http://placehold.it/100x100"
