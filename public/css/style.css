@@ -178,13 +178,15 @@ nav.navbar.navbar-default{
     padding-top: 0.2em; padding-bottom: 0.2em;
 }
 .static-content a{
-    color: #ED1C26;
+    color: #1A6FB0;
+    border-top: 0.5px solid #1A6FB0; border-bottom: 0.5px solid #1A6FB0;
     transition-duration: 0.5s;
     font-weight: bold;
 }
 .static-content a:hover{
-    color: #252525;
+    color: #252525; text-decoration: none;
     transition-duration: 0.5s;
+    border-top: 0.5px solid #363636; border-bottom: 0.5px solid #363636;
 }
 .static-content ul{
     list-style: none;
@@ -391,3 +393,42 @@ nav.navbar.navbar-default{
         top: 250px;
         text-align: center;
     }
+
+/**
+* ABOUT PAGE
+*/
+.skillset h4{
+    font-size: 2em; border-bottom: 3px solid #1A6FB0; text-transform: uppercase;
+}
+.skillset > ul{ margin-left: -1.5%;}
+.skill-headers{ font-size: 1.5em; color: #1A6FB0;}
+.skills{ font-size: 1.3em; font-weight: 600; margin-left: -2%; line-height: 1.2;}
+.development-history h4{
+    font-size: 1.5em; margin-top: 3%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #1A6FB0;
+}
+.development-history h5{
+    font-size: 1.5em; line-height: 0.5;
+    color: #1A6FB0;
+}
+.development-history p{
+    font-size: 1.2em;
+    margin-left: 1%;
+}
+.development-history > h5 > a{
+    color: #1A6FB0; font-weight: 300; text-decoration: underline;
+}
+
+.academic-history h4{
+    font-size: 1.4em; letter-spacing: 1px; text-transform: uppercase;
+    border-bottom: 3px solid #1A6FB0; margin-top: 3%;
+}
+
+.academic-history h5{
+    font-size: 1.5em; line-height: 0.5; color: #1A6FB0;
+}
+.academic-history p{
+    font-size: 1.2em; margin-left: 1%;
+}

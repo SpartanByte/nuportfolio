@@ -1,6 +1,4 @@
-
 @yield('foot')
-
 		<div id="footer">
 			<ul class="footer-left">
 					<li>&copy; <?php echo date('Y'); ?> | Brian Wardwell | Email at: 
@@ -9,10 +7,9 @@
 					<li><a href="https://www.facebook.com/briantwardwell">facebook.com/briantwardwell</a><strong> || </strong>
 						<a href="https://twitter.com/spartanbyte">twitter.com/spartanbyte</a><strong> || </strong>
 						<a href="https://github.com/spartanbyte">github.com/spartanbyte</a><strong> || </strong>
-				</ul>
-
+			</ul>
 			<ul class="footer-right">
-			<script>
+				<script>
                     image01 = new Image()
                     image01.src ="/images/icons/linkedin.png"
                     image02 = new Image()
@@ -28,11 +25,6 @@
                 <li><a href="https://soundcloud.com/battle-cry-wardwell"><img src="/images/icons/soundcloud.png" title="Soundcloud"/></a></li>
                 <li><a href="http://spartanbyte.deviantart.com/"><img src="/images/icons/deviantart-new.png" title="DeviantArt"/></a></li>
 			</ul>
-							
-
-			
-
-
 		</div>
     </body>
 </html>

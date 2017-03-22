@@ -2,7 +2,7 @@
 <meta name="description" content="">
 <meta name="author" content="NuWebsite">
 
-<title>NuWebsite</title>
+	<title>NuWebsite</title>
 
 <!-- resetting css -->
 <link rel="stylesheet" href="{{ URL::asset('css/reset.css') }}" />
@@ -16,7 +16,4 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 {{-- jQuery Mobile for RWD  --}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-
 <script src="{{ URL::asset('js/slideshow.js') }}" /></script>
-
-<!-- end of head.blade.php -->

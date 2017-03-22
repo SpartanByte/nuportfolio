@@ -37,9 +37,6 @@ Route::get('pages.photoshop-gallery', 'PageController@photoshop');
 Route::get('pages.photography-gallery', 'PageController@photography');
 Route::get('pages.slideshow', 'PageController@slideshow');
 
-
-
-
 // * Gallery Template, will eventually move to a TemplateController when Admin Panel is built
 Route::get('templates.gallery-template', 'PageController@galleryTemplate');
 
@@ -55,20 +52,17 @@ Route::get('code_pages.python-samples', 'CodePageController@pythonSamples');
   |--------------------------------------------------------------------------
   | FORM ROUTES
   |--------------------------------------------------------------------------
-  |
  */
 Route::get('upload', function(){
     return View::make('pages.upload');
 });
 Route::post('apply/upload', 'UploadController@upload');
 
-
 /**
  * ROUTE RETURNING UPLOADED IMAGES
  */
  Route::get('intervention-resizeImage',['as'=>'intervention.getresizeimage','uses'=>'FileController@getResizeImage']);
  Route::post('intervention-resizeImage',['as'=>'intervention.postresizeimage','uses'=>'FileController@postResizeImage']);
-
 
 /**
  * The following is a tutorial from Laracasts Image Manipulation tutorial
@@ -90,15 +84,12 @@ Route::post('/photos/show', function(){
 	$imageName = new ImageName;
 	$imageName->fileName = $request->fileName;
 	$imageName->save();
-
 	return redirect('photos/index');
 });
-
 
 /**
  *  Contact Form Routes
  */
-
 Route::get('contact',
   ['as' => 'contact', 'uses' => 'ContactController@create']);
 Route::post('contact',
