@@ -86,7 +86,6 @@ nav.navbar.navbar-default{
     color: #770000;
 }
 
-
 /**
  * ANY STYLES REGARDING THE FOOTER ARE HERE
  */
@@ -94,16 +93,15 @@ nav.navbar.navbar-default{
     clear: both;
     font-family: 'Oxygen', sans-serif;
     font-weight: 300;
-    font-size: 16px;
-    font-stretch: extra-expanded;
     background-color: black;
     color: white;
     margin-bottom: 0;
-    margin-top: 40px;
     position: relative;
-    padding-bottom: 80px; 
-    padding-top: 0px;
-    height: 70px;
+    width: 100%;
+    padding: 2%;
+    padding-top: 1%; 
+    margin-top: 58em; !important;
+    height: 6.5em;
 }
 
 .footer-left{
@@ -111,6 +109,11 @@ nav.navbar.navbar-default{
     font-size: 16px;
     width: 45%;
     float:left;
+    position: absolute;
+    top: 1em;
+}
+.footer-left a{
+    
 }
 .footer-right{
     text-align: right;
@@ -118,6 +121,9 @@ nav.navbar.navbar-default{
     font-size: 16px;
     float: left;
     width: 45%;
+    position: absolute;
+    right: 5px;;
+    top: 10px;
 }
 .footer-right a {
     float: right;
@@ -125,52 +131,68 @@ nav.navbar.navbar-default{
 }
 .footer-right a, .footer-left a{
     color: #337ab7 !important;
-    font-size: 20px !important;
+    font-size: 18px !important;
 }
 .footer-right a:hover, .footer-left a:hover{
-    background-color: #337ab7; /* Adds a near-white background to the dropdown itself (not the parent link causing the dropdown) */
-    border: 1px #337ab7 solid;
-    border-radius: 10px;
-    padding: 2px 2px 2px 2px;
-    color: #fff !important;
+    color: #252525 !important;
+    filter: grayscale(100%);
 }
-
+.footer-right > li > a > img{width: 3em; height: 3em;}
+.bottom-spacer{
+    margin-bottom: 200px;
+}
 
 /**
  * STANDARD PAGES: TEMPLATED STYLES
  */
 .page-header{
-    /* color: #337ab7; */
     color: black;
     text-shadow: 4px 2px 6px #404040;
     font-size: 4em !important;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
-
 }
 .static-content{
-    margin: auto;
-    /* background-color: rgba(192,192,192,.8); */
-    background-color: rgba(255,255,255, .25);
-    padding-left: 10px;
-    border: 1px solid rgba(128,128,128,.2);
-    border-radius: 5px;
+    margin: auto; padding-left: 1em; padding-right: 10em;
+    margin-top: 10em; margin-bottom: 10em;
+    background-color: rgba(255,255,255, .25); color: black;
     width: 80%;
-    margin-top: 60px;
-    margin-bottom: 80px;
-    color: black;
 }
-.static-content p, h1, h3, h4, h5{
-    margin-left: 20px;
+.static-content p{
+    font-size: 1.2em;
+    letter-spacing: 0.3px;
+}
+.static-content h1{
+    font-size: 3em; letter-spacing: 2px;
+    text-transform: uppercase; text-align: center;
+    color: white; background-color: #252525;
+    padding-top: 0.2em; padding-bottom: 0.2em;
+    border: 1px solid black; border-radius: 0.2em;
+    width: 110%;
+}
+.static-content h3{
+    font-size: 3em; letter-spacing: 2px; text-align: center;
+    border-top: 2px solid black; text-transform: uppercase;
+    border-bottom: 2px solid black; border-radius: 0.3em;
+    color: white; background-color: #252525; width: 110%;
+    padding-top: 0.2em; padding-bottom: 0.2em;
 }
 .static-content a{
-    color: #A7BAAF;
+    color: #1A6FB0;
+    border-top: 0.5px solid #1A6FB0; border-bottom: 0.5px solid #1A6FB0;
+    transition-duration: 0.5s;
+    font-weight: bold;
 }
 .static-content a:hover{
-    color: white;
+    color: #252525; text-decoration: none;
+    transition-duration: 0.5s;
+    border-top: 0.5px solid #363636; border-bottom: 0.5px solid #363636;
 }
 .static-content ul{
     list-style: none;
+}
+.static-content > img{
+   margin: auto; margin-left: 35%; margin-right: 0%;
 }
 #content{
     min-width:100%;
@@ -205,39 +227,31 @@ nav.navbar.navbar-default{
 }
 
 #right-home{
-    /*right-home border*/
-   /* border: 2px solid rgba(128,128,128,.2);
-    border-radius: 5px; */
-    /* background-color: rgba(128,128,128,.2); */
     float: left;
     margin-top: 80px;
-    margin-left: 40px;
+    margin-left: 10em;
     width: 40%;
     font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
     text-align: right;
-    height: 500px;
+    height: 15%;
     display:inline;
 }
 
 #right-home h1{
-    font-size: 28px;
-    margin-right: 10px;
+    margin-right: 10px; font-size: 4em; font-weight: 600; text-transform: uppercase;
 }
+#right-home h2{font-size: 1.5em; font-weight: 600; letter-spacing: 0.5px;}
+#right-home h3{font-size: 1em; letter-spacing: 0.5px;}
 
 #right-home p{
     padding-top: 10px;
-    font-size: 18px;
     margin-right: 10px;
 }
 #right-home img{
     margin-bottom: 20px;
 }
-#social-corner{
-    margin-bottom: 120px;
-    height: 90%;
-    clear:both;
-    float:right;
-}
+
 
 
 /* GALLERY PAGE STYLES */
@@ -379,3 +393,42 @@ nav.navbar.navbar-default{
         top: 250px;
         text-align: center;
     }
+
+/**
+* ABOUT PAGE
+*/
+.skillset h4{
+    font-size: 2em; border-bottom: 3px solid #1A6FB0; text-transform: uppercase;
+}
+.skillset > ul{ margin-left: -1.5%;}
+.skill-headers{ font-size: 1.5em; color: #1A6FB0;}
+.skills{ font-size: 1.3em; font-weight: 600; margin-left: -2%; line-height: 1.2;}
+.development-history h4{
+    font-size: 1.5em; margin-top: 3%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #1A6FB0;
+}
+.development-history h5{
+    font-size: 1.5em; line-height: 0.5;
+    color: #1A6FB0;
+}
+.development-history p{
+    font-size: 1.2em;
+    margin-left: 1%;
+}
+.development-history > h5 > a{
+    color: #1A6FB0; font-weight: 300; text-decoration: underline;
+}
+
+.academic-history h4{
+    font-size: 1.4em; letter-spacing: 1px; text-transform: uppercase;
+    border-bottom: 3px solid #1A6FB0; margin-top: 3%;
+}
+
+.academic-history h5{
+    font-size: 1.5em; line-height: 0.5; color: #1A6FB0;
+}
+.academic-history p{
+    font-size: 1.2em; margin-left: 1%;
+}
