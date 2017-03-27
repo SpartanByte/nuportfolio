@@ -33,7 +33,7 @@
                                     {!! Form::submit('Submit', array('class'=>'send-btn')) !!}
                                     {!! Form::close() !!}
                                 </div>
-                                </div>{{-- END OF   --}}
+                                </div>{{-- END OF CONTROL GROUP  --}}
                             </div>{{-- END OF SECURE  --}}
                         </div>{{-- END OF UPLOAD-FORM-CONTAINER  --}}
                     </div>{{-- END OF SPAN7  --}}
