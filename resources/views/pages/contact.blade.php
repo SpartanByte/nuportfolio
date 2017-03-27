@@ -43,7 +43,6 @@
             {!! Form::submit('Contact',
                     array('class' => 'btn btn-primary')) !!}
         </div>
-
         {!! Form::close() !!}
 </div>
 @stop

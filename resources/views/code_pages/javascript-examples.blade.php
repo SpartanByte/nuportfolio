@@ -17,8 +17,8 @@
         <hr />
 
         <img src="https://dummyimage.com/450x300/000/fff" />
-        <h3>Subject Header 1</h3>
-            <p>Subject Description1</p>
+        <h3>Vue.js</h3>
+            <p><a href="https://vuejs.org/" target="_blank">Vue.js</a> has...</p>
 
         <hr />
 
