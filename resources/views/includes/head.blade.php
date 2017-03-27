@@ -18,3 +18,4 @@
 {{-- jQuery Mobile for RWD  --}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 <script src="{{ URL::asset('js/slideshow.js') }}" /></script>
+<script src="{{ URL::asset('js/vue.js') }}" /></script>

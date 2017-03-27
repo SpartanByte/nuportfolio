@@ -23,9 +23,9 @@ class ContactController extends Controller
         ), function($message){
 
         	$message->from('example@example.com');
-        	$message->to('example@example.com', 'Admin')->subject('TODOParrot Feedback');
+        	$message->to('example@example.com', 'Admin')->subject('NuWebsite Feedback');
     	});
 
-  		return \Redirect::route('contact')->with('message', 'Thanks for contacting us!');
+  		return \Redirect::route('contact')->with('message', 'Thanks for the message. I will be following up with you soon!');
     }
 }
