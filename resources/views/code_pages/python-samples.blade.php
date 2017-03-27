@@ -1,5 +1,7 @@
     @extends('layouts.default')
 
+    @section('title', 'Python Examples')
+
     @section('content')
     <div class="static-content" id="code-content">
 

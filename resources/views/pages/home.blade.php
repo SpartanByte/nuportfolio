@@ -1,6 +1,15 @@
 @extends('layouts.default')
 
+@section('title', 'Home')
+
 @section('content')
+
+    <p>test paragraph</p>
+
+
+
+
+
 
         <div class="landing-image">
             <img src="/images/stock/laptop_time.jpg" />
@@ -14,7 +23,7 @@
                     <p>Sole musician in musical project, <a href="#">Battle Cry</a> (Recorded from 1997-2012) | Vocals, Guitar, Bass, Keyboards <br />
                     Sole administrator and writer for entertainment website, <a href="#">MusicBytes</a> (launched in January 2015) <br />
                     Also an amateur photographer and graphics manipulator</p>
-                    <p><img src="https://dummyimage.com/460x308/000/fff" /></p>
+                    <p><img src="/images/stock/code-screen.jpg" /></p>
                 </section>
         </div>
         <div id="social-corner">

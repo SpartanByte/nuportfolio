@@ -1,5 +1,7 @@
     @extends('layouts.default')
 
+      @section('title', 'JavaScript Examples')
+
     @section('content')
     <div class="static-content">
 
