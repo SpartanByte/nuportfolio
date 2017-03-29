@@ -1,11 +1,13 @@
  @extends('layouts.default')
 
+ @section('title', 'Slideshow')
+
  @section('content')
     <div class="static-content">
 
 
 	<div id="gallery-thumbnails" style="padding-bottom:15px;">
-    <h1 class="page-header">Photoshop Composites</h1>
+    <h1 class="page-header">Slideshow</h1>
 	<title>Javascript Slideshow</title>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

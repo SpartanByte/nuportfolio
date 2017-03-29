@@ -1,8 +1,9 @@
 <meta charset="utf-8">
 <meta name="description" content="">
 <meta name="author" content="NuWebsite">
+	
 
-	<title>NuWebsite</title>
+<title>NuWebsite | @yield('title')</title>
 
 <!-- resetting css -->
 <link rel="stylesheet" href="{{ URL::asset('css/reset.css') }}" />
@@ -17,3 +18,4 @@
 {{-- jQuery Mobile for RWD  --}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 <script src="{{ URL::asset('js/slideshow.js') }}" /></script>
+<script src="{{ URL::asset('js/vue.js') }}" /></script>

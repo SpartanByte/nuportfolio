@@ -1,5 +1,7 @@
     @extends('layouts.default')
 
+    @section('title', 'About')
+
     @section('content')
     <div class="static-content">
         <h1>A Brief Story About Myself</h1>

@@ -1,5 +1,7 @@
     @extends('layouts.default')
 
+    @section('title', 'General Information')
+
     @section('content')
     <div class="static-content">
 

@@ -1,5 +1,7 @@
     @extends('layouts.default')
 
+    @section('title', 'PHP Examples')
+
     @section('content')
     <div class="static-content" id="code-content">
 
@@ -15,7 +17,6 @@
             <p><a href="#">Test Link 2</a></p>
             <p><a href="#">Test Link 3</a></p>
             <p><a href="#">Test Link 4</a></p>
-
 
         <hr />
 
