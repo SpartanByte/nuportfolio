@@ -1,0 +1,11 @@
+#admin-backdrop {
+  background: #252525; margin-top: -2%;
+  width: 100%; height: 860px;
+  margin-bottom: 0;}
+
+#dashboardHeaders > h3{margin-left: 1%; font-size: 2em; text-transform: uppercase; color: #252525; letter-spacing: 2px;}
+.dashboard-panel{margin-left: -10em; margin-right: -10em; padding: 1em; height: 850px;}
+
+.updateList{ list-style-type: none; font-size: 1.2em;}
+.updateList > li > a{ color: #252525; text-decoration: none; transition-duration: 0.4s;}
+.updateList > li > a:hover{color: black; font-weight: bold; transition-duration: 0.4s; letter-spacing: 0.5px;}

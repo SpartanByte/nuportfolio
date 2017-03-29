@@ -6,10 +6,10 @@
     <div class="static-content">
 
         {{-- Current CSS isn't showing anything above the following H1, will need to fix this  --}}
-        <h1>General Inforamtion</h1>
+        <h1>General Information</h1>
         <hr />
 
-        <img src="https://dummyimage.com/450x300/000/fff" />
+        <img src="/images/logos/laravel.png" />
         <h3>PHP</h3>
             <p>PHP (Hypertext Preprocessor) is a server-side language that was specifically designed for web development in 1994 by Rasmus Lerdorf. While
                 PHP is often considered easier to learn as a first programming language, special consideration and best practices need to be followed
