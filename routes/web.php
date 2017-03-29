@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,8 +9,6 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
-
 /*
   |--------------------------------------------------------------------------
   | PAGE ROUTES
@@ -94,3 +91,14 @@ Route::get('contact',
   ['as' => 'contact', 'uses' => 'ContactController@create']);
 Route::post('contact',
   ['as' => 'contact_store', 'uses' => 'ContactController@store']);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+
+/**
+ *  START OF ADMIN AREA ROUTES
+ *  
+ */
+Route::get('/admin/home', 'AdminController@home');
