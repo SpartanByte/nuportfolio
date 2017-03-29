@@ -1,5 +1,7 @@
 @extends('layouts.default')
 
+@section('title', 'Contact')
+
     {{-- I am testing comments in Blade that should not be seen in inspect page --}}
 
 @section('content')
@@ -41,7 +43,6 @@
             {!! Form::submit('Contact',
                     array('class' => 'btn btn-primary')) !!}
         </div>
-
         {!! Form::close() !!}
 </div>
 @stop

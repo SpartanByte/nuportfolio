@@ -1,5 +1,7 @@
 @extends('layouts.default')
 
+@section('title', 'Photoshop Composites')
+
 @section('content')
 <div class="static-content">
     <div id="gallery-thumbnails" style="padding-bottom:15px;">
