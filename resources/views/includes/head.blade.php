@@ -8,6 +8,7 @@
 <!-- resetting css -->
 <link rel="stylesheet" href="{{ URL::asset('css/reset.css') }}" />
 <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" />
+<link rel="icon" type="image/png" href="/images/icons/bw-favicon.png" />
 
 <!-- loading boostrap from CDN -->
 {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --}}
