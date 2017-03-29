@@ -174,7 +174,7 @@ nav.navbar.navbar-default{
     font-size: 3em; letter-spacing: 2px; text-align: center;
     border-top: 2px solid black; text-transform: uppercase;
     border-bottom: 2px solid black; border-radius: 0.3em;
-    color: white; background-color: #252525; width: 110%;
+    color: white; background-color: #252525; width: 50%;
     padding-top: 0.2em; padding-bottom: 0.2em;
 }
 .static-content a{
