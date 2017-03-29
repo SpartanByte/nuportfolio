@@ -164,18 +164,18 @@ nav.navbar.navbar-default{
 }
 .static-content h1{
     font-size: 3em; letter-spacing: 2px;
-    text-transform: uppercase; text-align: center;
+    text-transform: uppercase; 
     color: white; background-color: #252525;
     padding-top: 0.2em; padding-bottom: 0.2em;
     border: 1px solid black; border-radius: 0.2em;
-    width: 110%;
+
 }
 .static-content h3{
-    font-size: 3em; letter-spacing: 2px; text-align: center;
+    font-size: 2.5em; letter-spacing: 2px; 
     border-top: 2px solid black; text-transform: uppercase;
     border-bottom: 2px solid black; border-radius: 0.3em;
-    color: white; background-color: #252525; width: 110%;
-    padding-top: 0.2em; padding-bottom: 0.2em;
+    color: white; background-color: #252525; width: 50%;
+    padding-top: 0.2em; padding-bottom: 0.2em; padding-left: 1%;
 }
 .static-content a{
     color: #1A6FB0;
@@ -221,7 +221,7 @@ nav.navbar.navbar-default{
 /**
  * ANY STYLES DESIGNED EXCLUSIVELY FOR THE HOME PAGE ARE HERE
  */
-.landing-image {
+.landing-image{
     padding-top: 100px;
     float: left;
 }
