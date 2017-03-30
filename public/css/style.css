@@ -259,35 +259,20 @@ nav.navbar.navbar-default{
 #gallery-thumbnails{
     display: inline;
     margin: auto;
-    min-height: 100%;
+    min-height: 100%;}
 
-}
-
-#gallery-thumbnails img{
-    padding: 10px;
-}
+#gallery-thumbnails img{padding: 10px;}
 
 .photo-list ul{
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 40px;
-    list-style: none;
-}
-
-.photo-list li{
-    float:left;
-}
-
-.alert-box h2{
-    top-margin: 200px;
-    color: green;
-
-}
-
-.secure h3{
-    top-margin: 150px;
-}
+    list-style: none;}
+.photo-list li{float:left;}
+.alert-box h2{top-margin: 200px;color: green;}
+.secure h3{top-margin: 150px;}
+.page-header.gallery-header{margin-left: 4%; width: 94%;}
 
 /**
  * THIS IS BEING USED ON UPLOAD.BLADE.PHP WHICH IS THE OLD UPLOAD FORM AND WILL LIKELY BE REMOVED

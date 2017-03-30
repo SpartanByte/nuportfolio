@@ -7,9 +7,9 @@
 
         {{-- Current CSS isn't showing anything above the following H1, will need to fix this  --}}
         <h1>General Information</h1>
-        <hr />
 
-        <img src="/images/logos/laravel.png" />
+        <hr />
+        <img src="/images/logos/php.png" />
         <h3>PHP</h3>
             <p>PHP (Hypertext Preprocessor) is a server-side language that was specifically designed for web development in 1994 by Rasmus Lerdorf. While
                 PHP is often considered easier to learn as a first programming language, special consideration and best practices need to be followed
@@ -22,24 +22,24 @@
             <p>One of the forthcoming examples is an application that I originally developed as a course project which involved listing course ID's, course title, the semester in which the course was taken, professor's name, and the grade received. The program demonstrated the ability to create, update, view and remove courses and fields in this list, which was displayed in HTML using a table. This is otherwise known as a <strong>CRUD</strong> application, which is an acronym for "<strong>C</strong>reate, <strong>R</strong>ead, <strong>U</strong>pdate, and <strong>D</strong>elete".</p>
 
         <hr />
-
-        <img src="https://dummyimage.com/450x300/000/fff" />
+        <img src="/images/logos/CSS.png" />
         <h3>CSS</h3>
             <p>CSS (or <strong>Cascading Styling Sheets</strong>) is still one of my favorite codes to play with even though isn't programming. The challenge of achieving the visual/user interface design along with the "WOW" factor has always been exciting. CSS is a <em>stylesheet</em> language that was introduced in 1996 after styling had begun to be added to HTML standards as need to give pages more than a "white background and black text" look quickly arose. It's still often explained to beginners that HTML is the structure, CSS is the "look and feel". CSS's syntax ranges from very simple to fairly complex. Much can be done using HTML tags alone, however without classes and ID's, it would be extremely difficult to maintain even the most basic of sites. Pseudo-classes are also extremely useful to put conditions on styles without the use of programming, such as when a link is being hovered by a mouse. CSS Preprocessors have also evolved by, at least, when <em><a href="http://sass-lang.com/" target="_blank">Sass</a></em>(Syntatically Awesome StyleSheets) was introduced in 2006. Other very common examples are <a href="http://lesscss.org/" target="_blank">Less</a> (influenced by Sass) and <a href="http://stylus-lang.com/" target="_blank">Stylus</a>. </p>
-        <hr />
 
-        <img src="https://dummyimage.com/450x300/000/fff" />
+        <hr />
+        <img src="/images/logos/javascript.png" />
         <h3>JavaScript</h3>
             <p>One of the least appreciated references is when JavaScript (a client side scripting language) is assumed to be similar to or confused with <strong>Java</strong> (a server-side object oriented programming language birthed long before web programming. The shortest and quickest explanation is simply that JavaScript was introduced in 1995 to add functionality to websites which was also a period where Java was exceptionally popular for desktop applications and some web programming as it evolved. I'm still unsure why its proper name, <strong>ECMAScript</strong> (or ES) hasn't replaced by the marketing driven given name. While many developers debate on if JavaScript (JS) should even be classified as a programming language, I won't lie or deny that it is still one of my least popular of the programming languages. My opinion of its scattered, messy syntax could be the same reason why JS libraries, years later, exploded as the language matured.</p> 
 
             <p><strong>jQuery</strong> was created to make writing JavaScript functionality quicker and with less lines of code. JS's nature is to run within the browser to add user interface functionality and interaction with the end user. I'm sure I will update this as there are many but many JavaScript libraries have come and gone over the years, in a trendy fashion, though jQuery is still very often a developer's first choice. Main reasons on the rising and falling of various libraries and frameworks for JavaScript over the years lays within concerns of security and maintainability. I personally also believe that the more libraries there are, the more confusing it is to use which library for what functionality. Currently, the most popular are jQuery, <strong>Angular</strong>, <strong>React</strong>, and the recently released <strong>Vue.js</strong>. However, the most recent version of JavaScript (ES6) greatly expanded its native capabilities such as objects, methods, and closures. Uniquely, <strong>Node.js</strong> continues popularity as it is built as a server-side language library rather than to run on the browser. There is even Node based servers and databases.</p>   
 
 
-        <img src="https://dummyimage.com/450x300/000/fff" />
+        <img src="/images/logos/python.png" />
         <h3>Python</h3>
             <p>Enter Python information here (including Django and Flask). </p>
+
         <hr />  
-                <img src="https://dummyimage.com/450x300/000/fff" />
+        <img src="/images/logos/csharp.png" />
         <h3>C# (and ASP.NET)</h3>
             <p>Arriving in 2010, C# is a strong-typed programming language that is based on both C++ and Java. C# was developed as a multi-paradigm programming language which allows it to encompass the object oriented, functional, and many other programming paradigms. It was also designed and developed for CLI (Client Language Infrastructure) which enables the ability to write code that doesn't have to be rewritten or amended for different platform architectures. It's often referred to be <em>platform agnostic</em> meaning a C# compiler (which translates human readable program code into machine language(binary) could be C++ based.</p>
             <p>Though other high-level programming languages such as Java, Python, Perl, Ruby and many more implement specific features and classes that enable functionality such as encapsulation (which increases security), C# is arguably particularly popular with many developers for various reasons. A very common reason is the frequency in which C#'s syntax and libraries are updated. Version 5.0 add Async Features and Caller Information, Version 6.0 added primary structures, exception filters and other features.</p>
