@@ -5,7 +5,8 @@
 
 html{
     /* background-color: #083450; */
-    background-color: white;
+    background-color: #FFFFFF;
+    font-size: 100%;
 }
 
 
@@ -13,7 +14,7 @@ html{
     min-width: 100%;
     min-height: 100%;
     /* background-color: #083450; very light grey is : #cccccc; */
-    background-color: white; /* very light grey for main background */
+    background-color: #FFFFFF; /* very light grey for main background */
 }
 
 header.row{
@@ -36,13 +37,13 @@ div#main.row{
 }
 
 nav.navbar.navbar-default{
-    background-color: white;
-    color: white;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
     border: solid #083450 1px;
 }
 #navbar-override{
     /* This controls stlyles that affects the entire background/block of the navigation bar from Bootstrap and overrides it where noted */
-    background-color: black;
+    background-color: #000000;
     font-family: 'Open Sans', sans-serif;
 }
 #navbar-override a{
@@ -56,7 +57,7 @@ nav.navbar.navbar-default{
 }
 
 #navbar-dropdown-override{
-    background-color: #f2f2f2; /* Adds a near-white background to the dropdown itself (not the parent link causing the dropdown) */
+    background-color: #f2f2f2; /* Adds a near-#FFFFFF background to the dropdown itself (not the parent link causing the dropdown) */
     color: #000000 !important;
 }
 
@@ -72,14 +73,15 @@ nav.navbar.navbar-default{
  * #code-content overrides any Bootstrap styles for any of the Code Samples pages (also has the static-content class applied) 
  */
 #code-content h1, h2, h3, h4{
-    color: white;
+    color: #FFFFFF;
 }
-
+#code-content h1{font-size: 2.5rem; letter-spacing: 0.5em; margin-top: 0%;}
 #code-content a{
-    color: white;
-    font-size: 18px;
+    color: #252525;
+    font-size: 2rem;
     font-family: 'Oxygen', sans-serif;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 #code-content a:hover{
@@ -93,8 +95,8 @@ nav.navbar.navbar-default{
     clear: both;
     font-family: 'Oxygen', sans-serif;
     font-weight: 300;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #FFFFFF;
     margin-bottom: 0;
     position: relative;
     width: 100%;
@@ -146,7 +148,7 @@ nav.navbar.navbar-default{
  * STANDARD PAGES: TEMPLATED STYLES
  */
 .page-header{
-    color: black;
+    color: #000000;
     text-shadow: 4px 2px 6px #404040;
     font-size: 4em !important;
     font-family: 'Open Sans', sans-serif;
@@ -155,7 +157,7 @@ nav.navbar.navbar-default{
 .static-content{
     margin: auto; padding-left: 1em; padding-right: 10em;
     margin-top: 10em; margin-bottom: 10em;
-    background-color: rgba(255,255,255, .25); color: black;
+    background-color: rgba(255,255,255, .25); color: #000000;
     width: 80%;
 }
 .static-content p{
@@ -165,16 +167,16 @@ nav.navbar.navbar-default{
 .static-content h1{
     font-size: 3em; letter-spacing: 2px; width: 50%; text-align: center;
     text-transform: uppercase; 
-    color: white; background-color: #252525;
+    color: #FFFFFF; background-color: #252525;
     padding-top: 0.2em; padding-bottom: 0.2em; padding-left: 0.2em;
-    border: 1px solid black; border-radius: 0.2em;
+    border: 1px solid #000000; border-radius: 0.2em;
 
 }
 .static-content h3{
     font-size: 2.5em; letter-spacing: 2px; text-align: center;
-    border-top: 2px solid black; text-transform: uppercase;
-    border-bottom: 2px solid black; border-radius: 0.3em;
-    color: white; background-color: #252525; width: 50%;
+    border-top: 2px solid #000000; text-transform: uppercase;
+    border-bottom: 2px solid #000000; border-radius: 0.3em;
+    color: #FFFFFF; background-color: #252525; width: 50%;
 
     padding-top: 0.2em; padding-bottom: 0.2em; padding-left: 1%;
     padding-top: 0.2em; padding-bottom: 0.2em;
@@ -204,7 +206,7 @@ nav.navbar.navbar-default{
 .page-title{
     font-family: 'Julius Sans One', sans-serif;
     font-size: 40px;
-    color: black;
+    color: #000000;
     margin-left: 15px;
     padding-bottom: 5px;
 }
@@ -286,7 +288,7 @@ nav.navbar.navbar-default{
     margin-top: -20px;
     padding-left: 15px;
     padding-bottom: 5px;
-    color: white;
+    color: #FFFFFF;
 }
 
 .upload-form-container button{
@@ -330,7 +332,7 @@ nav.navbar.navbar-default{
 }
 .outgoingLink:hover{
     background-color: #337ab7;
-    color: white !important;
+    color: #FFFFFF !important;
     padding: 2px 2px 2px 2px;
 }
 /**
@@ -343,7 +345,7 @@ nav.navbar.navbar-default{
     padding: 4px;
 }
 .internalLink:hover{
-    color: white !important;
+    color: #FFFFFF !important;
     background-color: #337ab7;
 }
 
@@ -363,8 +365,8 @@ nav.navbar.navbar-default{
         left: 10px;
     }
     #slideshow > div > img {
-        border: 2px solid black;
-        box-shadow: 2px 2px 20px black;
+        border: 2px solid #000000;
+        box-shadow: 2px 2px 20px #000000;
     }
 
     .picture{
@@ -374,7 +376,7 @@ nav.navbar.navbar-default{
     .picture p{
         position: absolute;
         width:100%;
-        color: black;
+        color: #000000;
         font-size: 18px;
         top: 250px;
         text-align: center;

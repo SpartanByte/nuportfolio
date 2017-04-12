@@ -22,10 +22,13 @@ class CodePageController extends Controller
     {
         return view('code_pages.code-information');
     }
-    
+    public function javaSamples()
+    {
+        return view('code_pages.java-samples');
+    }
     public function javascriptPage()
     {
-    	return view('code_pages.javascript-examples');
+    	return view('code_pages.javascript-samples');
     }
     public function phpSamples(){
 

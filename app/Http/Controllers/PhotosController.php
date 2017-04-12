@@ -18,7 +18,9 @@ class PhotosController extends Controller
     public function create(){
     	return view('photos.create');
     }
-
+    public function imageTest(){
+        return view('photos/image-fill-test');
+    }
     public function store(){
 
     	$input = Input::all();
@@ -39,8 +41,6 @@ class PhotosController extends Controller
     }
 
     public function show(){
-
-
     	/*
     	$imagePath = user_photos_path();
     	$imageFiles = File::allFiles($imagePath);

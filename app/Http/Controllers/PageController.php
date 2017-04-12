@@ -38,9 +38,6 @@ class PageController extends BaseController
     public function upload2(){
         return view('pages.upload2');
     }
-    public function showJava(){
-        return view('pages.java-samples');
-    }
     public function intervention(){
         return view('photos.create');
     }

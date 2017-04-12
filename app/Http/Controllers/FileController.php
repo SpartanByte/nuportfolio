@@ -29,4 +29,20 @@ class FileController extends Controller {
             ->with('success','Image Upload successful')
             ->with('imagename',$imagename);
     }
+    public function showImage(Request $request)
+    {
+        $this->validate($request, [
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
+        ]);
+        $thisImage = $request->file('photo');
+        $pictureName = time().'.'.$photo->getClientOriginalExtension();
+
+        $imagePath = public_path('/images/logos');
+        $thumb = Image::make($photo->getRealPath())->resize(450,300);
+        $thumb->save($imagePath.'/'.$pictureName);
+
+        return back()
+            ->with('Your method worked')
+            ->with('pictureName', $pictureName);
+    }
 }
