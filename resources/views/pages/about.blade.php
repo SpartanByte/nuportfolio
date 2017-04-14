@@ -3,7 +3,7 @@
     @section('title', 'About')
 
     @section('content')
-    <div class="static-content">
+    <div class="static-content about">
         <h1>A Brief Story About Myself</h1>
 
         {{-- start of background/bio --}}

@@ -37,4 +37,13 @@ class CodePageController extends Controller
     public function pythonSamples(){
         return view('code_pages.python-samples');
     }
+    public function csharpSamples(){
+        return view('code_pages.csharp-samples');
+    }
+    public function cssSamples(){
+        return view('code_pages.css-samples');
+    }
+    public function umbracoCms(){
+        return view('code_pages.umbraco-cms');
+    }
 }

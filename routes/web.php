@@ -43,7 +43,9 @@ Route::get('code_pages.java-samples', 'CodePageController@javaSamples');
 Route::get('code_pages.javascript-samples', 'CodePageController@javascriptPage');
 Route::get('code_pages.php-samples', 'CodePageController@phpSamples');
 Route::get('code_pages.python-samples', 'CodePageController@pythonSamples');
-
+Route::get('code_pages.csharp-samples', 'CodePageController@csharpSamples');
+Route::get('code_pages.css-samples', 'CodePageController@cssSamples');
+Route::get('code_pages.umbraco-cms', 'CodePageController@umbracoCms');
 /*
   |--------------------------------------------------------------------------
   | FORM ROUTES

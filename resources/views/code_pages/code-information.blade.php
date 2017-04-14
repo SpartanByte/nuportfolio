@@ -3,10 +3,10 @@
     @section('title', 'General Information')
 
     @section('content')
-    <div class="static-content">
+    <div class="static-content general-coding">
 
         {{-- Current CSS isn't showing anything above the following H1, will need to fix this  --}}
-        <h1>General Information</h1>
+        <h1>General Coding Information</h1>
 
         <hr />
         <img src="/images/logos/php.png" />

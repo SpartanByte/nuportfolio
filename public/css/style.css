@@ -5,10 +5,14 @@
 
 html{
     /* background-color: #083450; */
-    background-color: #FFFFFF;
+    background-color: transparent;
     font-size: 100%;
 }
 
+/* This overrides text-transform that is created by jQuery Mobile */
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{
+    text-shadow: none !important;
+}
 
 .container{
     min-width: 100%;
@@ -37,7 +41,7 @@ div#main.row{
 }
 
 nav.navbar.navbar-default{
-    background-color: #FFFFFF;
+    
     color: #FFFFFF;
     border: solid #083450 1px;
 }
@@ -160,6 +164,7 @@ nav.navbar.navbar-default{
     background-color: rgba(255,255,255, .25); color: #000000;
     width: 80%;
 }
+
 .static-content p{
     font-size: 1.2em;
     letter-spacing: 0.3px;
@@ -167,17 +172,14 @@ nav.navbar.navbar-default{
 .static-content h1{
     font-size: 3em; letter-spacing: 2px; width: 50%; text-align: center;
     text-transform: uppercase; 
-    color: #FFFFFF; background-color: #252525;
+    color: #252525;
     padding-top: 0.2em; padding-bottom: 0.2em; padding-left: 0.2em;
-    border: 1px solid #000000; border-radius: 0.2em;
 
 }
 .static-content h3{
     font-size: 2.5em; letter-spacing: 2px; text-align: center;
-    border-top: 2px solid #000000; text-transform: uppercase;
-    border-bottom: 2px solid #000000; border-radius: 0.3em;
-    color: #FFFFFF; background-color: #252525; width: 50%;
-
+    text-transform: uppercase;
+    color: #252525;  width: 50%;
     padding-top: 0.2em; padding-bottom: 0.2em; padding-left: 1%;
     padding-top: 0.2em; padding-bottom: 0.2em;
 
@@ -385,38 +387,109 @@ nav.navbar.navbar-default{
 /**
 * ABOUT PAGE
 */
-.skillset h4{
-    font-size: 2em; border-bottom: 3px solid #1A6FB0; text-transform: uppercase;
+.static-content.about{ margin-bottom: 10%;}
+.static-content.about h1{
+    background-color: transparent; color: #252525; font-size: 4rem;
+    font-family: 'proza_libreregular', sans-serif;
+    text-shadow: #363636 2px 3px 4px;
+    width: 80%; text-align: left; border: none;
+    
 }
+.static-content.about h3{
+    font-family: 'proza_libresemibold', sans-serif; font-size: 2.5rem;
+    color: #252525; background-color: transparent; border: none;
+    text-align: left; border-bottom: 3px solid #1A6FB0; border-radius: 0px;
+}
+.static-content.about h4{
+    font-family: 'proza_libresemibold', sans-serif; font-size: 2.25rem;
+    letter-spacing: 0.25rem; border-bottom: 3px solid #1A6FB0; text-transform: uppercase;
+}
+/* About page: Background section */
+.background, .skillset, .development-history, .academic-history { width: 90%;}
+.background p{
+    font-family: 'proza_libreregular', sans-serif; font-size: 1.5rem;
+}
+/* About page: Skillset section */
+
 .skillset > ul{ margin-left: -1.5%;}
-.skill-headers{ font-size: 1.5em; color: #1A6FB0;}
-.skills{ font-size: 1.3em; font-weight: 600; margin-left: -2%; line-height: 1.2;}
+.skill-headers{ font-size: 2.5rem; color: #1A6FB0; 
+    font-family: 'proza_libreregular', sans-serif; margin-left: -1.5%;}
+.skills{ font-size: 2rem; font-family: 'proza_libresemibold', sans-serif; 
+    margin-left: -2%;  line-height: 1.2; letter-spacing: 1px;}
+/* About page: Development/work history section */
 .development-history h4{
-    font-size: 1.5em; margin-top: 3%;
+    font-family: 'proza_libreregular', sans-serif;
+    font-size: 2rem;  margin-top: 3%; 
     letter-spacing: 1px;
     text-transform: uppercase;
     border-bottom: 3px solid #1A6FB0;
 }
 .development-history h5{
-    font-size: 1.5em; line-height: 0.5;
-    color: #1A6FB0;
+    font-family: 'proza_libresemibold', sans-serif; font-size: 2rem; line-height: 0.5;
+    color: #1A6FB0; padding-top: 0.25em; 
 }
 .development-history p{
-    font-size: 1.2em;
+    font-size: 1.8rem; font-family: 'proza_libreregular', sans-serif;
     margin-left: 1%;
 }
 .development-history > h5 > a{
-    color: #1A6FB0; font-weight: 300; text-decoration: underline;
+    color: #1A6FB0; font-weight: 300;  text-decoration: underline;  border: none;
 }
-
+/* About page: Academic/training history section */
 .academic-history h4{
-    font-size: 1.4em; letter-spacing: 1px; text-transform: uppercase;
+    text-transform: uppercase; font-family: 'proza_libresemibold', sans-serif;
     border-bottom: 3px solid #1A6FB0; margin-top: 3%;
 }
 
 .academic-history h5{
     font-size: 1.5em; line-height: 0.5; color: #1A6FB0;
+    font-family: 'proza_libresemibold', sans-serif;
 }
 .academic-history p{
     font-size: 1.2em; margin-left: 1%;
+}
+
+/**
+ * GENERAL CODING INFORMATION PAGE --- STYLES HERE
+ */
+.static-content.general-coding{
+    width: 80%;
+}
+.static-content.general-coding h1{
+    background-color: transparent; color: #252525; font-size: 4rem;
+    font-family: 'proza_libreregular', sans-serif;
+    text-shadow: #363636 2px 3px 4px;
+    width: 80%; text-align: left; border: none;
+}
+/* General Coding Information page: Header for each programming language */
+.static-content.general-coding h3{
+    font-family: 'proza_libresemibold', sans-serif;
+    color: #252525; background-color: transparent; border: none;
+    text-align: left; font-size: 4.5rem; margin-left: -1%;
+}
+/* General Coding Information page: paragraph text */
+.static-content.general-coding p{
+    font-family: 'proza_libreregular', sans-serif;
+    width: 90%;
+}
+.static-content.general-coding hr{
+    border-bottom: 3px solid #1A6FB0;
+    box-shadow: #252525 2px 2px 5px;
+}
+
+/**
+ * CODE SAMPLE PAGES -- STYLES FOR .static-content.code-sample-page
+ */
+.static-content.code-sample-page h1{
+    font-family: 'proza_libresemibold', sans-serif; text-align: left; 
+    letter-spacing: 1rem; margin-bottom: 5%;
+}
+
+.static-content.code-sample-page h3{
+    font-family: 'proza_libresemibold', sans-serif; text-align: left;
+    margin-top: 5%; letter-spacing: 0.5rem; margin-left: -1%;
+}
+
+.static-content.code-sample-page p{
+    font-family: 'proza_libreregular', sans-serif; font-size: 2rem; width: 90%;
 }
