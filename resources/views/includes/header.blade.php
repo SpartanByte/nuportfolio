@@ -35,6 +35,7 @@
                                 <li><a href="{{ url('code_pages.php-samples')  }}" title="PHP Code Examples">PHP</a></li>
                                 <li><a href="{{ url('code_pages.python-samples') }}" title="Python Programming Samples">Python</a></li>
                                 <li><a href="{{ url('code_pages.umbraco-cms') }}" title="Umbraco ASP.NET CMS">Umbraco CMS</a></li>
+                                <li><a href="{{ url('javascript-programs/jquery-toggling') }}" title="jQuery Toggle Example">jQuery Toggling</a></li>
                             </ul>
                         </li>
                     </ul>

@@ -98,9 +98,17 @@ Route::post('contact',
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-
 /**
  *  START OF ADMIN AREA ROUTES
  *  
  */
 Route::get('/admin/home', 'AdminController@home');
+
+
+/*
+  |--------------------------------------------------------------------------
+  | ROUTES FOR DISTRIBUTING TRAFFIC AND ANY OTHER NEEDED PROGRAMMING FOR THE 
+  | PROGRAM SAMPLES OF JAVASCRIPT, PHP, C#, JAVA, ETC
+  |--------------------------------------------------------------------------
+ */
+Route::get('javascript-programs/jquery-toggling', 'ProgramSampleController@jqueryToggle');
