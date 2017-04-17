@@ -493,3 +493,22 @@ nav.navbar.navbar-default{
 .static-content.code-sample-page p{
     font-family: 'proza_libreregular', sans-serif; font-size: 2rem; width: 90%;
 }
+
+/* Specific styles for javascript-program pages */
+.page-header.extended-header{
+    width: 90%;
+    font-family: 'proza_libreregular', sans-serif;
+    font-size: 3.25rem !important; text-align: left;
+}
+.program-description{
+    width: 90%;
+}
+.program-description h3{
+    font-family: 'proza_libresemibold', sans-serif;
+    font-size: 2.5rem; 
+    margin-left: -2%;
+}
+.program-description p{
+    font-family: 'proza_libreregular', sans-serif;
+    font-size: 2rem;
+}
