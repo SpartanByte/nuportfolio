@@ -1,5 +1,6 @@
 @yield('foot')
-		<div id="footer">
+	<div class="footer-container">
+		<div class="footer">
 			<ul class="footer-left">
 					<li>&copy; <?php echo date('Y'); ?> | Brian Wardwell | Email at: 
 						<a href="mailto:brianwardwell@brianwardwell.com">brianwardwell@brianwardwell.com</a> or
@@ -25,6 +26,7 @@
                 <li><a href="https://soundcloud.com/battle-cry-wardwell"><img src="/images/icons/soundcloud.png" title="Soundcloud"/></a></li>
                 <li><a href="http://spartanbyte.deviantart.com/"><img src="/images/icons/deviantart-new.png" title="DeviantArt"/></a></li>
 			</ul>
+		</div>
 		</div>
     </body>
 </html>
