@@ -3,19 +3,53 @@
     @section('title', 'jQuery Toggling')
 
     @section('content')
+
+        <script>
+            $(document).ready(function() {
+                 $('.image-module article').hide(); 
+                $('.imgtoggle-buttons').click(function() {
+                    var $this = $(this).closest('section').find('article');
+                $('.image-module article').not($this).slideUp();
+                    $this.fadeToggle(800);
+            });
+        });
+
+        // Image hover effects - jquery
+        $(document).ready(function(){
+                $('.image-color').mouseenter(function(){
+                $('.image-color').css("filters", "grayscale(100%)");
+            });
+
+        });
+
+        </script>
+
     <div class="static-content program-page">
 
         {{-- Current CSS isn't showing anything above the following H1, will need to fix this  --}}
         <h1 class="page-header extended-header">Toggling and Other Visual Effects with jQuery</h1>
         <hr />
 
-        <img src="/images/logos/jquery-logo.png" />
+        <img src="/images/logos/jquery-logo.png" width="225" height="150" />
         <div class="program-description">
             <h3 class="program-header">Very Simple Toggling with jQuery</h3>
-            <p>For additional information, <a href="outgoingLink" title="CSS Tricks">CSS Tricks</a> is a wonderful resource as well as training/tutorial hub for beginner developers.</p>
         </div>
-        <hr />
+        
+        <section class="image-module btn title3" type="button">
+            <ul class="imgtoggle-buttons">
+                <li><span class="showhide img-list"></span>
+                <h4><span class="showhide image-toggle">CLICK TO TOGGLE IMAGE</span></h4>
+           
+                <article class="image-result">
+                    <img src="/images/slide/red.jpg" width="333" height="292" />
+                </article>
 
-   
+                </li>
+            </ul>
+        </section>
+
+        <h4>Enter For Grayscale</h4>
+        <img class="image-color" src="/images/slide/red.jpg" width="333" height="292" />
+        <hr />
     </div>
 @stop
