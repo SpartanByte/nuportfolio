@@ -19,7 +19,7 @@
                             <h2>{!! Session::get('success') !!}</h2>
                         </div>
                     @endif
-                        <img src="{{asset('uploads/') . '/' }}">
+                        {{-- <img src="uploads/{{ $fileName }}" /> --}}
                     <div class="control-group">
                         <div class="controls">
                             
