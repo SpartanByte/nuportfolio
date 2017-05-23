@@ -10,7 +10,8 @@
         <hr />
 
         <img src="/images/logos/java.jpg" />
-        <h1>Java Code Samples</h1>
+
+        <span class="page-header uppercase-shadow">Java Code Samples</span>
             <p><a href="#">Choose An Applet You Made And Liked</a></p>
             <p><a href="#">Java Example 2</a></p>
             <p><a href="#">Java Example 3</a></p>

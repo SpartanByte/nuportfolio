@@ -10,7 +10,7 @@
         <hr />
 
         <img src="/images/logos/php.png" />
-        <h1>PHP Code Samples</h1>
+        <span class="page-header uppercase-shadow">PHP Code Samples</span>
             <p><a href="#">Concert Ticket Ordering Program</a></p>
             <p><a href="#">Business Travel Expenses Calculator</a></p>
             <p><a href="#">Airline Arrival Program</a></p>

@@ -6,16 +6,18 @@
 <title>BWardwell | @yield('title')</title>
 {{-- Favicon --}}
 <link rel="icon" type="image/png" href="/images/icons/bw-favicon.png" />
-
-{{-- importing Proza Libre fonts via webkit --}}
-<link rel="stylesheet" href="{{ URL::asset('css/proza-libre-webkit/stylesheet.css') }}" />
+<link rel="icon" href="/images/icons/bw-favicon.png" type="image/png" />
 
 {{-- Resetting browser defaults for CSS --}}
 <link rel="stylesheet" href="{{ URL::asset('css/reset.css') }}" />
 <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" />
 {{-- Responsive design breakpoints (dedicated CSS file) --}}
 <link rel="stylesheet" href="{{ URL::asset('css/responsive.css') }}" />
+{{-- importing Proza Libre fonts via webkit --}}
+<link rel="stylesheet" href="{{ URL::asset('css/proza-libre-webkit/stylesheet.css') }}" />
 
+{{-- CDN for jQuery --}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 {{-- CDN for Vue.JS --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
 

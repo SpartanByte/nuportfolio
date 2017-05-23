@@ -6,7 +6,7 @@
     <div class="static-content code-sample-page">
 
         {{-- Current CSS isn't showing anything above the following H1, will need to fix this  --}}
-        <h1 class="page-header">JavaScript</h1>
+        <span class="page-header uppercase-shadow">JavaScript</span>
         <hr />
 
 
