@@ -24,7 +24,7 @@ Route::get('pages.about', 'PageController@about' );
 Route::get('pages.upload', 'PageController@upload');
 Route::get('pages.gallery-test', 'PageController@gallery');
 Route::get('pages.success', 'PageController@success');
-Route::get('upload2', 'PageController@upload2');
+Route::get('upload-success', 'PageController@uploadSuccess');
 Route::get('pages.picturetest', 'PageController@pictureTest');
 Route::get('photos.create', 'PageController@intervention');
 Route::get('photos.image_example', 'PageController@interventionExample');
@@ -75,12 +75,12 @@ Route::resource('photos', 'PhotosController');
  * Routes to image uploads, index and gallery
  */
 Route::get('photos/create', 'PhotosController@create');
-Route::get('photos/show', 'PhotosController@show');
+Route::get('photos.show', 'PhotosController@show');
 Route::get('photos/index', 'PhotosController@index');
 Route::get('photos/image-fill-test', 'PhotosController@imageTest');
 
 // post functionality for photos
-Route::post('/photos/show', function(){
+Route::post('photos.show', function(){
 	$imageName = new ImageName;
 	$imageName->fileName = $request->fileName;
 	$imageName->save();

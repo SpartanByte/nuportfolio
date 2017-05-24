@@ -5,7 +5,8 @@
 @section('content')
 <div class="static-content">
     <div id="gallery-thumbnails" style="padding-bottom:15px;">
-        <h1 class="page-header gallery-header">Photography</h1>
+
+        <span class="page-header uppercase-shadow gallery-header">Photography</span>
             <ul class="photo-list">
                 <li><img src="/images/photography/big-sur-400-300.png" /></li>
                 <li><img src="/images/photography/golden-gate-400-300.png" /></li>
