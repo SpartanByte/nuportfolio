@@ -30,6 +30,47 @@
                     <img src="/images/photography/thumbs/izzy-stare-thumb.jpg" /></a></li>
                 {{--<li><img src="/images/photograhy/san-francisco-face-400-300.png" /></li>--}}
             </ul>
+            <ul class="photo-list">
+
+           
+            <?php
+                /* Settings */
+                $image_dir = 'images/photography/full/';
+                $thumbs_dir = 'images/photography/thumbs/';
+                $images_per_row = 6;
+
+                /* generating photo gallery */
+                $image_files = get_files($images_dir);
+
+                if(count($image_files))
+                {
+                    $index = 0;
+                    foreach($image_files as $index=>$file)
+                    {
+                        $index++;
+                        $thumbnail_image = $thumbs_dir.$file;
+                        
+                        if(!file_exists($thumbnail_images))
+                        {
+                            $extension = get_file_extension($thumbnail_image);
+                            if($extension)
+                            {
+                                make_thumb($images_dir.$file, $thumbnail_image, $thumbs_width);
+                            }
+                            echo '<li><a href="', $images_dir.$file, '">
+                                <img src="', $thumbnail_image,'" /></a></li>';
+                            if($index % $images_per_row == 0) { echo '<div class="clear"></div>'; }
+                        }
+                        echo '<div class="clear"></div>';
+                    }
+                    
+                    } else {
+                        echo '<p>There are no images in this gallery.</p>';
+                    }
+
+            ?>
+
+            </ul>
     </div>
     <div id="gallery-clear-bottom"></div>
 </div>

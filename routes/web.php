@@ -105,6 +105,7 @@ Route::get('/home', 'HomeController@index');
 Route::get('/admin/home', 'AdminController@home');
 
 
+
 /*
   |--------------------------------------------------------------------------
   | ROUTES FOR DISTRIBUTING TRAFFIC AND ANY OTHER NEEDED PROGRAMMING FOR THE 
@@ -112,3 +113,6 @@ Route::get('/admin/home', 'AdminController@home');
   |--------------------------------------------------------------------------
  */
 Route::get('javascript-programs/jquery-toggling', 'ProgramSampleController@jqueryToggle');
+
+
+Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude');
