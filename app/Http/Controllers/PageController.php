@@ -35,8 +35,8 @@ class PageController extends BaseController
     public function success(){
         return view('pages.success');
     }
-    public function upload2(){
-        return view('pages.upload2');
+    public function uploadSuccess(){
+        return view('pages.upload-success');
     }
     public function intervention(){
         return view('photos.create');

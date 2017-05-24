@@ -5,7 +5,8 @@
 @section('content')
 <div class="static-content">
     <div id="gallery-thumbnails" style="padding-bottom:15px;">
-        <h1 class="page-header gallery-header">Photoshop Composites</h1>
+
+        <span class="page-header uppercase-shadow gallery-header">Photoshop Gallery</span>
             <ul class="photo-list">
                 <li><img src="/images/photoshop/above-and-beyond-mock-400-300.png" /></li>
                 <li><img src="/images/photoshop/the-hjemkomst-center-handout-400-300.png" /></li>

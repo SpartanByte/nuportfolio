@@ -4,7 +4,8 @@
 
     @section('content')
     <div class="static-content about">
-        <h1>A Brief Story About Myself</h1>
+ 
+        <span class="page-header uppercase-shadow">A Little Bit About Myself</span>
 
         {{-- start of background/bio --}}
         <section class="background">

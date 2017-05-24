@@ -33,7 +33,7 @@
 
                         //Sending back message
                         Session::flash('success', 'Upload is successful!');
-                        return Redirect::to('upload2'); 
+                        return Redirect::to('upload-success');
 
                     }
                 }

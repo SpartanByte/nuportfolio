@@ -85,15 +85,6 @@
                     </ul>
 
             </ul>{{-- End of left side menu  --}}
-
-            {{-- Start of right side search  --}}
-           {{-- <form class="navbar-form navbar-right">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form> --}}
-
         </div>
     </div>
     <!-- end of header.blade.php -->
