@@ -9,7 +9,8 @@
 
         <hr />
         <img src="/images/logos/php.png" />
-        <h3>PHP</h3>
+
+        <span class="section-header mid-size-font">PHP</span>
             <p>PHP (Hypertext Preprocessor) is a server-side language that was specifically designed for web development in 1994 by Rasmus Lerdorf. While
                 PHP is often considered easier to learn as a first programming language, special consideration and best practices need to be followed
                 to ensure security and proper implementation. As with many programming languages, <em>Procedural</em> PHP is where many get their start. However, with the popularity and usefulness of <em><strong>Object Oriented Languages</strong></em> such as Java, C#, C++ and Python; PHP evolved to be optionally written using Object Oriented principles. Older Object Oriented Languages including C# and Java have libraries of classes and methods that "come with" the language itself. Although PHP's implementation is much different in this respect, what it lacks in pre-written functionality allows it to be extremely flexible when the programmer is allowed to write custom classes, methods and libraries.</p>
@@ -22,7 +23,8 @@
 
         <hr />
         <img src="/images/logos/CSS.png" />
-        <h3>CSS</h3>
+
+        <span class="section-header mid-size-font">CSS</span>
             <p>CSS (or <strong>Cascading Styling Sheets</strong>) is still one of my favorite codes to play with even though isn't programming. The challenge of achieving the visual/user interface design along with the "WOW" factor has always been exciting. CSS is a <em>stylesheet</em> language that was introduced in 1996 after styling had begun to be added to HTML standards as need to give pages more than a "white background and black text" look quickly arose. It's still often explained to beginners that HTML is the structure, CSS is the "look and feel". CSS's syntax ranges from very simple to fairly complex. Much can be done using HTML tags alone, however without classes and ID's, it would be extremely difficult to maintain even the most basic of sites. Pseudo-classes are also extremely useful to put conditions on styles without the use of programming, such as when a link is being hovered by a mouse. CSS Preprocessors have also evolved by, at least, when <em><a href="http://sass-lang.com/" target="_blank">Sass</a></em>(Syntatically Awesome StyleSheets) was introduced in 2006. Other very common examples are <a href="http://lesscss.org/" target="_blank">Less</a> (influenced by Sass) and <a href="http://stylus-lang.com/" target="_blank">Stylus</a>. </p>
 
         <hr />

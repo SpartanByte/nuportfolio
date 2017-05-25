@@ -14,7 +14,7 @@
 	</head>
 	<body>
 	<div class="email-format">
-		<h2>Someone has contacted you!</h2>
+		<h2>Laravel successefully sent an email!</h2>
 			<p>Name: {{ $name }}<br />
 			<p>Email: {{ $email }}<br />
 			<p>Message: {{ $user_message }}</p>

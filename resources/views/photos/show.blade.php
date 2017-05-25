@@ -14,24 +14,10 @@
                   </div>
 
                   <div class="panel-body">
-                      <table class="table table-striped task-table">
-
-                          <thead>
-                              <th>Image Title</th>
-                          </thead>
                             @foreach($imageFiles as $imageFile){{-- $imageFile should be coming from PhotosController  --}}
                               <tr>
-                                <td class="table-text">
-                                  <div>{{ $imageFile }}</div>
-                                </td>
-                                </tr>
-                            }
-                            }
+                                  <img src="{{ $imageFile }}" />
                             @endforeach
-
-                              <form action="/photos/show/{{imageName}}" method="POST">
-                            </form>
-                      </table>
                     </div>{{-- end of panel-body --}}
 
                 </div>

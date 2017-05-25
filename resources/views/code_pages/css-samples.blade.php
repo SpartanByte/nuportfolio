@@ -10,7 +10,7 @@
 
         <img src="/images/logos/CSS.png" />
         <h3>CSS</h3>
-        <p>For additional information, <a href="outgoingLink" title="CSS Tricks">CSS Tricks</a> is a wonderful resource as well as training/tutorial hub for beginner developers.</p>
+        <p>For additional information, <a href="https://css-tricks.com/" title="CSS Tricks">CSS Tricks</a> is a wonderful resource as well as training/tutorial hub for beginner developers.</p>
 
         <hr />
 
