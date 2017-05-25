@@ -13,7 +13,10 @@ class GalleryController extends Controller
     //
     
 
-
+	/**
+	 * Automatically pulls folders from the images/photography/full 
+	 * @return displays these images on "pages/photography-gallery"
+	 */
     public function showPhotography(){
     	
     $imagePath = 'images/photography/full';

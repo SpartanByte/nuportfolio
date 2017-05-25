@@ -9,12 +9,12 @@
         <span class="page-header uppercase-shadow gallery-header">Photography</span>
             <ul class="photo-list">
 
-            @foreach($imageFiles as $imageFile){{-- $imageFile should be coming from PhotosController  --}}
-            
+                {{-- Images generated from ImageController@showPhotography --}}
+                @foreach($imageFiles as $imageFile)
                     <li><a href="{{ $imageFile }}" title="View Full Size" style="width:100%;height:100%;"><img src="{{ $imageFile }}" width="400" height="300" /></a></li>
-                            @endforeach
+                @endforeach
 
-    </div>
+         </div>
     <div id="gallery-clear-bottom"></div>
 </div>
 @stop
