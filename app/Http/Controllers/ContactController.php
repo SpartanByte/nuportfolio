@@ -9,8 +9,11 @@ class ContactController extends Controller
 {
     //
     public function create(){
+        $confirm = 'Thank you. I will follow up with you soon!';
+        \Session::flash('flash_message','Office successfully added.'); 
+        $success = true;
+    	return view('pages.contact', ['confirm' => $confirm, 'success' => $success]);
 
-    	return view('pages.contact');
     }
 
     public function store(ContactFormRequest $request){
@@ -22,8 +25,8 @@ class ContactController extends Controller
             'user_message' => $request->get('message')
         ), function($message){
 
-        	$message->from('example@example.com');
-        	$message->to('example@example.com', 'Admin')->subject('NuWebsite Feedback');
+        	$message->from('brianwardwell79@gmail.com');
+        	$message->to('briwar10@outlook.com', 'Admin')->subject('Brian Wardwell\'s Laravel Feedback');
     	});
 
   		return \Redirect::route('contact')->with('message', 'Thanks for the message. I will be following up with you soon!');

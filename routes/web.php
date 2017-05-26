@@ -29,7 +29,7 @@ Route::get('pages.picturetest', 'PageController@pictureTest');
 Route::get('photos.create', 'PageController@intervention');
 Route::get('photos.image_example', 'PageController@interventionExample');
 Route::get('pages.photoshop-gallery', 'PageController@photoshop');
-Route::get('pages.photography-gallery', 'PageController@photography');
+// Route::get('pages.photography-gallery', 'PageController@photography'); 
 Route::get('pages.slideshow', 'PageController@slideshow');
 
 // * Gallery Template, will eventually move to a TemplateController when Admin Panel is built
@@ -86,6 +86,9 @@ Route::post('photos.show', function(){
 	$imageName->save();
 	return redirect('photos/index');
 });
+
+
+Route::get('pages.photography-gallery', 'GalleryController@showPhotography');
 
 /**
  *  Contact Form Routes

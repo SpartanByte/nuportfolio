@@ -12,28 +12,12 @@
                   <div class="page-header">
                       <h1>Uploaded Photos</h1>
                   </div>
-
                   <div class="panel-body">
-                      <table class="table table-striped task-table">
+                      @foreach($imageFiles as $imageFile){{-- $imageFile should be coming from PhotosController  --}}
+                          
+                          <img src="{{ $imageFile }}" />
 
-                          <thead>
-                              <th>Image Title</th>
-                          </thead>
-                            @foreach($imageFiles as $imageFile){{-- $imageFile should be coming from PhotosController  --}}
-                              <tr>
-                                <td class="table-text">
-                                  <div>{{ $imageFile }}</div>
-                                </td>
-                                </tr>
-                            }
-                            }
-                            @endforeach
-
-                              <form action="/photos/show/{{imageName}}" method="POST">
-                            </form>
-                      </table>
+                      @endforeach
                     </div>{{-- end of panel-body --}}
-
                 </div>
-
 @stop
