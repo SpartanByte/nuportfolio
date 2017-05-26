@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Services;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use Image;
 use Input;
+
 
 class GalleryController extends Controller
 {
@@ -17,12 +19,14 @@ class GalleryController extends Controller
 	 * Automatically pulls folders from the images/photography
 	 * Displays these images on "pages/photography-gallery"
 	 */
-    public function showPhotography(){
+    public function makePhotographyGallery(){
     	
         $imagePath = 'images/photography';
-        $imageFiles = File::allFiles($imagePath);
-
+        $imageFiles = File::allFiles($imagePath); 
+        // $this->request->imageFiles = $imageFiles;
+       // 'imageFiles' => $request->get('imageFiles');
         return view('pages.photography-gallery', ['imagePath' => $imagePath, 'imageFiles' => $imageFiles]);	
+        // return view('pages.photography-gallery', ['imageFiles' => $imageFiles]);
     }
 
     /**

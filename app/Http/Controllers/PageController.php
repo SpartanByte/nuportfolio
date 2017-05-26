@@ -27,7 +27,7 @@ class PageController extends BaseController
     {
         return view('pages.upload');
     }
-    // Move soon? (page turned into a template)
+  
     public function gallery(){
         return view('pages.gallery-test');
     }
@@ -41,12 +41,7 @@ class PageController extends BaseController
     public function intervention(){
         return view('photos.create');
     }
-    public function photoshop(){
-        return view('pages.photoshop-gallery');
-    }
-    public function photography(){
-        return view('pages.photography-gallery');
-    }
+
     // new method for gallery page template
     public function galleryTemplate(){
         return view('templates.gallery-template');

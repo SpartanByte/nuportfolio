@@ -10,7 +10,7 @@ class ContactController extends Controller
     //
     public function create(){
         $confirm = 'Thank you. I will follow up with you soon!';
-        \Session::flash('flash_message','Office successfully added.'); 
+        
         $success = true;
     	return view('pages.contact', ['confirm' => $confirm, 'success' => $success]);
 

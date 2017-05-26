@@ -16,13 +16,20 @@
 
 
         <hr />
-        {{-- <img src="https://dummyimage.com/450x300/000/fff" /> --}}
         <img src="/images/logos/vuejs-logo.jpg" />
         <h3>Vue.js</h3>
             <p><a href="https://vuejs.org/" target="_blank">Vue.js</a> has gained quick popularity after being released just three years ago in 2014. An advanced framework, complete with a "vue-router" package, that was bit to simplify the process of building interactive user interfaces. Much as <a href="https://en.wikipedia.org/wiki/Vue.js" target="_blank">Wikipedia</a> reports, it has power in SPA's (Single Page Applications) as well as transitions (regarding the "DOM", Document Object Model) and runs by the use of templates and components.</p>
         <hr />
 
-        <h3>Subject Header 1</h3>
-            <p>Subject Description1</p>       
+        <p>Popular Javascript Frameworks and Libraries</p>
+            <ul>
+                <li>jQuery</li>
+                <li>Vue.js</li>
+                <li>Angular.js</li>
+                <li>Node.js</li>
+                <li>React.js</li>
+                <li>etc</li>
+                <li>etc</li>
+            </ul>     
     </div>
 @stop

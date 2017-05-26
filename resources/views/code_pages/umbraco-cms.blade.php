@@ -1,6 +1,6 @@
     @extends('layouts.default')
 
-      @section('title', 'Umbraco CMS: About')
+    @section('title', 'Umbraco CMS: About')
 
     @section('content')
     <div class="static-content code-sample-page">
@@ -24,8 +24,7 @@
                 <li>Templates and Partial Views</li>
                 <li>Support for many languages, accessible from a simple drop-down menu</li>
             </ul>
+            {{-- <iframe width="560" height="315" src="https://www.youtube.com/embed/giYeaKsXnsI" frameborder="0" allowfullscreen></iframe> --}}
         <hr />
-
-    
     </div>
 @stop

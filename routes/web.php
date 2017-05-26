@@ -3,7 +3,6 @@
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
 | This file is where you may define all of the routes that are handled
 | by your application. Just tell Laravel the URIs it should respond
 | to using a Closure or controller method. Build something great!
@@ -29,20 +28,7 @@ Route::get('upload-success', 'PageController@uploadSuccess');
 Route::get('pages.picturetest', 'PageController@pictureTest');
 Route::get('photos.create', 'PageController@intervention');
 Route::get('photos.image_example', 'PageController@interventionExample');
-Route::get('pages.photoshop-gallery', 'PageController@photoshop');
-// Route::get('pages.photography-gallery', 'PageController@photography'); 
 Route::get('pages.slideshow', 'PageController@slideshow');
-
-
-/**
- * GALLERY ROUTES ====================================================
- */
-// * Gallery Template, will eventually move to a TemplateController when Admin Panel is built
-Route::get('templates.gallery-template', 'PageController@galleryTemplate');
-// Photography Route :: Generates gallery and shows view
-Route::get('pages.photography-gallery', 'GalleryController@showPhotography');
-// Photoshop Route :: Generates gallery and shows view
-Route::get('pages.photoshop-gallery', 'GalleryController@makePhotoshopGallery');
 
 /**
  * CODE PAGE CONTROLLER ROUTES ======================================
@@ -55,6 +41,18 @@ Route::get('code_pages.python-samples', 'CodePageController@pythonSamples');
 Route::get('code_pages.csharp-samples', 'CodePageController@csharpSamples');
 Route::get('code_pages.css-samples', 'CodePageController@cssSamples');
 Route::get('code_pages.umbraco-cms', 'CodePageController@umbracoCms');
+
+/**
+ * GALLERY ROUTES ====================================================
+ */
+// * Gallery Template, will eventually move to a TemplateController when Admin Panel is built
+Route::get('templates.gallery-template', 'PageController@galleryTemplate');
+// Photography Route :: Generates gallery and shows view
+Route::get('pages.photography-gallery', 'GalleryController@makePhotographyGallery');
+// Photoshop Route :: Generates gallery and shows view
+Route::get('pages.photoshop-gallery', 'GalleryController@makePhotoshopGallery');
+
+
 /*
   |--------------------------------------------------------------------------
   | FORM ROUTES
