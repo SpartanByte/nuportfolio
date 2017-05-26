@@ -19,6 +19,7 @@
 /**
  * Page Routes 
  */
+Route::get('/home', 'HomeController@index');
 Route::get('/', 'PageController@home');
 Route::get('pages.about', 'PageController@about' );
 Route::get('pages.upload', 'PageController@upload');
@@ -32,11 +33,19 @@ Route::get('pages.photoshop-gallery', 'PageController@photoshop');
 // Route::get('pages.photography-gallery', 'PageController@photography'); 
 Route::get('pages.slideshow', 'PageController@slideshow');
 
-// * Gallery Template, will eventually move to a TemplateController when Admin Panel is built
-Route::get('templates.gallery-template', 'PageController@galleryTemplate');
 
 /**
- * CODE PAGE CONTROLLER ROUTES
+ * GALLERY ROUTES ====================================================
+ */
+// * Gallery Template, will eventually move to a TemplateController when Admin Panel is built
+Route::get('templates.gallery-template', 'PageController@galleryTemplate');
+// Photography Route :: Generates gallery and shows view
+Route::get('pages.photography-gallery', 'GalleryController@showPhotography');
+// Photoshop Route :: Generates gallery and shows view
+Route::get('pages.photoshop-gallery', 'GalleryController@makePhotoshopGallery');
+
+/**
+ * CODE PAGE CONTROLLER ROUTES ======================================
  */
 Route::get('code_pages.code-information', 'CodePageController@info');
 Route::get('code_pages.java-samples', 'CodePageController@javaSamples');
@@ -57,10 +66,19 @@ Route::get('upload', function(){
 Route::post('apply/upload', 'UploadController@upload');
 
 /**
- * ROUTE RETURNING UPLOADED IMAGES
+ * ROUTE RETURNING UPLOADED IMAGES ======================================
  */
  Route::get('intervention-resizeImage',['as'=>'intervention.getresizeimage','uses'=>'FileController@getResizeImage']);
  Route::post('intervention-resizeImage',['as'=>'intervention.postresizeimage','uses'=>'FileController@postResizeImage']);
+
+/**
+ *  Contact Form Routes
+ */
+Route::get('contact',
+  ['as' => 'contact', 'uses' => 'ContactController@create']);
+Route::post('contact',
+  ['as' => 'contact_store', 'uses' => 'ContactController@store']);
+
 
 /**
  * The following is a tutorial from Laracasts Image Manipulation tutorial
@@ -86,26 +104,6 @@ Route::post('photos.show', function(){
 	$imageName->save();
 	return redirect('photos/index');
 });
-
-
-Route::get('pages.photography-gallery', 'GalleryController@showPhotography');
-
-/**
- *  Contact Form Routes
- */
-Route::get('contact',
-  ['as' => 'contact', 'uses' => 'ContactController@create']);
-Route::post('contact',
-  ['as' => 'contact_store', 'uses' => 'ContactController@store']);
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-/**
- *  START OF ADMIN AREA ROUTES
- *  
- */
-Route::get('/admin/home', 'AdminController@home');
 
 
 /*

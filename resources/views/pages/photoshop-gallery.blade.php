@@ -8,14 +8,10 @@
 
         <span class="page-header uppercase-shadow gallery-header">Photoshop Gallery</span>
             <ul class="photo-list">
-                <li><img src="/images/photoshop/above-and-beyond-mock-400-300.png" /></li>
-                <li><img src="/images/photoshop/the-hjemkomst-center-handout-400-300.png" /></li>
-                <li><img src="/images/photoshop/poppy-festival-handout-400-300.png" /></li>
-                <li><img src="/images/photoshop/the-blvd-handout-400-300.png" /></li>
-                <li><a href="/images/photoshop/full/the-skull-of-slayer-full.jpg">
-                    <img src="/images/photoshop/thumbs/the-skull-of-slayer-thumb.jpg"></a></li>
-                <li><img src="http://placehold.it/400x300" /></li>
-                <li><img src="http://placehold.it/400x300" /></li>
+                {{-- Images generated from ImageController@showPhotography --}}
+                @foreach($imageFiles as $imageFile)
+                    <li><a href="{{ $imageFile }}" title="View Full Size" style="width:100%;height:100%;"><img src="{{ $imageFile }}" width="400" height="300" /></a></li>
+                @endforeach
             </ul>
     </div>
     <div id="gallery-clear-bottom"></div>

@@ -17,7 +17,9 @@
                             <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
                             <ul class="dropdown-menu" id="navbar-dropdown-override">
                                 <li><a href="http://musicbytes.us/">MusicBytes</a></li>
+                                <li><a href="#">My Old Portfolio</a></li>
                                 <li><a href="http://newlinecharacter.com/">New Line Character (Coming Soon)</a></li>
+                                <li><a href="#">The Music Pavilion (Coming Soon)</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -40,27 +42,14 @@
                         </li>
                     </ul>
 
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Public Profiles<span class="caret"></span></a>
-                            <ul class="dropdown-menu" id="navbar-dropdown-override">
-                                <li><a href="https://github.com/SpartanByte" title="SpartanByte: GitHub" target="_blank">GitHub</a></li>
-                                <li><a href="https://gitlab.com/SpartanByte" title="SpartanByte: GitLab" target="_blank">GitLab</a></li>
-                                <li><a href="http://stackexchange.com/users/9660538/nintensified" title="Stack Overflow, More" target="_blank">StackExchange</a></li>
-                                <li><a href="https://www.sitepoint.com/premium/users/urlbyte" title="SitePoint Coding Community" target="_blank">SitePoint</a></li>
-                                <li><a href="https://www.linkedin.com/in/briantwardwell" title="Brian Wardwell: LinkedIn" target="_blank">LinkedIn</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
                     {{-- Galleries Dropdown  --}}
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galleries<span class="caret"></span></a>
                             <ul class="dropdown-menu" id="navbar-dropdown-override">
                                 <li><a href="{{ url('pages.photoshop-gallery') }}">Photoshop Gallery</a></li>
-                                <li><a href="{{ url('pages.photography-gallery') }}">Photography</a></li>
-                                <li><a href="{{ url('templates.gallery-template') }}">Gallery Template</a></li>
+                                <li><a href="{{ url('pages.photography-gallery') }}">Photography Gallery</a></li>
+                                {{-- <li><a href="{{ url('templates.gallery-template') }}">Gallery Template</a></li> --}}
                             </ul>
                         </li>
                     </ul>
@@ -80,6 +69,19 @@
                                 <li><a href="{{ url('photos.create') }}">Test the Upload/Display Intervention Image Functionality</a></li>
                                 <li><a href="{{ url('upload') }}">Image Uploader</a></li>
                                 <li><a href="{{ url('pages.slideshow') }}">Slideshow</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Public Profiles<span class="caret"></span></a>
+                            <ul class="dropdown-menu" id="navbar-dropdown-override">
+                                <li><a href="https://github.com/SpartanByte" title="SpartanByte: GitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://gitlab.com/SpartanByte" title="SpartanByte: GitLab" target="_blank">GitLab</a></li>
+                                <li><a href="http://stackexchange.com/users/9660538/nintensified" title="Stack Overflow, More" target="_blank">StackExchange</a></li>
+                                <li><a href="https://www.sitepoint.com/premium/users/urlbyte" title="SitePoint Coding Community" target="_blank">SitePoint</a></li>
+                                <li><a href="https://www.linkedin.com/in/briantwardwell" title="Brian Wardwell: LinkedIn" target="_blank">LinkedIn</a></li>
                             </ul>
                         </li>
                     </ul>

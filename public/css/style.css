@@ -7,12 +7,15 @@ html{
     background-color: transparent;
     font-size: 100%;}
 
+body{
+    font-family: 'proza_libreregular', sans-serif !important;
+}
+
 /* Formatting styles */
 .page-header{
     color: #252525;
     font-size: 4em !important;
     letter-spacing: 1px;
-    font-family: 'proza_libresemibold', sans-serif;  
     text-align: center;}
 
 .uppercase-shadow{
@@ -27,6 +30,11 @@ html{
 /**
  * GLOBAL STYLING HERE
  */
+.container{
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #FFFFFF; /* very light grey for main background */}
+
 .internalLink{
     font-size: 26px;
     font-weight: bold;
@@ -47,6 +55,20 @@ html{
     color: #FFFFFF !important;
     padding: 2px 2px 2px 2px;}
 
+/* COULD BE USED FOR STYLING OUTGOING LINKS --- IF CODE IS ADDED TO AVOID CHANGING ANY LINKS IN FOOTER 
+a[href^="https://"]{
+     color: #337ab7 !important;
+     font-size: 15px !important
+}
+
+a[href^="http://"]{
+    color: #337AB7 !important;;
+    font-size: 12px;
+} */
+/**
+ * To be used for ALL internal links
+ */
+
 /* DO NOT remove or modify this style as it separates the photos from the bottom of the page
 ** allowing either content to be below the pictures if needed or grant extra space/padding below galleries
 */
@@ -54,19 +76,16 @@ html{
     display: block !important;
     clear: both;}
 
-
-
+.standard-ul{
+    font-weight: bold;
+    font-size: 1.75rem;
+}
 /* ================================================  END OF GLOBAL STYLES ======================================= */
 
 /* 
 /* This overrides text-transform that is created by jQuery Mobile */
 .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{
     text-shadow: none !important;}
-
-.container{
-    min-width: 100%;
-    min-height: 100%;
-    background-color: #FFFFFF; /* very light grey for main background */}
 
 header.row{
     min-width: 100%;
@@ -124,7 +143,6 @@ nav.navbar.navbar-default{
 #code-content a{
     color: #252525;
     font-size: 2rem;
-    font-family: 'Oxygen', sans-serif;
     font-weight: bold;
     text-transform: uppercase;}
 
@@ -139,7 +157,6 @@ nav.navbar.navbar-default{
     width: 100%;}
 .footer{
     clear: both;
-    font-family: 'Oxygen', sans-serif;
     font-weight: 300;
     background-color: #000000;
     color: #FFFFFF;
@@ -228,7 +245,6 @@ nav.navbar.navbar-default{
     min-width:100%;}
 
 .page-title{
-    font-family: 'Julius Sans One', sans-serif;
     font-size: 40px;
     color: #000000;
     margin-left: 15px;
@@ -265,7 +281,6 @@ nav.navbar.navbar-default{
     margin-top: 80px;
     margin-left: 10em;
     width: 40%;
-    font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     text-align: right;
     height: 15%;
@@ -321,7 +336,6 @@ nav.navbar.navbar-default{
  * THIS IS BEING USED ON UPLOAD.BLADE.PHP WHICH IS THE OLD UPLOAD FORM AND WILL LIKELY BE REMOVED
  */
 .secure h3{
-    font-family: 'Julius Sans One', sans-serif;
     font-weight: 600;
     background-color: #666666;
     width: 110%;
@@ -351,24 +365,6 @@ nav.navbar.navbar-default{
     padding-left: 5px;}
 /* END OF STYLES FOR UPLOAD.BLADE.PHP */
 
-
-
-
-
-
-/* COULD BE USED FOR STYLING OUTGOING LINKS --- IF CODE IS ADDED TO AVOID CHANGING ANY LINKS IN FOOTER 
-a[href^="https://"]{
-     color: #337ab7 !important;
-     font-size: 15px !important
-}
-
-a[href^="http://"]{
-    color: #337AB7 !important;;
-    font-size: 12px;
-} */
-/**
- * To be used for ALL internal links
- */
 
 /**
  * Slideshow CSS
@@ -403,35 +399,32 @@ a[href^="http://"]{
 */
 .static-content.about{ 
     margin-bottom: 10%;}
-.static-content.about h1{
-    background-color: transparent; 
-    color: #252525; font-size: 4rem;
-    font-family: 'proza_libreregular', sans-serif;
-    text-shadow: #363636 2px 3px 4px;
-    width: 80%; 
-    text-align: left; 
-    border: none;}
-.static-content.about h3{
-    font-family: 'proza_libresemibold', sans-serif; 
-    font-size: 2.5rem;
-    color: #252525; 
-    background-color: transparent; 
-    border: none;
-    text-align: left; 
-    border-bottom: 3px solid #1A6FB0; 
-    border-radius: 0px;}
-.static-content.about h4{
-    font-family: 'proza_libresemibold', sans-serif; 
-    font-size: 2.25rem;
-    letter-spacing: 0.25rem; 
-    border-bottom: 3px solid #1A6FB0; 
-    text-transform: uppercase;}
+    .static-content.about h1{
+        background-color: transparent; 
+        color: #252525; font-size: 4rem;
+        text-shadow: #363636 2px 3px 4px;
+        width: 80%; 
+        text-align: left; 
+        border: none;}
+    .static-content.about h3{
+        font-size: 2.5rem;
+        color: #252525; 
+        background-color: transparent; 
+        border: none;
+        text-align: left; 
+        border-bottom: 3px solid #1A6FB0; 
+        border-radius: 0px;}
+    .static-content.about h4{
+        font-size: 2.25rem;
+        letter-spacing: 0.25rem; 
+        border-bottom: 3px solid #1A6FB0; 
+        text-transform: uppercase;}
+
 /* About page: Background section */
 .background, .skillset, .development-history, .academic-history { 
     width: 90%;}
-.background p{
-    font-family: 'proza_libreregular', sans-serif; 
-    font-size: 1.5rem;}
+    .background p{
+        font-size: 1.5rem;}
 
 /* About page: Skillset section */
 
@@ -440,17 +433,15 @@ a[href^="http://"]{
 .skill-headers{ 
     font-size: 2.5rem; 
     color: #1A6FB0; 
-    font-family: 'proza_libreregular', sans-serif; 
     margin-left: -1.5%;}
-.skills{ 
-    font-size: 2rem; 
-    font-family: 'proza_libresemibold', sans-serif; 
-    margin-left: -2%;  
-    line-height: 1.2; 
-    letter-spacing: 1px;}
+    .skills{ 
+        font-size: 2rem; 
+        margin-left: -2%;  
+        line-height: 1.2; 
+        letter-spacing: 1px;}
+
 /* About page: Development/work history section */
 .development-history h4{
-    font-family: 'proza_libreregular', sans-serif;
     font-size: 2rem;  
     margin-top: 3%; 
     letter-spacing: 1px;
@@ -458,32 +449,29 @@ a[href^="http://"]{
     uppercase;
     border-bottom: 3px solid #1A6FB0;}
 .development-history h5{
-    font-family: 'proza_libresemibold', sans-serif; 
     font-size: 2rem; 
     line-height: 0.5;
     color: #1A6FB0; 
     padding-top: 0.25em; }
+    .development-history > h5 > a{
+        color: #1A6FB0; 
+        font-weight: 300;  
+        text-decoration: underline;  
+        border: none;}
 .development-history p{
     font-size: 1.8rem; 
-    font-family: 'proza_libreregular', sans-serif;
     margin-left: 1%;}
-.development-history > h5 > a{
-    color: #1A6FB0; 
-    font-weight: 300;  
-    text-decoration: underline;  
-    border: none;}
+
 /* About page: Academic/training history section */
 .academic-history h4{
     text-transform: uppercase; 
-    font-family: 'proza_libresemibold', sans-serif;
     border-bottom: 3px solid #1A6FB0; 
     margin-top: 3%;}
 
 .academic-history h5{
     font-size: 1.5em; 
     line-height: 0.5; 
-    color: #1A6FB0;
-    font-family: 'proza_libresemibold', sans-serif;}
+    color: #1A6FB0;}
 .academic-history p{
     font-size: 1.2em; 
     margin-left: 1%;}
@@ -493,15 +481,15 @@ a[href^="http://"]{
  */
 .static-content.general-coding{
     width: 80%;}
-.static-content.general-coding h1{
-    background-color: transparent; 
-    color: #252525; 
-    font-size: 4rem;
-    font-family: 'proza_libreregular', sans-serif;
-    text-shadow: #363636 2px 3px 4px;
-    width: 80%; 
-    text-align: left; 
-    border: none;}
+    .static-content.general-coding h1{
+        background-color: transparent; 
+        color: #252525; 
+        font-size: 4rem;
+        text-shadow: #363636 2px 3px 4px;
+        width: 80%; 
+        text-align: left; 
+        border: none;}
+        
 /* General Coding Information page: Header for each programming language */
 .section-header{
     color: #252525; 
@@ -512,7 +500,6 @@ a[href^="http://"]{
 
 /* General Coding Information page: paragraph text */
 .static-content.general-coding p{
-    font-family: 'proza_libreregular', sans-serif;
     width: 90%;}
 .static-content.general-coding hr{
     border-bottom: 3px solid #1A6FB0;
@@ -522,38 +509,32 @@ a[href^="http://"]{
  * CODE SAMPLE PAGES -- STYLES FOR .static-content.code-sample-page
  */
 .static-content.code-sample-page h1{
-    font-family: 'proza_libresemibold', sans-serif; 
     text-align: left; 
     letter-spacing: 1rem; 
     margin-bottom: 5%;}
 
 .static-content.code-sample-page h3{
-    font-family: 'proza_libresemibold', sans-serif; 
     text-align: left;
     margin-top: 5%; 
     letter-spacing: 0.5rem; 
     margin-left: -1%;}
 
 .static-content.code-sample-page p{
-    font-family: 'proza_libreregular', sans-serif; 
     font-size: 2rem; 
     width: 90%;}
 
 /* Specific styles for javascript-program pages */
 .page-header.extended-header{
     width: 90%;
-    font-family: 'proza_libreregular', sans-serif;
     font-size: 3.25rem !important; 
     text-align: left;}
 .program-description{
     width: 90%;}
-.program-description h3{
-    font-family: 'proza_libresemibold', sans-serif;
-    font-size: 2.5rem; 
-    margin-left: -2%;}
-.program-description p{
-    font-family: 'proza_libreregular', sans-serif;
-    font-size: 2rem;}
+    .program-description h3{
+        font-size: 2.5rem; 
+        margin-left: -2%;}
+    .program-description p{
+        font-size: 2rem;}
 
 /**
  * JQUERY-TOGGLING PAGE STYLES
@@ -561,7 +542,6 @@ a[href^="http://"]{
 .image-toggle{
     margin-left: -50%;
     margin-bottom: 5%;
-    font-family: 'proza_libreregular', sans-serif;
     font-size: 2rem;
     color: #FFFFFF;
     background-color: #252525;
@@ -569,9 +549,9 @@ a[href^="http://"]{
     padding: 10px;
     border: 1px solid #252525;
     border-radius: 10px; }
-.image-toggle:hover{
-    background-color: #3399ff;
-    transition-duration: 0.5s;}
+    .image-toggle:hover{
+        background-color: #3399ff;
+        transition-duration: 0.5s;}
 .image-result{
     margin-left: -35%;
     margin-top: 10%;}
