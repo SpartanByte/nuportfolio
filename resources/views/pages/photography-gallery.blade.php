@@ -8,6 +8,7 @@
 
         <span class="page-header uppercase-shadow gallery-header">Photography</span>
             <ul class="photo-list">
+<<<<<<< HEAD
                 <li><img src="/images/photography/big-sur-400-300.png" /></li>
                 <li><img src="/images/photography/golden-gate-400-300.png" /></li>
                 <li><img src="/images/photography/falls-park-400-300.png" /></li>
@@ -73,6 +74,15 @@
 
             </ul>
     </div>
+=======
+
+                {{-- Images generated from ImageController@showPhotography --}}
+                @foreach($imageFiles as $imageFile)
+                    <li><a href="{{ $imageFile }}" title="View Full Size" style="width:100%;height:100%;"><img src="{{ $imageFile }}" width="400" height="300" /></a></li>
+                @endforeach
+
+         </div>
+>>>>>>> 3f69ac3b2d6b681775d9b7f795816324e9b637b3
     <div id="gallery-clear-bottom"></div>
 </div>
 @stop

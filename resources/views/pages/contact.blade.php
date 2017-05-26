@@ -44,5 +44,11 @@
                     array('class' => 'btn btn-primary')) !!}
         </div>
         {!! Form::close() !!}
+
+        @if($success==true){
+            {{ $confirm }}
+        }
+        @endif
+
 </div>
 @stop
