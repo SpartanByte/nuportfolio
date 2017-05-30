@@ -12,7 +12,6 @@
   | PAGE ROUTES
   |--------------------------------------------------------------------------
   | Main routes to pages using the PageController
-  |
 */
 
 /**
@@ -21,6 +20,8 @@
 Route::get('/home', 'HomeController@index');
 Route::get('/', 'PageController@home');
 Route::get('pages.about', 'PageController@about' );
+
+
 Route::get('pages.upload', 'PageController@upload');
 Route::get('pages.gallery-test', 'PageController@gallery');
 Route::get('pages.success', 'PageController@success');
@@ -58,16 +59,13 @@ Route::get('pages.photoshop-gallery', 'GalleryController@makePhotoshopGallery');
   | FORM ROUTES
   |--------------------------------------------------------------------------
  */
+/**
+ * Routes for Image Uploader
+ */
 Route::get('upload', function(){
     return View::make('pages.upload');
 });
 Route::post('apply/upload', 'UploadController@upload');
-
-/**
- * ROUTE RETURNING UPLOADED IMAGES ======================================
- */
- Route::get('intervention-resizeImage',['as'=>'intervention.getresizeimage','uses'=>'FileController@getResizeImage']);
- Route::post('intervention-resizeImage',['as'=>'intervention.postresizeimage','uses'=>'FileController@postResizeImage']);
 
 /**
  *  Contact Form Routes
@@ -76,16 +74,9 @@ Route::get('contact',
   ['as' => 'contact', 'uses' => 'ContactController@create']);
 Route::post('contact',
   ['as' => 'contact_store', 'uses' => 'ContactController@store']);
-
-
 /**
- * The following is a tutorial from Laracasts Image Manipulation tutorial
- *       for testing
+ * Routes for Upload/Display Intervention Image example
  */
-function user_photos_path(){
-	return public_path() . '/images/';
-} 
-
 Route::resource('photos', 'PhotosController');
 /**
  * Routes to image uploads, index and gallery
@@ -103,6 +94,9 @@ Route::post('photos.show', function(){
 	return redirect('photos/index');
 });
 
+function user_photos_path(){
+  return public_path() . '/images/';
+} 
 
 /*
   |--------------------------------------------------------------------------
@@ -110,4 +104,14 @@ Route::post('photos.show', function(){
   | PROGRAM SAMPLES OF JAVASCRIPT, PHP, C#, JAVA, ETC
   |--------------------------------------------------------------------------
  */
+/**
+ * START OF ROUTES FOR PROGRAMMING EXAMPLES
+ */
 Route::get('javascript-programs/jquery-toggling', 'ProgramSampleController@jqueryToggle');
+
+/**
+ * ROUTE RETURNING UPLOADED IMAGES ======================================
+ */
+  // Making sure this is not being used before removing completely
+ /*Route::get('intervention-resizeImage',['as'=>'intervention.getresizeimage','uses'=>'FileController@getResizeImage']);
+ Route::post('intervention-resizeImage',['as'=>'intervention.postresizeimage','uses'=>'FileController@postResizeImage']); */

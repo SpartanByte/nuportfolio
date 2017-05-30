@@ -11,7 +11,7 @@ use Illuminate\Foundation\Http\FormRequest;
 	use Input;
 
 
-	class GalleryWorker extends FormRequest{
+	class GalleryRequest extends FormRequest{
 
 		public function getPhotography(){
 
@@ -22,7 +22,12 @@ use Illuminate\Foundation\Http\FormRequest;
         	return [
         		'imagePath', 
         		'imageFiles',
-        	];
+        	]; 
+
+            /* return [
+                'imagepath' => $imagePath, 
+                'imageFiles' => $imageFiles,
+            ]; */
 
 		}
 
