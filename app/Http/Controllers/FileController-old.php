@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Image;
 
+
+    /**
+     * ==== MAKING SURE THIS IS NO LONGER BEING USED BEFORE REMOVING
+     */
 class FileController extends Controller {
     public function getResizeImage()
     {

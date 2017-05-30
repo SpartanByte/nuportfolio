@@ -248,6 +248,27 @@ nav.navbar.navbar-default{
     margin-left: 15px;
     padding-bottom: 5px;}
 
+
+.static-content.gallery a{
+    border: none;
+}
+    .static-content.gallery a:hover{
+        border: none;
+    }
+
+.static-content.gallery img{
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+    .static-content.gallery img:hover{
+        opacity: 0.7;
+        transition-duration: 0.5s;
+    }
+
+
+
+
+
 /**
  * Setting up these styles to go into the auto-generated image gallery by Javascript
  * Direction for this using Javascript/AJAX is at https://davidwalsh.name/generate-photo-gallery

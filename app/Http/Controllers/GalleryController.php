@@ -24,7 +24,7 @@ class GalleryController extends Controller
         $imagePath = 'images/photography';
         $imageFiles = File::allFiles($imagePath); 
 
-        return view('pages.photography-gallery', ['imagePath' => $imagePath, 'imageFiles' => $imageFiles]); 
+        return view('pages/photography', ['imagePath' => $imagePath, 'imageFiles' => $imageFiles]); 
 
         /* Am trying to move this to a Request(?), using
 
@@ -44,7 +44,7 @@ class GalleryController extends Controller
         $imagePath = 'images/photoshop';
         $imageFiles = File::allFiles($imagePath);
 
-        return view('pages.photoshop-gallery', ['imagePath' => $imagePath, 'imageFiles' => $imageFiles]);
+        return view('pages/photoshop', ['imagePath' => $imagePath, 'imageFiles' => $imageFiles]);
 
     }
 }

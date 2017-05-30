@@ -29,14 +29,14 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coding<span class="caret"></span></a>
                             <ul class="dropdown-menu" id="navbar-dropdown-override">
-                                <li><a href="{{ url('code_pages.code-information') }}">General Information</a></li>
-                                <li><a href="{{ url('code_pages.csharp-samples') }}" title="C# Programming Samples">C#</a></li>
-                                <li><a href="{{ url('code_pages.css-samples') }}" titile="Cascading Style Sheets">CSS (Cascading Style Sheets)</a></li>
-                                <li><a href="{{ url('code_pages.java-samples') }}" title="Java Programming Samples">Java Samples</a></li>
-                                <li><a href="{{ url('code_pages.javascript-samples') }}" title="JavaScript Programming Scripting Samples">JavaScript</a></li>
-                                <li><a href="{{ url('code_pages.php-samples')  }}" title="PHP Code Examples">PHP</a></li>
-                                <li><a href="{{ url('code_pages.python-samples') }}" title="Python Programming Samples">Python</a></li>
-                                <li><a href="{{ url('code_pages.umbraco-cms') }}" title="Umbraco ASP.NET CMS">Umbraco CMS</a></li>
+                                <li><a href="{{ url('coding/general') }}">General Information</a></li>
+                                <li><a href="{{ url('coding/csharp') }}" title="C# Programming Samples">C#</a></li>
+                                <li><a href="{{ url('coding/css') }}" titile="Cascading Style Sheets">CSS (Cascading Style Sheets)</a></li>
+                                <li><a href="{{ url('coding/java') }}" title="Java Programming Samples">Java Samples</a></li>
+                                <li><a href="{{ url('coding/javascript') }}" title="JavaScript Programming Scripting Samples">JavaScript</a></li>
+                                <li><a href="{{ url('coding/php')  }}" title="PHP Code Examples">PHP</a></li>
+                                <li><a href="{{ url('coding/python') }}" title="Python Programming Samples">Python</a></li>
+                                <li><a href="{{ url('coding/umbraco') }}" title="Umbraco ASP.NET CMS">Umbraco CMS</a></li>
                                 <li><a href="{{ url('javascript-programs/jquery-toggling') }}" title="jQuery Toggle Example">jQuery Toggling</a></li>
                             </ul>
                         </li>
@@ -47,16 +47,16 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galleries<span class="caret"></span></a>
                             <ul class="dropdown-menu" id="navbar-dropdown-override">
-                                <li><a href="{{ url('pages.photoshop-gallery') }}">Photoshop Gallery</a></li>
-                                <li><a href="{{ url('pages.photography-gallery') }}">Photography Gallery</a></li>
-                                {{-- <li><a href="{{ url('templates.gallery-template') }}">Gallery Template</a></li> --}}
+                                <li><a href="{{ url('pages/photoshop') }}">Photoshop Gallery</a></li>
+                                <li><a href="{{ url('pages/photography') }}">Photography Gallery</a></li>
+                                {{-- <li><a href="{{ url('templates/gallery-template') }}">Gallery Template</a></li> --}}
                             </ul>
                         </li>
                     </ul>
 
                     {{-- NON-dropdown menu items  --}}
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ url('pages.about') }}">About</a></li>
+                        <li><a href="{{ url('pages/about') }}">About</a></li>
                         <li><a href="{{ url('contact') }}">Contact</a></li>
                     </ul>
 
@@ -65,10 +65,10 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Img CRUD Testing<span class="caret"></span></a>
                             <ul class="dropdown-menu" id="navbar-dropdown-override">
-                                <li><a href="{{ url('photos.image_example') }}">Example Result of Intervention Image</a></li>
-                                <li><a href="{{ url('photos.create') }}">Test the Upload/Display Intervention Image Functionality</a></li>
+                                <li><a href="{{ url('photos/image_example') }}">Example Result of Intervention Image</a></li>
+                                <li><a href="{{ url('photos/create') }}">Test the Upload/Display Intervention Image Functionality</a></li>
                                 <li><a href="{{ url('upload') }}">Image Uploader</a></li>
-                                <li><a href="{{ url('pages.slideshow') }}">Slideshow</a></li>
+                                <li><a href="{{ url('pages/slideshow') }}">Slideshow</a></li>
                             </ul>
                         </li>
                     </ul>
