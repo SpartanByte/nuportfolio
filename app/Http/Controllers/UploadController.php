@@ -8,6 +8,9 @@
     use Request;
     use Session;
 
+    /**
+     *  FOR "IMAGE UPLOADER" functionality
+     */
     class UploadController extends Controller{
 
         public function upload(){
@@ -34,7 +37,6 @@
                         //Sending back message
                         Session::flash('success', 'Upload is successful!');
                         return Redirect::to('upload-success');
-
                     }
                 }
         }
