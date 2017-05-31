@@ -42,7 +42,7 @@ class PhotosController extends Controller
 
     public function show(){
     	
-        $imagePath = 'images/logos';
+        $imagePath = 'uploads';
     	/* $imagePath = user_photos_path(); */
 
     	$imageFiles = File::allFiles($imagePath);

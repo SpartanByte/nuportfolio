@@ -1,3 +1,4 @@
+{{-- These should should be in the head.php file only, they are doubled up --}}
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -34,10 +35,13 @@
                                 <li><a href="{{ url('coding/css') }}" titile="Cascading Style Sheets">CSS (Cascading Style Sheets)</a></li>
                                 <li><a href="{{ url('coding/java') }}" title="Java Programming Samples">Java Samples</a></li>
                                 <li><a href="{{ url('coding/javascript') }}" title="JavaScript Programming Scripting Samples">JavaScript</a></li>
+                                    <ul class="nav-third-level">
+                                        <li><a href="{{ url('programs/js/jquery-toggling') }}" title="jQuery Toggle">jQuery Toggling</a></li>
+                                        <li><a href=" {{ url('programs/js/slideshow') }}" title="Javascript Slideshow">Slideshow</a></li>
+                                    </ul>
                                 <li><a href="{{ url('coding/php')  }}" title="PHP Code Examples">PHP</a></li>
                                 <li><a href="{{ url('coding/python') }}" title="Python Programming Samples">Python</a></li>
                                 <li><a href="{{ url('coding/umbraco') }}" title="Umbraco ASP.NET CMS">Umbraco CMS</a></li>
-                                <li><a href="{{ url('javascript-programs/jquery-toggling') }}" title="jQuery Toggle Example">jQuery Toggling</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -68,7 +72,6 @@
                                 <li><a href="{{ url('photos/image_example') }}">Example Result of Intervention Image</a></li>
                                 <li><a href="{{ url('photos/create') }}">Test the Upload/Display Intervention Image Functionality</a></li>
                                 <li><a href="{{ url('upload') }}">Image Uploader</a></li>
-                                <li><a href="{{ url('pages/slideshow') }}">Slideshow</a></li>
                             </ul>
                         </li>
                     </ul>

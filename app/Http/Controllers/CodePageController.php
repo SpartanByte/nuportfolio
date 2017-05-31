@@ -18,32 +18,31 @@ class CodePageController extends Controller
      * THIS CONTROLLER IS RESPONSIBLE FOR ALL PAGES WITHIN THE CODE SAMPLES AND THEIR FUNCTIONALITY
      * @return [type] [description]
      */
-   /* public function info()
-    {
-        // return view('coding/general');
+    public function general(){
+        return view('coding/general');
     }
-    public function javaSamples()
+    public function javaPage()
     {
-        // return view('coding/java');
+        return view('coding/java');
     }
     public function javascriptPage()
     {
-    	// return view('coding/javascript');
+    	return view('coding/javascript');
     }
-    public function phpSamples(){
+    public function phpPage(){
 
-        //return view('coding/php');
+        return view('coding/php');
     }
-    public function pythonSamples(){
+    public function pythonPage(){
         return view('coding/python');
     }
-    public function csharpSamples(){
+    public function csharpPage(){
         return view('coding/csharp');
     }
-    public function cssSamples(){
+    public function cssPage(){
         return view('coding/css');
     }
-    public function umbracoCms(){
-        return view('coding/umbraco-cms');
-    } */
+    public function umbracoPage(){
+        return view('coding/umbraco');
+    } 
 }

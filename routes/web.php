@@ -7,33 +7,21 @@
 | by your application. Just tell Laravel the URIs it should respond
 | to using a Closure or controller method. Build something great!
 */
-/*
-  |--------------------------------------------------------------------------
-  | PAGE ROUTES
-  |--------------------------------------------------------------------------
-  | Main routes to pages using the PageController
-*/
 
   Route::get('/home', 'HomeController@index');
   Route::get('/', 'PageController@home');
 
   // Intervention Image Example 
   Route::get('photos/image_example', 'PageController@interventionExample');
+
 /**
- * Page Routes 
+ * PAGE CONTROLLER ROUTES ======================================
+ * ==== replacing PageController
  */
 Route::group(['prefix' => 'pages'], function(){
 
-  Route::get('about', function(){
-    return view('pages/about');
-  });
-
-  Route::get('slideshow', function(){
-    return view('pages/slideshow');
-
-  Route::get('image-example', function(){
-    return view('photos/image_example');
-  });
+  Route::get('about', 'PageController@about');
+  Route::get('image-example', 'PageController@interventionExample');
 
   Route::get('intervention', function(){
     return view('photos/create');
@@ -41,59 +29,24 @@ Route::group(['prefix' => 'pages'], function(){
 
 });
 
-
-
-});
-
-
   Route::get('pages.upload', 'PageController@upload');
   Route::get('pages.success', 'PageController@success');
   Route::get('upload-success', 'PageController@uploadSuccess');
-  Route::get('pages.picturetest', 'PageController@pictureTest');
+
 /**
  * CODE PAGE CONTROLLER ROUTES ======================================
+ * 
  */
 Route::group(['prefix' => 'coding'], function()
 {
-    Route::get('general', function(){ // Coding -> General Information page
-      return view('coding/general');
-    });
-
-    Route::get('java', function(){ // Coding --> Java Information page
-      return view('coding/java');
-    });
-
-    Route::get('javascript', function(){ // Coding --> JavaScript Information page
-      return view('coding/javascript');
-    });
-
-    Route::get('php', function(){ // Coding --> CSS Information page
-      return view('coding/php');
-    });
-
-    Route::get('python', function(){ // Coding --> Python Information page
-      return view('coding/python');
-    });
-
-    Route::get('csharp', function(){ // Coding --> C# Information page
-      return view('coding/csharp');
-    });
-
-    Route::get('css', function(){ // Coding --> CSS Information page
-      return view('coding/css');
-    });
-
-    Route::get('umbraco', function(){ // Coding --> Umbraco page
-      return view('coding/umbraco');
-    });
-
-    // Route::get('coding/java', 'CodePageController@javaSamples');
-    // Route::get('coding/javascript', 'CodePageController@javascriptPage');
-    // Route::get('coding/php', 'CodePageController@phpSamples');
-    // Route::get('coding/python', 'CodePageController@pythonSamples');
-    // Route::get('coding/csharp', 'CodePageController@csharpSamples');
-    // Route::get('coding/css', 'CodePageController@cssSamples');
-    // Route::get('coding/umbraco-cms', 'CodePageController@umbracoCms');
+    Route::get('general', 'CodePageController@general');
+    Route::get('java', 'CodePageController@javaPage');
+    Route::get('javascript', 'CodePageController@javascriptPage');
+    Route::get('php', 'CodePageController@phpPage');
+    Route::get('python', 'CodePageController@pythonPage');
+    Route::get('csharp', 'CodePageController@csharpPage');
+    Route::get('css', 'CodePageController@cssPage');
+    Route::get('umbraco', 'CodePageController@umbracoPage');
 });
 
 /**
@@ -123,10 +76,14 @@ Route::post('apply/upload', 'UploadController@upload');
 /**
  *  Contact Form Routes
  */
-Route::get('contact',
-  ['as' => 'contact', 'uses' => 'ContactController@create']);
-Route::post('contact',
-  ['as' => 'contact_store', 'uses' => 'ContactController@store']);
+// Refactoring routes, will remove
+Route::get('contact', 'ContactController@create')->name('contact');
+  // ['as' => 'contact', 'uses' => 'ContactController@create']);
+Route::post('contact', 'ContactController@store')->name('contact_store');
+  // ['as' => 'contact_store', 'uses' => 'ContactController@store']);
+
+
+
 /**
  * Routes for Upload/Display Intervention Image example
  */
@@ -140,7 +97,7 @@ Route::get('photos/index', 'PhotosController@index');
 Route::get('photos/image-fill-test', 'PhotosController@imageTest');
 
 // post functionality for photos
-Route::post('photos.show', function(){
+Route::post('photos/show', function(){
 	$imageName = new ImageName;
 	$imageName->fileName = $request->fileName;
 	$imageName->save();
@@ -160,7 +117,14 @@ function user_photos_path(){
 /**
  * START OF ROUTES FOR PROGRAMMING EXAMPLES
  */
-Route::get('javascript-programs/jquery-toggling', 'ProgramSampleController@jqueryToggle');
+Route::group(['prefix' => 'programs/js'], function(){
+
+  Route::get('jquery-toggling', 'ProgramSampleController@jqueryToggle');
+  Route::get('slideshow', 'ProgramSampleController@jsSlideshow');
+
+});
+
+
 
 /**
  * ROUTE RETURNING UPLOADED IMAGES ======================================
