@@ -18,14 +18,9 @@ class PageController extends BaseController
     public function home(){
         return view('pages.home');
     }
-    /* public function about()
-    {
-    	// return view('pages.about');
+    public function about(){
+        return view('pages/about');
     }
-
-    public function intervention(){
-       // return view('photos/create');
-    } */
     public function upload()
     {
         return view('pages.upload');
@@ -41,9 +36,6 @@ class PageController extends BaseController
     // new method for gallery page template
     public function galleryTemplate(){
         return view('templates/gallery-template');
-    }
-    public function slideshow(){
-        return view('pages/slideshow');
     }
 
     public function interventionExample(){

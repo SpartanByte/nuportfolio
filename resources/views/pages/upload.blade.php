@@ -18,20 +18,31 @@
                             <div class="secure"><h3>Upload Form</h3></div>
                                 {!! Form::open(array('url'=>'apply/upload', 'method'=>'POST', 'files'=>true)) !!}
 
-                                <div class="control-group">
-                                    <div class="controls">
-                                        {!! Form::file('image') !!}
+                                    {{-- Start of container for input box  --}}
+
+                                    <div class="col-md-6">
+                                        {!! Form::label('pathLabel', 'Image Path:') !!}
+                                        {!! Form::text('uploadImgPath', null, ['class' => 'form-control']) !!}
+                                        {!! Form::label('titleLabel', 'Title for image:') !!}
+                                        {!! Form::text('uploadImgTitle', null, ['class' => 'form-control']) !!}
+                                    {{-- End of container for input box  --}}<br />
+
+                                      {!! Form::file('image', array('class' => 'browse-btn')) !!}
                                         <p class="errors">{!! $errors->first('image') !!}</p>
 
                                         @if(Session::has('error'))
                                             <p class="errors">{!! Session::get('error') !!}</p>
                                          @endif
+
+
+                                         {!! Form::submit('Submit', array('class'=>'send-btn uploader')) !!}
+                                            {!! Form::close() !!}
                                     </div>
-                                </div>{{-- END OF CONTROL-GROUP  --}}
-                            
                                 <div id="success"></div>
+                                    {{-- <div class="col-md-6">
                                     {!! Form::submit('Submit', array('class'=>'send-btn')) !!}
-                                    {!! Form::close() !!}
+                                    {!! Form::close() !!} --}}
+                                    </div>
                                 </div>
                                 </div>{{-- END OF CONTROL GROUP  --}}
                             </div>{{-- END OF SECURE  --}}
@@ -41,3 +52,4 @@
             </div>{{-- ABOUT-SECTION --}}
         </div>{{-- END OF STATIC-CONTENT  --}}    
     @stop
+

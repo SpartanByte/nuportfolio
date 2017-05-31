@@ -48,8 +48,8 @@
             </ul>
         </section>
 
-        <h4>Enter For Grayscale</h4>
-        <img class="image-color" src="/images/slide/red.jpg" width="333" height="292" />
+        <p><span class="h3" style="text-align:left;">Image will appear here.</span></p>
+        {{-- <img class="image-color" src="/images/slide/red.jpg" width="333" height="292" /> --}}
         <hr />
     </div>
 @stop

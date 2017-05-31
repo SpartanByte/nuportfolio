@@ -23,16 +23,10 @@ class GalleryController extends Controller
 
         $imagePath = 'images/photography';
         $imageFiles = File::allFiles($imagePath); 
+        return view('pages/photography')->with(compact('imagePath', 'imageFiles'));
 
-        return view('pages/photography', ['imagePath' => $imagePath, 'imageFiles' => $imageFiles]); 
-
-        /* Am trying to move this to a Request(?), using
-
-        public function makePhotographyGallery(GalleryRequest $request){
-            
-            $this->request->imageFiles = $imageFiles;
-            'imageFiles' => $request->get('imageFiles'); 
-            return view('pages.photography-gallery')->with($imagePath, $imageFiles); */
+        // replacing with compact()
+        // return view('pages/photography', ['imagePath' => $imagePath, 'imageFiles' => $imageFiles]); 
     }
 
     /**
@@ -43,8 +37,9 @@ class GalleryController extends Controller
 
         $imagePath = 'images/photoshop';
         $imageFiles = File::allFiles($imagePath);
+        return view('pages/photoshop')->with(compact('imagePath', 'imageFiles'));
 
-        return view('pages/photoshop', ['imagePath' => $imagePath, 'imageFiles' => $imageFiles]);
-
+        // replacing with compact()
+        // return view('pages/photoshop', ['imagePath' => $imagePath, 'imageFiles' => $imageFiles]);
     }
 }

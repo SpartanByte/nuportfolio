@@ -6,7 +6,7 @@
     <header class="row">
         @include('includes.header')
     </header>
-
+            {{-- This shows the file after upload (example), need to alter the name of the file, misleading --}}
             <div class="page-header">
                       <br /><br />{{-- These are only being used to space the "Uploaded Photos" header for now (below navigation)  --}}
                 </div>
