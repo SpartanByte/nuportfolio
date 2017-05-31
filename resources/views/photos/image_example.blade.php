@@ -28,7 +28,7 @@
                   
                     <div class="panel-body">
                       <div style="margin-left:30px;">
-                        <img src="images/{{ $fileName }}" class="img-rounded col-md-2" title="This image was just uploaded with Laravel!"/><br />
+                        <img src="/images/{{ $fileName }}" class="img-rounded col-md-2" title="This image was just uploaded with Laravel!"/><br />
                         <h5 class="h3 col-md-2" style="text-align:center;clear:both;float:left;">{{ $imageTitle }}</h5>{{--  $imageTitle from PhotosController --}}
                       </div>
                     </div>{{-- end of panel-body --}}
