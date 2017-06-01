@@ -38,12 +38,10 @@
                         Input::file('image')->move($imgInputPath, $fileName);
 
                         //Sending back message
-                        Session::flash('success', 'Upload is successful!');
-                        return Redirect::to('upload-success');
+                        return view('pages.success')->with(['fileName' => $fileName]);
                     }
                 }
         }
-
         /*
             Controls image display from upload.
         */

@@ -23,34 +23,24 @@ class PageController extends BaseController
     }
     public function upload()
     {
-        return view('pages.upload');
+        return view('pages/upload');
     }
-
-    public function success(){
-        return view('pages.success');
-    }
-    public function uploadSuccess(){
-        return view('pages.upload-success');
-    }
-
     // new method for gallery page template
     public function galleryTemplate(){
         return view('templates/gallery-template');
     }
+<<<<<<< HEAD
 
     public function interventionExample(){
+=======
+>>>>>>> bwardwell
 
-    // These are temporary static values until the "pull each image from folder and display" issue is solved
-        $fileName = 'PastelTile.jpg';
-        $image = Image::make('images/PastelTile.jpg');
-        $imageTitle = 'Pastel Title';
-        return view('photos/image_example', ['fileName' => $fileName, 'uploadedImage' => $image, 'imageTitle' => $imageTitle]);
+    public function interventionCreate(){
+         return view('photos/create');
     }
 
     public function currentPage(){
-
         $currentPage = url()->current();
         return view('code_pages.code-information', $currentPage);
     }
-
 }
