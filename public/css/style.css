@@ -282,8 +282,6 @@ nav.navbar.navbar-default{
 
 
 
-
-
 /**
  * Setting up these styles to go into the auto-generated image gallery by Javascript
  * Direction for this using Javascript/AJAX is at https://davidwalsh.name/generate-photo-gallery
@@ -403,7 +401,6 @@ nav.navbar.navbar-default{
     padding-bottom: 5px;
     padding-left: 5px;}
 /* END OF STYLES FOR UPLOAD.BLADE.PHP */
-
 
 /**
  * Slideshow CSS
