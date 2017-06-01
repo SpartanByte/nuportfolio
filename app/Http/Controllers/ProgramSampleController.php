@@ -17,6 +17,10 @@ class ProgramSampleController extends Controller
     //
      public function jqueryToggle()
     {
-        return view('javascript-programs/jquery-toggling');
+        return view('programs/js/jquery-toggling');
+    }
+    public function jsSlideshow()
+    {
+    	return view('programs/js/slideshow');
     }
 }

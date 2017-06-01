@@ -2,10 +2,7 @@
 @extends('layouts.default')
 
 @section('content')
-
-
           <h1>Upload a New Photo</h1>
-
           {!! Form::open(['route' => 'photos.store', 'files' => true]) !!}
 
           <div class="form-group">
@@ -29,9 +26,7 @@
                   </div>
                 </div>{{-- end of uploading styling --}}
               </div> {{-- end of form-group  --}}
-            </div>
-
-                    
+            </div>            
             {!! Form::close() !!}
 
 @stop
