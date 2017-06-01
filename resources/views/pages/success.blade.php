@@ -8,6 +8,8 @@
 
                 <h2>This is the success page!</h2>
                 <h3>You have successed!</h3>
+                <h3>{{ $fileName }} was uploaded</h3>
+
                 </div>
                 </div>
             </div>

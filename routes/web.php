@@ -3,15 +3,12 @@
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
+<<<<<<< HEAD
 | This file is where you may define all of the routes that are handled
 | by your application. Just tell Laravel the URIs it should respond
 | to using a Closure or controller method. Build something great!
-*/
-/*
-  |--------------------------------------------------------------------------
-  | PAGE ROUTES
-  |--------------------------------------------------------------------------
-  | Main routes to pages using the PageController
+=======
+>>>>>>> bwardwell
 */
 
   Route::get('/home', 'HomeController@index');
@@ -19,21 +16,24 @@
 
   // Intervention Image Example 
   Route::get('photos/image_example', 'PageController@interventionExample');
+
 /**
- * Page Routes 
+ * PAGE CONTROLLER ROUTES ======================================
+<<<<<<< HEAD
+ * ==== replacing PageController
+=======
+>>>>>>> bwardwell
  */
 Route::group(['prefix' => 'pages'], function(){
+  Route::get('about', 'PageController@about'); // About page
+  Route::get('image-example', 'PageController@interventionExample'); // Image Intervention Example page
+  Route::get('upload', 'PageController@upload'); // Image Upload page
+  Route::get('intervention', 'PageController@interventionCreate'); // Image Intervention upload page 'photos/create'
+}); 
 
-  Route::get('about', function(){
-    return view('pages/about');
-  });
-
-  Route::get('slideshow', function(){
-    return view('pages/slideshow');
-
-  Route::get('image-example', function(){
-    return view('photos/image_example');
-  });
+<<<<<<< HEAD
+  Route::get('about', 'PageController@about');
+  Route::get('image-example', 'PageController@interventionExample');
 
   Route::get('intervention', function(){
     return view('photos/create');
@@ -41,59 +41,37 @@ Route::group(['prefix' => 'pages'], function(){
 
 });
 
-
-
-});
-
-
   Route::get('pages.upload', 'PageController@upload');
   Route::get('pages.success', 'PageController@success');
   Route::get('upload-success', 'PageController@uploadSuccess');
-  Route::get('pages.picturetest', 'PageController@pictureTest');
+
+=======
+>>>>>>> bwardwell
 /**
  * CODE PAGE CONTROLLER ROUTES ======================================
+ * 
  */
 Route::group(['prefix' => 'coding'], function()
 {
-    Route::get('general', function(){ // Coding -> General Information page
-      return view('coding/general');
-    });
-
-    Route::get('java', function(){ // Coding --> Java Information page
-      return view('coding/java');
-    });
-
-    Route::get('javascript', function(){ // Coding --> JavaScript Information page
-      return view('coding/javascript');
-    });
-
-    Route::get('php', function(){ // Coding --> CSS Information page
-      return view('coding/php');
-    });
-
-    Route::get('python', function(){ // Coding --> Python Information page
-      return view('coding/python');
-    });
-
-    Route::get('csharp', function(){ // Coding --> C# Information page
-      return view('coding/csharp');
-    });
-
-    Route::get('css', function(){ // Coding --> CSS Information page
-      return view('coding/css');
-    });
-
-    Route::get('umbraco', function(){ // Coding --> Umbraco page
-      return view('coding/umbraco');
-    });
-
-    // Route::get('coding/java', 'CodePageController@javaSamples');
-    // Route::get('coding/javascript', 'CodePageController@javascriptPage');
-    // Route::get('coding/php', 'CodePageController@phpSamples');
-    // Route::get('coding/python', 'CodePageController@pythonSamples');
-    // Route::get('coding/csharp', 'CodePageController@csharpSamples');
-    // Route::get('coding/css', 'CodePageController@cssSamples');
-    // Route::get('coding/umbraco-cms', 'CodePageController@umbracoCms');
+<<<<<<< HEAD
+    Route::get('general', 'CodePageController@general');
+    Route::get('java', 'CodePageController@javaPage');
+    Route::get('javascript', 'CodePageController@javascriptPage');
+    Route::get('php', 'CodePageController@phpPage');
+    Route::get('python', 'CodePageController@pythonPage');
+    Route::get('csharp', 'CodePageController@csharpPage');
+    Route::get('css', 'CodePageController@cssPage');
+    Route::get('umbraco', 'CodePageController@umbracoPage');
+=======
+    Route::get('general', 'CodePageController@general'); // General Coding Information page
+    Route::get('java', 'CodePageController@javaPage'); // Java page
+    Route::get('javascript', 'CodePageController@javascriptPage'); // JavaScript page
+    Route::get('php', 'CodePageController@phpPage'); // PHP page
+    Route::get('python', 'CodePageController@pythonPage'); // Python page
+    Route::get('csharp', 'CodePageController@csharpPage'); // C# page
+    Route::get('css', 'CodePageController@cssPage'); // CSS page
+    Route::get('umbraco', 'CodePageController@umbracoPage'); // Umbraco page
+>>>>>>> bwardwell
 });
 
 /**
@@ -101,17 +79,9 @@ Route::group(['prefix' => 'coding'], function()
  */
 // * Gallery Template, will eventually move to a TemplateController when Admin Panel is built
 Route::get('templates/gallery-template', 'PageController@galleryTemplate');
-// Photography Route :: Generates gallery and shows view
-Route::get('pages/photography', 'GalleryController@makePhotographyGallery');
-// Photoshop Route :: Generates gallery and shows view
-Route::get('pages/photoshop', 'GalleryController@makePhotoshopGallery');
+Route::get('pages/photography', 'GalleryController@makePhotographyGallery'); // Generates gallery/shows view
+Route::get('pages/photoshop', 'GalleryController@makePhotoshopGallery'); // Generates gallery/shows view
 
-
-/*
-  |--------------------------------------------------------------------------
-  | FORM ROUTES
-  |--------------------------------------------------------------------------
- */
 /**
  * Routes for Image Uploader
  */
@@ -123,24 +93,37 @@ Route::post('apply/upload', 'UploadController@upload');
 /**
  *  Contact Form Routes
  */
-Route::get('contact',
-  ['as' => 'contact', 'uses' => 'ContactController@create']);
-Route::post('contact',
-  ['as' => 'contact_store', 'uses' => 'ContactController@store']);
+<<<<<<< HEAD
+// Refactoring routes, will remove
+Route::get('contact', 'ContactController@create')->name('contact');
+  // ['as' => 'contact', 'uses' => 'ContactController@create']);
+Route::post('contact', 'ContactController@store')->name('contact_store');
+  // ['as' => 'contact_store', 'uses' => 'ContactController@store']);
+
+
+=======
+// Creates and sends contact email
+Route::get('contact', 'ContactController@create')->name('contact');
+Route::post('contact', 'ContactController@store')->name('contact_store');
+>>>>>>> bwardwell
+
 /**
- * Routes for Upload/Display Intervention Image example
+ * IMAGE INTERVENTION (EXAMPLE AND UPLOAD) ROUTES
  */
-Route::resource('photos', 'PhotosController');
+Route::resource('photos', 'PhotosController'); 
 /**
  * Routes to image uploads, index and gallery
  */
-Route::get('photos/create', 'PhotosController@create');
-Route::get('photos.show', 'PhotosController@show');
-Route::get('photos/index', 'PhotosController@index');
-Route::get('photos/image-fill-test', 'PhotosController@imageTest');
+Route::group(['prefix' => 'photos'], function()
+{
+  Route::get('create', 'PhotosController@create'); // upload page
+  Route::get('show', 'PhotosController@show'); // show and index both list uploaded files (will only need one view)
+  Route::get('index', 'PhotosController@index');
+  Route::get('image_example', 'PhotosController@interventionExample'); // Static example of the Image Intervention resizing result page
+});
 
 // post functionality for photos
-Route::post('photos.show', function(){
+Route::post('photos/show', function(){
 	$imageName = new ImageName;
 	$imageName->fileName = $request->fileName;
 	$imageName->save();
@@ -151,20 +134,21 @@ function user_photos_path(){
   return public_path() . '/images/';
 } 
 
-/*
-  |--------------------------------------------------------------------------
-  | ROUTES FOR DISTRIBUTING TRAFFIC AND ANY OTHER NEEDED PROGRAMMING FOR THE 
-  | PROGRAM SAMPLES OF JAVASCRIPT, PHP, C#, JAVA, ETC
-  |--------------------------------------------------------------------------
- */
 /**
  * START OF ROUTES FOR PROGRAMMING EXAMPLES
  */
-Route::get('javascript-programs/jquery-toggling', 'ProgramSampleController@jqueryToggle');
+Route::group(['prefix' => 'programs/js'], function(){
+<<<<<<< HEAD
 
-/**
- * ROUTE RETURNING UPLOADED IMAGES ======================================
- */
-  // Making sure this is not being used before removing completely
- /*Route::get('intervention-resizeImage',['as'=>'intervention.getresizeimage','uses'=>'FileController@getResizeImage']);
- Route::post('intervention-resizeImage',['as'=>'intervention.postresizeimage','uses'=>'FileController@postResizeImage']); */
+  Route::get('jquery-toggling', 'ProgramSampleController@jqueryToggle');
+  Route::get('slideshow', 'ProgramSampleController@jsSlideshow');
+
+});
+
+
+=======
+  Route::get('jquery-toggling', 'ProgramSampleController@jqueryToggle'); // jQuery toggle example
+  Route::get('slideshow', 'ProgramSampleController@jsSlideshow'); // JavaScript slideshow example
+>>>>>>> bwardwell
+
+});

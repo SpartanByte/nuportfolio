@@ -5,7 +5,7 @@
 
 html{
     background-color: transparent;
-    font-size: 100%;}
+    font-size: 14px;}
 
 body{
     font-family: 'proza_libreregular', sans-serif !important;
@@ -13,10 +13,13 @@ body{
 
 /* Formatting styles */
 .page-header{
+    padding-top: 4em;
     color: #252525;
-    font-size: 4em !important;
-    letter-spacing: 1px;
     text-align: center;}
+
+.h1{font-size: 4em !important;}
+.h2{font-size: 3.5rem !important;}
+.h3{font-size: 3rem !important; }
 
 .uppercase-shadow{
     text-transform: uppercase;
@@ -130,6 +133,18 @@ nav.navbar.navbar-default{
 
 #navbar-dropdown-override a:hover{
     background-color: #82734C; /* medium blue background when navbar items are hovered over 80BFFF*/}
+
+.nav-third-level {
+    list-style-type: none;
+    background-color: #b4ab93;
+    text-decoration: none;}
+.nav-third-level li{
+    padding: 2%;}
+.nav-third-level li:hover{
+    background-color: #82734c;}
+.nav-third-level:hover a{
+    cursor: pointer;
+    text-decoration: none;}
 
 /**
  * #code-content overrides any Bootstrap styles for any of the Code Samples pages (also has the static-content class applied) 
@@ -267,8 +282,6 @@ nav.navbar.navbar-default{
 
 
 
-
-
 /**
  * Setting up these styles to go into the auto-generated image gallery by Javascript
  * Direction for this using Javascript/AJAX is at https://davidwalsh.name/generate-photo-gallery
@@ -374,6 +387,12 @@ nav.navbar.navbar-default{
 .send-btn{
     margin-left: 15px;}
 
+.send-btn.uploader{
+    margin: 2% 0 0 0;
+    padding: 0 1.5%;
+    font-size: 1.6rem;
+    background-color: #82734C;}
+
 .controls input{
     margin-left: 15px;
     border: 2px solid rgba(128,128,128,.2);
@@ -382,7 +401,6 @@ nav.navbar.navbar-default{
     padding-bottom: 5px;
     padding-left: 5px;}
 /* END OF STYLES FOR UPLOAD.BLADE.PHP */
-
 
 /**
  * Slideshow CSS

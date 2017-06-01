@@ -29,18 +29,19 @@
                 else {
                     // checking for file validity
                     if(Input::file('image')->isValid()){
-                        $destinationPath = 'uploads';
+                        
+                        $input = Input::all();
+                        $imgInputPath = $input['uploadImgPath'];
+                        $imgInputTitle = $input['uploadImgTitle'];
                         $extension = Input::file('image')->getClientOriginalExtension(); // image extension
-                        $fileName = rand(11111,99999).'.'.$extension; // renaming image
-                        Input::file('image')->move($destinationPath, $fileName); // moving file to given path
+                        $fileName = $imgInputTitle . '.' .$extension;
+                        Input::file('image')->move($imgInputPath, $fileName);
 
                         //Sending back message
-                        Session::flash('success', 'Upload is successful!');
-                        return Redirect::to('upload-success');
+                        return view('pages.success')->with(['fileName' => $fileName]);
                     }
                 }
         }
-
         /*
             Controls image display from upload.
         */
