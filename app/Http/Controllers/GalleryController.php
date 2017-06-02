@@ -19,12 +19,7 @@ class GalleryController extends Controller
         $imagePath = 'images/photography';
         $imageFiles = File::allFiles($imagePath); 
         return view('pages/photography')->with(compact('imagePath', 'imageFiles'));
-<<<<<<< HEAD
 
-        // replacing with compact()
-        // return view('pages/photography', ['imagePath' => $imagePath, 'imageFiles' => $imageFiles]); 
-=======
->>>>>>> bwardwell
     }
 
     /**
@@ -35,11 +30,5 @@ class GalleryController extends Controller
         $imagePath = 'images/photoshop';
         $imageFiles = File::allFiles($imagePath);
         return view('pages/photoshop')->with(compact('imagePath', 'imageFiles'));
-<<<<<<< HEAD
-
-        // replacing with compact()
-        // return view('pages/photoshop', ['imagePath' => $imagePath, 'imageFiles' => $imageFiles]);
-=======
->>>>>>> bwardwell
     }
 }

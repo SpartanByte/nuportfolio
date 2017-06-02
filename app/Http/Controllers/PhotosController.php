@@ -35,14 +35,10 @@ class PhotosController extends Controller
     }
 
     public function show(){
-<<<<<<< HEAD
-    	
         $imagePath = 'uploads';
     	/* $imagePath = user_photos_path(); */
 
-=======
         $imagePath = 'uploads';
->>>>>>> bwardwell
     	$imageFiles = File::allFiles($imagePath);
     	return view('photos/show', ['imagePath' => $imagePath, 'imageFiles' => $imageFiles]);
     }
