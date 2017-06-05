@@ -35,20 +35,14 @@ class PhotosController extends Controller
     }
 
     public function show(){
-<<<<<<< HEAD
-    	
-        $imagePath = 'uploads';
-    	/* $imagePath = user_photos_path(); */
 
-=======
         $imagePath = 'uploads';
->>>>>>> bwardwell
     	$imageFiles = File::allFiles($imagePath);
     	return view('photos/show', ['imagePath' => $imagePath, 'imageFiles' => $imageFiles]);
     }
 
     public function interventionExample(){
-    // These are temporary static values until the "pull each image from folder and display" issue is solved
+        // These are temporary static values until the "pull each image from folder and display" issue is solved
         $fileName = 'PastelTile.jpg';
         $image = Image::make('images/PastelTile.jpg');
         $imageTitle = 'Pastel Title';

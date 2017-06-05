@@ -29,15 +29,6 @@ class PageController extends BaseController
     public function galleryTemplate(){
         return view('templates/gallery-template');
     }
-<<<<<<< HEAD
-
-    public function interventionExample(){
-=======
->>>>>>> bwardwell
-
-    public function interventionCreate(){
-         return view('photos/create');
-    }
 
     public function currentPage(){
         $currentPage = url()->current();

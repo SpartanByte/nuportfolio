@@ -27,8 +27,5 @@
                 image02 = new Image()
                 image02.src="https://dummyimage.com/100x100/000/fff"
             </script>
-                {{-- This idea could be used for the new social media icons (or stick with the animation on the current site?) 
-                <a href="{{ url('pages.about') }}" onmouseover="document.images['example'].src=image02.src" onmouseout="document.images['example'].src=image01.src">
-                <img src="http://placehold.it/100x50" name="example"> </a>--}}
-            </div>
+        </div>
 @stop
