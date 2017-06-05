@@ -17,7 +17,6 @@ Route::group(['prefix' => 'pages'], function(){
   Route::get('about', 'PageController@about'); // About page
   Route::get('image-example', 'PageController@interventionExample'); // Image Intervention Example page
   Route::get('upload', 'PageController@upload'); // Image Upload page
-  Route::get('intervention', 'PageController@interventionCreate'); // Image Intervention upload page 'photos/create'
 }); 
 
 /**

@@ -30,10 +30,6 @@ class PageController extends BaseController
         return view('templates/gallery-template');
     }
 
-    public function interventionCreate(){
-         return view('photos/create');
-    }
-
     public function currentPage(){
         $currentPage = url()->current();
         return view('code_pages.code-information', $currentPage);
