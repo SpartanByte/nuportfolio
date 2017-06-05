@@ -12,10 +12,10 @@ use Image;
 use Response;
 use File;
 
-class ProgramSampleController extends Controller
+class CodeSampleController extends Controller
 {
     //
-     public function jqueryToggle()
+    public function jqueryToggle()
     {
         return view('programs/js/jquery-toggling');
     }
