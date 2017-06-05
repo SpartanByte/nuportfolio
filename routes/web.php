@@ -4,12 +4,11 @@
 | Web Routes
 |--------------------------------------------------------------------------
 */
-
+  // not using yet (requires authentication code)
   Route::get('/home', 'HomeController@index');
-  Route::get('/', 'PageController@home');
 
-  // Intervention Image Example 
-  Route::get('photos/image_example', 'PageController@interventionExample');
+  // Homepage
+  Route::get('/', 'PageController@home');
 
 /**
  * PAGE CONTROLLER ROUTES ======================================
@@ -18,7 +17,6 @@ Route::group(['prefix' => 'pages'], function(){
   Route::get('about', 'PageController@about'); // About page
   Route::get('image-example', 'PageController@interventionExample'); // Image Intervention Example page
   Route::get('upload', 'PageController@upload'); // Image Upload page
-  Route::get('intervention', 'PageController@interventionCreate'); // Image Intervention upload page 'photos/create'
 }); 
 
 /**
@@ -37,15 +35,37 @@ Route::group(['prefix' => 'coding'], function()
 });
 
 /**
+ * CODE SAMPLE ROUTES ====================================================
+ * Programming examples going from (language from dropdown menu)-> selected example
+ */
+Route::group(['prefix' => 'programs/js'], function(){
+  Route::get('jquery-toggling', 'CodeSampleController@jqueryToggle'); // jQuery toggle example
+  Route::get('slideshow', 'CodeSampleController@jsSlideshow'); // JavaScript slideshow example
+
+});
+
+Route::group(['prefix' => 'programs/php'], function(){
+  Route::get('timeanddates', 'CodeSampleController@phpTime');
+});
+
+/**
+ * CONTACT FORM ROUTES ====================================================
+ * Creates and sends contact email
+ */
+Route::get('contact', 'ContactController@create')->name('contact');
+Route::post('contact', 'ContactController@store')->name('contact_store');
+
+/**
  * GALLERY ROUTES ====================================================
  */
 // * Gallery Template, will eventually move to a TemplateController when Admin Panel is built
-Route::get('templates/gallery-template', 'PageController@galleryTemplate');
+Route::get('templates/gallery-template', 'PageController@galleryTemplate'); // just a static template for page structure copy/paste
 Route::get('pages/photography', 'GalleryController@makePhotographyGallery'); // Generates gallery/shows view
 Route::get('pages/photoshop', 'GalleryController@makePhotoshopGallery'); // Generates gallery/shows view
 
 /**
- * Routes for Image Uploader
+ * IMAGE UPLOADER ROUTES ('/upload') ==================================
+ * Note: This image uploader is not using Invervention Image 
  */
 Route::get('upload', function(){
     return View::make('pages.upload');
@@ -53,15 +73,14 @@ Route::get('upload', function(){
 Route::post('apply/upload', 'UploadController@upload');
 
 /**
- *  Contact Form Routes
+ * IMAGE INTERVENTION ROUTES ('/photos/create') ============================================
+ * Portion of Image Intervention for upload functionality and example of uploaded result
  */
-// Creates and sends contact email
-Route::get('contact', 'ContactController@create')->name('contact');
-Route::post('contact', 'ContactController@store')->name('contact_store');
 
-/**
- * IMAGE INTERVENTION (EXAMPLE AND UPLOAD) ROUTES
- */
+// Intervention Image Example 
+Route::get('photos/image_example', 'PhotosController@interventionExample');
+
+// RESTful Resource Controller for CRUD
 Route::resource('photos', 'PhotosController'); 
 /**
  * Routes to image uploads, index and gallery
@@ -71,9 +90,9 @@ Route::group(['prefix' => 'photos'], function()
   Route::get('create', 'PhotosController@create'); // upload page
   Route::get('show', 'PhotosController@show'); // show and index both list uploaded files (will only need one view)
   Route::get('index', 'PhotosController@index');
-  Route::get('image_example', 'PhotosController@interventionExample'); // Static example of the Image Intervention resizing result page
 });
 
+<<<<<<< HEAD
 // post functionality for photos
 Route::post('photos/show', function(){
 	$imageName = new ImageName;
@@ -118,3 +137,16 @@ Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude
 =======
 });
 >>>>>>> 6c65f9bc27a808a7f37d3ba3c6245fe4d9158c68
+=======
+  // post functionality for photos
+  Route::post('photos/show', function(){
+    $imageName = new ImageName;
+    $imageName->fileName = $request->fileName;
+    $imageName->save();
+    return redirect('photos/index');
+  });
+
+  function user_photos_path(){
+    return public_path() . '/images/';
+  } 
+>>>>>>> d8e7f6ccbb94771e038e82ce35de4ee043a486b1

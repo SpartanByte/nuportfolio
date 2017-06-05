@@ -30,14 +30,14 @@
                     // checking for file validity
                     if(Input::file('image')->isValid()){
                         
-                        $input = Input::all();
-                        $imgInputPath = $input['uploadImgPath'];
-                        $imgInputTitle = $input['uploadImgTitle'];
-                        $extension = Input::file('image')->getClientOriginalExtension(); // image extension
-                        $fileName = $imgInputTitle . '.' .$extension;
-                        Input::file('image')->move($imgInputPath, $fileName);
+                        $input = Input::all(); // new instance
+                        $imgInputPath = $input['uploadImgPath']; // setting path
+                        $imgInputTitle = $input['uploadImgTitle']; // setting title
+                        $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
+                        $fileName = $imgInputTitle . '.' .$extension; // merging all values
+                        Input::file('image')->move($imgInputPath, $fileName); // adding image to directory folder
 
-                        //Sending back message
+                        // returning view with file name for img tags and index
                         return view('pages.success')->with(['fileName' => $fileName]);
                     }
                 }

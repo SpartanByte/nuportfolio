@@ -12,10 +12,10 @@ use Image;
 use Response;
 use File;
 
-class ProgramSampleController extends Controller
+class CodeSampleController extends Controller
 {
     //
-     public function jqueryToggle()
+    public function jqueryToggle()
     {
         return view('programs/js/jquery-toggling');
     }
@@ -23,4 +23,15 @@ class ProgramSampleController extends Controller
     {
     	return view('programs/js/slideshow');
     }
+
+    public function phpTime(){
+
+    	$currentDate = date("n/d/Y");
+    	$CST = date_default_timezone_set("America/Chicago"); 
+    	// $timestamp = date('h:m', time());
+    	$timestamp = date("h:i");
+    	return view('programs/php/timeanddates')->with(['currentDate' => $currentDate, 'timestamp' => $timestamp]);
+    }
+
+
 }

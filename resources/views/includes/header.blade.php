@@ -40,6 +40,9 @@
                                         <li><a href=" {{ url('programs/js/slideshow') }}" title="Javascript Slideshow">Slideshow</a></li>
                                     </ul>
                                 <li><a href="{{ url('coding/php')  }}" title="PHP Code Examples">PHP</a></li>
+                                    <ul class="nav-third-level">
+                                        <li><a href="{{ url('programs/php/timeanddates') }}" title="PHP Time/Date Examples">Time and Date</a></li>
+                                    </ul>
                                 <li><a href="{{ url('coding/python') }}" title="Python Programming Samples">Python</a></li>
                                 <li><a href="{{ url('coding/umbraco') }}" title="Umbraco ASP.NET CMS">Umbraco CMS</a></li>
                             </ul>
