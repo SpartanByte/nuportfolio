@@ -45,7 +45,7 @@
 
                 <p>With <a href="https://laravel.com">Laravel</a>, programming code can be further minimized and organized by processing all this retrieving and formatting within classes and functions and passing only the variable to this page, which is the <strong>View</strong>. Directly from a Controller, this View is fed the data.</p>
 
-                <span class="code-gen-text"><p>Today is {{ $currentDate }} at {{ $timestamp }}.</p></span>
+                <span class="code-gen-text"><p>Today is {{ $currentDate }} at {{ $timestamp }}. This time, the data is being produced from Laravel and Blade.</p></span>
 
                 <p>In addition to standard PHP, <strong>Laravel</strong> is a framework that boasts MVC (Model-View-Controller), which is a very long topic on its own, it also has its own template language: Blade. This makes it easy to reference the variables in very little code and more readability so long as those variables and/or data are passed to the View appropriately.</p>
         </article>

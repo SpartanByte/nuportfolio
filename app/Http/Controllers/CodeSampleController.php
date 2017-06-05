@@ -28,7 +28,8 @@ class CodeSampleController extends Controller
 
     	$currentDate = date("n/d/Y");
     	$CST = date_default_timezone_set("America/Chicago"); 
-    	$timestamp = date('h:m', time());
+    	// $timestamp = date('h:m', time());
+    	$timestamp = date("h:i");
     	return view('programs/php/timeanddates')->with(['currentDate' => $currentDate, 'timestamp' => $timestamp]);
     }
 
