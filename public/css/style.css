@@ -27,8 +27,17 @@ body{
 
 .mid-size-font{
     font-family: 'proza_libresemibold', sans-serif;
-    font-size: 2.5em;}
+    font-size: 2.5rem;}
 
+.small-header-font{
+    font-size: 2rem;
+}
+
+.half-img{width:50%;height:50%;}
+.quarter-img{width:25%;height:25%;}
+.onethird-img{width:33%;height:33%;}
+
+.code-gen-text{ font-weight: bold; font-family: Oxygen, sans-serif; font-size: 1.5rem; line-height:1;}
 /* ================================================  START OF GLOBAL STYLES ======================================= */
 /**
  * GLOBAL STYLING HERE
@@ -238,8 +247,9 @@ nav.navbar.navbar-default{
         width: 50%;
         padding-top: 0.2em; padding-bottom: 0.2em; padding-left: 1%;}
     .static-content a{
-        color: #1A6FB0;
-        border-top: 0.5px solid #1A6FB0; border-bottom: 0.5px solid #1A6FB0;
+        /* color: #1A6FB0;*/
+       /* border-top: 0.5px solid #1A6FB0; border-bottom: 0.5px solid #1A6FB0; */
+        color: #2B2619;
         transition-duration: 0.5s;
         font-weight: bold;}
         .static-content a:hover{

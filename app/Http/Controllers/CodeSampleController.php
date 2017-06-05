@@ -23,4 +23,14 @@ class CodeSampleController extends Controller
     {
     	return view('programs/js/slideshow');
     }
+
+    public function phpTime(){
+
+    	$currentDate = date("n/d/Y");
+    	$CST = date_default_timezone_set("America/Chicago"); 
+    	$timestamp = date('h:m', time());
+    	return view('programs/php/timeanddates')->with(['currentDate' => $currentDate, 'timestamp' => $timestamp]);
+    }
+
+
 }

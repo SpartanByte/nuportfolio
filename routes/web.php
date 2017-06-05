@@ -45,6 +45,10 @@ Route::group(['prefix' => 'programs/js'], function(){
 
 });
 
+Route::group(['prefix' => 'programs/php'], function(){
+  Route::get('timeanddates', 'CodeSampleController@phpTime');
+});
+
 /**
  * CONTACT FORM ROUTES ====================================================
  * Creates and sends contact email
@@ -100,4 +104,3 @@ Route::group(['prefix' => 'photos'], function()
   function user_photos_path(){
     return public_path() . '/images/';
   } 
-
