@@ -92,6 +92,44 @@ Route::group(['prefix' => 'photos'], function()
   Route::get('index', 'PhotosController@index');
 });
 
+
+// post functionality for photos
+Route::post('photos/show', function(){
+	$imageName = new ImageName;
+	$imageName->fileName = $request->fileName;
+	$imageName->save();
+	return redirect('photos/index');
+});
+
+
+
+
+
+/*
+  |--------------------------------------------------------------------------
+  | ROUTES FOR DISTRIBUTING TRAFFIC AND ANY OTHER NEEDED PROGRAMMING FOR THE 
+  | PROGRAM SAMPLES OF JAVASCRIPT, PHP, C#, JAVA, ETC
+  |--------------------------------------------------------------------------
+ */
+
+/**
+ * START OF ROUTES FOR PROGRAMMING EXAMPLES
+ */
+/*Route::group(['prefix' => 'programs/js'], function(){
+  Route::get('jquery-toggling', 'ProgramSampleController@jqueryToggle'); // jQuery toggle example
+  Route::get('slideshow', 'ProgramSampleController@jsSlideshow'); // JavaScript slideshow example*/
+
+
+
+Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude');
+
+/**
+ * ROUTE RETURNING UPLOADED IMAGES ======================================
+ */
+  // Making sure this is not being used before removing completely
+ /*Route::get('intervention-resizeImage',['as'=>'intervention.getresizeimage','uses'=>'FileController@getResizeImage']);
+ Route::post('intervention-resizeImage',['as'=>'intervention.postresizeimage','uses'=>'FileController@postResizeImage']); */
+
   // post functionality for photos
   Route::post('photos/show', function(){
     $imageName = new ImageName;
@@ -103,3 +141,4 @@ Route::group(['prefix' => 'photos'], function()
   function user_photos_path(){
     return public_path() . '/images/';
   } 
+

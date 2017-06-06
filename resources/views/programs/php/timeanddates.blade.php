@@ -37,7 +37,7 @@
                     $newYearsDay = strtotime("December 31");
                     $newYearsDay = ceil(($newYearsDay-time())/60/60/24);
 
-                    echo "<p>There are " . $july4th ." days until 5th of July. Additionally, there are " . $halloween . " days until Halloween. </p>";
+                    echo "<p>There are " . $july4th ." days until 4th of July. Additionally, there are " . $halloween . " days until Halloween. </p>";
                     echo "<p>How many days until next year? Well, next year will be " . $nextYear . " and New Year's Eve is " . $newYearsDay . " days away!</p>";
                 ?> 
                 </span>
@@ -47,7 +47,7 @@
 
                 <span class="code-gen-text"><p>Today is {{ $currentDate }} at {{ $timestamp }}. This time, the data is being produced from Laravel and Blade.</p></span>
 
-                <p>In addition to standard PHP, <strong>Laravel</strong> is a framework that boasts MVC (Model-View-Controller), which is a very long topic on its own, it also has its own template language: Blade. This makes it easy to reference the variables in very little code and more readability so long as those variables and/or data are passed to the View appropriately.</p>
+                <p>In addition to standard PHP, <strong>Laravel</strong> is a framework that boasts MVC (Model-View-Controller), which is a very long topic on its own, it also has its own template language: <strong>Blade</strong>. This makes it easy to reference the variables in very little code and more readability so long as those variables and/or data are passed to the View appropriately.</p>
         </article>
     </div>
     <div class="bottom-spacer"></div>
