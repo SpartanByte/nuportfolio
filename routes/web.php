@@ -41,11 +41,11 @@ Route::group(['prefix' => 'coding'], function()
 Route::group(['prefix' => 'programs/js'], function(){
   Route::get('jquery-toggling', 'CodeSampleController@jqueryToggle'); // jQuery toggle example
   Route::get('slideshow', 'CodeSampleController@jsSlideshow'); // JavaScript slideshow example
-
 });
 
 Route::group(['prefix' => 'programs/php'], function(){
   Route::get('timeanddates', 'CodeSampleController@phpTime');
+  Route::get('timeanddates', 'CodeSampleController@phpHolidays');
 });
 
 /**
@@ -120,4 +120,4 @@ Route::post('photos/show', function(){
     return public_path() . '/images/';
   } 
 
-Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude');
+// Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude');

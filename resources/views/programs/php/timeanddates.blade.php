@@ -45,9 +45,36 @@
 
                 <p>With <a href="https://laravel.com">Laravel</a>, programming code can be further minimized and organized by processing all this retrieving and formatting within classes and functions and passing only the variable to this page, which is the <strong>View</strong>. Directly from a Controller, this View is fed the data.</p>
 
-                <span class="code-gen-text"><p>Today is {{ $currentDate }} at {{ $timestamp }}. This time, the data is being produced from Laravel and Blade.</p></span>
+                {{-- <span class="code-gen-text"><p>Today is {{ $currentDate }} at {{ $timestamp }}. This time, the data is being produced from Laravel and Blade.</p></span> --}}
 
                 <p>In addition to standard PHP, <strong>Laravel</strong> is a framework that boasts MVC (Model-View-Controller), which is a very long topic on its own, it also has its own template language: <strong>Blade</strong>. This makes it easy to reference the variables in very little code and more readability so long as those variables and/or data are passed to the View appropriately.</p>
+
+                <hr />
+
+                {{-- @foreach($holidays as list($holiday, $date)) --}}
+                <span class="uppercase-shadow mid-size-font center-text" style="display:block;">PHP Holidays - "Days Until" Table</span>
+                <table class="full-table med-size-font">
+                <tr class="table-header"><td>Holiday</td><td>Date of Holiday</td><td>Days Remaining</td>
+                    <?php 
+                      foreach($holidays as list($holiday, $date))
+                      {
+                          $central = date_default_timezone_set("America/Chicago"); 
+                          $daysUntil = strtotime($date);
+                          $daysUntil = ceil(($daysUntil-time())/60/60/24); 
+
+                          if($daysUntil < 0)
+                          {
+                            $daysUntil = $daysUntil + 365;
+                          }
+                          echo '<tr><td>'.$holiday. "</td><td>" . $date . "</td><td>" .$daysUntil. " days remaining </td></tr>";
+                      } 
+                    ?>
+                  </table>
+
+                  {{--  <table>
+                    <tr><td>{{ $holiday }}</td><td> || </td><td>{{ $date }}</td><td>{{ $daysUntil }}</td></tr>
+                  </table> --}}
+
         </article>
     </div>
     <div class="bottom-spacer"></div>

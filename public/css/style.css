@@ -3,41 +3,52 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i');
 @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
 
-html{
-    background-color: transparent;
-    font-size: 14px;}
-
-body{
-    font-family: 'proza_libreregular', sans-serif !important;
-}
+html{background-color: transparent; font-size: 14px;}
+body{font-family: 'proza_libreregular', sans-serif !important;}
 
 /* Formatting styles */
-.page-header{
-    padding-top: 4em;
-    color: #252525;
-    text-align: center;}
-
+.page-header{padding-top: 4em;color: #252525; text-align: center;}
 .h1{font-size: 4em !important;}
 .h2{font-size: 3.5rem !important;}
 .h3{font-size: 3rem !important; }
+.mid-size-font{font-family: 'proza_libresemibold', sans-serif; font-size: 2.5rem;}
+.med-size-font{font-family: 'proza_libresemibold', sans-serif; font-size: 1.5rem;}
+.small-header-font{font-size: 2rem;}
+.standard-ul{font-weight: bold;font-size: 1.75rem;}
 
-.uppercase-shadow{
-    text-transform: uppercase;
-    text-shadow: 4px 2px 6px #404040;}
+/* Font Effects */
+.uppercase-shadow{text-transform: uppercase; text-shadow: 4px 2px 6px #404040;}
+.shadow-uppercase{text-shadow: 4px 2px 6px $404040;}
+.center-text{text-align: center;}
 
-.mid-size-font{
-    font-family: 'proza_libresemibold', sans-serif;
-    font-size: 2.5rem;}
-
-.small-header-font{
-    font-size: 2rem;
-}
+/**
+ * To be used for ALL outgoing/external links
+ */
+.outgoing-link{color: #0c467f !important;}
+.outgoing-link:hover{color: #0c0c7f !important;}
+.internal-link{color: #287ACC !important;}
+.internal-link:hover{color: #0c0c7f !important;}
 
 .half-img{width:50%;height:50%;}
 .quarter-img{width:25%;height:25%;}
 .onethird-img{width:33%;height:33%;}
 
 .code-gen-text{ font-weight: bold; font-family: Oxygen, sans-serif; font-size: 1.5rem; line-height:1;}
+
+/* full-table may end up applying to any other tables that may be used */
+.full-table{
+    width: 100%;}
+    .full-table td{
+        border: 1px solid black;
+        text-align: center;
+        max-width: 35%;
+        padding-top: 3px;
+        padding-bottom: 3px;}
+    .full-table tr:nth-child(even) {
+        background: #909090;}
+    .full-table .table-header{
+        background-color: #000000;
+        color: #FFFFFF;}
 /* ================================================  START OF GLOBAL STYLES ======================================= */
 /**
  * GLOBAL STYLING HERE
@@ -46,26 +57,6 @@ body{
     min-width: 100%;
     min-height: 100%;
     background-color: #FFFFFF; /* very light grey for main background */}
-
-.internalLink{
-    font-size: 26px;
-    font-weight: bold;
-    color: blue !important;
-    padding: 4px;}
-.internalLink:hover{
-    color: #FFFFFF !important;
-    background-color: #337ab7;}
-
-/**
- * To be used for ALL outgoing/external links
- */
-.outgoingLink{
-     color: #337ab7 !important;
-     font-size: 13px !important;}
-.outgoingLink:hover{
-    background-color: #337ab7;
-    color: #FFFFFF !important;
-    padding: 2px 2px 2px 2px;}
 
 /* COULD BE USED FOR STYLING OUTGOING LINKS --- IF CODE IS ADDED TO AVOID CHANGING ANY LINKS IN FOOTER 
 a[href^="https://"]{
@@ -84,14 +75,8 @@ a[href^="http://"]{
 /* DO NOT remove or modify this style as it separates the photos from the bottom of the page
 ** allowing either content to be below the pictures if needed or grant extra space/padding below galleries
 */
-#gallery-clear-bottom{
-    display: block !important;
-    clear: both;}
+#gallery-clear-bottom{display: block !important;clear: both;}
 
-.standard-ul{
-    font-weight: bold;
-    font-size: 1.75rem;
-}
 /* ================================================  END OF GLOBAL STYLES ======================================= */
 
 /* 
@@ -249,7 +234,7 @@ nav.navbar.navbar-default{
     .static-content a{
         /* color: #1A6FB0;*/
        /* border-top: 0.5px solid #1A6FB0; border-bottom: 0.5px solid #1A6FB0; */
-        color: #2B2619;
+        color: #0c467f;
         transition-duration: 0.5s;
         font-weight: bold;}
         .static-content a:hover{
