@@ -28,7 +28,7 @@ class CodeSampleController extends Controller
     	$CST = date_default_timezone_set("America/Chicago"); 
         $currentDate = date("n/j/Y");
     	$timestamp = date("h:i");
-    	return view('programs/php/timeanddates')->with(['currentDate' => $currentDate, 'timestamp' => $timestamp]);
+        return view('programs/php/timeanddates')->with(compact('currentDate', 'timestamp')); 
     }
 
     public function phpHolidays(){
@@ -38,8 +38,6 @@ class CodeSampleController extends Controller
 
         // Need to get each holiday name and date into a multidimensional array to print to a table "days until..." for example
         
-
-
     }
 
 }

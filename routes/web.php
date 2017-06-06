@@ -101,28 +101,6 @@ Route::post('photos/show', function(){
 	return redirect('photos/index');
 });
 
-
-
-
-
-/*
-  |--------------------------------------------------------------------------
-  | ROUTES FOR DISTRIBUTING TRAFFIC AND ANY OTHER NEEDED PROGRAMMING FOR THE 
-  | PROGRAM SAMPLES OF JAVASCRIPT, PHP, C#, JAVA, ETC
-  |--------------------------------------------------------------------------
- */
-
-/**
- * START OF ROUTES FOR PROGRAMMING EXAMPLES
- */
-/*Route::group(['prefix' => 'programs/js'], function(){
-  Route::get('jquery-toggling', 'ProgramSampleController@jqueryToggle'); // jQuery toggle example
-  Route::get('slideshow', 'ProgramSampleController@jsSlideshow'); // JavaScript slideshow example*/
-
-
-
-Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude');
-
 /**
  * ROUTE RETURNING UPLOADED IMAGES ======================================
  */
@@ -142,3 +120,4 @@ Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude
     return public_path() . '/images/';
   } 
 
+Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude');
