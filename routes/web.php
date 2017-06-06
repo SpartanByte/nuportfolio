@@ -92,7 +92,7 @@ Route::group(['prefix' => 'photos'], function()
   Route::get('index', 'PhotosController@index');
 });
 
-<<<<<<< HEAD
+
 // post functionality for photos
 Route::post('photos/show', function(){
 	$imageName = new ImageName;
@@ -101,11 +101,9 @@ Route::post('photos/show', function(){
 	return redirect('photos/index');
 });
 
-function user_photos_path(){
-  return public_path() . '/images/';
-} 
 
-<<<<<<< HEAD
+
+
 
 /*
   |--------------------------------------------------------------------------
@@ -113,31 +111,25 @@ function user_photos_path(){
   | PROGRAM SAMPLES OF JAVASCRIPT, PHP, C#, JAVA, ETC
   |--------------------------------------------------------------------------
  */
-=======
->>>>>>> 6c65f9bc27a808a7f37d3ba3c6245fe4d9158c68
+
 /**
  * START OF ROUTES FOR PROGRAMMING EXAMPLES
  */
-Route::group(['prefix' => 'programs/js'], function(){
+/*Route::group(['prefix' => 'programs/js'], function(){
   Route::get('jquery-toggling', 'ProgramSampleController@jqueryToggle'); // jQuery toggle example
-  Route::get('slideshow', 'ProgramSampleController@jsSlideshow'); // JavaScript slideshow example
+  Route::get('slideshow', 'ProgramSampleController@jsSlideshow'); // JavaScript slideshow example*/
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude');
-=======
+
 /**
  * ROUTE RETURNING UPLOADED IMAGES ======================================
  */
   // Making sure this is not being used before removing completely
  /*Route::get('intervention-resizeImage',['as'=>'intervention.getresizeimage','uses'=>'FileController@getResizeImage']);
  Route::post('intervention-resizeImage',['as'=>'intervention.postresizeimage','uses'=>'FileController@postResizeImage']); */
->>>>>>> 267022cfa791e5ccc784a04ccfdc6ff26a23108f
-=======
-});
->>>>>>> 6c65f9bc27a808a7f37d3ba3c6245fe4d9158c68
-=======
+
   // post functionality for photos
   Route::post('photos/show', function(){
     $imageName = new ImageName;
@@ -149,4 +141,4 @@ Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude
   function user_photos_path(){
     return public_path() . '/images/';
   } 
->>>>>>> d8e7f6ccbb94771e038e82ce35de4ee043a486b1
+
