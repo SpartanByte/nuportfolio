@@ -25,13 +25,21 @@ class CodeSampleController extends Controller
     }
 
     public function phpTime(){
-
-    	$currentDate = date("n/d/Y");
     	$CST = date_default_timezone_set("America/Chicago"); 
-    	// $timestamp = date('h:m', time());
+        $currentDate = date("n/j/Y");
     	$timestamp = date("h:i");
     	return view('programs/php/timeanddates')->with(['currentDate' => $currentDate, 'timestamp' => $timestamp]);
     }
 
+    public function phpHolidays(){
+        // Setting default timezone
+        $timezone = date_default_timezone_set("America\Chicago");
+        $today = date("n/j/Y");
+
+        // Need to get each holiday name and date into a multidimensional array to print to a table "days until..." for example
+        
+
+
+    }
 
 }
