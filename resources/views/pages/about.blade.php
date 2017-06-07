@@ -5,11 +5,11 @@
     @section('content')
     <div class="static-content about">
  
-        <span class="page-header uppercase-shadow">A Little Bit About Myself</span>
+        <span class="page-header uppercase-shadow small-header-font">A Little Bit About Myself</span><br /><br />
 
         {{-- start of background/bio --}}
         <section class="background">
-            <h3>Background</h3>
+            <span class="section-header uppercase-shadow mid-size-font">Background</span><br />
 
             <p>I am a native of Fargo, North Dakota and attended Fargo North High School. Years later, I enrolled in the <em>Web Development AAS</em> program at <a href="#" alt="Minnesota State Community and Technical College" target="_self">Minnesota State Community and Technical College</a> to which I graduated from in the summer of 2015 with additional credits. Course areas included HTML/CSS, Javascript, Web Applications Programming, PHP/MySQL, Python (from the Computer Programming courses), Content Management Systems, and User Interface/Experience Design. However, my passion to learn more and dig deeper didn't end there.</p>
 
@@ -22,16 +22,17 @@
 
         <hr />
         <section class="skillset">
-            <h4>Skill-Set</h4>
+           <span class="mid-size-font">Skill-Set</span>
+           <hr />
             <ul>
-                <li class="skill-headers"><strong>Front-End</strong></li>
-                    <ul class="skills">
+                <span class="mid-size-font"><li class="ul-header"><strong>Front-End</strong></li></span>
+                    <ul class="skills small-header-font">
                         <li>CSS / Sass</li>
                         <li>JavaScript</li>
                         <li>Adobe Photoshop</li>
                     </ul>
-                <li class="skill-headers"><strong>Back-End</strong></li>
-                    <ul class="skills">
+                <span class="mid-size-font"><li class="ul-header"><strong>Back-End</strong></li></span>
+                    <ul class="skills small-header-font">
                         <li>Laravel (PHP Framework)</li>
                         <li>PHP</li>
                         <li>C#</li>
@@ -41,24 +42,24 @@
         </section>
 
         {{-- Start of Professional/Personal Development --}}
-        <section class="development-history">
-        <h4>Professional and Personal Development:</h4>
-            <h5>Insight Technologies</h5>
-                <p><strong>Web Developer, October 2016 - Current</strong></p>
-            <h5>Dakota Supply Group</h5>
-                <p><strong>Intranet/Internal Website (Temp/Contract), June 2016-Current (Maintenance Contract)</strong></p>
-            <h5><a href="http://musicbytes.us/" title="MusicBytes: Entertainment" alt="MusicBytes.us: Entertainment Website">MusicBytes.us</a></h5>
-                <p><strong>Music Entertainment Website, Web Developer (2012 - Current)</strong></p>
+        <section>
+        <span class="history-header">Professional and Personal Development:</span><br />
+            <span class="history-header second-level">Insight Technologies</section></br />
+                <p>Web Developer, October 2016 - Current</p>
+            <span class="history-header second-level">Dakota Supply Group</span><br />
+                <p>Intranet/Internal Website (Temp/Contract), June 2016-Current (Maintenance Contract)</p>
+           <span class="history-header second-level"><a href="http://musicbytes.us/" title="MusicBytes: Entertainment" alt="MusicBytes.us: Entertainment Website">MusicBytes.us</span></a>
+                <p>Music Entertainment Website, Web Developer (2012 - Current)</p>
         </section>
 
-        <section class="academic-history">
-            <h4>Academics:</h4>
-                <h5>North Hennepin Community College, Internet and Object-Oriented Programming</h5>
+        <section>
+            <span class="history-header">Academics:</span><br />
+                <span class="history-header second-level">North Hennepin Community College, Internet and Object-Oriented Programming</span><br />
                     <p>Attended 2016-??, eCampus</p>
-                <h5>Minnesota State College - Southeast Technical, Web Programming</h5>
+                <span class="history-header second-level">Minnesota State College - Southeast Technical, Web Programming</span><br />
                     <p>Attended Spring 2016, eCampus</p>
-                <h5>Minnesota State Community and Technical College, Web Development AAS</h5>
-                    <p><strong>Graduated: May 2015, Moorhead MN</strong></p>
+                <span class="history-header second-level">Minnesota State Community and Technical College, Web Development AAS</span><br />
+                    <p>Graduated: May 2015, Moorhead MN</p>
         </section>
     </div>
 @stop

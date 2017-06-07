@@ -53,27 +53,12 @@
 
                 {{-- @foreach($holidays as list($holiday, $date)) --}}
                 <span class="uppercase-shadow mid-size-font center-text" style="display:block;">PHP Holidays - "Days Until" Table</span>
-                <table class="full-table med-size-font">
+                  <table class="full-table med-size-font">
                 <tr class="table-header"><td>Holiday</td><td>Date of Holiday</td><td>Days Remaining</td>
-                    <?php 
-                      foreach($holidays as list($holiday, $date))
-                      {
-                          $central = date_default_timezone_set("America/Chicago"); 
-                          $daysUntil = strtotime($date);
-                          $daysUntil = ceil(($daysUntil-time())/60/60/24); 
-
-                          if($daysUntil < 0)
-                          {
-                            $daysUntil = $daysUntil + 365;
-                          }
-                          echo '<tr><td>'.$holiday. "</td><td>" . $date . "</td><td>" .$daysUntil. " days remaining </td></tr>";
-                      } 
-                    ?>
+                  @foreach($holidaysArray as list($holiday, $date))
+                    <tr><td>{{ $holiday }}</td><td>{{ $date }}</td>{{--<td>{{ $daysRemaining }}</td>--}}</tr>
+                  @endforeach
                   </table>
-
-                  {{--  <table>
-                    <tr><td>{{ $holiday }}</td><td> || </td><td>{{ $date }}</td><td>{{ $daysUntil }}</td></tr>
-                  </table> --}}
 
         </article>
     </div>
