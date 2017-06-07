@@ -14,7 +14,6 @@ class ContactController extends Controller
         $confirm = 'Thank you. I will follow up with you soon!';
         $success = true;
     	return view('pages.contact', ['confirm' => $confirm, 'success' => $success]);
-
     }
 
     public function store(ContactFormRequest $request){

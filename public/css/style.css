@@ -458,42 +458,34 @@ nav.navbar.navbar-default{
         font-size: 1.5rem;}
 
 /* About page: Skillset section */
-
 .skillset > ul{ 
     margin-left: -1.5%;}
-.skill-headers{ 
+.ul-header{ 
+    padding: 1% 0;
     font-size: 2.5rem; 
-    color: #1A6FB0; 
     margin-left: -1.5%;}
-    .skills{ 
+    .skills li{ 
         font-size: 2rem; 
-        margin-left: -2%;  
-        line-height: 1.2; 
+        font-weight: bold;
+        margin-left: -2%;
+        line-height: 2; 
         letter-spacing: 1px;}
 
 /* About page: Development/work history section */
-.development-history h4{
-    font-size: 2rem;  
-    margin-top: 3%; 
-    letter-spacing: 1px;
-    text-transform: 
-    uppercase;
-    border-bottom: 3px solid #1A6FB0;}
-.development-history h5{
+.history-header.second-level{
     font-size: 2rem; 
-    line-height: 0.5;
-    color: #1A6FB0; 
+    font-weight: bold;
     padding-top: 0.25em; }
-    .development-history > h5 > a{
-        color: #1A6FB0; 
-        font-weight: 300;  
+    .history-header > a{
+        color: #524830;
+        font-weight: bold; 
         text-decoration: underline;  
         border: none;}
-.development-history p{
-    font-size: 1.8rem; 
-    margin-left: 1%;}
 
-/* About page: Academic/training history section */
+
+/*
+
+ About page: Academic/training history section 
 .academic-history h4{
     text-transform: uppercase; 
     border-bottom: 3px solid #1A6FB0; 
@@ -506,7 +498,7 @@ nav.navbar.navbar-default{
 .academic-history p{
     font-size: 1.2em; 
     margin-left: 1%;}
-
+*/
 /**
  * GENERAL CODING INFORMATION PAGE --- STYLES HERE
  */
