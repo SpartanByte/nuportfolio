@@ -46,6 +46,7 @@ Route::group(['prefix' => 'programs/js'], function(){
 Route::group(['prefix' => 'programs/php'], function(){
   Route::get('timeanddates', 'CodeSampleController@phpTime');
   Route::get('timeanddates', 'CodeSampleController@setHolidays');
+ //  Route::get('timeanddates', 'CodeSampleController@setDaysRemaining');
 });
 /**
  * CONTACT FORM ROUTES ====================================================
