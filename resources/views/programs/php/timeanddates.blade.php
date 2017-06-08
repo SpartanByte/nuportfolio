@@ -56,8 +56,14 @@
                   <table class="full-table med-size-font">
                 <tr class="table-header"><td>Holiday</td><td>Date of Holiday</td><td>Days Remaining</td>
                   @foreach($holidaysArray as list($holiday, $date))
-                    <tr><td>{{ $holiday }}</td><td>{{ $date }}</td>{{--<td>{{ $daysRemaining }}</td>--}}</tr>
+                    <tr><td>{{ $holiday }}</td><td>{{ $date }}</td></tr>
+
                   @endforeach
+                  
+                      
+
+
+                  
                   </table>
 
         </article>
