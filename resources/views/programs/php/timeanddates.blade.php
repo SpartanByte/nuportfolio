@@ -18,7 +18,7 @@
           {{-- standard PHP for example --}}
           <span class="code-gen-text">
               <?php $central = date_default_timezone_set("America/Chicago"); 
-                   // $eastern = date_default_timezone_set("America/NewYork"); 
+
               
               echo '<p>'."For example, you loaded this page at " . date("h:i") . " Central Time. It is the " 
                   . date('d') . " of " . date("F") . " and the year is " . date("Y") . '.</p>'; ?>
@@ -54,13 +54,14 @@
                 {{-- @foreach($holidays as list($holiday, $date)) --}}
                 <span class="uppercase-shadow mid-size-font center-text" style="display:block;">PHP Holidays - "Days Until" Table</span>
                   <table class="full-table med-size-font">
-                <tr class="table-header"><td>Holiday</td><td>Date of Holiday</td><td>Days Remaining</td>
-                  @foreach($holidaysArray as list($holiday, $date))
-                    <tr><td>{{ $holiday }}</td><td>{{ $date }}</td></tr>
+                <tr class="table-header"><td>Holiday</td><td>Date of Holiday</td><td>Days Remaining</td></tr>
+              {{--  @foreach($holidaysArray as list($holiday, $date))
+                    <tr><td>{{ $holiday }}</td><td>{{ $date }}</td> --}}
 
-                  @endforeach
-                  
-                      
+                      @foreach($daysRemaining as $remainingDay)
+                      <td>{{ $remainingDay }}</td></tr>
+                      @endforeach
+                  {{-- @endforeach --}}
 
 
                   

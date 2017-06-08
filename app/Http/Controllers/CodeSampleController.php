@@ -30,19 +30,23 @@ class CodeSampleController extends Controller
         return view('programs/php/timeanddates')->with(compact('currentDate', 'timestamp')); 
     } 
 
-    public function setHolidays(HolidaysService $holidaysArray){
+    
+
+  /*  public function setHolidays(HolidaysService $holidaysArray){
         $holidaysList = new HolidaysService();
         $holidaysArray = $holidaysList->getHolidays();
 
         return view('programs/php/timeanddates')->with(compact('holidaysArray'));    
+    } */
+    
+
+
+    public function setCountdown(HolidaysService $daysRemaining){
+        $countdownResponse = new HolidaysService();
+        $daysRemaining = $countdownResponse->getCountdown();
+
+        return view('programs/php/timeanddates')->with(compact('daysRemaining'));    
     }
 
-
-   /*public function setDaysRemaining(HolidaysService $remainingDays){
-        $daysRemainingList = new HolidaysService();
-        $remainingDays = $daysRemainingList->getDaysRemaining(); 
-
-        return view('programs/php/timeanddates')->with(compact('remainingDays'));
-    } */
 
 }
