@@ -23,36 +23,6 @@
 			return $this->holidaysArray;
 		}
 
-		/* public function getDaysRemaining(){
-
-			$holidayDates = [
-	            ["New Years Day", "January 01"],
-	            ["Valentine's Day", "February 14"],
-	            ["Memorial Day", "May 29"], 
-	            ["Independence Day", "July 04"],
-	            ["Labor Day", "September 04"],
-	            ["Halloween", "October 31"],
-	            ["Veterans Day", "November 11"],
-	            ["Christmas", "December 25"],
-	            ["New Years Eve", "December 31"],
-	        ]; 
-
-			foreach($holidayDates as list($holidayName, $holidayDate))
-			{
-
-				$central = date_default_timezone_set("America/Chicago"); 
-	            $daysUntil = strtotime($holidayDate);
-	            $daysUntil = ceil(($daysUntil-time())/60/60/24);
-
-	            if($daysUntil < 0)
-	            {
-	            	$daysUntil = $daysUntil + 365;
-	        	} 
-	        	return $daysUntil;
-	        } 
-
-		}
-		*/
 		public function getCountdown(){
 
 			$dates = [
@@ -79,12 +49,8 @@
 	            {
 	            	$daysUntil = $daysUntil + 365;
 	        	} 
-
-
             	array_push($daysRemaining, $daysUntil);
         	}
-
-			return $daysRemaining;
-        	
+			return $daysRemaining;	
 		}
 	}

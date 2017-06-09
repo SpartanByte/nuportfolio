@@ -45,4 +45,5 @@ class CodePageController extends Controller
     public function umbracoPage(){
         return view('coding/umbraco');
     } 
+
 }

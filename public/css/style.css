@@ -20,6 +20,9 @@ body{font-family: 'proza_libreregular', sans-serif !important;}
 .uppercase-shadow{text-transform: uppercase; text-shadow: 4px 2px 6px #404040;}
 .shadow-uppercase{text-shadow: 4px 2px 6px $404040;}
 .center-text{text-align: center;}
+.sm-letter-spacing{letter-spacing:0.1rem;}
+.med-letter-spacing{letter-spacing:0.25rem;}
+.lrg-letter-spacing{letter-spacing:0.5rem;}
 
 /**
  * To be used for ALL outgoing/external links
@@ -165,7 +168,6 @@ nav.navbar.navbar-default{
     width: 100%;}
 .footer{
     clear: both;
-    font-weight: 300;
     background-color: #000000;
     color: #FFFFFF;
     margin-bottom: 0px !important;
@@ -177,13 +179,15 @@ nav.navbar.navbar-default{
     height: 6.5em;}
     .footer-left{
         list-style-type: none;
-        text-transform: uppercase;}
+        }
+.footer-left, .footer-right{ letter-spacing: 0.1rem;}
+.footer-left > li{font-size:1.5rem;}
     .footer-right{
         text-align: right;
         list-style-type: none;
-        font-size: 16px;
+        font-size: 1rem !important;;
         float: left;
-        width: 45%;
+        width: 47%;
         position: absolute;
         right: 5px;;
         top: 10px;}
@@ -191,15 +195,14 @@ nav.navbar.navbar-default{
             float: right;
             padding: 5px;}
         .footer-right a, .footer-left a{
-            color: #82734C /*#337ab7*/ !important;
-            font-size: 18px !important;}
+            color: #82734C !important;
+            font-size: 1.65rem !important;}
         .footer-right a:hover, .footer-left a:hover{
             color: #82734C !important;
             filter: grayscale(100%);}
         .footer-right > li > a > img{width: 3em; height: 3em;}
         .bottom-spacer{
             margin-bottom: 200px;}
-
 /**
  * STANDARD PAGES: TEMPLATED STYLES
  */
