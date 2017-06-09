@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use Image;
 use Input;
-
+// use App\Services\Gallery\GalleryService
 class GalleryController extends Controller
 {    
 	/**

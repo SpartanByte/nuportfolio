@@ -1,29 +1,16 @@
-<?php
+<?php  
+	
+	namespace Services\Gallery;
 
-    namespace App\Http\Controllers;
+	use Illuminate\Http\Request;
+	use App\Http\Controllers\Controller;
+	use Illuminate\Support\Facades\File;
+	use Image;
+	use Input;
 
-    use Input;
-    use Validator;
-    use Redirect;
-    use Request;
-    use Session;
-    use App\Services\ImageUploader\ImageUploaderService;
+	class ImageUploaderService{
 
-    /**
-     *  FOR "IMAGE UPLOADER" functionality
-     */
-    class UploadController extends Controller{
-
-
-        public function getUpload(ImageUploaderService $currentUpload){
-
-            $newUpload = new ImageUploaderService();
-            $currentUpload = $newUpload->upload();
-
-            return view('pages/success')->with(['currentUpload' => $currentUpload]);
-        }
-        /* 
-        public function upload(){
+		public function upload(){
 
             // getting post data
             $file = array('image'=> Input::file('image'));
@@ -52,8 +39,5 @@
                     }
                 }
         } 
-        */
-        /*
-            Controls image display from upload.
-        */
-}
+
+	}
