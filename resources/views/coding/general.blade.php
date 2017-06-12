@@ -6,10 +6,8 @@
     <div class="static-content general-coding">
 
         <span class="page-header uppercase-shadow">General Coding Information</span>
-
         <hr />
-        <span class="animated tada" style="-vendor-animation-delay: 13s;"><img class="animated tada" src="/images/logos/php.png" /></span>
-
+    <img class="animated tada" src="/images/logos/php.png" />
         <span class="section-header mid-size-font">PHP</span>
             <p>PHP (Hypertext Preprocessor) is a server-side language that was specifically designed for web development in 1994 by Rasmus Lerdorf. While
                 PHP is often considered easier to learn as a first programming language, special consideration and best practices need to be followed
@@ -20,7 +18,6 @@
             <p>While Symfony, Zend, and CodeIgniter each provided follow up versions in the meantime, <strong><a href="https://laravel.com/" target="_blank">Laravel</a></strong> (an MVC framework based on Symfony itself) was introduced in 2011 with Laravel 2 upgrading it the same year. Laravel is currently on version 5 and is arguably the most popular and widely used PHP frameworks. Of course, CakePHP, Zend, and Symfony continue to advance as well.</p>
 
             <p>One of the forthcoming examples is an application that I originally developed as a course project which involved listing course ID's, course title, the semester in which the course was taken, professor's name, and the grade received. The program demonstrated the ability to create, update, view and remove courses and fields in this list, which was displayed in HTML using a table. This is otherwise known as a <strong>CRUD</strong> application, which is an acronym for "<strong>C</strong>reate, <strong>R</strong>ead, <strong>U</strong>pdate, and <strong>D</strong>elete".</p>
-
         <hr />
         <img src="/images/logos/CSS.png" />
 
