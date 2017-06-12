@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--	Author: Brian Wardwell
+		Last Edited: December 6th, 2015
+		File:	event.php
+		Description: Form for event tickets to be processed by event.php
+-->
+
+<html>
+<head>
+	<title>Performance</title>
+	<link rel ="stylesheet" type="text/css" href="sample.css" />
+</head>
+
+<body>
+	<h1>Ticket Order Form</h1>
+	<strong><p>Get your tickets for the show!</p></strong>
+	<form action="event.php" method="post">
+		<p>What is your first name?
+		<input type="text" size="20" name="firstName" /></p>
+		<p>What is your last name?
+		<input type="text" size="20" name="lastName" /></p>
+		<p>What is your phone number (Including dashes please)?
+		<input type="text" size="20" name="phoneNumber" /></p>
+		<p>Please enter the number of tickets you wish to order:
+		<input type="text" size="20" name="ticketNumber" /></p>
+		<p><input type="submit" value="Order Tickets" /> 
+		<input type="reset" value="Reset" /></p>
+	</form>
+</body>
+</html>

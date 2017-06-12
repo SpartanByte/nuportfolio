@@ -122,3 +122,7 @@ Route::post('photos/show', function(){
   } 
 
 // Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude');
+
+
+
+Route::get('/files/python/py-calculations.html', 'CodeSampleController@testPython');

@@ -11,6 +11,7 @@
 {{-- Resetting browser defaults for CSS --}}
 <link rel="stylesheet" href="{{ URL::asset('css/reset.css') }}" />
 <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" />
+<link rel="stylesheet" href="{{ URL::asset('css/animate.css') }}" />
 {{-- Responsive design breakpoints (dedicated CSS file) --}}
 <link rel="stylesheet" href="{{ URL::asset('css/responsive.css') }}" />
 {{-- importing Proza Libre fonts via webkit --}}

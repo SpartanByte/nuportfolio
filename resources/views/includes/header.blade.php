@@ -10,7 +10,7 @@
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
+                <li><a class="animated infinite flash-link" href="/">Home</a></li>
 
                     {{-- Start of dropdown available items | Projects dropdown --}}
                     <ul class="nav navbar-nav">
@@ -30,7 +30,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coding<span class="caret"></span></a>
                             <ul class="dropdown-menu" id="navbar-dropdown-override">
-                                <li><a href="{{ url('coding/general') }}">General Information</a></li>
+                                <li><a class="animated infinite flash-link" href="{{ url('coding/general') }}">General Information</a></li>
                                 <li><a href="{{ url('coding/csharp') }}" title="C# Programming Samples">C#</a></li>
                                 <li><a href="{{ url('coding/css') }}" titile="Cascading Style Sheets">CSS (Cascading Style Sheets)</a></li>
                                 <li><a href="{{ url('coding/java') }}" title="Java Programming Samples">Java Samples</a></li>
@@ -41,7 +41,7 @@
                                     </ul>
                                 <li><a href="{{ url('coding/php')  }}" title="PHP Code Examples">PHP</a></li>
                                     <ul class="nav-third-level">
-                                        <li><a href="{{ url('programs/php/timeanddates') }}" title="PHP Time/Date Examples">Time and Date</a></li>
+                                        <li><a class="animated infinite flash-link" href="{{ url('programs/php/timeanddates') }}" title="PHP Time/Date Examples">Time and Date</a></li>
                                     </ul>
                                 <li><a href="{{ url('coding/python') }}" title="Python Programming Samples">Python</a></li>
                                 <li><a href="{{ url('coding/umbraco') }}" title="Umbraco ASP.NET CMS">Umbraco CMS</a></li>
