@@ -7,6 +7,7 @@
 
 	class HolidaysService{
 
+		// This provides the array of holidays to fill the first two columns of PHP Holidays (php/timeanddates)
 		public $holidaysArray = [
 	            ["New Years Day", "January 01"],
 	            ["Valentine's Day", "February 14"],
@@ -20,11 +21,14 @@
 	        ]; 
 
 		public function getHolidays(){
-			return $this->holidaysArray;
+			return $this->holidaysArray; // available for CodeSampleController
 		}
 
 		public function getCountdown(){
 
+			// troubleshooting with static array, trying to return how many days until X holiday based on current time
+			//  The problem may be in Blade
+			// ---also looking into using Carbon
 			$dates = [
 	            ["New Years Day", "January 01"],
 	            ["Valentine's Day", "February 14"],
@@ -51,6 +55,6 @@
 	        	} 
             	array_push($daysRemaining, $daysUntil);
         	}
-			return $daysRemaining;	
+			return $daysRemaining;	//  is returning a new array of day countdown results
 		}
 	}

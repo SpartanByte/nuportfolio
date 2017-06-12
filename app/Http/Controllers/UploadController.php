@@ -14,7 +14,6 @@
      */
     class UploadController extends Controller{
 
-
         public function getUpload(ImageUploaderService $currentUpload){
 
             $newUpload = new ImageUploaderService();

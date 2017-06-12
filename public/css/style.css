@@ -56,11 +56,8 @@ body{font-family: 'proza_libreregular', sans-serif !important;}
 /**
  * GLOBAL STYLING HERE
  */
-.container{
-    min-width: 100%;
-    min-height: 100%;
-    background-color: #FFFFFF; /* very light grey for main background */}
-
+.container{min-width: 100%; min-height: 100%; background-color: #FFFFFF;}
+.clear { clear:both; }
 /* COULD BE USED FOR STYLING OUTGOING LINKS --- IF CODE IS ADDED TO AVOID CHANGING ANY LINKS IN FOOTER 
 a[href^="https://"]{
      color: #337ab7 !important;
@@ -94,27 +91,25 @@ header.row{
 
 .title-container{
     background-color: #666666;
-    width: 100%;
+    width: 100%; height: auto;
     padding-top: 10px;
-    margin-top: 60px;
-    height: auto;}
+    margin-top: 60px;}
 
 div#main.row{
     margin-bottom: 60px;
     padding-bottom: 0px;}
 
 nav.navbar.navbar-default{
-    
     color: #FFFFFF;
     border: solid #083450 1px;}
+
 #navbar-override{
     /* This controls stlyles that affects the entire background/block of the navigation bar from Bootstrap and overrides it where noted */
     background-color: #000000;
     font-family: 'Open Sans', sans-serif;}
-
-#navbar-override a{
-    color: #e6e6e6;
-    font-size: 14px;}
+    #navbar-override a{
+        color: #e6e6e6;
+        font-size: 14px;}
 
 .navbar .nav > li.dropdown.open.active > a:hover,
 .navbar .nav > li.dropdown.open > a {
@@ -122,43 +117,41 @@ nav.navbar.navbar-default{
     color: #000000 !important;}
 
 #navbar-dropdown-override{
-    background-color: #f2f2f2; /* Adds a near-#FFFFFF background to the dropdown itself (not the parent link causing the dropdown) */
+    background-color: #f2f2f2; /* Adds a near-#FFFFFF background to the dropdown (not the parent link causing the dropdown) */
     color: #000000 !important;}
-
-#navbar-dropdown-override a{
-    color: #000000;}
-
-#navbar-dropdown-override a:hover{
-    background-color: #82734C; /* medium blue background when navbar items are hovered over 80BFFF*/}
+    #navbar-dropdown-override a{
+        color: #000000;}
+        #navbar-dropdown-override a:hover{
+            background-color: #82734C;}
 
 .nav-third-level {
     list-style-type: none;
     background-color: #b4ab93;
     text-decoration: none;}
-.nav-third-level li{
-    padding: 2%;}
-.nav-third-level li:hover{
-    background-color: #82734c;}
-.nav-third-level:hover a{
-    cursor: pointer;
-    text-decoration: none;}
+    .nav-third-level li{
+        padding: 2%;}
+        .nav-third-level li:hover{
+            background-color: #82734c;}
+            .nav-third-level:hover a{
+                cursor: pointer;
+                text-decoration: none;}
 
 /**
  * #code-content overrides any Bootstrap styles for any of the Code Samples pages (also has the static-content class applied) 
  */
 #code-content h1, h2, h3, h4{
     color: #FFFFFF;}
-#code-content h1{
-    font-size: 2.5rem; 
-    letter-spacing: 0.5em; 
-    margin-top: 0%;}
-#code-content a{
-    color: #252525;
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;}
-    #code-content a:hover{
-        color: #770000;}
+    #code-content h1{
+        font-size: 2.5rem; 
+        letter-spacing: 0.5em; 
+        margin-top: 0%;}
+        #code-content a{
+            color: #252525;
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;}
+            #code-content a:hover{
+                color: #770000;}
 
 /**
  * ANY STYLES REGARDING THE FOOTER ARE HERE
@@ -178,8 +171,7 @@ nav.navbar.navbar-default{
     margin-top: 58em; !important;
     height: 6.5em;}
     .footer-left{
-        list-style-type: none;
-        }
+        list-style-type: none;}
 .footer-left, .footer-right{ letter-spacing: 0.1rem;}
 .footer-left > li{font-size:1.5rem;}
     .footer-right{
@@ -206,7 +198,6 @@ nav.navbar.navbar-default{
 /**
  * STANDARD PAGES: TEMPLATED STYLES
  */
-
 .static-content{
     margin: auto; 
     padding-left: 1em; 
@@ -263,22 +254,16 @@ nav.navbar.navbar-default{
 
 
 .static-content.gallery a{
-    border: none;
-}
+    border: none;}
     .static-content.gallery a:hover{
-        border: none;
-    }
+        border: none;}
 
 .static-content.gallery img{
     opacity: 1;
-    transition-duration: 0.5s;
-}
+    transition-duration: 0.5s;}
     .static-content.gallery img:hover{
         opacity: 0.7;
-        transition-duration: 0.5s;
-    }
-
-
+        transition-duration: 0.5s;}
 
 /**
  * Setting up these styles to go into the auto-generated image gallery by Javascript
@@ -286,8 +271,6 @@ nav.navbar.navbar-default{
  * However, the PHP code may need some planning in order to integrate it properly into Laravel (and in an auto-generation Controller?)
  * There is an alternative example using Javascript/AJAX entirely at: http://www.codechewing.com/library/automatic-reloading-image-gallery-with-ajax-jquery/
  */
-.clear { 
-    clear:both; }
 .photo-link {
     padding:5px; 
     margin:5px; 
@@ -350,8 +333,7 @@ nav.navbar.navbar-default{
     margin-right: auto;
     padding-bottom: 40px;
     list-style: none;}
-.photo-list li{
-    float:left;}
+    .photo-list li{float:left;}
 .alert-box h2{
     top-margin: 200px;
     color: green;}
@@ -377,19 +359,15 @@ nav.navbar.navbar-default{
 .upload-form-container button{
     min-width: 200px;
     text-transform: uppercase;}
-
+.send-btn{margin-left: 15px;}
+    .send-btn.uploader{
+        margin: 2% 0 0 0;
+        padding: 0 1.5%;
+        font-size: 1.6rem;
+        background-color: #82734C;}
 .control-group{
     margin-top: 40px;
     margin-bottom: 40px;}
-
-.send-btn{
-    margin-left: 15px;}
-
-.send-btn.uploader{
-    margin: 2% 0 0 0;
-    padding: 0 1.5%;
-    font-size: 1.6rem;
-    background-color: #82734C;}
 
 .controls input{
     margin-left: 15px;
@@ -407,26 +385,25 @@ nav.navbar.navbar-default{
         position: relative;
         width: 300px;
         height: 510px;
-        padding: 10px;}
- 
-    #slideshow > div {
-        position: absolute;
-        top: 10px;
-        left: 10px;}
-    #slideshow > div > img {
-        border: 2px solid #000000;
-        box-shadow: 2px 2px 20px #000000;}
+        padding: 10px;} 
+        #slideshow > div {
+            position: absolute;
+            top: 10px;
+            left: 10px;}
+            #slideshow > div > img {
+                border: 2px solid #000000;
+                box-shadow: 2px 2px 20px #000000;}
 
     .picture{
         position: relative;
         width:100%;}
-    .picture p{
-        position: absolute;
-        width:100%;
-        color: #000000;
-        font-size: 18px;
-        top: 250px;
-        text-align: center;}
+        .picture p{
+            position: absolute;
+            width:100%;
+            color: #000000;
+            font-size: 18px;
+            top: 250px;
+            text-align: center;}
 
 /**
 * ABOUT PAGE
@@ -485,23 +462,6 @@ nav.navbar.navbar-default{
         text-decoration: underline;  
         border: none;}
 
-
-/*
-
- About page: Academic/training history section 
-.academic-history h4{
-    text-transform: uppercase; 
-    border-bottom: 3px solid #1A6FB0; 
-    margin-top: 3%;}
-
-.academic-history h5{
-    font-size: 1.5em; 
-    line-height: 0.5; 
-    color: #1A6FB0;}
-.academic-history p{
-    font-size: 1.2em; 
-    margin-left: 1%;}
-*/
 /**
  * GENERAL CODING INFORMATION PAGE --- STYLES HERE
  */

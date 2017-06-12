@@ -46,7 +46,8 @@ Route::group(['prefix' => 'programs/js'], function(){
 Route::group(['prefix' => 'programs/php'], function(){
   Route::get('timeanddates', 'CodeSampleController@phpTime');
   Route::get('timeanddates', 'CodeSampleController@setHolidays');
-  // Route::get('timeanddates', 'CodeSampleController@setCountdown');
+  // Route::get('timeanddates', 'CodeSampleController@setCountdown'); 
+      // this is returning value but erroring when both setHolidays and setCountdown are uncommented/active
 });
 /**
  * CONTACT FORM ROUTES ====================================================
@@ -70,7 +71,7 @@ Route::get('pages/photoshop', 'GalleryController@makePhotoshopGallery'); // Gene
 Route::get('upload', function(){
     return View::make('pages.upload');
 });
-Route::post('apply/upload', 'UploadController@upload');
+// Route::post('apply/upload', 'UploadController@upload');
 
 /**
  * IMAGE INTERVENTION ROUTES ('/photos/create') ============================================
