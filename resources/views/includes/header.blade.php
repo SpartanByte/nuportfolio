@@ -30,7 +30,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coding<span class="caret"></span></a>
                             <ul class="dropdown-menu" id="navbar-dropdown-override">
-                                <li><a class="animated infinite flash-link" href="{{ url('coding/general') }}">General Information</a></li>
+                                <li><a href="{{ url('coding/general') }}">General Information</a></li>
                                 <li><a href="{{ url('coding/csharp') }}" title="C# Programming Samples">C#</a></li>
                                 <li><a href="{{ url('coding/css') }}" titile="Cascading Style Sheets">CSS (Cascading Style Sheets)</a></li>
                                 <li><a href="{{ url('coding/java') }}" title="Java Programming Samples">Java Samples</a></li>

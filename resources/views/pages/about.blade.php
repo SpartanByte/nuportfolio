@@ -1,5 +1,5 @@
     @extends('layouts.default')
-
+    @section('description', 'About Brian Wardwell: web developer, musician, amateur photographer, writer, native of Fargo North Dakota')
     @section('title', 'About')
 
     @section('content')

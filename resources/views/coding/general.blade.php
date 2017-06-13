@@ -1,5 +1,5 @@
     @extends('layouts.default')
-
+   @section('description', 'General information about programming and languages Java, PHP, Python, CSS, C#, JavaScript')
     @section('title', 'General Information')
 
     @section('content')

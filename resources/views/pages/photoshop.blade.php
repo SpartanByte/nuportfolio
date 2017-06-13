@@ -1,5 +1,5 @@
 @extends('layouts.default')
-
+@section('description', 'Brian Wardwell photoshop prototypes and composites: music related, advertising, website mockups. some from my profile as x-ample on deviantart.com')
 @section('title', 'Photoshop Composites')
 
 @section('content')

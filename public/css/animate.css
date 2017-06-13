@@ -1579,3 +1579,15 @@
 .slideOutUp {
   animation-name: slideOutUp;
 }
+
+
+/**
+ * CLASSES TO IMPLEMENT ANIMATE.CSS FOR PRESENTATION AND DEMO PURPOSES
+ *  AUTHOR: BRIAN WARDWELL
+ */
+.flash-demo:hover{
+  animation-name: flash;
+}
+.slideInRight-demo{
+  animation-name: slideInRight;
+}

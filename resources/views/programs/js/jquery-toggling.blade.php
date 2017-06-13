@@ -1,27 +1,25 @@
     @extends('layouts.default')
-
+    @section('description', 'image toggling example using jQuery, JavaScript and Laravel')
     @section('title', 'jQuery Toggling')
 
     @section('content')
 
         <script>
             $(document).ready(function() {
-                 $('.image-module article').hide(); 
+                $('.image-module article').hide(); 
                 $('.imgtoggle-buttons').click(function() {
-                    var $this = $(this).closest('section').find('article');
-                $('.image-module article').not($this).slideUp();
-                    $this.fadeToggle(800);
-            });
-        });
-
-        // Image hover effects - jquery
-        $(document).ready(function(){
-                $('.image-color').mouseenter(function(){
-                $('.image-color').css("filters", "grayscale(100%)");
+                        var $this = $(this).closest('section').find('article');
+                    $('.image-module article').not($this).slideUp();
+                        $this.fadeToggle(800);
+                });
             });
 
-        });
-
+            // Image hover effects - jquery
+            $(document).ready(function(){
+                    $('.image-color').mouseenter(function(){
+                    $('.image-color').css("filters", "grayscale(100%)");
+                });
+            });
         </script>
 
     <div class="static-content program-page">

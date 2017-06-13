@@ -1,6 +1,6 @@
     @extends('layouts.default')
-
-    @section('title', 'PHP Examples')
+    @section('description', 'General information about server-side programming lanuage Java and libraries such as Swing')
+    @section('title', 'Java Information')
 
     @section('content')
     <div class="static-content" id="code-content">
@@ -15,7 +15,7 @@
             <p><a href="#">Choose An Applet You Made And Liked</a></p>
             <p><a href="#">Java Example 2</a></p>
             <p><a href="#">Java Example 3</a></p>
-            {{-- additional projects will continue like this. -- will be easy to advance into a model returning a request for files related to PHP samples --}}
+            {{-- additional projects will continue like this.  will be easy to advance into a model returning a request for files related to PHP samples --}}
 
         <hr />
 

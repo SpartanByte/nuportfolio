@@ -1,6 +1,6 @@
- @extends('layouts.default')
-
- @section('title', 'Time and Dates')
+    @extends('layouts.default')
+    @section('description', 'more information on PHP and time and countdown examples')
+    @section('title', 'PHP > Time and Dates')
 
  @section('content')
 

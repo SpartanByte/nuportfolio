@@ -1,5 +1,5 @@
 @extends('layouts.default')
-
+@section('description', 'Brian Wardwell amateur photography: portraits, landscapes, macro. some from my profile as x-ample on deviantart.com')
 @section('title', 'Photography')
 
 @section('content')

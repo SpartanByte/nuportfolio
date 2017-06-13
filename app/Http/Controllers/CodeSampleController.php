@@ -33,7 +33,7 @@ class CodeSampleController extends Controller
     public function setHolidays(HolidaysService $holidaysArray){
         $holidaysList = new HolidaysService();
         $holidaysArray = $holidaysList->getHolidays();
-
+        $currentDate = date("n/j/Y");
         return view('programs/php/timeanddates')->with(compact('holidaysArray'));    
     } 
 
