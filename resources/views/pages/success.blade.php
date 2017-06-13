@@ -1,17 +1,16 @@
 
-@extends('layouts.default')
 
-@section('content')
-        <div class="about-section">
-            <div class="text-content">
-                <div class="span7 offset1">
+ @extends('layouts.default')
 
-                <h2>This is the success page!</h2>
-                <h3>You have successed!</h3>
-                <h3>{{ $fileName }} was uploaded</h3>
+    @section('title', 'General Information')
 
-                </div>
-                </div>
-            </div>
-        </div>
-    @stop
+    @section('content')
+    <div class="static-content general-coding">
+
+        <span class="section-header mid-size-font">Upload Successful!<br />
+        <span class="uppercase-shadow">{{ $fileName }} was uploaded!</span></span>
+        <hr />
+        <p><a class="internal-link mid-size-font" href="/">Back To Homepage</a></p>
+
+    <div class="bottom-spacer"></div>
+@stop

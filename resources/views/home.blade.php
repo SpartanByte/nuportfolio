@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('title')
+    Home!
+@stop
+
+@section('description', 'Web Developer from Fargo, ND. He is also a musician and working on projects Battle Cry and LaconicAura, amateur photographer and writer.')
+
 @section('content')
 <div class="container">
     <div class="row">

@@ -1,9 +1,8 @@
 @extends('layouts.default')
-
-@section('title', 'Home')
+@section('description', 'Web Developer from Fargo, ND. He is also a musician and working on projects Battle Cry and LaconicAura, amateur photographer and writer.')
+@section('title', 'Brian Wardwell: Web Developer')
 
 @section('content')
-
 
         <div class="landing-image">
             <img src="/images/stock/laptop_time.jpg" />

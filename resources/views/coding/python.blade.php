@@ -1,5 +1,5 @@
     @extends('layouts.default')
-
+   @section('description', 'General information about server-side programming lanuage Python including smaller desktop application scripts')
     @section('title', 'Python Examples')
 
     @section('content')
@@ -17,7 +17,9 @@
                 <img src="/images/language-icons/python.png" width="50" height="50">(Note: this is in .py format)</p>
         <p><a class="internalLink" href="/files/python/python-calculations.txt">Python Calculations (.txt format)</a></p>
 
-
+        <form action="/files/python/py-calculations.html" method = "POST">
+            <input type="submit" value="Run the Python program">
+        </form>
 
 
         <hr />

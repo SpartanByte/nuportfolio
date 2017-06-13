@@ -1,5 +1,5 @@
     @extends('layouts.default')
-
+    @section('description', 'General information about server-side language PHP and the Laravel framework')
     @section('title', 'PHP Examples')
 
     @section('content')

@@ -7,12 +7,21 @@
     use Redirect;
     use Request;
     use Session;
+    use App\Services\ImageUploader\ImageUploaderService;
 
     /**
      *  FOR "IMAGE UPLOADER" functionality
      */
     class UploadController extends Controller{
 
+        public function getUpload(ImageUploaderService $currentUpload){
+
+            $newUpload = new ImageUploaderService();
+            $currentUpload = $newUpload->upload();
+
+            return view('pages/success')->with(['currentUpload' => $currentUpload]);
+        }
+        /* 
         public function upload(){
 
             // getting post data
@@ -38,10 +47,11 @@
                         Input::file('image')->move($imgInputPath, $fileName); // adding image to directory folder
 
                         // returning view with file name for img tags and index
-                        return view('pages.success')->with(['fileName' => $fileName]);
+                        return view('pages/success')->with(['fileName' => $fileName]);
                     }
                 }
-        }
+        } 
+        */
         /*
             Controls image display from upload.
         */

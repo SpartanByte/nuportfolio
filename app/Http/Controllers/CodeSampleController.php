@@ -3,18 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Foundation\Bus\DispatchesJobs;
+use App\Services\CodeSamples\PHP\HolidaysService;
+
+/* use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Intervention\Image\ImageManager;
-use Image;
-use Response;
-use File;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;*/
+
 
 class CodeSampleController extends Controller
 {
-    //
+
     public function jqueryToggle()
     {
         return view('programs/js/jquery-toggling');
@@ -28,18 +27,24 @@ class CodeSampleController extends Controller
     	$CST = date_default_timezone_set("America/Chicago"); 
         $currentDate = date("n/j/Y");
     	$timestamp = date("h:i");
-    	return view('programs/php/timeanddates')->with(['currentDate' => $currentDate, 'timestamp' => $timestamp]);
+        return view('programs/php/timeanddates')->with(compact('currentDate', 'timestamp')); 
+    } 
+
+    public function setHolidays(HolidaysService $holidaysArray){
+        $holidaysList = new HolidaysService();
+        $holidaysArray = $holidaysList->getHolidays();
+        $currentDate = date("n/j/Y");
+        return view('programs/php/timeanddates')->with(compact('holidaysArray'));    
+    } 
+
+   /* public function setCountdown(HolidaysService $daysRemaining){
+        $countdownResponse = new HolidaysService();
+        $daysRemaining = $countdownResponse->getCountdown();
+
+        return view('programs/php/timeanddates')->with(compact('daysRemaining'));    
+    } */
+
+    public function testPython(){
+        return view('/files/python/py-calculations.html');
     }
-
-    public function phpHolidays(){
-        // Setting default timezone
-        $timezone = date_default_timezone_set("America\Chicago");
-        $today = date("n/j/Y");
-
-        // Need to get each holiday name and date into a multidimensional array to print to a table "days until..." for example
-        
-
-
-    }
-
 }

@@ -1,5 +1,5 @@
     @extends('layouts.default')
-
+   @section('description', 'General information about Umbraco - a ASP.NET and C# based  content management system')
     @section('title', 'Umbraco CMS: About')
 
     @section('content')

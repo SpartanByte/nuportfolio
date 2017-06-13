@@ -1,6 +1,6 @@
- @extends('layouts.default')
-
- @section('title', 'Slideshow')
+    @extends('layouts.default')
+    @section('description', 'slideshow example using jQuery, JavaScript and Laravel')
+    @section('title', 'BWardwell: Slideshow Example')
 
  @section('content')
     <div class="static-content">
@@ -33,7 +33,8 @@
     <div id="gallery-clear-bottom"><button type="button" class="btn-primary btn-lg"><a href="#">Back To Home</a></button></div>
 </div>
     
-
+  {{-- js-examples.js --}}
+  <script src="{{ URL::asset('js/js-examples.js') }}" /></script>
 
 @stop
 

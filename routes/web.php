@@ -41,13 +41,14 @@ Route::group(['prefix' => 'coding'], function()
 Route::group(['prefix' => 'programs/js'], function(){
   Route::get('jquery-toggling', 'CodeSampleController@jqueryToggle'); // jQuery toggle example
   Route::get('slideshow', 'CodeSampleController@jsSlideshow'); // JavaScript slideshow example
-
 });
 
 Route::group(['prefix' => 'programs/php'], function(){
   Route::get('timeanddates', 'CodeSampleController@phpTime');
+  Route::get('timeanddates', 'CodeSampleController@setHolidays');
+  // Route::get('timeanddates', 'CodeSampleController@setCountdown'); 
+      // this is returning value but erroring when both setHolidays and setCountdown are uncommented/active
 });
-
 /**
  * CONTACT FORM ROUTES ====================================================
  * Creates and sends contact email
@@ -70,7 +71,7 @@ Route::get('pages/photoshop', 'GalleryController@makePhotoshopGallery'); // Gene
 Route::get('upload', function(){
     return View::make('pages.upload');
 });
-Route::post('apply/upload', 'UploadController@upload');
+// Route::post('apply/upload', 'UploadController@upload');
 
 /**
  * IMAGE INTERVENTION ROUTES ('/photos/create') ============================================
@@ -101,28 +102,6 @@ Route::post('photos/show', function(){
 	return redirect('photos/index');
 });
 
-
-
-
-
-/*
-  |--------------------------------------------------------------------------
-  | ROUTES FOR DISTRIBUTING TRAFFIC AND ANY OTHER NEEDED PROGRAMMING FOR THE 
-  | PROGRAM SAMPLES OF JAVASCRIPT, PHP, C#, JAVA, ETC
-  |--------------------------------------------------------------------------
- */
-
-/**
- * START OF ROUTES FOR PROGRAMMING EXAMPLES
- */
-/*Route::group(['prefix' => 'programs/js'], function(){
-  Route::get('jquery-toggling', 'ProgramSampleController@jqueryToggle'); // jQuery toggle example
-  Route::get('slideshow', 'ProgramSampleController@jsSlideshow'); // JavaScript slideshow example*/
-
-
-
-Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude');
-
 /**
  * ROUTE RETURNING UPLOADED IMAGES ======================================
  */
@@ -142,3 +121,5 @@ Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude
     return public_path() . '/images/';
   } 
 
+// Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude');
+Route::get('/files/python/py-calculations.html', 'CodeSampleController@testPython');

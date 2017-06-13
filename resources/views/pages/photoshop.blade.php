@@ -1,12 +1,12 @@
 @extends('layouts.default')
-
+@section('description', 'Brian Wardwell photoshop prototypes and composites: music related, advertising, website mockups. some from my profile as x-ample on deviantart.com')
 @section('title', 'Photoshop Composites')
 
 @section('content')
 <div class="static-content gallery">
     <div id="gallery-thumbnails" style="padding-bottom:15px;">
 
-        <span class="page-header uppercase-shadow gallery-header">Photoshop Gallery</span>
+        <span class="page-header uppercase-shadow gallery-header lightSpeedIn">Photoshop Gallery</span>
             <ul class="photo-list">
                 {{-- Images generated from ImageController@showPhotography --}}
                 @foreach($imageFiles as $imageFile)

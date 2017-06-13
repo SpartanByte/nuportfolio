@@ -3,70 +3,61 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i');
 @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
 
-html{
-    background-color: transparent;
-    font-size: 14px;}
-
-body{
-    font-family: 'proza_libreregular', sans-serif !important;
-}
+html{background-color: transparent; font-size: 14px;}
+body{font-family: 'proza_libreregular', sans-serif !important;}
 
 /* Formatting styles */
-.page-header{
-    padding-top: 4em;
-    color: #252525;
-    text-align: center;}
-
+.page-header{padding-top: 4em;color: #252525; text-align: center;}
 .h1{font-size: 4em !important;}
 .h2{font-size: 3.5rem !important;}
 .h3{font-size: 3rem !important; }
+.mid-size-font{font-family: 'proza_libresemibold', sans-serif; font-size: 2.5rem;}
+.med-size-font{font-family: 'proza_libresemibold', sans-serif; font-size: 1.5rem;}
+.small-header-font{font-size: 2rem;}
+.standard-ul{font-weight: bold;font-size: 1.75rem;}
 
-.uppercase-shadow{
-    text-transform: uppercase;
-    text-shadow: 4px 2px 6px #404040;}
+/* Font Effects */
+.uppercase-shadow{text-transform: uppercase; text-shadow: 4px 2px 6px #404040;}
+.shadow-uppercase{text-shadow: 4px 2px 6px $404040;}
+.center-text{text-align: center;}
+.sm-letter-spacing{letter-spacing:0.1rem;}
+.med-letter-spacing{letter-spacing:0.25rem;}
+.lrg-letter-spacing{letter-spacing:0.5rem;}
 
-.mid-size-font{
-    font-family: 'proza_libresemibold', sans-serif;
-    font-size: 2.5rem;}
-
-.small-header-font{
-    font-size: 2rem;
-}
+/**
+ * To be used for ALL outgoing/external links
+ */
+.outgoing-link{color: #0c467f !important;}
+.outgoing-link:hover{color: #0c0c7f !important;}
+.internal-link{color: #287ACC !important;}
+.internal-link:hover{color: #0c0c7f !important;}
 
 .half-img{width:50%;height:50%;}
 .quarter-img{width:25%;height:25%;}
 .onethird-img{width:33%;height:33%;}
 
 .code-gen-text{ font-weight: bold; font-family: Oxygen, sans-serif; font-size: 1.5rem; line-height:1;}
+
+/* full-table may end up applying to any other tables that may be used */
+.full-table{
+    width: 100%;}
+    .full-table td{
+        border: 1px solid black;
+        text-align: center;
+        max-width: 35%;
+        padding-top: 3px;
+        padding-bottom: 3px;}
+    .full-table tr:nth-child(even) {
+        background: #909090;}
+    .full-table .table-header{
+        background-color: #000000;
+        color: #FFFFFF;}
 /* ================================================  START OF GLOBAL STYLES ======================================= */
 /**
  * GLOBAL STYLING HERE
  */
-.container{
-    min-width: 100%;
-    min-height: 100%;
-    background-color: #FFFFFF; /* very light grey for main background */}
-
-.internalLink{
-    font-size: 26px;
-    font-weight: bold;
-    color: blue !important;
-    padding: 4px;}
-.internalLink:hover{
-    color: #FFFFFF !important;
-    background-color: #337ab7;}
-
-/**
- * To be used for ALL outgoing/external links
- */
-.outgoingLink{
-     color: #337ab7 !important;
-     font-size: 13px !important;}
-.outgoingLink:hover{
-    background-color: #337ab7;
-    color: #FFFFFF !important;
-    padding: 2px 2px 2px 2px;}
-
+.container{min-width: 100%; min-height: 100%; background-color: #FFFFFF;}
+.clear { clear:both; }
 /* COULD BE USED FOR STYLING OUTGOING LINKS --- IF CODE IS ADDED TO AVOID CHANGING ANY LINKS IN FOOTER 
 a[href^="https://"]{
      color: #337ab7 !important;
@@ -84,14 +75,8 @@ a[href^="http://"]{
 /* DO NOT remove or modify this style as it separates the photos from the bottom of the page
 ** allowing either content to be below the pictures if needed or grant extra space/padding below galleries
 */
-#gallery-clear-bottom{
-    display: block !important;
-    clear: both;}
+#gallery-clear-bottom{display: block !important;clear: both;}
 
-.standard-ul{
-    font-weight: bold;
-    font-size: 1.75rem;
-}
 /* ================================================  END OF GLOBAL STYLES ======================================= */
 
 /* 
@@ -106,27 +91,25 @@ header.row{
 
 .title-container{
     background-color: #666666;
-    width: 100%;
+    width: 100%; height: auto;
     padding-top: 10px;
-    margin-top: 60px;
-    height: auto;}
+    margin-top: 60px;}
 
 div#main.row{
     margin-bottom: 60px;
     padding-bottom: 0px;}
 
 nav.navbar.navbar-default{
-    
     color: #FFFFFF;
     border: solid #083450 1px;}
+
 #navbar-override{
     /* This controls stlyles that affects the entire background/block of the navigation bar from Bootstrap and overrides it where noted */
     background-color: #000000;
     font-family: 'Open Sans', sans-serif;}
-
-#navbar-override a{
-    color: #e6e6e6;
-    font-size: 14px;}
+    #navbar-override a{
+        color: #e6e6e6;
+        font-size: 14px;}
 
 .navbar .nav > li.dropdown.open.active > a:hover,
 .navbar .nav > li.dropdown.open > a {
@@ -134,43 +117,41 @@ nav.navbar.navbar-default{
     color: #000000 !important;}
 
 #navbar-dropdown-override{
-    background-color: #f2f2f2; /* Adds a near-#FFFFFF background to the dropdown itself (not the parent link causing the dropdown) */
+    background-color: #f2f2f2; /* Adds a near-#FFFFFF background to the dropdown (not the parent link causing the dropdown) */
     color: #000000 !important;}
-
-#navbar-dropdown-override a{
-    color: #000000;}
-
-#navbar-dropdown-override a:hover{
-    background-color: #82734C; /* medium blue background when navbar items are hovered over 80BFFF*/}
+    #navbar-dropdown-override a{
+        color: #000000;}
+        #navbar-dropdown-override a:hover{
+            background-color: #82734C;}
 
 .nav-third-level {
     list-style-type: none;
     background-color: #b4ab93;
     text-decoration: none;}
-.nav-third-level li{
-    padding: 2%;}
-.nav-third-level li:hover{
-    background-color: #82734c;}
-.nav-third-level:hover a{
-    cursor: pointer;
-    text-decoration: none;}
+    .nav-third-level li{
+        padding: 2%;}
+        .nav-third-level li:hover{
+            background-color: #82734c;}
+            .nav-third-level:hover a{
+                cursor: pointer;
+                text-decoration: none;}
 
 /**
  * #code-content overrides any Bootstrap styles for any of the Code Samples pages (also has the static-content class applied) 
  */
 #code-content h1, h2, h3, h4{
     color: #FFFFFF;}
-#code-content h1{
-    font-size: 2.5rem; 
-    letter-spacing: 0.5em; 
-    margin-top: 0%;}
-#code-content a{
-    color: #252525;
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;}
-    #code-content a:hover{
-        color: #770000;}
+    #code-content h1{
+        font-size: 2.5rem; 
+        letter-spacing: 0.5em; 
+        margin-top: 0%;}
+        #code-content a{
+            color: #252525;
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;}
+            #code-content a:hover{
+                color: #770000;}
 
 /**
  * ANY STYLES REGARDING THE FOOTER ARE HERE
@@ -180,7 +161,6 @@ nav.navbar.navbar-default{
     width: 100%;}
 .footer{
     clear: both;
-    font-weight: 300;
     background-color: #000000;
     color: #FFFFFF;
     margin-bottom: 0px !important;
@@ -191,14 +171,15 @@ nav.navbar.navbar-default{
     margin-top: 58em; !important;
     height: 6.5em;}
     .footer-left{
-        list-style-type: none;
-        text-transform: uppercase;}
+        list-style-type: none;}
+.footer-left, .footer-right{ letter-spacing: 0.1rem;}
+.footer-left > li{font-size:1.5rem;}
     .footer-right{
         text-align: right;
         list-style-type: none;
-        font-size: 16px;
+        font-size: 1rem !important;;
         float: left;
-        width: 45%;
+        width: 47%;
         position: absolute;
         right: 5px;;
         top: 10px;}
@@ -206,19 +187,17 @@ nav.navbar.navbar-default{
             float: right;
             padding: 5px;}
         .footer-right a, .footer-left a{
-            color: #82734C /*#337ab7*/ !important;
-            font-size: 18px !important;}
+            color: #82734C !important;
+            font-size: 1.65rem !important;}
         .footer-right a:hover, .footer-left a:hover{
             color: #82734C !important;
             filter: grayscale(100%);}
         .footer-right > li > a > img{width: 3em; height: 3em;}
         .bottom-spacer{
             margin-bottom: 200px;}
-
 /**
  * STANDARD PAGES: TEMPLATED STYLES
  */
-
 .static-content{
     margin: auto; 
     padding-left: 1em; 
@@ -229,7 +208,7 @@ nav.navbar.navbar-default{
     color: #000000;
     width: 80%;}
     .static-content p{
-        font-size: 1.2em;
+        font-size: 1rem;
         letter-spacing: 0.3px;}
     .static-content h1{
         font-size: 3em; letter-spacing: 2px; width: 50%; text-align: center;
@@ -249,7 +228,7 @@ nav.navbar.navbar-default{
     .static-content a{
         /* color: #1A6FB0;*/
        /* border-top: 0.5px solid #1A6FB0; border-bottom: 0.5px solid #1A6FB0; */
-        color: #2B2619;
+        color: #0c467f;
         transition-duration: 0.5s;
         font-weight: bold;}
         .static-content a:hover{
@@ -275,22 +254,16 @@ nav.navbar.navbar-default{
 
 
 .static-content.gallery a{
-    border: none;
-}
+    border: none;}
     .static-content.gallery a:hover{
-        border: none;
-    }
+        border: none;}
 
 .static-content.gallery img{
     opacity: 1;
-    transition-duration: 0.5s;
-}
+    transition-duration: 0.5s;}
     .static-content.gallery img:hover{
         opacity: 0.7;
-        transition-duration: 0.5s;
-    }
-
-
+        transition-duration: 0.5s;}
 
 /**
  * Setting up these styles to go into the auto-generated image gallery by Javascript
@@ -298,8 +271,6 @@ nav.navbar.navbar-default{
  * However, the PHP code may need some planning in order to integrate it properly into Laravel (and in an auto-generation Controller?)
  * There is an alternative example using Javascript/AJAX entirely at: http://www.codechewing.com/library/automatic-reloading-image-gallery-with-ajax-jquery/
  */
-.clear { 
-    clear:both; }
 .photo-link {
     padding:5px; 
     margin:5px; 
@@ -362,8 +333,7 @@ nav.navbar.navbar-default{
     margin-right: auto;
     padding-bottom: 40px;
     list-style: none;}
-.photo-list li{
-    float:left;}
+    .photo-list li{float:left;}
 .alert-box h2{
     top-margin: 200px;
     color: green;}
@@ -389,19 +359,15 @@ nav.navbar.navbar-default{
 .upload-form-container button{
     min-width: 200px;
     text-transform: uppercase;}
-
+.send-btn{margin-left: 15px;}
+    .send-btn.uploader{
+        margin: 2% 0 0 0;
+        padding: 0 1.5%;
+        font-size: 1.6rem;
+        background-color: #82734C;}
 .control-group{
     margin-top: 40px;
     margin-bottom: 40px;}
-
-.send-btn{
-    margin-left: 15px;}
-
-.send-btn.uploader{
-    margin: 2% 0 0 0;
-    padding: 0 1.5%;
-    font-size: 1.6rem;
-    background-color: #82734C;}
 
 .controls input{
     margin-left: 15px;
@@ -419,26 +385,25 @@ nav.navbar.navbar-default{
         position: relative;
         width: 300px;
         height: 510px;
-        padding: 10px;}
- 
-    #slideshow > div {
-        position: absolute;
-        top: 10px;
-        left: 10px;}
-    #slideshow > div > img {
-        border: 2px solid #000000;
-        box-shadow: 2px 2px 20px #000000;}
+        padding: 10px;} 
+        #slideshow > div {
+            position: absolute;
+            top: 10px;
+            left: 10px;}
+            #slideshow > div > img {
+                border: 2px solid #000000;
+                box-shadow: 2px 2px 20px #000000;}
 
     .picture{
         position: relative;
         width:100%;}
-    .picture p{
-        position: absolute;
-        width:100%;
-        color: #000000;
-        font-size: 18px;
-        top: 250px;
-        text-align: center;}
+        .picture p{
+            position: absolute;
+            width:100%;
+            color: #000000;
+            font-size: 18px;
+            top: 250px;
+            text-align: center;}
 
 /**
 * ABOUT PAGE
@@ -473,54 +438,29 @@ nav.navbar.navbar-default{
         font-size: 1.5rem;}
 
 /* About page: Skillset section */
-
 .skillset > ul{ 
     margin-left: -1.5%;}
-.skill-headers{ 
+.ul-header{ 
+    padding: 1% 0;
     font-size: 2.5rem; 
-    color: #1A6FB0; 
     margin-left: -1.5%;}
-    .skills{ 
+    .skills li{ 
         font-size: 2rem; 
-        margin-left: -2%;  
-        line-height: 1.2; 
+        font-weight: bold;
+        margin-left: -2%;
+        line-height: 2; 
         letter-spacing: 1px;}
 
 /* About page: Development/work history section */
-.development-history h4{
-    font-size: 2rem;  
-    margin-top: 3%; 
-    letter-spacing: 1px;
-    text-transform: 
-    uppercase;
-    border-bottom: 3px solid #1A6FB0;}
-.development-history h5{
+.history-header.second-level{
     font-size: 2rem; 
-    line-height: 0.5;
-    color: #1A6FB0; 
+    font-weight: bold;
     padding-top: 0.25em; }
-    .development-history > h5 > a{
-        color: #1A6FB0; 
-        font-weight: 300;  
+    .history-header > a{
+        color: #524830;
+        font-weight: bold; 
         text-decoration: underline;  
         border: none;}
-.development-history p{
-    font-size: 1.8rem; 
-    margin-left: 1%;}
-
-/* About page: Academic/training history section */
-.academic-history h4{
-    text-transform: uppercase; 
-    border-bottom: 3px solid #1A6FB0; 
-    margin-top: 3%;}
-
-.academic-history h5{
-    font-size: 1.5em; 
-    line-height: 0.5; 
-    color: #1A6FB0;}
-.academic-history p{
-    font-size: 1.2em; 
-    margin-left: 1%;}
 
 /**
  * GENERAL CODING INFORMATION PAGE --- STYLES HERE
@@ -566,7 +506,7 @@ nav.navbar.navbar-default{
     margin-left: -1%;}
 
 .static-content.code-sample-page p{
-    font-size: 2rem; 
+    font-size: 1.5rem; 
     width: 90%;}
 
 /* Specific styles for javascript-program pages */
@@ -601,3 +541,33 @@ nav.navbar.navbar-default{
 .image-result{
     margin-left: -35%;
     margin-top: 10%;}
+
+/**
+ * CSS SAMPLE PAGE STYLES
+ */
+.btn-animate{
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+    background-color: #82734C;
+    color: #FFFFFF;
+    transition-duration: 0.75s;
+    font-weight: bold;
+    width: 150px;
+}
+.btn-animate:hover{
+    cursor: pointer;
+    color: #221E14;
+    background-color: #FFFFFF;
+    transition-duration: 0.75s;
+}
+ 
+.code-example > .indent-1{
+    margin-left: 1%;
+ }
+.code-example > .indent-2{
+    margin-left: 2%;
+}
+
+
+

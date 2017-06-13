@@ -1,26 +1,23 @@
     @extends('layouts.default')
-
+   @section('description', 'General information about programming and languages Java, PHP, Python, CSS, C#, JavaScript')
     @section('title', 'General Information')
 
     @section('content')
     <div class="static-content general-coding">
 
         <span class="page-header uppercase-shadow">General Coding Information</span>
-
         <hr />
-        <img src="/images/logos/php.png" />
-
+    <img class="animated tada" src="/images/logos/php.png" />
         <span class="section-header mid-size-font">PHP</span>
             <p>PHP (Hypertext Preprocessor) is a server-side language that was specifically designed for web development in 1994 by Rasmus Lerdorf. While
                 PHP is often considered easier to learn as a first programming language, special consideration and best practices need to be followed
                 to ensure security and proper implementation. As with many programming languages, <em>Procedural</em> PHP is where many get their start. However, with the popularity and usefulness of <em><strong>Object Oriented Languages</strong></em> such as Java, C#, C++ and Python; PHP evolved to be optionally written using Object Oriented principles. Older Object Oriented Languages including C# and Java have libraries of classes and methods that "come with" the language itself. Although PHP's implementation is much different in this respect, what it lacks in pre-written functionality allows it to be extremely flexible when the programmer is allowed to write custom classes, methods and libraries.</p>
 
-            <p>PHP frameworks also assisted in the solution of pre-written classes and methods. Early frameworks, which are commonly debated as frameworks, were Phplib and PEAR which were introduced between 2000 and 2002. While the amount and sophistication of PHP frameworks slowly grew, its truly powerful object oriented and MVC (Model View Controller) really took off in 2005 when both <strong>CakePHP</strong> and <strong><a href="https://symfony.com/" target="_blank">Symfony</a></strong> took off. Alongside them were <a href="http://www.tinymvc.com/" target="_blank">TinyMVC</a>, <a href="https://codeigniter.com/" target="_blank">CodeIgniter</a>, and <a href="https://framework.zend.com/" target="_blank">Zend</a>. </p>
+            <p>PHP frameworks also assisted in the solution of pre-written classes and methods. Early frameworks, which are commonly debated as frameworks, were Phplib and PEAR which were introduced between 2000 and 2002. While the amount and sophistication of PHP frameworks slowly grew, its truly powerful object oriented and MVC (Model View Controller) really took off in 2005 when both <strong>CakePHP</strong> and <strong><a href="https://symfony.com/" target="_blank">Symfony</a></strong> took off. Alongside them were <a  {{-- class="flash-link animated" --}} style="display:inline-block;" href="http://www.tinymvc.com/" target="_blank">TinyMVC</a>, <a  href="https://codeigniter.com/" target="_blank">CodeIgniter</a>, and <a href="https://framework.zend.com/" target="_blank">Zend</a>. </p>
 
             <p>While Symfony, Zend, and CodeIgniter each provided follow up versions in the meantime, <strong><a href="https://laravel.com/" target="_blank">Laravel</a></strong> (an MVC framework based on Symfony itself) was introduced in 2011 with Laravel 2 upgrading it the same year. Laravel is currently on version 5 and is arguably the most popular and widely used PHP frameworks. Of course, CakePHP, Zend, and Symfony continue to advance as well.</p>
 
             <p>One of the forthcoming examples is an application that I originally developed as a course project which involved listing course ID's, course title, the semester in which the course was taken, professor's name, and the grade received. The program demonstrated the ability to create, update, view and remove courses and fields in this list, which was displayed in HTML using a table. This is otherwise known as a <strong>CRUD</strong> application, which is an acronym for "<strong>C</strong>reate, <strong>R</strong>ead, <strong>U</strong>pdate, and <strong>D</strong>elete".</p>
-
         <hr />
         <img src="/images/logos/CSS.png" />
 

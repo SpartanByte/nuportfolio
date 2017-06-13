@@ -1,6 +1,6 @@
     @extends('layouts.default')
-
-      @section('title', 'JavaScript Examples')
+    @section('description', 'General information about JavaScript and libraries/frameworks Vue.js, React.js, Angular.js')
+      @section('title', 'JavaScript Information')
 
     @section('content')
     <div class="static-content code-sample-page">
