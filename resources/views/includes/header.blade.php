@@ -9,74 +9,85 @@
 <nav class="navbar navbar-default" id="navbar-override">
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+             {{-- Start of Navigation Elements --}}  
             <ul class="nav navbar-nav">
-                <li><a class="animated infinite flash-link" href="/">Home</a></li>
+                <li><a href="/">Home</a></li>
 
-                    {{-- Start of dropdown available items | Projects dropdown --}}
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
-                            <ul class="dropdown-menu" id="navbar-dropdown-override">
-                                <li><a href="http://musicbytes.us/">MusicBytes</a></li>
-                                <li><a href="#">My Old Portfolio</a></li>
-                                <li><a href="http://newlinecharacter.com/">New Line Character (Coming Soon)</a></li>
-                                <li><a href="#">The Music Pavilion (Coming Soon)</a></li>
-                            </ul>
-                        </li>
+            {{--Projects dropdown --}}
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+                    <ul class="dropdown-menu" id="navbar-dropdown-override">
+                        <li><a href="http://musicbytes.us/">MusicBytes</a></li>
+                        <li><a href="#">My Old Portfolio</a></li>
+                        <li><a href="http://newlinecharacter.com/">New Line Character (Coming Soon)</a></li>
+                        <li><a href="#">The Music Pavilion (Coming Soon)</a></li>
                     </ul>
+                </li>
+            </ul>
 
-                    {{-- Code Samples Dropdown --}}
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coding<span class="caret"></span></a>
-                            <ul class="dropdown-menu" id="navbar-dropdown-override">
-                                <li><a href="{{ url('coding/general') }}">General Information</a></li>
-                                <li><a href="{{ url('coding/csharp') }}" title="C# Programming Samples">C#</a></li>
-                                <li><a href="{{ url('coding/css') }}" titile="Cascading Style Sheets">CSS (Cascading Style Sheets)</a></li>
-                                <li><a href="{{ url('coding/java') }}" title="Java Programming Samples">Java Samples</a></li>
-                                <li><a href="{{ url('coding/javascript') }}" title="JavaScript Programming Scripting Samples">JavaScript</a></li>
-                                    <ul class="nav-third-level">
+            {{-- Start of Coding  Dropdown --}}
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coding<span class="caret"></span></a>
+                        <ul class="dropdown-menu" id="navbar-dropdown-override">
+                            <li><a href="{{ url('coding/general') }}">General Information</a></li>
+                            {{-- C# --}}
+                            <li><a href="{{ url('coding/csharp') }}" title="C# Programming Samples">C#</a></li>
+                            {{-- CSS --}}
+                            <li><a href="{{ url('coding/css') }}" titile="Cascading Style Sheets">CSS (Cascading Style Sheets)</a></li>
+                            {{-- Java --}}
+                            <li><a href="{{ url('coding/java') }}" title="Java Programming Samples">Java </a></li>
+
+                            {{-- Javascript --}}
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-toggle" href="{{ url('coding/javascript') }}" title="JavaScript Programming Scripting Samples">JavaScript</a>
+                                    <ul class="dropdown-menu fade-in">
                                         <li><a href="{{ url('programs/js/jquery-toggling') }}" title="jQuery Toggle">jQuery Toggling</a></li>
                                         <li><a href=" {{ url('programs/js/slideshow') }}" title="Javascript Slideshow">Slideshow</a></li>
                                     </ul>
-                                <li><a href="{{ url('coding/php')  }}" title="PHP Code Examples">PHP</a></li>
-                                    <ul class="nav-third-level">
-                                        <li><a class="animated infinite flash-link" href="{{ url('programs/php/timeanddates') }}" title="PHP Time/Date Examples">Time and Date</a></li>
-                                    </ul>
-                                <li><a href="{{ url('coding/python') }}" title="Python Programming Samples">Python</a></li>
-                                <li><a href="{{ url('coding/umbraco') }}" title="Umbraco ASP.NET CMS">Umbraco CMS</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                                </li>
 
-                    {{-- Galleries Dropdown  --}}
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galleries<span class="caret"></span></a>
-                            <ul class="dropdown-menu" id="navbar-dropdown-override">
-                                <li><a href="{{ url('pages/photoshop') }}">Photoshop Gallery</a></li>
-                                <li><a href="{{ url('pages/photography') }}">Photography Gallery</a></li>
-                                {{-- <li><a href="{{ url('templates/gallery-template') }}">Gallery Template</a></li> --}}
-                            </ul>
-                        </li>
-                    </ul>
+                                {{-- PHP --}}
+                                 <li class="dropdown-submenu">
+                                        <a class="dropdown-toggle" href="{{ url('coding/php')  }}" title="PHP Code Examples">PHP</a>
+                                        <ul class="dropdown-menu fade-in">
+                                                <li><a  href="{{ url('programs/php/timeanddates') }}" title="PHP Time/Date Examples">Time and Date</a></li>
+                                        </ul>
+                                </li>
+
+                                {{-- Laravel --}}
+                                <li class="dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle lang-row" data-toggle="dropdown">Laravel</a>
+                                        <ul class="dropdown-menu fade-in">
+                                                <li><a href="{{ url('upload') }}">Facade Image Upload</a></li>
+                                                <li><a href="{{ url('photos/image_example') }}">Intervention Image Demo</a></li>
+                                                <li><a href="{{ url('photos/create') }}">Test Intervention Image</a></li>
+                                         </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        {{-- End of Coding dropdown menus --}}
+
+
+                        {{-- Galleries Dropdown  --}}
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galleries<span class="caret"></span></a>
+                                        <ul class="dropdown-menu" id="navbar-dropdown-override">
+                                            <li><a href="{{ url('pages/photoshop') }}">Photoshop Gallery</a></li>
+                                            <li><a href="{{ url('pages/photography') }}">Photography Gallery</a></li>
+                                            {{-- <li><a href="{{ url('templates/gallery-template') }}">Gallery Template</a></li> --}}
+                                         </ul>
+                                </li>
+                        </ul>
 
                     {{-- NON-dropdown menu items  --}}
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('pages/about') }}">About</a></li>
                         <li><a href="{{ url('contact') }}">Contact</a></li>
-                    </ul>
-
-                    {{-- Galleries Dropdown  --}}
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Img CRUD Testing<span class="caret"></span></a>
-                            <ul class="dropdown-menu" id="navbar-dropdown-override">
-                                <li><a href="{{ url('photos/image_example') }}">Example Result of Intervention Image</a></li>
-                                <li><a href="{{ url('photos/create') }}">Test the Upload/Display Intervention Image Functionality</a></li>
-                                <li><a href="{{ url('upload') }}">Image Uploader</a></li>
-                            </ul>
-                        </li>
                     </ul>
 
                     <ul class="nav navbar-nav">
@@ -91,8 +102,7 @@
                             </ul>
                         </li>
                     </ul>
-
             </ul>{{-- End of left side menu  --}}
         </div>
     </div>
-    <!-- end of header.blade.php -->
+<!-- end of header.blade.php -->
