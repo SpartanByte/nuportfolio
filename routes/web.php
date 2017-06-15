@@ -49,6 +49,11 @@ Route::group(['prefix' => 'programs/php'], function(){
   // Route::get('timeanddates', 'CodeSampleController@setCountdown'); 
       // this is returning value but erroring when both setHolidays and setCountdown are uncommented/active
 });
+
+// Route::resource('pages/photography',  'App\Services\GalleryService');
+// Route::get('pages/photography', 'GalleryController@makePhotographyGallery');
+
+
 /**
  * CONTACT FORM ROUTES ====================================================
  * Creates and sends contact email
@@ -71,7 +76,7 @@ Route::get('pages/photoshop', 'GalleryController@makePhotoshopGallery'); // Gene
 Route::get('upload', function(){
     return View::make('pages.upload');
 });
-// Route::post('apply/upload', 'UploadController@upload');
+Route::post('apply/upload', 'UploadController@upload');
 
 /**
  * IMAGE INTERVENTION ROUTES ('/photos/create') ============================================

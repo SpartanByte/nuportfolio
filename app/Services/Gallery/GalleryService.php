@@ -1,9 +1,9 @@
 <?php  
 	
-	namespace Services\Gallery;
+	namespace App\Services\Gallery;
 
 	use Illuminate\Http\Request;
-	use App\Http\Controllers\Controller;
+	// use App\Http\Controllers\Controller;
 	use Illuminate\Support\Facades\File;
 	use Image;
 	use Input;
@@ -12,7 +12,7 @@
 
 		public function getPhotography(){
 
-			// $imagePath = 'images/photography'; <--- this needs to be in the controller -- you can only return one value
+			$imagePath = 'images/photography';
         	$imageFiles = File::allFiles($imagePath);
         	return $imageFiles;
         	
@@ -22,11 +22,11 @@
         	]; */
 		}
 
-		public function makePhotoshopGallery(){
+public function makePhotoshopGallery(){
         // $imagePath = 'images/photoshop'; <--- this needs to be in the controller -- you can only return one value
         
         	$imageFiles = File::allFiles($imagePath);
-        	return $imageFiles;
+        	return $imageFiles; 
 
 	        	/* return [
 	        		'imagePath', 
