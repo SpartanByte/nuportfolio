@@ -38,6 +38,10 @@ body{font-family: 'proza_libreregular', sans-serif !important;}
 
 .code-gen-text{ font-weight: bold; font-family: Oxygen, sans-serif; font-size: 1.5rem; line-height:1;}
 
+.file-list > li{padding-bottom: 1%;}
+.file-list > li > a{padding-right: 1%;}
+.file-list > li > img{width: 25px;height: 25px;}
+
 /* full-table may end up applying to any other tables that may be used */
 .full-table{
     width: 100%;}
@@ -570,12 +574,6 @@ nav.navbar.navbar-default{
 .code-example > .indent-2{
     margin-left: 2%;
 }
-
-
-
-
-
-
 
 .dropdown-menu{
      -moz-animation: fadein 2s;
