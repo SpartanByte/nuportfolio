@@ -33,13 +33,13 @@
                     <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coding<span class="caret"></span></a>
                         <ul class="dropdown-menu" id="navbar-dropdown-override">
                             <li><a href="{{ url('coding/general') }}">General Information</a></li>
-                            {{-- C# --}}
-                            <li><a href="{{ url('coding/csharp') }}" title="C# Programming Samples">C#</a></li>
+
                             {{-- CSS --}}
                             <li><a href="{{ url('coding/css') }}" titile="Cascading Style Sheets">CSS (Cascading Style Sheets)</a></li>
+
                             {{-- Java --}}
                             <li><a href="{{ url('coding/java') }}" title="Java Programming Samples">Java </a></li>
-
+                            
                             {{-- Javascript --}}
                             <li class="dropdown-submenu">
                                 <a class="dropdown-toggle" href="{{ url('coding/javascript') }}" title="JavaScript Programming Scripting Samples">JavaScript</a>
