@@ -1,7 +1,8 @@
 
 {{-- THIS UPLOAD FORM/PAGE IS OLDER AND LIKELY WON'T BE USED SO DON'T WORRY ABOUT HOW THE STYLING ISN'T MATCHING UP  --}}
 @extends('layouts.default')
-
+    @section('description', 'Uploading an image using the Input facade in Laravel')
+    @section('title', 'Upload via Laravel Facade')
 @section('content')
     <div class="static-content">
         <div class="about-section">
