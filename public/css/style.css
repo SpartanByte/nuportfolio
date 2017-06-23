@@ -5,6 +5,8 @@
 
 html{background-color: transparent; font-size: 14px;}
 body{font-family: 'proza_libreregular', sans-serif !important;}
+blockquote{width: 90%;}
+
 
 /* Formatting styles */
 .page-header{padding-top: 4em;color: #252525; text-align: center;}
@@ -13,8 +15,13 @@ body{font-family: 'proza_libreregular', sans-serif !important;}
 .h3{font-size: 3rem !important; }
 .mid-size-font{font-family: 'proza_libresemibold', sans-serif; font-size: 2.5rem;}
 .med-size-font{font-family: 'proza_libresemibold', sans-serif; font-size: 1.5rem;}
+.normal-size-font{font-size:1.5rem;}
 .small-header-font{font-size: 2rem;}
 .standard-ul{font-weight: bold;font-size: 1.75rem;}
+
+/* Coloring Styles */
+.grey-rgba{background-color:rgba(0,0,0,0.2);}
+
 
 /* Font Effects */
 .uppercase-shadow{text-transform: uppercase; text-shadow: 4px 2px 6px #404040;}
@@ -347,7 +354,9 @@ nav.navbar.navbar-default{
     top-margin: 150px;}
 .page-header.gallery-header{
     margin-left: 4%; 
+    font-size:1.95rem;
     width: 94%;}
+
 
 /**
  * THIS IS BEING USED ON UPLOAD.BLADE.PHP WHICH IS THE OLD UPLOAD FORM AND WILL LIKELY BE REMOVED
@@ -576,7 +585,7 @@ nav.navbar.navbar-default{
 }
 
 .dropdown-menu{
-     -moz-animation: fadein 2s;
+     -moz-animation: fadein 1s;
 }
 
 
@@ -597,12 +606,12 @@ nav.navbar.navbar-default{
     -webkit-border-radius: 0 6px 6px 6px;
     -moz-border-radius: 0 6px 6px;
     border-radius: 0 6px 6px 6px;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
 }
 
 .dropdown-submenu:hover>.dropdown-menu {
     display: block;
-    transition-duration: 0.5s !important;
+    transition-duration: 0.3s !important;
 }
 
 .dropdown-submenu>a:after {

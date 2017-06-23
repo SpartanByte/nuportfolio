@@ -66,7 +66,17 @@
                                                 <li><a href="{{ url('photos/create') }}">Test Intervention Image</a></li>
                                          </ul>
                                     </li>
+
+                                       {{-- PYTHON --}}
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-toggle" href="{{ url('coding/python')  }}" title="Python Code Examples">Python</a>
+                                    </li>
+
+                                      {{-- C# --}}
+                                        <li class="dropdown-submenu"><a class="dropdown-toggle" href="{{ url('coding/csharp')  }}" title="C# Programming Examples">C#</a></li>
+                                        <li class="dropdown-submenu"><a class="dropdown-toggle" href="{{ url('coding/umbraco') }}" title="Umbraco">Umbraco</a></li>
                                 </ul>
+                                <li class="dropdown-submenu"><a class="dropdown-toggle" href="{{ url('coding/umbraco') }}" title="Umbraco">Umbraco</a></li>
                             </li>
                         </ul>
                         {{-- End of Coding dropdown menus --}}
