@@ -9,10 +9,8 @@
         <span class="page-header uppercase-shadow">JavaScript</span>
         <hr />
 
-
-        {{-- <img src="https://dummyimage.com/450x300/000/fff" /> --}}
         <img src="/images/logos/javascript.jpg" width="400"/>
-        <h3>JavaScript Code Samples</h3>
+         <div><br /><span class="page-header mid-size-font">JAVASCRIPT</span><br /></div>
             <p>The following simple examples show basic functionality of native JavaScript. I will be adding examples that show the diversity of the numberous JavaScript libraries and frameworks including AnglularJS and VueJS</p>
 
 
