@@ -22,7 +22,7 @@
                         <li><a href="http://musicbytes.us/">MusicBytes</a></li>
                         <li><a href="#">My Old Portfolio</a></li>
                         <li><a href="http://newlinecharacter.com/">New Line Character (Coming Soon)</a></li>
-                        <li><a href="#">The Music Pavilion (Coming Soon)</a></li>
+                        <li><a href="http://themusicpavilion.com/">The Music Pavilion (Coming Soon)</a></li>
                     </ul>
                 </li>
             </ul>
@@ -39,7 +39,7 @@
 
                             {{-- Java --}}
                             <li><a href="{{ url('coding/java') }}" title="Java Programming Samples">Java </a></li>
-                            
+
                             {{-- Javascript --}}
                             <li class="dropdown-submenu">
                                 <a class="dropdown-toggle" href="{{ url('coding/javascript') }}" title="JavaScript Programming Scripting Samples">JavaScript</a>
@@ -67,20 +67,18 @@
                                          </ul>
                                     </li>
 
-                                       {{-- PYTHON --}}
-                                        <li class="dropdown-submenu">
-                                            <a class="dropdown-toggle" href="{{ url('coding/python')  }}" title="Python Code Examples">Python</a>
+                                    {{-- PYTHON --}}
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-toggle" href="{{ url('coding/python')  }}" title="Python Code Examples">Python</a>
                                     </li>
 
-                                      {{-- C# --}}
-                                        <li class="dropdown-submenu"><a class="dropdown-toggle" href="{{ url('coding/csharp')  }}" title="C# Programming Examples">C#</a></li>
-                                        <li class="dropdown-submenu"><a class="dropdown-toggle" href="{{ url('coding/umbraco') }}" title="Umbraco">Umbraco</a></li>
+                                    {{-- C# --}}
+                                    <li class="dropdown-submenu"><a class="dropdown-toggle" href="{{ url('coding/csharp')  }}" title="C# Programming Examples">C#</a></li>
+                                    <li class="dropdown-submenu"><a class="dropdown-toggle" href="{{ url('coding/umbraco') }}" title="Umbraco">Umbraco</a></li>
                                 </ul>
-                                <li class="dropdown-submenu"><a class="dropdown-toggle" href="{{ url('coding/umbraco') }}" title="Umbraco">Umbraco</a></li>
                             </li>
                         </ul>
                         {{-- End of Coding dropdown menus --}}
-
 
                         {{-- Galleries Dropdown  --}}
                         <ul class="nav navbar-nav">
