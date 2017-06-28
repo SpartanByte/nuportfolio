@@ -50,10 +50,6 @@ Route::group(['prefix' => 'programs/php'], function(){
       // this is returning value but erroring when both setHolidays and setCountdown are uncommented/active
 });
 
-// Route::resource('pages/photography',  'App\Services\GalleryService');
-// Route::get('pages/photography', 'GalleryController@makePhotographyGallery');
-
-
 /**
  * CONTACT FORM ROUTES ====================================================
  * Creates and sends contact email
@@ -128,3 +124,17 @@ Route::post('photos/show', function(){
 
 // Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude');
 Route::get('/files/python/py-calculations.html', 'CodeSampleController@testPython');
+
+/**
+ *
+ *  POSTS ROUTING
+ */
+Route::resource('posts', 'PostController');
+
+Route::group(['prefix' => 'posts'], function()
+{
+      Route::get('index', 'PostController@index'); // indexing posts
+      Route::get('show', 'PostController@show'); // showing posts
+      Route::get('{id}', 'PostController@showPost'); //
+      Route::get('store', 'PostController@store');
+});
