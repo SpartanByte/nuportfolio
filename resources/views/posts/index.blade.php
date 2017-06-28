@@ -28,7 +28,7 @@
           <td>{{ $post->created_at }}</td>
           <td><a class="btn btn-small btn-success post-btn" href="{{ $post->id}}">View Post</a></td>{{-- Will update to method after method is built --}}
           <td><a  class="btn btn-small btn-success post-btn" href="#">Edit Post</a></td>
-          <td><a  class="btn btn-small btn-success del-post-warn-btn" href="{{ route('posts.destroy') }}">Delete Post</a></td>
+          <td><a  class="btn btn-small btn-success del-post-warn-btn" href="#">Delete Post</a></td>
         </tr>
         @endforeach
     </tbody>
