@@ -5,6 +5,7 @@
 @section('content')
   <h1>Add New Blog Post</h1>
   <div class="col-sm-8 col-sm-offset-2">
+        {{-- Form for creating new post, 'post.store' saves to DB --}}
         {!! Form::open(array('route' => 'posts.store', 'class' => 'form')) !!}
 
         <div class="form-group" style="height:auto;">

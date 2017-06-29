@@ -12,83 +12,59 @@ use Illuminate\Support\Facades\Redirect;
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-        $posts = Post::all();
 
-        return view ('posts.index')->with(['posts'=>$posts]);
-    }
+        // indexing/listing posts
+        public function index()
+        {
+            $posts = Post::all();
+            return view ('posts.index')->with(['posts'=>$posts]);
+        }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        // creating a blog post
-        return view('posts.create');
-    }
+        // serving create form for new post
+        public function create()
+        {
+            // creating a blog post
+            return view('posts.create');
+        }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        // stores post submission
-        $post = new Post;
+        // saving new post to database
+        public function store(Request $request)
+        {
+            // stores post submission
+            $post = new Post;
 
-        $postTitle = $request->title;
-        $postBody = $request->body;
-        $postDescription = $request->descriptions;
-        $postAuthor = $request->author;
+            $postTitle = $request->title;
+            $postBody = $request->body;
+            $postDescription = $request->descriptions;
+            $postAuthor = $request->author;
 
-        $post->title = $postTitle;
-        $post->body = $postBody;
-        $post->descriptions = $postDescription;
-        $post->author = $postAuthor;
+            $post->title = $postTitle;
+            $post->body = $postBody;
+            $post->descriptions = $postDescription;
+            $post->author = $postAuthor;
+            // saving input to new post record
+            $post->save();
 
-        $post->save();
+            return redirect()->route('posts.index');
+        }
 
-        return redirect()->route('posts.index');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $post = Post::find($id);
-        return view('posts.show')->with('post', $post);
-    }
+        // showing individual post (View Post)
+        public function show($id)
+        {
+            $post = Post::find($id);
+            return view('posts.show')->with('post', $post);
+        }
 
 
+        // Still working on this function for public view 
+        public function showPost($id)
+        {
+            // shows individual post
+            $post = Post::find($id);
+            return view('posts.show')->with('post', $post); 
+        }
 
-    public function showPost($id)
-    {
-        // shows individual post
-        $post = Post::find($id);
-        return view('posts.show')->with('post', $post); 
-    }
-
-        /**
-         * Show the form for editing the specified resource.
-         *
-         * @param  int  $id
-         * @return \Illuminate\Http\Response
-         */
+       // editing post 
         public function edit($id)
         {
             // editing selected post
@@ -97,13 +73,7 @@ class PostController extends Controller
             return View::make('posts.edit')->with('post', $post);
         }
 
-        /**
-         * Update the specified resource in storage.
-         *
-         * @param  \Illuminate\Http\Request  $request
-         * @param  int  $id
-         * @return \Illuminate\Http\Response
-         */
+        // updating post in database from edit post form
         public function update(Request $request, $id)
         {
             // updating the post with the edit form
@@ -120,12 +90,7 @@ class PostController extends Controller
             return Redirect::to('posts');
         }
 
-        /**
-         * Remove the specified resource from storage.
-         *
-         * @param  int  $id
-         * @return \Illuminate\Http\Response
-         */
+        // Deleting post from database
         public function destroy($id)
         {
             // delete post

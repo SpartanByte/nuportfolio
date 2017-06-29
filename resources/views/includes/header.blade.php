@@ -87,7 +87,6 @@
                                         <ul class="dropdown-menu" id="navbar-dropdown-override">
                                             <li><a href="{{ url('pages/photoshop') }}">Photoshop Gallery</a></li>
                                             <li><a href="{{ url('pages/photography') }}">Photography Gallery</a></li>
-                                            {{-- <li><a href="{{ url('templates/gallery-template') }}">Gallery Template</a></li> --}}
                                          </ul>
                                 </li>
                         </ul>

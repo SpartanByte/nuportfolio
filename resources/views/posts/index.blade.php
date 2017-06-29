@@ -34,9 +34,7 @@
                       {!! Form::hidden('_method', 'DELETE') !!}
                       {!! Form::submit('Delete Post', array('class' => 'btn del-post-warn-btn')) !!}
                   {!! Form::close() !!}
-
           </td>
-          {{-- <td><a  class="btn btn-small btn-success del-post-warn-btn" href="#">Delete Post</a></td> --}}
         </tr>
         @endforeach
     </tbody>
