@@ -94,6 +94,7 @@
 
                     {{-- NON-dropdown menu items  --}}
                     <ul class="nav navbar-nav">
+                        <li><a href="{{ route('posts.index') }}">Posts</a></li>{{--  Route/link to enter Posts/Blog --}}
                         <li><a href="{{ url('pages/about') }}">About</a></li>
                         <li><a href="{{ url('contact') }}">Contact</a></li>
                     </ul>

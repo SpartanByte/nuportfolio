@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
+
 
 class PostController extends Controller
 {
@@ -27,10 +32,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        // creating a blog post
         return view('posts.create');
-
-        // return Redirect::to('posts');
     }
 
     /**
@@ -67,9 +70,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-
         $post = Post::find($id);
-
         return view('posts.show')->with('post', $post);
     }
 
@@ -78,10 +79,9 @@ class PostController extends Controller
     public function showPost($id)
     {
         // shows individual post
-
         $post = Post::find($id);
-
-        return view('posts.show')->with('post', $post); }
+        return view('posts.show')->with('post', $post); 
+    }
 
         /**
          * Show the form for editing the specified resource.
@@ -91,7 +91,10 @@ class PostController extends Controller
          */
         public function edit($id)
         {
-            //
+            // editing selected post
+            $post = Post::find($id);
+            // show edit form and pass data to form
+            return View::make('posts.edit')->with('post', $post);
         }
 
         /**
@@ -103,7 +106,18 @@ class PostController extends Controller
          */
         public function update(Request $request, $id)
         {
-            //
+            // updating the post with the edit form
+            $post = Post::find($id);
+
+            $post->title  = Input::get('title');
+            $post->author = Input::get('author');
+            $post->descriptions = Input::get('descriptions');
+            $post->body = Input::get('body');
+            $post->save();
+
+            // redirect
+            Session::flash('message', 'Successfully updated post!');
+            return Redirect::to('posts');
         }
 
         /**
@@ -114,11 +128,10 @@ class PostController extends Controller
          */
         public function destroy($id)
         {
-            //
+            // delete post
             $post = Post::find($id);
-
             $post->delete();
-
+            
             Session::flash('message', 'Successfully deleted!');
             return Redirect::to('posts');
         }

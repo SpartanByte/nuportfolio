@@ -137,4 +137,6 @@ Route::group(['prefix' => 'posts'], function()
       Route::get('show', 'PostController@show'); // showing posts
       Route::get('{id}', 'PostController@showPost'); //
       Route::get('store', 'PostController@store');
+      // Route::get('{id}/edit', 'PostController@edit');
+    //  Route::get('edit', 'PostController@edit');
 });

@@ -26,9 +26,17 @@
           <td>{{ $post->descriptions }}</td>
           <td class="post-body">{{ $post->body }}</td>
           <td>{{ $post->created_at }}</td>
-          <td><a class="btn btn-small btn-success post-btn" href="{{ $post->id}}">View Post</a></td>{{-- Will update to method after method is built --}}
-          <td><a  class="btn btn-small btn-success post-btn" href="#">Edit Post</a></td>
-          <td><a  class="btn btn-small btn-success del-post-warn-btn" href="#">Delete Post</a></td>
+          <td><a class="btn btn-small btn-success post-btn" href="posts/{{ $post->id}}">View Post</a></td>{{-- Will update to method after method is built --}}
+          <td><a  class="btn btn-small btn-success post-btn" href="{{ URL::to('/posts') }}/{{ $post->id}}/edit">Edit Post</a></td>
+          <td>
+                  {{-- Delete Post Form --}}
+                  {!! Form::open(array('url' => 'posts/ '. $post->id, 'class' => 'pull-right' )) !!}
+                      {!! Form::hidden('_method', 'DELETE') !!}
+                      {!! Form::submit('Delete Post', array('class' => 'btn del-post-warn-btn')) !!}
+                  {!! Form::close() !!}
+
+          </td>
+          {{-- <td><a  class="btn btn-small btn-success del-post-warn-btn" href="#">Delete Post</a></td> --}}
         </tr>
         @endforeach
     </tbody>
