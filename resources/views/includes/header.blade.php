@@ -87,13 +87,13 @@
                                         <ul class="dropdown-menu" id="navbar-dropdown-override">
                                             <li><a href="{{ url('pages/photoshop') }}">Photoshop Gallery</a></li>
                                             <li><a href="{{ url('pages/photography') }}">Photography Gallery</a></li>
-                                            {{-- <li><a href="{{ url('templates/gallery-template') }}">Gallery Template</a></li> --}}
                                          </ul>
                                 </li>
                         </ul>
 
                     {{-- NON-dropdown menu items  --}}
                     <ul class="nav navbar-nav">
+                        <li><a href="{{ route('posts.index') }}">Posts</a></li>{{--  Route/link to enter Posts/Blog --}}
                         <li><a href="{{ url('pages/about') }}">About</a></li>
                         <li><a href="{{ url('contact') }}">Contact</a></li>
                     </ul>
