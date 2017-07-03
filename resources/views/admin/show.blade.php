@@ -8,7 +8,7 @@
   <p class="h4">This is a very general and basic blog.</p>
 
   <p>Test: {{ $post->title}}</p>
-  <p>{{$post->body}}</p>
+  <p>{!! $post->body !!}</p>
 
   <span><a class="btn btn-small btn-success post-btn" href="{{ URL::to('/posts') }}">Return to Posts</a></span>
     <span><a class="btn btn-small btn-success post-btn" href="{{ URL::to('/') }}">Return to Home</a></span>

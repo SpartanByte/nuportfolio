@@ -129,14 +129,44 @@ Route::get('/files/python/py-calculations.html', 'CodeSampleController@testPytho
  *
  *  POSTS ROUTING
  */
-Route::resource('posts', 'PostController');
 
-Route::group(['prefix' => 'posts'], function()
+// Route::resource('posts', 'PostController');
+
+
+// Route::group(['prefix' => 'posts'], function()
+// {
+//       Route::get('index', 'PostController@index'); // indexing posts
+//       Route::get('show', 'PostController@show'); // showing posts
+//       Route::get('{id}', 'PostController@showPost'); //
+//       Route::get('store', 'PostController@store');
+// });
+
+Route::resource('admin', 'PostController');
+
+
+Route::group(['prefix' => 'admin'], function()
 {
       Route::get('index', 'PostController@index'); // indexing posts
       Route::get('show', 'PostController@show'); // showing posts
       Route::get('{id}', 'PostController@showPost'); //
       Route::get('store', 'PostController@store');
-      // Route::get('{id}/edit', 'PostController@edit');
-    //  Route::get('edit', 'PostController@edit');
+});
+
+/*
+Front End Post Routes
+ */
+Route::resource('posts', 'PostViewController');
+
+
+// Route::get('posts-view/all', 'PostViewController@showAll');
+// Route::get('posts-view/show', 'PostViewController@show');
+// Route::get('posts-view.{id}', 'PostViewController@showPost');
+
+
+Route::group(['prefix' => 'posts'], function()
+{
+    Route::get('index', 'PostViewController@index'); // indexing posts
+      Route::get('show', 'PostViewController@show'); // showing posts
+      Route::get('{id}', 'PostViewController@showPost'); //
+Route::get('store', 'PostViewController@store');
 });
