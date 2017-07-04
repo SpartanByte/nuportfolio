@@ -17,14 +17,14 @@ class PostController extends Controller
         public function index()
         {
             $posts = Post::all();
-            return view ('posts.index')->with(['posts'=>$posts]);
+            return view ('admin.index')->with('posts', $posts);
         }
 
         // serving create form for new post
         public function create()
         {
             // creating a blog post
-            return view('posts.create');
+            return view('admin.create');
         }
 
         // saving new post to database
@@ -45,14 +45,15 @@ class PostController extends Controller
             // saving input to new post record
             $post->save();
 
-            return redirect()->route('posts.index');
+           return redirect()->route('admin.index');
+           //return view('admin.index');
         }
 
         // showing individual post (View Post)
         public function show($id)
         {
             $post = Post::find($id);
-            return view('posts.show')->with('post', $post);
+            return view('admin.show')->with('post', $post);
         }
 
 
@@ -61,7 +62,7 @@ class PostController extends Controller
         {
             // shows individual post
             $post = Post::find($id);
-            return view('posts.show')->with('post', $post); 
+            return view('admin.show')->with('post', $post); 
         }
 
        // editing post 
@@ -70,7 +71,7 @@ class PostController extends Controller
             // editing selected post
             $post = Post::find($id);
             // show edit form and pass data to form
-            return View::make('posts.edit')->with('post', $post);
+            return View::make('admin.edit')->with('post', $post);
         }
 
         // updating post in database from edit post form
@@ -87,7 +88,7 @@ class PostController extends Controller
 
             // redirect
             Session::flash('message', 'Successfully updated post!');
-            return Redirect::to('posts');
+            return Redirect::to('admin');
         }
 
         // Deleting post from database
@@ -98,6 +99,6 @@ class PostController extends Controller
             $post->delete();
             
             Session::flash('message', 'Successfully deleted!');
-            return Redirect::to('posts');
+            return Redirect::to('admin');
         }
 }
