@@ -7,7 +7,7 @@
   
   	<h2 class="h3">Edit Post: <strong>{{ $post->title }}</strong></h2>
 
-  	{!! Form::model($post, array('route' => array('posts.update', $post->id), 'method' => 'PUT')) !!}
+  	{!! Form::model($post, array('route' => array('admin.update', $post->id), 'method' => 'PUT')) !!}
 
   	<div class="form-group">
   		{!! Form::label('title', 'Title: ') !!}

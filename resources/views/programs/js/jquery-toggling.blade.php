@@ -28,7 +28,7 @@
         <h1 class="page-header extended-header">Toggling and Other Visual Effects with jQuery</h1>
         <hr />
 
-        <img src="/images/logos/jquery-logo.png" width="225" height="150" />
+        <img src="/images/logos/jquery.png" width="225" height="150" />
         <div class="program-description">
             <h3 class="program-header">Very Simple Toggling with jQuery</h3>
         </div>
