@@ -14,7 +14,7 @@
 
 
         <!-- main content -->
-        <div id="content" class="col-md-8">
+        <div id="content" class="col-md-8 home-pad">
             @yield('content')
         </div>
     </div>

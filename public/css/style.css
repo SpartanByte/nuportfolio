@@ -167,7 +167,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 .text-center { text-align:center; }
 .text-justify { text-align:justify; }
 
-/*html{
+html{
     color:#FFF;
     background:#252525;
     font:10px/1 'Rleud', sans-serif; }
@@ -176,7 +176,7 @@ body {
 a {
     cursor:pointer;
     text-decoration:none;
-    transition-duration:0.5s; }*/
+    transition-duration:0.5s; }
 
 /**
  * AND OF BG'S BASE STYLES
@@ -351,32 +351,52 @@ nav.navbar.navbar-default{
  * ANY STYLES REGARDING THE FOOTER ARE HERE
  */
 .footer-container{
-    position: relative;
-    width: 100%;}
+/*    position: fixed;*/
+/*    position: absolute;*/
+    width: 100%;
+/*    margin-top: 58em;*/
+/*    margin-top: 80%;*/
+/*    margin-bottom: 10px;*/
+    clear:both;
+    background-color: #000000;
+        color: #FFFFFF;
+        height: 100px;
+/*    height: 100%;*/
+}
 .footer{
+    background-color: #000000 !important;
+    padding-top: 1%;
+}
+/*.footer{
     clear: both;
     background-color: #000000;
     color: #FFFFFF;
     margin-bottom: 0px !important;
-    position: fixed;
+    position: absolute;
     width: 100%;
-    padding: 2%;
-    padding-top: 1%; 
-    margin-top: 58em; !important;
-    height: 6.5em;}
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 61em; !important;
+}*/
+
     .footer-left{
-        list-style-type: none;}
-.footer-left, .footer-right{ letter-spacing: 0.1rem;}
+        list-style-type: none;
+        float: left;
+/*        position: relative;*/
+        width:47%;}
+.footer-left, .footer-right{ letter-spacing: 0.1rem; background-color:#000000;}
 .footer-left > li{font-size:1.5rem;}
     .footer-right{
         text-align: right;
         list-style-type: none;
-        font-size: 1rem !important;;
+        font-size: 1rem !important;
         float: left;
         width: 47%;
-        position: absolute;
-        right: 5px;;
-        top: 10px;}
+/*        position: relative;
+        margin: 5px 5px 5px 50%;*/
+        right: 5px;
+        top: 2%;
+    }
         .footer-right a {
             float: right;
             padding: 5px;}
@@ -387,8 +407,8 @@ nav.navbar.navbar-default{
             color: #82734C !important;
             filter: grayscale(100%);}
         .footer-right > li > a > img{width: 3em; height: 3em;}
-        .bottom-spacer{
-            margin-bottom: 200px;}
+/*        .bottom-spacer{
+            margin-bottom: 200px;}*/
 /**
  * STANDARD PAGES: TEMPLATED STYLES
  */
@@ -479,6 +499,9 @@ nav.navbar.navbar-default{
 /**
  * ANY STYLES DESIGNED EXCLUSIVELY FOR THE HOME PAGE ARE HERE
  */
+.home-pad{
+    padding-bottom: 8%;
+}
 .landing-image{
     padding-top: 100px;
     float: left;}

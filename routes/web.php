@@ -125,48 +125,33 @@ Route::post('photos/show', function(){
 // Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude');
 Route::get('/files/python/py-calculations.html', 'CodeSampleController@testPython');
 
+
+
+
 /**
  *
  *  POSTS ROUTING
  */
-
-// Route::resource('posts', 'PostController');
-
-
-// Route::group(['prefix' => 'posts'], function()
-// {
-//       Route::get('index', 'PostController@index'); // indexing posts
-//       Route::get('show', 'PostController@show'); // showing posts
-//       Route::get('{id}', 'PostController@showPost'); //
-//       Route::get('store', 'PostController@store');
-// });
-
+// Backend Posting Routes
 Route::resource('admin', 'PostController');
+  Route::group(['prefix' => 'admin'], function()
+  {
+        Route::get('index', 'PostController@index'); // indexing posts
+        Route::get('show', 'PostController@show'); // showing posts
+        Route::get('{id}', 'PostController@showPost'); //
+        Route::get('store', 'PostController@store');
+  });
 
-
-Route::group(['prefix' => 'admin'], function()
-{
-      Route::get('index', 'PostController@index'); // indexing posts
-      Route::get('show', 'PostController@show'); // showing posts
-      Route::get('{id}', 'PostController@showPost'); //
-      Route::get('store', 'PostController@store');
-});
-
-/*
-Front End Post Routes
- */
+// Frontend Post Routes
 Route::resource('posts', 'PostViewController');
+  Route::group(['prefix' => 'posts'], function()
+  {
+      Route::get('index', 'PostViewController@index'); // indexing posts
+        Route::get('show', 'PostViewController@show'); // showing posts
+        Route::get('{id}', 'PostViewController@showPost'); //
+  Route::get('store', 'PostViewController@store');
+  });
 
-
-// Route::get('posts-view/all', 'PostViewController@showAll');
-// Route::get('posts-view/show', 'PostViewController@show');
-// Route::get('posts-view.{id}', 'PostViewController@showPost');
-
-
-Route::group(['prefix' => 'posts'], function()
-{
-    Route::get('index', 'PostViewController@index'); // indexing posts
-      Route::get('show', 'PostViewController@show'); // showing posts
-      Route::get('{id}', 'PostViewController@showPost'); //
-Route::get('store', 'PostViewController@store');
-});
+// setting up user to be required to sign in to access /admin
+Auth::routes();
+Route::get('/admin', 'AdminController@home');
