@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 
 class AdminController extends Controller
 {
@@ -15,6 +20,7 @@ class AdminController extends Controller
      // getting the admin dashboard/home
     public function home()
     {
-        return view('admin/home');
+          $posts = Post::all();
+          return view ('admin/home')->with('posts', $posts);
     }
 }
