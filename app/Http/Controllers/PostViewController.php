@@ -11,19 +11,17 @@ use Illuminate\Support\Facades\Redirect;
 
 class PostViewController extends Controller
 {
-
     // Show list of posts with brief descriptions for users
     public function index()
-    {
-        
-            $posts = Post::all();
-            return view ('posts.index')->with(['posts'=>$posts]);
+    {        
+        $posts = Post::all();
+        return view ('posts.index')->with(['posts'=>$posts]);
     }
 
     // Show individual post
     public function show($id)
     {
-            $post = Post::find($id);
-            return view('posts.show')->with('post', $post);
+        $post = Post::find($id);
+        return view('posts.show')->with('post', $post);
     }
 }

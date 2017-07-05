@@ -1,9 +1,9 @@
-@extends('layouts.default')
+@extends('layouts.home')
 @section('description', 'Web Developer from Fargo, ND. He is also a musician and working on projects Battle Cry and LaconicAura, amateur photographer and writer.')
 @section('title', 'Brian Wardwell: Web Developer')
 
 @section('content')
-
+    <div class="home-pad">
         <div class="landing-image">
             <img src="/images/stock/laptop_time.jpg" />
         </div>
@@ -19,12 +19,13 @@
                     <p><img src="/images/stock/code-screen.jpg" /></p>
                 </section>
         </div>
-        <div id="social-corner">
+</div>
+{{--         <div id="social-corner">
             <script>
                 image01 = new Image()
                 image01.src ="http://placehold.it/100x100"
                 image02 = new Image()
                 image02.src="https://dummyimage.com/100x100/000/fff"
             </script>
-        </div>
+        </div> --}}
 @stop
