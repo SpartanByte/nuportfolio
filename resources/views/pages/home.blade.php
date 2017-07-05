@@ -5,7 +5,7 @@
 @section('content')
     <div class="home-pad">
         <div class="landing-image">
-            <img src="/images/stock/laptop_time.jpg" />
+            <img src="/images/stock/laptop_time.jpg" class="img-100" />
         </div>
 
         <div id="right-home">
@@ -16,7 +16,7 @@
                     <p>Sole musician in musical project, <a href="https://soundcloud.com/battle-cry-wardwell" target="_blank">Battle Cry</a> (Recorded from 1997-2012) | Vocals, Guitar, Bass, Keyboards <br />
                     Sole administrator and writer for entertainment website, <a href="http://musicbytes.us/" target="_blank">MusicBytes</a> (launched in January 2015) <br />
                     Also an amateur photographer and graphics manipulator</p>
-                    <p><img src="/images/stock/code-screen.jpg" /></p>
+                    <p><img src="/images/stock/code-screen.jpg" class="img-100"/></p>
                 </section>
         </div>
 </div>

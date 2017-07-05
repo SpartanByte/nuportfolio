@@ -14,7 +14,10 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in! Head to the <a href="/admin/home">Admin Center!</a>
+                    <div class="static-content general-coding">
+{{--                     You are logged in! Head to the <a href="/admin/home">Admin Center!</a> --}}
+                    You sir, have logged in. Now, access the <a href="{{ url('/admin/index') }}" title="Java Programming Samples">Admin Center! </a>
+                    </div>
                 </div>
             </div>
         </div>
