@@ -3,15 +3,16 @@
     @section('title', 'Umbraco CMS: About')
 
     @section('content')
-    <div class="static-content code-sample-page">
+{{--     <div class="static-content code-sample-page"> --}}
+            <div class="static-content general-coding">
 
         {{-- Current CSS isn't showing anything above the following H1, will need to fix this  --}}
-        <span class="page-header uppercase-shadow">Umbraco: An ASP.NET CMS</span> 
+         <span class="page-header uppercase-shadow mid-size-font">Umbraco: An ASP.NET CMS</span>
         <hr />
 
 
-        <img src="/images/logos/umbraco-logo.png"/>
-        <h3>Umbraco</h3>
+        <img src="/images/logos/umbraco-logo.png" class="img-25 pad-bottom-1"/>
+        <span class="section-header mid-size-font">Umbraco</span>
             <p>Simply put, Umbraco is a content management system for ASP.NET and written in C#. However, that is likely too simply put as Umbraco is far more than that including implementation of full MVC (Model-View-Controller) architecture. For more information or for assistance, Umbraco has a fantastic support community as well as documentation at <a href="outgoingLink" title="Our.Umbraco">Our.Umbraco.org</a>.</p>
             <br />
             <p>Key features and benefits of the Umbraco CMS (for the developer, client, and end user):</p>

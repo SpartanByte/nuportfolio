@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
 
-
 class PostController extends Controller
 {
 
@@ -18,6 +17,13 @@ class PostController extends Controller
         {
             $posts = Post::all();
             return view ('admin.index')->with('posts', $posts);
+        }
+
+                // indexing/listing posts
+        public function home()
+        {
+            $posts = Post::all();
+            return view ('admin/home')->with('posts', $posts);
         }
 
         // serving create form for new post

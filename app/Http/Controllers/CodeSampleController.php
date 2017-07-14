@@ -34,15 +34,15 @@ class CodeSampleController extends Controller
         $holidaysList = new HolidaysService();
         $holidaysArray = $holidaysList->getHolidays();
         $currentDate = date("n/j/Y");
-        return view('programs/php/timeanddates')->with(compact('holidaysArray'));    
-    } 
+        return view('programs/php/timeanddates')->with(compact('holidaysArray'));
+    }
 
-   /* public function setCountdown(HolidaysService $daysRemaining){
+    public function setCountdown(HolidaysService $daysRemaining){
         $countdownResponse = new HolidaysService();
         $daysRemaining = $countdownResponse->getCountdown();
 
-        return view('programs/php/timeanddates')->with(compact('daysRemaining'));    
-    } */
+        return view('programs/php/timeanddates')->with(compact('daysRemaining'));
+    }
 
     public function testPython(){
         return view('/files/python/py-calculations.html');
