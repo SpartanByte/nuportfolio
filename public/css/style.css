@@ -357,17 +357,17 @@ nav.navbar.navbar-default{
  * ANY STYLES REGARDING THE FOOTER ARE HERE
  */
 .footer-container{
-/*    position: fixed;*/
-/*    position: absolute;*/
+    /*    position: fixed;*/
+    /*position: absolute;*/
     width: 100%;
-/*    margin-top: 58em;*/
-/*    margin-top: 80%;*/
-/*    margin-bottom: 10px;*/
+    /*    margin-top: 58em;*/
+    /*margin-top: 43%;*/
+    /*    margin-bottom: 10px;*/
     clear:both;
     background-color: #000000;
-        color: #FFFFFF;
-        height: 100px;
-/*    height: 100%;*/
+    color: #FFFFFF;
+    height: 100px;
+    /*    height: 100%;*/
 }
 .footer{
     background-color: #000000 !important;
@@ -506,39 +506,40 @@ nav.navbar.navbar-default{
  * ANY STYLES DESIGNED EXCLUSIVELY FOR THE HOME PAGE ARE HERE
  */
 .home-pad{
-    padding-bottom: 8%;
+    /*padding-bottom: 6%;*/
+    margin-top: 2%;
 }
-.landing-image{
-    padding-top: 100px;
-    float: left;}
+/*.landing-image{*/
+    /*padding-top: 100px;*/
+    /*float: left;}*/
 
 #right-home{
     float: left;
-    margin-top: 80px;
-    margin-left: 10em;
+    /*margin-top: 80px;*/
+    /*margin-left: 10em;*/
     width: 40%;
     font-size: 1em;
     text-align: right;
     height: 15%;
-    display:inline;}
-    #right-home h1{
-        margin-right: 10px; 
-        font-size: 4em; 
-        font-weight: 600; 
-        text-transform: uppercase;}
-    #right-home h2{
-        font-size: 1.5em; 
-        font-weight: 600; 
-        letter-spacing: 0.5px;}
-    #right-home h3{
-        font-size: 1em; 
-        letter-spacing: 0.5px;}
+    position:absolute;
+    margin:-38% 0% 6% 57%;}
+    /*#right-home h1{*/
+        /*margin-right: 10px; */
+        /*font-size: 4em; */
+        /*font-weight: 600; */
+        /*text-transform: uppercase;}*/
+    /*#right-home h2{*/
+        /*font-size: 1.5em; */
+        /*font-weight: 600; */
+        /*letter-spacing: 0.5px;}*/
+    /*#right-home h3{*/
+        /*font-size: 1em; */
+        /*letter-spacing: 0.5px;}*/
 
-    #right-home p{
-        padding-top: 10px;
-        margin-right: 10px;}
-    #right-home img{
-        margin-bottom: 20px;}
+    /*#right-home p{*/
+        /*padding-top: 10px;*/
+        /*margin-right: 10px;}*/
+
 
 
 /* GALLERY PAGE STYLES */
