@@ -1,17 +1,13 @@
 <!doctype html>
 <html>
 <head>
-    @include('includes.head')
+    @include('includes.adminhead')
 </head>
 <body>
 <div class="container">
     <header class="row">
-        @include('includes.header')
+        @include('includes.adminheader')
     </header>
-
-    <div id="" class="">
-
-
 
         <!-- main content -->
         <div id="content" class="col-md-8">
@@ -21,7 +17,7 @@
 
     <!-- footer content -->
     <footer class="row">
-        @include('includes.footer')
+        @include('includes.adminfooter')
     </footer>
 </div>
 </body>

@@ -11,14 +11,14 @@
     <thead>
       <th>id</th>
       <th>title</th>
-      <th>description</th>
+      <th>descriptions</th>
       <th>body</th>
       <th>posted on</th>
       <th>view</th>
       <th>edit</th>
       <th>delete</th>
     </thead>
-    <tbody>
+  <tbody>
      @foreach($posts as $post)
         <tr>
           <th>{{ $post->id }}</th>
