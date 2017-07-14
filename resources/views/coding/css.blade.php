@@ -7,21 +7,21 @@
 
         <span class="page-header mid-size-font">CSS CODE SAMPLES</span>
         <hr />
+        <img src="/images/logos/CSS.png" class="img-30"/>
+        <div><br /><span class="page-header mid-size-font">CSS</span><br /></div>
+            <p>CSS (Cascading Style Sheets) is a stylesheet language used for styling colors, fonts, placement, layouts, and other necessities required for making beautiful websites. Many developers still use "straight" CSS and implement the new features that come when versions update, which is now on CSS3. There are also CSS preprocessors, sometimes called frameworks or libraries, such as SASS and Less. It's also become common for frameworks to mix prewritten CSS with Javascript, which is where Bootstrap, a now common framework, came from. There are other front end frameworks spawning and testing such as Modernizer and Pure. Modernizer mimics the Bootstrap framework but is much more lightweight and tests the user's browser then reflects back HTML, CSS, and JavaScript can be offered by the browser. However, each developer always has their preference and style for CSS just as they do with "backend" programming.</p>
 
-        <img src="/images/logos/CSS.png" />
-       <div><br /><span class="page-header mid-size-font">CSS</span><br /></div>
-        <p>CSS (Cascading Style Sheets) is a stylesheet language used for styling colors, fonts, placement, layouts, and other necessities required for making beautiful websites. Many developers still use "straight" CSS and implement the new features that come when versions update, which is now on CSS3. There are also CSS preprocessors, sometimes called frameworks or libraries, such as SASS and Less. It's also become common for frameworks to mix prewritten CSS with Javascript, which is where Bootstrap, a now common framework, came from. There are other front end frameworks spawning and testing such as Modernizer and Pure. Modernizer mimics the Bootstrap framework but is much more lightweight and tests the user's browser then reflects back HTML, CSS, and JavaScript can be offered by the browser. However, each developer always has their preference and style for CSS just as they do with "backend" programming.</p>
-        <p>For additional information, <a href="https://css-tricks.com/" title="CSS Tricks">CSS Tricks</a> is a wonderful resource as well as training/tutorial hub for beginner developers.</p>
-        <p>Additionally, <strong>many</strong> great examples of sites and web applications using heavy CSS can be found at <a href="http://www.csszengarden.com/" title="CSS Zen Garden" alt="csszengarden.com">CSS ZenGarden</a> (or view the <a href="http://www.mezzoblue.com/zengarden/alldesigns/" title="MezzBlue.com" alt="ZenGarden at MezoBlue, all designs">gallery</a> directly).</p>
+            <p>For additional information, <a href="https://css-tricks.com/" title="CSS Tricks">CSS Tricks</a> is a wonderful resource as well as training/tutorial hub for beginner developers.</p>
+            
+            <p>Additionally, <strong>many</strong> great examples of sites and web applications using heavy CSS can be found at <a href="http://www.csszengarden.com/" title="CSS Zen Garden" alt="csszengarden.com">CSS ZenGarden</a> (or view the <a href="http://www.mezzoblue.com/zengarden/alldesigns/" title="MezzBlue.com" alt="ZenGarden at MezoBlue, all designs">gallery</a> directly).</p>
 
-        <hr />
-        <a href="https://daneden.github.io/animate.css/" target="_blank" title="Animate.css" alt="Animate.css library on GitHub"><img src="/images/logos/animate-css.png" /></a>
+        <a href="https://daneden.github.io/animate.css/" target="_blank" title="Animate.css" alt="Animate.css library on GitHub"><img src="/images/logos/animate-css.png" class="img-30"/></a>
         <h4><a class="outgoing-link" href="https://daneden.github.io/animate.css/" target="_blank" title="Animate.css" alt="Animate.css library on GitHub">Animate.css</a></h4>
-        <p>Animate.css was created by <a class="outgoing-link" href="https://daneden.me/" target="_blank" alt="Daniel Eden's personal site">Daniel Eden</a> and is as simple to use as a developer's own CSS starter stylesheet framework. It is applied by using classes and sub-classes that define the animation, the animation name, and the duration of the animation. You can also apply more than one animation sequence to an element if a design ever calls for it.</p>
+            <p>Animate.css was created by <a class="outgoing-link" href="https://daneden.me/" target="_blank" alt="Daniel Eden's personal site">Daniel Eden</a> and is as simple to use as a developer's own CSS starter stylesheet framework. It is applied by using classes and sub-classes that define the animation, the animation name, and the duration of the animation. You can also apply more than one animation sequence to an element if a design ever calls for it.</p>
 
         <section>
             <p>For example, hovering over the black box below will trigger Animate.css's <code>flash</code> class of keyframes to make the image blink. By default, when including <code>infinite</code> as one of the classes, it would blink on the page once it was loaded and as long as the page was on your monitor.</p>
-            <img class="animated infinite flash-demo" src="/images/box-black.jpg" />
+            <img class="animated infinite flash-demo img-20" src="/images/box-black.jpg" />
         </section>
         <section>
             <p>Let's show another example. We're seeing animation again, however, this time it is upon page load and using the <code>slideInRight</code> class.</p>

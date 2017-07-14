@@ -3,7 +3,8 @@
     @section('title', 'Python Examples')
 
     @section('content')
-    <div class="static-content code-sample-page">
+{{--     <div class="static-content code-sample-page"> --}}
+    <div class="static-content general-coding">
 
         {{-- Current CSS isn't showing anything above the following H1, will need to fix this  --}}
        <span class="page-header uppercase-shadow mid-size-font">Python Code Samples</span>

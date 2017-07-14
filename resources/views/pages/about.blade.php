@@ -5,7 +5,9 @@
     @section('content')
     <div class="static-content about">
  
-        <span class="page-header uppercase-shadow small-header-font">A Little Bit About Myself</span><br /><br />
+        <span class="page-header uppercase-shadow small-header-font">A Little Bit About Myself</span><br />
+        <img src="http://via.placeholder.com/600x400"  /><br />
+        <span class="img-caption" style="width:600px;">Caption for the Image</span>
 
         {{-- start of background/bio --}}
         <section class="background">
@@ -23,16 +25,15 @@
         <hr />
         <section class="skillset">
            <span class="mid-size-font">Skill-Set</span>
-           <hr />
             <ul>
-                <span class="mid-size-font"><li class="ul-header"><strong>Front-End</strong></li></span>
-                    <ul class="skills small-header-font">
+                <li class="ul-header"><strong>Front-End</strong></li>
+                    <ul class="skills">
                         <li>CSS / Sass</li>
                         <li>JavaScript</li>
                         <li>Adobe Photoshop</li>
                     </ul>
-                <span class="mid-size-font"><li class="ul-header"><strong>Back-End</strong></li></span>
-                    <ul class="skills small-header-font">
+                <li class="ul-header"><strong>Back-End</strong></li>
+                    <ul class="skills">
                         <li>Laravel (PHP Framework)</li>
                         <li>PHP</li>
                         <li>C#</li>
@@ -44,22 +45,22 @@
         {{-- Start of Professional/Personal Development --}}
         <section>
         <span class="history-header">Professional and Personal Development:</span><br />
-            <span class="history-header second-level">Insight Technologies</section></br />
-                <p>Web Developer, October 2016 - Current</p>
-            <span class="history-header second-level">Dakota Supply Group</span><br />
-                <p>Intranet/Internal Website (Temp/Contract), June 2016-Current (Maintenance Contract)</p>
-           <span class="history-header second-level"><a href="http://musicbytes.us/" title="MusicBytes: Entertainment" alt="MusicBytes.us: Entertainment Website">MusicBytes.us</span></a>
-                <p>Music Entertainment Website, Web Developer (2012 - Current)</p>
+            <span class="history-title">Insight Technologies</section>
+                <p class="history-details">Web Developer, October 2016 - Current</p>
+            <span class="history-title">Dakota Supply Group</span>
+                <p class="history-details">Intranet/Internal Website (Temp/Contract), June 2016-Current (Maintenance Contract)</p>
+           <span class="history-title"><a href="http://musicbytes.us/" title="MusicBytes: Entertainment" alt="MusicBytes.us: Entertainment Website">MusicBytes.us</span></a>
+                <p class="history-details">Music Entertainment Website, Web Developer (2012 - Current)</p>
         </section>
 
         <section>
             <span class="history-header">Academics:</span><br />
-                <span class="history-header second-level">North Hennepin Community College, Internet and Object-Oriented Programming</span><br />
-                    <p>Attended 2016-??, eCampus</p>
-                <span class="history-header second-level">Minnesota State College - Southeast Technical, Web Programming</span><br />
-                    <p>Attended Spring 2016, eCampus</p>
-                <span class="history-header second-level">Minnesota State Community and Technical College, Web Development AAS</span><br />
-                    <p>Graduated: May 2015, Moorhead MN</p>
+                <span class="history-title">North Hennepin Community College, Internet and Object-Oriented Programming</span>
+                    <p class="history-details">Attended 2016-??, eCampus</p>
+                <span class="history-title">Minnesota State College - Southeast Technical, Web Programming</span>
+                    <p class="history-details">Attended Spring 2016, eCampus</p>
+                <span class="history-title">Minnesota State Community and Technical College, Web Development AAS</span>
+                    <p class="history-details">Graduated: May 2015, Moorhead MN</p>
         </section>
     </div>
 @stop
