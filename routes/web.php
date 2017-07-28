@@ -8,6 +8,7 @@
               Route::get('/home', 'HomeController@index');
               // Homepage
               Route::get('/', 'PageController@home');
+              Route::get('/', 'PageController@home')->name('home');
 
 /**
  * PAGE CONTROLLER ROUTES ======================================
@@ -120,7 +121,7 @@
       Route::resource('admin', 'PostController');
         Route::group(['prefix' => 'admin'], function()
         {
-              Route::get('index', 'PostController@index'); // indexing posts
+              Route::get('index', 'PostController@index')->name('admin'); // indexing posts
               Route::get('show', 'PostController@show'); // showing posts
               Route::get('{id}', 'PostController@showPost'); //
               Route::get('store', 'PostController@store');
@@ -130,11 +131,11 @@
       // Frontend Post Routes
       Route::resource('posts', 'PostViewController');
         Route::group(['prefix' => 'posts'], function()
-        {
-            Route::get('index', 'PostViewController@index'); // indexing posts
+        { 
+            Route::get('index', 'PostViewController@index')->name('posts'); // indexing posts
               Route::get('show', 'PostViewController@show'); // showing posts
               Route::get('{id}', 'PostViewController@showPost'); //
-        Route::get('store', 'PostViewController@store');
+              Route::get('store', 'PostViewController@store');
 
         });
 
@@ -142,3 +143,4 @@
       Auth::routes();
       Route::get('/admin', 'AdminController@home');
       Route::get('admin/index', 'PostController@home');
+      Route::get('/register', 'PageController@denyRegister')->name('deny.register'); // denies unauthorized registration
