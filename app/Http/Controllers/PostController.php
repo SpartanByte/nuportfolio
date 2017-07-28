@@ -59,7 +59,9 @@ class PostController extends Controller
         public function show($id)
         {
             $post = Post::find($id);
-            return view('admin.show')->with('post', $post);
+            // return view('admin.show')->with('post', $post);
+             return view('admin.show')->with(compact('post'));
+
         }
 
 
@@ -68,7 +70,8 @@ class PostController extends Controller
         {
             // shows individual post
             $post = Post::find($id);
-            return view('admin.show')->with('post', $post); 
+            // return view('admin.show')->with('post', $post); 
+            return view('admin.show')->with(compact('post'));
         }
 
        // editing post 
@@ -77,7 +80,8 @@ class PostController extends Controller
             // editing selected post
             $post = Post::find($id);
             // show edit form and pass data to form
-            return View::make('admin.edit')->with('post', $post);
+            // return View::make('admin.edit')->with('post', $post);
+            return view('admin.edit')->with(compact('post'));
         }
 
         // updating post in database from edit post form
@@ -93,8 +97,9 @@ class PostController extends Controller
             $post->save();
 
             // redirect
-            Session::flash('message', 'Successfully updated post!');
-            return Redirect::to('admin');
+            // Session::flash('message', 'Successfully updated post!');
+            // return Redirect::to('admin');
+            return redirect()->route('admin');
         }
 
         // Deleting post from database
@@ -104,7 +109,6 @@ class PostController extends Controller
             $post = Post::find($id);
             $post->delete();
             
-            Session::flash('message', 'Successfully deleted!');
-            return Redirect::to('admin');
+            return redirect()->route('admin');
         }
 }

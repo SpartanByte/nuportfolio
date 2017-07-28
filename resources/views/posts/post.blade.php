@@ -9,7 +9,7 @@
   <br>
   <br>
   <br>
-  
+  <h1>This is post.blade.php</h1>
   <table class="table">
     <thead>
       <th>id</th>
