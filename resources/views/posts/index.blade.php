@@ -10,8 +10,9 @@
      <hr />
 
   @foreach($posts as $post)
-      <h2><a class="internal-link" href="{{ $post->id }}"><span class="section-header mid-size-font">{{ $post->title }}</span></a></h2>
-              <p>{{ $post->body }}. <a class="internal-link" href="/posts/{{$post->id}}">Read More</a></p>
+      <h2><a class="internal-link" href="{{ route('posts.show', ['post'=>$post->id]) }} "><span class="section-header mid-size-font">{{ $post->title }}</span></a></h2>
+      <p>Submitted on: {{ $post->created_at->format('m/d/Y') }}</p>
+              <p>{!! str_limit($post->body, 100) !!}. <a class="internal-link" href="/posts/{{$post->id}}">Read More</a></p>
   @endforeach
 
   <hr />

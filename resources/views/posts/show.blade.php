@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('title', 'Show')
+@section('title', $post['title'])
 
 @section('content')
     <div class="static-content general-coding">
@@ -11,7 +11,7 @@
 <hr />
 {{--   <p>Test: {{ $post->title}}</p> --}}
 
-
+<h1>This is show.blade.php</h1>
   <span class="page-header uppercase-shadow mid-size-font">Title: {{ $post->title }}</span>
   <p>{!! $post->body !!}</p>
 
