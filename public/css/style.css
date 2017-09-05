@@ -205,8 +205,12 @@ blockquote{width: 90%;}
 .grey-rgba{background-color:rgba(0,0,0,0.2);}
 
 /* Font Effects */
-.uppercase-shadow{text-transform: uppercase; text-shadow: 4px 2px 6px #404040;}
-.shadow-uppercase{text-shadow: 4px 2px 6px $404040;}
+.uppercase-shadow{text-transform: uppercase; 
+    /*text-shadow: 4px 2px 6px #404040;*/
+}
+.shadow-uppercase{
+    /*text-shadow: 4px 2px 6px #404040;*/
+}
 .center-text{text-align: center;}
 .sm-letter-spacing{letter-spacing:0.1rem;}
 .med-letter-spacing{letter-spacing:0.25rem;}
@@ -298,14 +302,17 @@ div#main.row{
     padding-bottom: 0px;}
 
 nav.navbar.navbar-default{
+    border-radius: 0px;
     color: #FFFFFF;
     border: solid #083450 1px;}
 
 #navbar-override{
     /* This controls stlyles that affects the entire background/block of the navigation bar from Bootstrap and overrides it where noted */
-    background-color: #000000;
+    /*background-color: #000000;*/
+    background-color: #252525;
     font-family: 'Open Sans', sans-serif;}
     #navbar-override a{
+        border-radius: 0px;
         color: #e6e6e6;
         font-size: 14px;}
 
@@ -316,7 +323,8 @@ nav.navbar.navbar-default{
 
 #navbar-dropdown-override{
     background-color: #f2f2f2; /* Adds a near-#FFFFFF background to the dropdown (not the parent link causing the dropdown) */
-    color: #000000 !important;}
+    color: #000000 !important;
+}
     #navbar-dropdown-override a{
         color: #000000;}
         #navbar-dropdown-override a:hover{
@@ -357,40 +365,26 @@ nav.navbar.navbar-default{
  * ANY STYLES REGARDING THE FOOTER ARE HERE
  */
 .footer-container{
-    /*    position: fixed;*/
-    /*position: absolute;*/
     width: 100%;
-    /*    margin-top: 58em;*/
-    /*margin-top: 43%;*/
-    /*    margin-bottom: 10px;*/
     clear:both;
-    background-color: #000000;
+    /*background-color: #000000;*/
+    background-color: #0b0b0b !important;
     color: #FFFFFF;
     height: 100px;
-    /*    height: 100%;*/
 }
 .footer{
-    background-color: #000000 !important;
+    /*background-color: #000000 !important;*/
     padding-top: 1%;
 }
-/*.footer{
-    clear: both;
-    background-color: #000000;
-    color: #FFFFFF;
-    margin-bottom: 0px !important;
-    position: absolute;
-    width: 100%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin-top: 61em; !important;
-}*/
-
     .footer-left{
         list-style-type: none;
         float: left;
 /*        position: relative;*/
         width:47%;}
-.footer-left, .footer-right{ letter-spacing: 0.1rem; background-color:#000000;}
+.footer-left, .footer-right{ letter-spacing: 0.1rem; 
+    /*background-color:#000000;*/
+    background-color: transparent;
+}
 .footer-left > li{font-size:1.5rem;}
     .footer-right{
         text-align: right;
@@ -398,8 +392,6 @@ nav.navbar.navbar-default{
         font-size: 1rem !important;
         float: left;
         width: 47%;
-/*        position: relative;
-        margin: 5px 5px 5px 50%;*/
         right: 5px;
         top: 2%;
     }
@@ -413,8 +405,28 @@ nav.navbar.navbar-default{
             color: #82734C !important;
             filter: grayscale(100%);}
         .footer-right > li > a > img{width: 3em; height: 3em;}
-/*        .bottom-spacer{
-            margin-bottom: 200px;}*/
+
+.vert-btn-container{
+    margin: 3% 0 19% 0;
+}
+.vert-btn-container ul li{
+    border: 1px solid #000;
+    width: 20%;
+    padding:1%;
+    text-align:center;
+    cursor:pointer;
+}
+.vert-btn-container ul li a{
+    color:#000;
+    text-transform: uppercase;
+}
+.vert-btn-container ul li:hover{
+    background-color: #252525;
+    color:#FFF;
+}
+.vert-btn-container ul li:hover a{
+    color:#FFF;
+}
 /**
  * STANDARD PAGES: TEMPLATED STYLES
  */
@@ -446,8 +458,6 @@ nav.navbar.navbar-default{
         width: 50%;
         padding-top: 0.2em; padding-bottom: 0.2em; padding-left: 1%;}
     .static-content a{
-        /* color: #1A6FB0;*/
-       /* border-top: 0.5px solid #1A6FB0; border-bottom: 0.5px solid #1A6FB0; */
         color: #0c467f;
         transition-duration: 0.5s;
         font-weight: bold;}
@@ -506,12 +516,8 @@ nav.navbar.navbar-default{
  * ANY STYLES DESIGNED EXCLUSIVELY FOR THE HOME PAGE ARE HERE
  */
 .home-pad{
-    /*padding-bottom: 6%;*/
     margin-top: 2%;
 }
-/*.landing-image{*/
-    /*padding-top: 100px;*/
-    /*float: left;}*/
 
 #right-home{
     float: left;
@@ -523,24 +529,6 @@ nav.navbar.navbar-default{
     height: 15%;
     position:absolute;
     margin:-38% 0% 6% 57%;}
-    /*#right-home h1{*/
-        /*margin-right: 10px; */
-        /*font-size: 4em; */
-        /*font-weight: 600; */
-        /*text-transform: uppercase;}*/
-    /*#right-home h2{*/
-        /*font-size: 1.5em; */
-        /*font-weight: 600; */
-        /*letter-spacing: 0.5px;}*/
-    /*#right-home h3{*/
-        /*font-size: 1em; */
-        /*letter-spacing: 0.5px;}*/
-
-    /*#right-home p{*/
-        /*padding-top: 10px;*/
-        /*margin-right: 10px;}*/
-
-
 
 /* GALLERY PAGE STYLES */
 #gallery-thumbnails{
@@ -639,7 +627,7 @@ nav.navbar.navbar-default{
     .static-content.about h1{
         background-color: transparent; 
         color: #252525; font-size: 4rem;
-        text-shadow: #363636 2px 3px 4px;
+        /*text-shadow: #363636 2px 3px 4px;*/
         width: 80%; 
         text-align: left; 
         border: none;}
@@ -710,7 +698,7 @@ nav.navbar.navbar-default{
         background-color: transparent; 
         color: #252525; 
         font-size: 4rem;
-        text-shadow: #363636 2px 3px 4px;
+        /*text-shadow: #363636 2px 3px 4px;*/
         width: 80%; 
         text-align: left; 
         border: none;}
@@ -816,6 +804,8 @@ nav.navbar.navbar-default{
 
 .dropdown-submenu {
     position: relative;
+    background-color: #CCC;
+    border-top: 1px solid #252525;
 }
 
 @-moz-keyframes fadein{
@@ -848,7 +838,8 @@ nav.navbar.navbar-default{
     border-color: transparent;
     border-style: solid;
     border-width: 5px 0 5px 5px;
-    border-left-color: #ccc;
+    /*border-left-color: #ccc;*/
+    border-left-color: #000;
     margin-top: 5px;
     margin-right: -10px;
 }
@@ -912,3 +903,9 @@ nav.navbar.navbar-default{
     max-width: 250px;
     height: 50px;
     overflow: hidden;}
+.post-description{
+    background-color: #ccc;
+    padding-left: 2%;}
+.post-description p{
+    font-size: 2.25rem !important;
+}

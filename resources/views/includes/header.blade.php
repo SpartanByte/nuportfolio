@@ -69,12 +69,15 @@
 
                                     {{-- PYTHON --}}
                                     <li class="dropdown-submenu">
-                                        <a class="dropdown-toggle" href="{{ url('coding/python')  }}" title="Python Code Examples">Python</a>
+                                        {{-- <a class="dropdown-toggle" href="{{ url('coding/python')  }}" title="Python Code Examples">Python</a> --}}
+                                         <li><a href="{{ url('coding/python') }}" title="Python Programming Examples">Python</a></li>
                                     </li>
 
                                     {{-- C# --}}
-                                    <li class="dropdown-submenu"><a class="dropdown-toggle" href="{{ url('coding/csharp')  }}" title="C# Programming Examples">C#</a></li>
-                                    <li class="dropdown-submenu"><a class="dropdown-toggle" href="{{ url('coding/umbraco') }}" title="Umbraco">Umbraco</a></li>
+                                 {{--    <li class="dropdown-submenu"><a class="dropdown-toggle" href="{{ url('coding/csharp')  }}" title="C# Programming Examples">C#</a></li>
+                                    <li class="dropdown-submenu"><a class="dropdown-toggle" href="{{ url('coding/umbraco') }}" title="Umbraco">Umbraco</a></li> --}}
+                                    <li><a href="{{ url('coding/csharp') }}" title="C# Programming">C# (C Sharp)</a></li>
+                                    <li><a href="{{ url('coding/umbraco') }}" title="Umbraco CMS">Umbraco CMS</a></li>
                                 </ul>
                             </li>
                         </ul>

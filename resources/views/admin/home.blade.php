@@ -24,9 +24,9 @@
           <th>{{ $post->id }}</th>
           <td>{{ $post->title }}</td>
           <td>{{ $post->descriptions }}</td>
-          <td class="post-body">{{ $post->body }}</td>
+          {{-- <td class="post-body">{{ $post->body }}</td> --}}
           <td>{{ $post->created_at }}</td>
-          <td><a class="btn btn-small btn-success post-btn" href="admin/{{ $post->id}}">View Post</a></td>{{-- Will update to method after method is built --}}
+          <td><a class="btn btn-small btn-success post-btn" href="{{ $post->id}}">View Post</a></td>{{-- Will update to method after method is built --}}
           <td><a  class="btn btn-small btn-success post-btn" href="{{ URL::to('/admin') }}/{{ $post->id}}/edit">Edit Post</a></td>
           <td>
                   {{-- Delete Post Form --}}
