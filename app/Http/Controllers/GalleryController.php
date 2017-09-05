@@ -15,18 +15,9 @@ class GalleryController extends Controller
 	 * Automatically pulls folders from the images/photography, displays
 	 */
         public function makePhotographyGallery(){
-
-                        /**
-                         * TRYING TO USE A SERVICE CLASS: App\Services\Gallery; 
-                         * --- not currently working.
-                         */
-                        // function parameter was GalleryService $photographyArray
-                        //  $photographyGallery = new GalleryService();
-                        // $photographyArray = $photographyGallery->getPhotography();
-        
-        $imagePath = 'images/photography';
-        $imageFiles = File::allFiles($imagePath); 
-        return view('pages/photography')->with(compact('imagePath', 'imageFiles'));
+            $imagePath = 'images/photography';
+            $imageFiles = File::allFiles($imagePath); 
+            return view('pages/photography')->with(compact('imagePath', 'imageFiles'));
     }
 
         /**
@@ -36,5 +27,9 @@ class GalleryController extends Controller
             $imagePath = 'images/photoshop';
             $imageFiles = File::allFiles($imagePath);
             return view('pages/photoshop')->with(compact('imagePath', 'imageFiles'));
+        }
+
+        public function home(){
+            return view('pages/galleries');
         }
 }

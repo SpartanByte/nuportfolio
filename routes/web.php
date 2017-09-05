@@ -1,14 +1,10 @@
 <?php
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-*/
+
               // not using yet (requires authentication code)
               Route::get('/home', 'HomeController@index');
               // Homepage
               Route::get('/', 'PageController@home');
-
+              Route::get('/', 'PageController@home')->name('home');
 /**
  * PAGE CONTROLLER ROUTES ======================================
  */
@@ -35,7 +31,6 @@
 
 /**
  * CODE SAMPLE ROUTES ====================================================
- * Programming examples going from (language from dropdown menu)-> selected example
  */
         /* JavaScript */
         Route::group(['prefix' => 'programs/js'], function(){
@@ -51,7 +46,6 @@
 
 /**
  * CONTACT FORM ROUTES ====================================================
- * Creates and sends contact email
  */
       Route::get('contact', 'ContactController@create')->name('contact');
       Route::post('contact', 'ContactController@store')->name('contact_store');
@@ -62,6 +56,7 @@
       Route::get('templates/gallery-template', 'PageController@galleryTemplate'); // just a static template for page structure copy/paste
       Route::get('pages/photography', 'GalleryController@makePhotographyGallery'); // Generates gallery/shows view
       Route::get('pages/photoshop', 'GalleryController@makePhotoshopGallery'); // Generates gallery/shows view
+      Route::get('pages/galleries', 'GalleryController@home');
 
 /**
  * IMAGE UPLOADER ROUTES ('/upload') ==================================
@@ -109,36 +104,37 @@
           return redirect('photos/index');
         });
 
-        function user_photos_path(){
-          return public_path() . '/images/';} 
+        function user_photos_path()
+        {
+            return public_path() . '/images/';
+        } 
 
-      // Route::get('includes/phpimagefunctions.php', 'ImageFunctionController@getInclude');
       Route::get('/files/python/py-calculations.html', 'CodeSampleController@testPython');
 
 /* ======================== POSTS ROUTING ==================================== */
-      // Backend Posting Routes
-      Route::resource('admin', 'PostController');
-        Route::group(['prefix' => 'admin'], function()
-        {
-              Route::get('index', 'PostController@index'); // indexing posts
-              Route::get('show', 'PostController@show'); // showing posts
-              Route::get('{id}', 'PostController@showPost'); //
-              Route::get('store', 'PostController@store');
-              Route::get('home', 'PostController@home');
-        });
-
-      // Frontend Post Routes
-      Route::resource('posts', 'PostViewController');
-        Route::group(['prefix' => 'posts'], function()
-        {
-            Route::get('index', 'PostViewController@index'); // indexing posts
-              Route::get('show', 'PostViewController@show'); // showing posts
-              Route::get('{id}', 'PostViewController@showPost'); //
-        Route::get('store', 'PostViewController@store');
-
-        });
+    // Frontend Post Routes
+    Route::resource('posts', 'PostViewController');
+    Route::group(['prefix' => 'posts'], function()
+    { 
+        Route::get('index', 'PostViewController@index')->name('posts'); // indexing posts
+          Route::get('show', 'PostViewController@show'); // showing posts
+          Route::get('{id}', 'PostViewController@showPost'); //
+    });
 
       // setting up user to be required to sign in to access /admin
       Auth::routes();
-      Route::get('/admin', 'AdminController@home');
-      Route::get('admin/index', 'PostController@home');
+      Route::group(['middleware' => ['auth']], function()
+      {
+          // Create & Store
+          Route::get('/admin/create', 'PostController@create')->name('admin.create');
+          Route::post('/', 'PostController@store')->name('admin.store');
+          // Index & Show
+          Route::get('/admin/index', 'PostController@home')->name('admin.home');
+          Route::get('/admin', 'PostController@home');
+          Route::get('admin/{id}', 'PostController@show')->name('admin.show');
+          // Edit & Update
+          Route::get('/admin/{id}/edit', 'PostController@edit')->name('admin.edit');
+          Route::put('{id}',  'PostController@update')->name('admin.update');
+      });
+
+      Route::get('/register', 'PageController@denyRegister')->name('deny.register'); // denies unauthorized registration
