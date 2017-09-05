@@ -16,13 +16,7 @@ class PostViewController extends Controller
     public function index()
     {        
         $posts = Post::all();
-        // return view ('posts.index')->with(['posts'=>$posts]);
-        // foreach($posts as $post){
-        //     $postTimestamp = $post['created_at']->setTimezone('UTC');
-        // }
-        // $postDate = $posts['created_at']->date('dd-mm-YY');
         return view('posts.index')->with(compact('posts'));
-        // return redirect()->route('posts')->with(compact('posts'));
     }
 
     // Show individual post

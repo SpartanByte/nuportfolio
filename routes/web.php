@@ -10,6 +10,7 @@
               Route::get('/', 'PageController@home');
               Route::get('/', 'PageController@home')->name('home');
 
+
 /**
  * PAGE CONTROLLER ROUTES ======================================
  */
@@ -63,6 +64,7 @@
       Route::get('templates/gallery-template', 'PageController@galleryTemplate'); // just a static template for page structure copy/paste
       Route::get('pages/photography', 'GalleryController@makePhotographyGallery'); // Generates gallery/shows view
       Route::get('pages/photoshop', 'GalleryController@makePhotoshopGallery'); // Generates gallery/shows view
+      Route::get('pages/galleries', 'GalleryController@home');
 
 /**
  * IMAGE UPLOADER ROUTES ('/upload') ==================================
@@ -118,15 +120,15 @@
 
 /* ======================== POSTS ROUTING ==================================== */
       // Backend Posting Routes
-      Route::resource('admin', 'PostController');
-        Route::group(['prefix' => 'admin'], function()
-        {
-              Route::get('index', 'PostController@index')->name('admin'); // indexing posts
-              Route::get('show', 'PostController@show'); // showing posts
-              Route::get('{id}', 'PostController@showPost'); //
-              Route::get('store', 'PostController@store');
-              Route::get('home', 'PostController@home');
-        });
+      // Route::resource('admin', 'PostController');
+        // Route::group(['prefix' => 'admin'], function()
+        // {
+        //       Route::get('index', 'PostController@index')->name('admin'); // indexing posts
+        //       Route::get('show', 'PostController@show'); // showing posts
+        //       Route::get('{id}', 'PostController@showPost'); //
+        //       Route::get('store', 'PostController@store');
+        //       Route::get('home', 'PostController@home');
+        // });
 
       // Frontend Post Routes
       Route::resource('posts', 'PostViewController');
@@ -135,12 +137,24 @@
             Route::get('index', 'PostViewController@index')->name('posts'); // indexing posts
               Route::get('show', 'PostViewController@show'); // showing posts
               Route::get('{id}', 'PostViewController@showPost'); //
-              Route::get('store', 'PostViewController@store');
+              // Route::get('store', 'PostViewController@store')->name('admin.store');
 
         });
 
       // setting up user to be required to sign in to access /admin
       Auth::routes();
-      Route::get('/admin', 'AdminController@home');
-      Route::get('admin/index', 'PostController@home');
+      Route::group(['middleware' => ['auth']], function()
+      {
+          Route::get('/admin/create', 'PostController@create')->name('admin.create');
+          Route::post('/', 'PostController@store')->name('admin.store');
+          Route::get('/admin/index', 'PostController@home')->name('admin.home');
+          Route::get('/admin', 'PostController@home');
+
+          Route::get('/admin/{id}/edit', 'PostController@edit')->name('admin.edit');
+          Route::put('{id}',  'PostController@update')->name('admin.update');
+
+          Route::get('admin/{id}', 'PostController@show')->name('admin.show');
+      });
+
       Route::get('/register', 'PageController@denyRegister')->name('deny.register'); // denies unauthorized registration
+// Route::get('pages/confirmation', '')
