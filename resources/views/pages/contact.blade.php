@@ -32,7 +32,7 @@
         </div>
 
         <div class="form-group">
-            {!! Form::label('Your Message: ') !!}
+            {!! Form::label('Your Message: | Note: No HTML is accepted in this form') !!}
             {!! Form::textarea('message', null,
                     array('required', 
                             'class' => 'form-control',
@@ -40,15 +40,9 @@
         </div>
 
         <div class="form-group">
-            {!! Form::submit('Contact',
+            {!! Form::submit('Send Email',
                     array('class' => 'btn btn-primary')) !!}
         </div>
         {!! Form::close() !!}
-
-        @if($success==true){
-            {{ $confirm }}
-        }
-        @endif
-
 </div>
 @stop

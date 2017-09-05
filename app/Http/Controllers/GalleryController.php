@@ -37,4 +37,8 @@ class GalleryController extends Controller
             $imageFiles = File::allFiles($imagePath);
             return view('pages/photoshop')->with(compact('imagePath', 'imageFiles'));
         }
+
+        public function home(){
+            return view('pages/galleries');
+        }
 }

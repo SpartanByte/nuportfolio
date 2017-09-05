@@ -51,7 +51,7 @@ class PostController extends Controller
             // saving input to new post record
             $post->save();
 
-           return redirect()->route('admin.index');
+           return redirect()->route('admin.home');
            //return view('admin.index');
         }
 
@@ -88,6 +88,7 @@ class PostController extends Controller
         public function update(Request $request, $id)
         {
             // updating the post with the edit form
+
             $post = Post::find($id);
 
             $post->title  = Input::get('title');
@@ -99,7 +100,7 @@ class PostController extends Controller
             // redirect
             // Session::flash('message', 'Successfully updated post!');
             // return Redirect::to('admin');
-            return redirect()->route('admin');
+            return redirect()->route('admin.home');
         }
 
         // Deleting post from database
