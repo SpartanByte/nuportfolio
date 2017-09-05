@@ -4,7 +4,6 @@
 
 	use Illuminate\Http\Request;
 
-
 	class HolidaysService{
 
 		// This provides the array of holidays to fill the first two columns of PHP Holidays (php/timeanddates)
@@ -24,7 +23,6 @@
 		}
 
 		public function getCountdown(){
-
 		// troubleshooting with static array, trying to return how many days until X holiday based on current time
 		//  The problem may be in Blade
 		// ---also looking into using Carbon
@@ -49,11 +47,11 @@
 				$daysUntil = ceil(($daysUntil-time())/60/60/24);
 
 				if($daysUntil < 0)
-	            {
-	            	$daysUntil = $daysUntil + 365;
-	        	} 
-            	array_push($daysRemaining, $daysUntil);
-        	}
+	            		{
+	            			$daysUntil = $daysUntil + 365;
+	        			} 
+            			array_push($daysRemaining, $daysUntil);
+        			}
 			return $daysRemaining;	//  is returning a new array of day countdown results
 		}
 	}
