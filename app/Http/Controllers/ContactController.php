@@ -9,7 +9,6 @@ class ContactController extends Controller
 {
     //
     public function create(){
-
         // Working on creating a custom confermation message without showing the form again
         $confirm = 'Thank you. I will follow up with you soon!';
         $success = true;
