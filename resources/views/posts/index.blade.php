@@ -13,7 +13,7 @@
               <h2><a class="internal-link" href="{{ route('posts.show', ['post'=>$post->id]) }} "><span class="section-header mid-size-font">{{ $post->title }}</span></a></h2>
               <p>Submitted on: {{ $post->created_at->format('m/d/Y') }}</p>
               <div class="post-description">
-                    <p>{{$post->descriptions}} ||| <a href="{{ route('posts.show', ['post' => $post->id]) }}">View Post</a></p>
+                    <blockquote>{{$post->descriptions}} ||| <a href="{{ route('posts.show', ['post' => $post->id]) }}">View Post</a></blockquote>
             </div>
       @endforeach
 
