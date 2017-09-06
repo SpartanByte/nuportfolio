@@ -36,6 +36,7 @@
         Route::group(['prefix' => 'programs/js'], function(){
           Route::get('jquery-toggling', 'CodeSampleController@jqueryToggle'); // jQuery toggle example
           Route::get('slideshow', 'CodeSampleController@jsSlideshow'); // JavaScript slideshow example
+          Route::get('tuition-calculator', 'CodeSampleController@tuitionCalculator');
         });
 
         /* PHP */

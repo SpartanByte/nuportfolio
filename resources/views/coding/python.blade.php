@@ -27,26 +27,39 @@
         <p>Python also uses colons rather than semicolons, functions are defined diffently and in quick desktop applications "task main" is required. You can also visit the very large <a class="outgoingLink" href="https://www.python.org/community/">Python Community</a>.</p>
 
         {{-- Note: message.... --}}
-        <blockquote class="normal-size-font grey-rgba"><strong>Note:</strong> These examples were created in the Python IDE (IDLE) and have not yet been translated to web standard Python so that they can be rendered in a web page. As a result, these examples are a combination of PDF files showing Python code and images of the interfaces.</blockquote>
+        <blockquote class="normal-size-font grey-rgba"><strong>Note:</strong> These examples were created in the Python IDE (IDLE) and have not yet been translated to web standard Python so that they can be rendered in a web page. As a result, there are both downloadable Python files (.py) and text files (.txt) below. Many of these were written in 2014.</blockquote>
 
         {{-- Start of Examples --}}
         <ul class="file-list med-size-font">
-                <li><a href="/files/python/py-calculations.py">Python Calculations Example</a> 
+                <li><a href="/files/PositiveNumberSum.py">Postive Number Sum (Console Program)</a> 
                         <img src="/images/language-icons/python.png" width="50" height="50" /></li>
-                <li><a href="/files/python/python-calculations.txt">Python Calculations  (.txt file)</a>
+                <li><a href="/files/python/PositiveNumberSum.txt">Positive Number Sum (.txt file)</a>
+                        <img src="/icons/file-icons/txt-file.png" /></li>
+                <li><a href="/files/python/BudgetSubtractor.py">Budget Subtractor</a>
+                        <img src="/images/language-icons/python.png" width="50" height="50" /></li>
+                <li><a href="/files/python/BudgetSubtractor.txt">Budget Subtractor (txt File)</a>
+                        <img src="/icons/file-icons/txt-file.png" /></li>
+                <li><a href="/files/python/SochiOlympicTimeclock.py">Sochi Olympics Time Converter (Console Program)</a>
+                        <img src="/images/language-icons/python.png" width="50" height="50" /></li>
+                <li><a href="/files/python/SochiOlympicTimeclock.txt">Sochi Olympics Time Converter (txt File)</a>
+                        <img src="/icons/file-icons/txt-file.png" /></li>
+                <li><a href="/files/python/PaintCostCalculator.py">Paint Cost Calculator (Console Program)</a>
+                        <img src="/images/language-icons/python.png" width="50" height="50" /></li>
+                <li><a href="/files/python/PaintCostCalculator.txt">Paint Cost Calculator (txt File)</a>
+                        <img src="/icons/file-icons/txt-file.png" /></li>
+                <li><a href="/files/python/BuildingInsuranceCalculator.py">Building Insurance Calculator (Console Program)</a>
+                        <img src="/images/language-icons/python.png" width="50" height="50" /></li>
+                <li><a href="/files/python/BuildingInsuranceCalculator.txt">Building Insurance Calculator (txt File)</a>
+                        <img src="/icons/file-icons/txt-file.png" /></li>
+                <li><a href="/files/python/BMICalculator.py">BMI (Body Mass Indicator) Calculator (Console Program)</a>
+                        <img src="/images/language-icons/python.png" width="50" height="50" /></li>
+                <li><a href="/files/python/BMICalculator.txt">BMI (Body Mass Indicator) Calculator (txt File)</a>
                         <img src="/icons/file-icons/txt-file.png" /></li>
 
         </ul>
-            {{--         <p><a class="internalLink" href="/files/python/py-calculations.py">Python Calculations Example</a>
-                            <img src="/images/language-icons/python.png" width="50" height="50">(Note: this is in .py format)</p>
-                    <p><a class="internalLink" href="/files/python/python-calculations.txt">Python Calculations (.txt format)</a></p>
-
-                    <form action="/files/python/py-calculations.html" method = "POST">
-                        <input type="submit" value="Run the Python program">
-                    </form> --}}
+          
 
 
-Yes, me as well...kinda like an "okay", etc. Kinda like when people don't text back lol. Communication goes two ways. At least you're close to the end of the day, right?
         <hr />
     </div>
 @stop

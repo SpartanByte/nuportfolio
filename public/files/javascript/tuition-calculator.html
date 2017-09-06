@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<!--Brian Wardwell
+	Javascript
+	Chapter 5-6 Homework
+	February 27, 2014-->
+<head>
+	<title>Name Prompt</title>
+<script>
+function alertName() {
+	var name = document.forms[0].nametext.value;
+	if (name == "Brian") {
+		alert("Welcome Brian");
+		var onlineCredits = prompt("Please enter the number of online credits here: "); //Acquiring number of online credits.
+		var onlineCost = onlineCredits * 180.0; //Calculating cost of online credits.
+		alert("Your total for number of online credits is: $" + (onlineCost.toFixed(2))); //Showing online credits cost rounded.
+		var campusCredits = prompt("Please enter the number of on campus credits here: "); //Acquiring number of on campus credits.
+		var campusCost = campusCredits * 160.8; //Calculating cost of on campus credits
+		alert("Your total for number of on campus credits is: $" + (campusCost.toFixed(2))); //Showing on campus credits cost rounded.
+		var creditTotal = onlineCost + campusCost; //Calculating total cost of online and on campus credits.
+		alert("Your total for number of online and on campus credits is: $" + (creditTotal.toFixed(2))); //Showing total credits cost rounded.
+	}
+	else {
+		alert("Sorry, " + name + ", this program only works for Brian"); //Alert for invalid name entered.
+	}
+	return true;
+	}
+</script>
+</head>
+<body>
+<form id="myform" action="#" onsubmit="return alertName();">
+<h3>Directions</h3>
+<p>Enter the username "Brian", then input the number of on campus and online courses (priced differently) to view the total cost of tuition for the semester.</p>
+<p>Username: <input id="nametext" name="username" type="text" /></p>
+</form>
+</body>
+</html>
