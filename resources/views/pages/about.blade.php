@@ -5,8 +5,9 @@
     @section('content')
     <div class="static-content about">
         <span class="page-header uppercase-shadow mid-size-font">A Little Bit About Myself</span><br />
-        <img src="http://via.placeholder.com/600x400"  /><br />
-        <span class="img-caption" style="width:600px;">Caption for the Image</span>
+        <!-- <img src="http://via.placeholder.com/600x400"  /> -->
+        <img src="/images/portrait-in-ca.jpg" /><br />
+        <span class="img-caption" style="width:600px;">On the shore of the Merced River in California</span>
 
         {{-- start of background/bio --}}
         <section class="background">

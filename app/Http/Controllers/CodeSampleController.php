@@ -22,6 +22,9 @@ class CodeSampleController extends Controller
     {
     	return view('programs/js/slideshow');
     }
+    public function tuitionCalculator(){
+        return view('programs/js/tuition-calculator');
+    }
 
     public function phpTime(){
     	$CST = date_default_timezone_set("America/Chicago"); 
