@@ -16,29 +16,40 @@ class CodeSampleController extends Controller
 
     public function jqueryToggle()
     {
-        return view('programs/js/jquery-toggling');
+        // return view('programs/js/jquery-toggling');
+        return view('programs.js.jquery-toggling');
     }
     public function jsSlideshow()
     {
-    	return view('programs/js/slideshow');
+    	return view('programs.js.slideshow');
     }
     public function tuitionCalculator(){
-        return view('programs/js/tuition-calculator');
+        return view('programs.js.tuition-calculator');
     }
 
     public function phpTime(){
     	$CST = date_default_timezone_set("America/Chicago"); 
         $currentDate = date("n/j/Y");
     	$timestamp = date("h:i");
-        return view('programs/php/timeanddates')->with(compact('currentDate', 'timestamp')); 
+        return view('programs.php.timeanddates')->with(compact('currentDate', 'timestamp')); 
     } 
 
-    public function setHolidays(HolidaysService $holidaysArray){
+
+
+    public function setHolidays(HolidaysService $allHolidays){
         $holidaysList = new HolidaysService();
         $holidaysArray = $holidaysList->getHolidays();
-        $currentDate = date("n/j/Y");
-        return view('programs/php/timeanddates')->with(compact('holidaysArray'));
+        // $currentDate = date("n/j/Y");
+
+        $countdown = new HolidaysService();
+        $allHolidays= $countdown->getCountdown($holidaysArray);
+
+        return view('programs.php.timeanddates')->with(compact('allHolidays'));
     }
+
+
+
+
 
     public function setCountdown(HolidaysService $daysRemaining){
         $countdownResponse = new HolidaysService();

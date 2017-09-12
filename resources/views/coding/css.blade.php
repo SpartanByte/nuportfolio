@@ -1,6 +1,6 @@
     @extends('layouts.default')
    @section('description', 'General information about Cascading Stylesheets, animate.css, SASS')
-    @section('title', 'CSS Information')
+    @section('title', 'Coding -> CSS')
 
     @section('content')
     <div class="static-content code-sample-page">

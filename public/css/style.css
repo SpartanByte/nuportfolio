@@ -508,19 +508,20 @@ nav.navbar.navbar-default{
     border-color: #999;}
 /* end of image gallery styles */
 
-/**
- * ANY STYLES DESIGNED EXCLUSIVELY FOR THE HOME PAGE ARE HERE
- */
+/* === HOMEPAGE STYLES === */
 .home-pad{
     margin-top: 2%;
+    letter-spacing:1px;
 }
+
+
+.code-wrapper code{
+    font-weight:bold;}
 
 #right-home{
     float: left;
-    /*margin-top: 80px;*/
-    /*margin-left: 10em;*/
     width: 40%;
-    font-size: 1em;
+    font-size: 1.5rem;
     text-align: right;
     height: 15%;
     position:absolute;
@@ -559,7 +560,14 @@ nav.navbar.navbar-default{
 .photo-list a{
     font-size: 2rem;
 }
-
+.gallery-description{
+    width: 80%;
+    margin-left: 4%;
+    padding: 1% 0 1% 0;
+}
+.gallery-description p{
+    font-size:1.5rem;
+}
 /**
  * THIS IS BEING USED ON UPLOAD.BLADE.PHP WHICH IS THE OLD UPLOAD FORM AND WILL LIKELY BE REMOVED
  */
