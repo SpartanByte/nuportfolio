@@ -19,31 +19,31 @@ class CodePageController extends Controller
      * @return [type] [description]
      */
     public function general(){
-        return view('coding/general');
+        return view('coding.general');
     }
     public function javaPage()
     {
-        return view('coding/java');
+        return view('coding.java');
     }
     public function javascriptPage()
     {
-    	return view('coding/javascript');
+    	return view('coding.javascript');
     }
     public function phpPage(){
 
-        return view('coding/php');
+        return view('coding.php');
     }
     public function pythonPage(){
-        return view('coding/python');
+        return view('coding.python');
     }
     public function csharpPage(){
-        return view('coding/csharp');
+        return view('coding.csharp');
     }
     public function cssPage(){
-        return view('coding/css');
+        return view('coding.css');
     }
     public function umbracoPage(){
-        return view('coding/umbraco');
+        return view('coding.umbraco');
     } 
 
 }

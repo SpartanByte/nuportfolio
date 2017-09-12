@@ -1,6 +1,6 @@
  @extends('layouts.default')
     @section('description', 'General information about JavaScript and libraries/frameworks Vue.js, React.js, Angular.js')
-      @section('title', 'JavaScript Information')
+      @section('title', 'Coding -> JavaScript')
 
     @section('content')
     <div class="static-content code-sample-page">
@@ -10,13 +10,13 @@
         <hr />
 
         <img src="/images/logos/javascript.jpg" width="400"/>
-         <div><br /><span class="page-header mid-size-font">JAVASCRIPT</span><br /></div>
-            <p>The following simple examples show basic functionality of native JavaScript. I will be adding examples that show the diversity of the numberous JavaScript libraries and frameworks including AnglularJS and VueJS</p>
+         <div><br /><span class="page-header mid-size-font">JAVASCRIPT (ECMAScript)</span><br /></div>
+            <p>The following simple examples show basic functionality of native JavaScript. I will be adding examples that show the diversity of the numberous JavaScript libraries and frameworks including AnglularJS and VueJS. Native JavaScript is becoming a growing preference to some libraries, especially jQuery, as the newer versions have drastically expanded capabilities. Released in 2015, ECMAScript 6 (ECMAScript being the true name of JavaScript) added classes and modules. In 2016, ECMAScript 7 added <code>Array.protoype.includes</code> for checking arrays for a value to return true/false depending on its existance, control of effects (another advantage of jQuery previously), among other features. However, ECMAScript 6 & 7 are currently poorly supported in browsers. In June of 2017, ECMAScript 8 was released  adding more data binding features, mathematics enhancements, value types, tuples, among other features. Hopefully, this version will become more browser-friendly (or vice-versa) to fully open up its new features. w3schools (part of the <a href="https://www.w3.org/" title="World Wide Web Consortium" target="_blank">World Wide Web Consortium (aka "W3C")</a> has a <a href="https://www.w3schools.com/js/js_versions.asp" title="W3C Schools: Learn Web Development" target="_blank"> list of JavaScript versions</a> (including Browser Support details for ECMAScript 5 & 6).</p>
 
         <img src="/images/logos/jquery.png" width="400" />
          <div><br /><span class="page-header mid-size-font">jQuery</span><br /></div>
             <p>After being released initially in 2006, <a href="https://jquery.com/" title="jQuery Documentation" target="_blank">jQuery</a> has become quite likely the most widely used JavaScript library. Much of  this is that it mutates much of the tediousness of plain JavaScript into a much more straight-forward syntax. This is especially true when regarding Document  Object Model elements, animations, event handling and Ajax applications. jQuery's prewritteen functions for grabbing HTML "id" attributes, button events, and so forth most often include less code and with less repitition. Hence it's mantra of <em>"write less, do more"</em>.</p>
-            <p>jQuery has also expanded by adding the <a href="https://jqueryui.com/" title="jQuery UI Documentation" target="_blank">jQuery UI</a> library designed for better handling of user interface features  such as interactions, effects, widgets, and even themes. <a href="https://jquerymobile.com/" target="_blank">jQuery Mobile</a> is also very widely used for making mobile sites quickly or adding it to "responsive breakpoints" of desktop sites for responsive, mutli-platform/multi-device websites and applications</p>
+            <p>jQuery has also expanded by adding the <a href="https://jqueryui.com/" title="jQuery UI Documentation" target="_blank">jQuery UI</a> library designed for better handling of user interface features  such as interactions, effects, widgets, and even themes. <a href="https://jquerymobile.com/" target="_blank">jQuery Mobile</a> is also very widely used for making mobile sites quickly or adding it to "responsive breakpoints" of desktop sites for responsive, mutli-platform/multi-device websites and applications. There have been rumors  recently of developers starting to transition away from using jQuery as much due to other powerful libraries, recent native JavaScript's version "ECMAScript 7" being more powerful, and the often bloated code that jQuery can lead to.</p>
 
 
         <hr />

@@ -1,6 +1,6 @@
     @extends('layouts.default')
    @section('description', 'General information about C# and .NET applications')
-    @section('title', 'C# Examples')
+    @section('title', 'Coding -> C#')
 
     @section('content')
     <div class="static-content code-sample-page">
