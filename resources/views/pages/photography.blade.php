@@ -8,7 +8,9 @@
 
         <span class="page-header uppercase-shadow gallery-header">Photography</span>
             <ul class="photo-list">
-
+            	        <div class="gallery-description">
+        	<p>I remember that I first took an active, rather than viewing only, interest in photography during a vacation to <a href="http://www.visitduluth.com/" title="visitduluth.com" target="_blank">Duluth, MN</a> in 1998. In awe of not only the huge oil ships but also the rugged North Shore of Lake Superior and the natural beauty of Duluth itself. Due to only having the ability to afford cheap film cameras at the time, it wasn't until about 2003 that I purchased a digital camera and started to really experiment. To be honest, I don't remember what image editing program I was using at the time but it was likely as barebones as you could get at the time. I take a keen interest in macro photography and capturing interesting angles of everday objects we commonly don't notice in our daily lives. I also enjoy portraits and nature/landscape scenes. Dutch photographer <a href="http://antoncorbijn.com/" title="antoncorbijn.com" target="_blank">Anton Corbijn</a> was a major influence to my photography. His style is dual-tones and black & white photography with heavy contrast. He wasn't afraid of grain and, most likely, commonly added it. As a result, even today, most of my photo-editing is adjusting contrast, shadow/highlight levels, and exposure to express a similar adoration for things a bit darker.</p>
+        </div>
 
                 {{-- Images generated from ImageController@showPhotography --}}
                 @foreach($imageFiles as $imageFile)

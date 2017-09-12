@@ -1,6 +1,6 @@
     @extends('layouts.default')
    @section('description', 'General information about server-side programming lanuage Python including smaller desktop application scripts')
-    @section('title', 'Python Examples')
+    @section('title', 'Coding -> Python')
 
     @section('content')
 {{--     <div class="static-content code-sample-page"> --}}
