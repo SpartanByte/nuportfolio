@@ -927,3 +927,42 @@ nav.navbar.navbar-default{
 .post-description p{
     font-weight: 600;
 }
+
+// Vue page styles
+.vue-wrapper{
+    text-align:left;
+    font-family: 'Open Sans', sans-serif;
+    padding-left:2%;}
+    .vue-wrapper input{
+        padding:0.25%;
+        width:20%;}
+    .vue-wrapper button{
+        border: 1px solid #363636;
+        color:#363636;
+        text-transform:uppercase;
+        font-weight:bold;
+        cursor:pointer;
+        font-size:1rem;}
+        .vue-wrapper button:hover{
+            background-color:#363636;
+            color:#FFF;
+            transition-duration:.3s;}
+
+.list-group{margin-left:-2.25%;}
+    .list-group li{
+        list-style-type:none;
+        font-weight:bold;}
+
+.modified{
+    width:30%;
+    text-align:left;    }
+
+.bold-text{font-weight:bold;}
+.red-text{color: #990000;}
+.new-task-btn{
+    padding:0.25%;
+    width:6%;}
+
+.vue-btn{
+    margin:1% 0 1% 0;
+    width: 15%;}
