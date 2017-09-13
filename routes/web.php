@@ -140,3 +140,12 @@
       });
 
       Route::get('/register', 'PageController@denyRegister')->name('deny.register'); // denies unauthorized registration
+
+// Route::get('/', function(){
+//   return view('/programs/vuejs/vue-todo');
+// });
+
+                      Route::get('programs/vuejs/vue-todo', 'TaskController@taskList');
+Route::group(['prefix' => 'api'], function () {
+  Route::resource('tasks', 'TaskController');
+});
