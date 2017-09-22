@@ -1,5 +1,8 @@
     @extends('layouts.default')
 
+    @section('description', 'Example of a C# Guess A Word Web Form application')
+    @section('title', 'C# -> Guess A Word')
+    
     @section('content')
     <div class="static-content">
 
@@ -15,8 +18,8 @@
                     </div>
             <p class="h2 uppercase-shadow">Downloads</p>
             <ul class="file-list med-size-font">
-                                <li><a href="/files/csharp/GuessAWord.zip">GuessAWord.zip</a><img src="/icons/file-icons/zip-file.png"/></li>
-                                <li><a href="/files/csharp/GuessAWord.zip">GuessAWord (PDF File)</a><img src="/icons/file-icons/zip-file.png"/></li>
+                                <li><a href="/files/csharp/GuessAWord.zip">GuessAWord.zip</a><img class="file-icon" src="/icons/file-icons/zip-file.png"/></li>
+                                <li><a href="/files/csharp/GuessAWord.pdf">GuessAWord (PDF File)</a><img class="file-icon" src="/icons/file-icons/pdf-file.png"/></li>
             </ul>
     <div id="gallery-clear-bottom"></div>
 </div>

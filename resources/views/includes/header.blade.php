@@ -64,19 +64,19 @@
                                          </ul>
                                     </li>
 
-                                    {{-- PYTHON --}}
-                                    <li class="dropdown-submenu">
-                                         <li><a href="{{ url('coding/python') }}" title="Python Programming Examples">Python</a></li>
-                                    </li>
-
                                     {{-- C# --}}
                                     <li class="dropdown-submenu">
                                             <a href="{{ url('coding/csharp') }}" class="dropdown-toggle lang-row" data-toggle="dropdown">C# Programming</a>
                                             <ul class="dropdown-menu fade-in">
-                                                <li><a href="{{ route('csharp.guess-a-word') }}">Guess A Word Example</a></li> 
+                                                <li><a href="{{ route('csharp.guess-a-word') }}" title="Guess A Word C# Web Form Example">Guess A Word Example</a></li>
+                                                <li><a href="{{ route('csharp.prime-numbers') }}" title="Prime Numbers Within Range in C#">Prime Numbers Finder</a></li> 
                                             </ul>
                                         </li>
                                     <li><a href="{{ url('coding/umbraco') }}" title="Umbraco CMS">Umbraco CMS</a></li>
+                                                                        {{-- PYTHON --}}
+                                    <li class="dropdown-submenu">
+                                         <li><a href="{{ url('coding/python') }}" title="Python Programming Examples">Python</a></li>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>

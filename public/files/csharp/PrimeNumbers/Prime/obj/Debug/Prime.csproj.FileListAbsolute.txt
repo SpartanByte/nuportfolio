@@ -1,0 +1,9 @@
+C:\Users\bwardwell\Code\nuportfolio\public\files\csharp\Prime factors\Prime\bin\Debug\Prime.exe.config
+C:\Users\bwardwell\Code\nuportfolio\public\files\csharp\Prime factors\Prime\bin\Debug\Prime.exe
+C:\Users\bwardwell\Code\nuportfolio\public\files\csharp\Prime factors\Prime\bin\Debug\Prime.pdb
+C:\Users\bwardwell\Code\nuportfolio\public\files\csharp\Prime factors\Prime\obj\Debug\Prime.csprojResolveAssemblyReference.cache
+C:\Users\bwardwell\Code\nuportfolio\public\files\csharp\Prime factors\Prime\obj\Debug\Prime.primeForm.resources
+C:\Users\bwardwell\Code\nuportfolio\public\files\csharp\Prime factors\Prime\obj\Debug\Prime.Properties.Resources.resources
+C:\Users\bwardwell\Code\nuportfolio\public\files\csharp\Prime factors\Prime\obj\Debug\Prime.csproj.GenerateResource.Cache
+C:\Users\bwardwell\Code\nuportfolio\public\files\csharp\Prime factors\Prime\obj\Debug\Prime.exe
+C:\Users\bwardwell\Code\nuportfolio\public\files\csharp\Prime factors\Prime\obj\Debug\Prime.pdb
