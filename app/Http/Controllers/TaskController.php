@@ -11,19 +11,21 @@ class TaskController extends Controller
     public function index()
     {
         $tasks = Task::latest()->get();
-        return view('/programs/vuejs/index')->with(compact('tasks'));
+        return view('/vue')->with(compact('tasks'));
         // return Task::latest()->get();
     }
 
         // create functionality is handled by a Vue form
     public function taskList()
     {
-         return view('/programs/vuejs/vue-todo')->with(compact('tasks'));
+         return view('/vue')->with(compact('tasks'));
     }
     public function show(){
         //
     }
-
+    public function update(){
+        //
+    }
     public function store(Request $request)
     {
             $this->validate($request, [ 
@@ -31,15 +33,16 @@ class TaskController extends Controller
                 ]);
 
 
-            // return Task::create(['body' => request('body')]);
-            // $postTitle = $request->title;
-            $task = new Task;
-            $body = $request->body;
+            return Task::create(['body' => request('body')]);
+            $postTitle = $request->title;
+            // $task = new Task;
+            // $body = $request->body;
 
-            $task->body = $body;
-            $post->save();
+            // $task->body = $body;
+            // $post->save();
 
-            return view('/api/tasks');
+            // return view('/api/tasks');
+            return view('/vue');
 
     }
 

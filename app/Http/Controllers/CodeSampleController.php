@@ -61,4 +61,12 @@ class CodeSampleController extends Controller
     public function testPython(){
         return view('/files/python/py-calculations.html');
     }
+
+    /**
+     *  C# SAMPLES
+     */
+    public function guessAWord()
+    {
+        return view('/programs/csharp/guess-a-word');
+    }
 }
