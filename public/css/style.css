@@ -892,12 +892,6 @@ nav.navbar.navbar-default{
    line-height: 1.5;}
 .post-table tbody{
     border-bottom: 1px solid black;}
-/*.post-content p{
-    font-size: 2rem;}*/
-/*.post-body{
-    max-width: 250px;
-    height: 50px;
-    overflow: hidden;}*/
 .post-body{
     text-transform: none;
     font-family: 'Open Sans', sans-serif;
@@ -978,4 +972,8 @@ nav.navbar.navbar-default{
     width: 40%;
     height:40%;
     border: 1px solid #000;
+}
+.file-icon{
+    width: 5rem !important;
+    height:  5rem !important;
 }

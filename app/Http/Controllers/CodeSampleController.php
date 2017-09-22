@@ -69,4 +69,8 @@ class CodeSampleController extends Controller
     {
         return view('/programs/csharp/guess-a-word');
     }
+    public function primeNumbers()
+    {
+        return view ('/programs/csharp/prime-numbers');
+    }
 }
