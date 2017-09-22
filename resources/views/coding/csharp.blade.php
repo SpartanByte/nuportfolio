@@ -31,5 +31,19 @@
                                  <li><a href="/files/csharp/GuessAWord.pdf">PrimeFactors: 'PrimeForm.cs' (Web Form)</a><img src="/icons/file-icons/pdf-file.png"/></li>
                                 <li><a href="/files/csharp/AveragesForm.zip">Prime Factors.zip</a><img src="/icons/file-icons/zip-file.png"/></li>
                         </ul>
+
+                        <div class="screenshot">
+                            <p class="mid-size-font uppercase-shadow">Actual C# Files</p>
+                            <p><strong>Note:</strong> These files are in zip format and will need Visual Studio (Community Edition is free) in order to build/"play" the small program. Screenshots of the simple steps in Visual Studio are below.</p>
+                            <ul class="file-list med-size-font">
+                                <li>1. After unzipping the files, open Visual Studio and click <strong>File > Open File</strong>from the menu.</li>
+                                <li>2. Navigate to the unzipped folder and select the solution file (file extension .sln) and open</li>
+                                <li><img class="screenshot" src="/images/csharp-screenshots/open-file.png" alt="image to open file under file menu" /></li>
+                                <li>3. Once open, highlight the full solution as shown (opening the .sln file will pull dependent files automatically).</li>
+                                <li><img src="/images/csharp-screenshots/highlight-solution.png" alt="image showing highlighted solution on right side of Visual Studio" /></li>
+                                <li>4. With the full Solution highlighted, click "Start" to build/compile the code and display the user interface.</li>
+                                <li><img src="/images/csharp-screenshots/click-start.png" alt="image showing where the start button is located to build and display form" /></li>
+                            </ul>
+                    </div>
     </div>
 @stop

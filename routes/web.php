@@ -52,6 +52,12 @@
           Route::get('/php/timeanddates', 'CodeSampleController@setHolidays')->name('php.timeanddates');
         });
 
+        /* C# */
+        Route::group(['prefix' => 'programs'], function()
+        {
+          Route::get('/csharp/guess-a-word', 'CodeSampleController@guessAWord')->name('csharp.guess-a-word');
+        });
+
 /* === CONTACT FORM ROUTES === */
       Route::get('contact', 'ContactController@create')->name('contact');
       Route::post('contact', 'ContactController@store')->name('contact_store');
@@ -145,7 +151,21 @@
 //   return view('/programs/vuejs/vue-todo');
 // });
 
-                      Route::get('programs/vuejs/vue-todo', 'TaskController@taskList');
+ Route::get('programs/vuejs/vue-todo', 'TaskController@taskList');
 Route::group(['prefix' => 'api'], function () {
   Route::resource('tasks', 'TaskController');
 });
+
+// Route::get('/tasks', function(){
+//   return view('vue');
+// });
+// Route::group(['prefix' => '/vue'], function () {
+//     Route::post('/tasks', 'TaskController@store');
+
+//   Route::resource('tasks', 'TaskController');
+//   // Route::post('/tasks', 'TaskController@store');
+// });
+// Route::post('/api/tasks', 'TaskController@store');
+// Route::group(['prefix' => 'api'], function(){
+//   Route::resource('tasks', 'TaskController');
+// });

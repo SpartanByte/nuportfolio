@@ -965,4 +965,17 @@ nav.navbar.navbar-default{
 
 .vue-btn{
     margin:1% 0 1% 0;
+    display: block;
     width: 15%;}
+
+
+.input-group input[type="text"] {
+    width: 50%;
+    display: block;
+    margin-bottom: 10px;}
+
+.screenshot > ul > li > img{
+    width: 40%;
+    height:40%;
+    border: 1px solid #000;
+}

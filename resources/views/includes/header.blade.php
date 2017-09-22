@@ -20,9 +20,9 @@
                     <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
                     <ul class="dropdown-menu" id="navbar-dropdown-override">
                         <li><a href="http://musicbytes.us/">MusicBytes</a></li>
+                        <li><a href="http://themusicpavilion.com">The Music Pavilion</a></li>
                         <li><a href="#">My Old Portfolio</a></li>
                         <li><a href="http://newlinecharacter.com/">New Line Character (Coming Soon)</a></li>
-                        <li><a href="http://themusicpavilion.com/">The Music Pavilion (Coming Soon)</a></li>
                     </ul>
                 </li>
             </ul>
@@ -70,7 +70,12 @@
                                     </li>
 
                                     {{-- C# --}}
-                                    <li><a href="{{ url('coding/csharp') }}" title="C# Programming">C# (C Sharp)</a></li>
+                                    <li class="dropdown-submenu">
+                                            <a href="{{ url('coding/csharp') }}" class="dropdown-toggle lang-row" data-toggle="dropdown">C# Programming</a>
+                                            <ul class="dropdown-menu fade-in">
+                                                <li><a href="{{ route('csharp.guess-a-word') }}">Guess A Word Example</a></li> 
+                                            </ul>
+                                        </li>
                                     <li><a href="{{ url('coding/umbraco') }}" title="Umbraco CMS">Umbraco CMS</a></li>
                                 </ul>
                             </li>
