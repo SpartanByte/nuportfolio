@@ -56,6 +56,7 @@
         Route::group(['prefix' => 'programs'], function()
         {
           Route::get('/csharp/guess-a-word', 'CodeSampleController@guessAWord')->name('csharp.guess-a-word');
+          Route::get('/csharp/prime-numbers', 'CodeSampleController@primeNumbers')->name('csharp.prime-numbers');
         });
 
 /* === CONTACT FORM ROUTES === */
