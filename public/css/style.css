@@ -200,6 +200,7 @@ blockquote{width: 90%;}
 .small-header-font{font-size: 2rem;}
 .standard-ul{font-weight: bold;font-size: 1.75rem;}
 .code-gen-text{ font-weight: bold; font-family: Oxygen, sans-serif; font-size: 1.5rem; line-height:1;}
+.black-txt-block{background-color:#000;color:#FFF;padding:1%;}
 
 /* Coloring Styles */
 .grey-rgba{background-color:rgba(0,0,0,0.2);}
