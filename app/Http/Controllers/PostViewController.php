@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
+use Carbon\Carbon;
 
 class PostViewController extends Controller
 {
@@ -15,13 +16,13 @@ class PostViewController extends Controller
     public function index()
     {        
         $posts = Post::all();
-        return view ('posts.index')->with(['posts'=>$posts]);
+        return view('posts.index')->with(compact('posts'));
     }
 
     // Show individual post
     public function show($id)
     {
         $post = Post::find($id);
-        return view('posts.show')->with('post', $post);
+        return view('posts.show')->with(compact('post'));
     }
 }

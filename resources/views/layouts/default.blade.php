@@ -2,6 +2,10 @@
 <html>
 <head>
     @include('includes.head')
+            <meta name="csrf-token" content="{{ csrf_token() }}">
+        <script>
+            window.Laravel = { csrfToken: '{{ csrf_token() }} '}
+        </script>
 </head>
 <body>
 <div class="container">

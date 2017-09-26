@@ -9,7 +9,6 @@ class ContactController extends Controller
 {
     //
     public function create(){
-
         // Working on creating a custom confermation message without showing the form again
         $confirm = 'Thank you. I will follow up with you soon!';
         $success = true;
@@ -28,10 +27,12 @@ class ContactController extends Controller
 
             // Declaring email addresses to send emails to outlook while testing
         	$message->from('brianwardwell79@gmail.com');
-        	$message->to('briwar10@outlook.com', 'Admin')->subject('Brian Wardwell\'s Laravel Feedback');
+        	$message->to('briwar10@outlook.com', 'Admin')->subject('A message from your web portfolio');
     	});
 
         // Using route to show confirmation on page to customer (still working on this, condition is not working)
-  		return \Redirect::route('contact')->with('message', 'Thanks for the message. I will be following up with you soon!');
+  		// return \Redirect::route('contact')->with('message', 'Thanks for the message. I will be following up with you soon!');
+        $confirmation = "Thank you. I will be following up with you soon";
+        return view('pages/confirmation')->with(compact('confirmation'));
     }
 }
