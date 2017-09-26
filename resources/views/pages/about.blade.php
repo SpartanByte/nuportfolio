@@ -4,10 +4,10 @@
 
     @section('content')
     <div class="static-content about">
- 
-        <span class="page-header uppercase-shadow small-header-font">A Little Bit About Myself</span><br />
-        <img src="http://via.placeholder.com/600x400"  /><br />
-        <span class="img-caption" style="width:600px;">Caption for the Image</span>
+        <span class="page-header uppercase-shadow mid-size-font">A Little Bit About Myself</span><br />
+        <!-- <img src="http://via.placeholder.com/600x400"  /> -->
+        <img src="/images/portrait-in-ca.jpg" /><br />
+        <span class="img-caption" style="width:600px;">On the shore of the Merced River in California</span>
 
         {{-- start of background/bio --}}
         <section class="background">
@@ -28,16 +28,22 @@
             <ul>
                 <li class="ul-header"><strong>Front-End</strong></li>
                     <ul class="skills">
-                        <li>CSS / Sass</li>
+                        <li>CSS</li>
+                            <blockquote>CSS Animations, Text Hovers and Shadow Effects, Grid Positioning Layouts, Responsive Web Design for desktop to mobile views, Float based layouts, Z-Index Layering, and plenty more.</blockquote>
                         <li>JavaScript</li>
+                            <blockquote>JavaScript interactive elements such as button, hover, and other animations used with user interaction, dynamic views. I often use plain JavaScript and jQuery but recently started adapting and adding in Vue.js.</blockquote>
                         <li>Adobe Photoshop</li>
+                            <blockquote>I've had a love for photomanipulation, Photoshop composites, image editing and more since approximately 2005. For many years, I've enjoyed amateur photography such as nature and self-portraits, which lead me to start using Photoshop to add professional touches long before I started working on my Web Development degree. More recently, I've adapted to making web application mockups before starting the actual coding of a website.</blockquote>
                     </ul>
                 <li class="ul-header"><strong>Back-End</strong></li>
                     <ul class="skills">
-                        <li>Laravel (PHP Framework)</li>
+                        {{-- <li>Laravel (PHP Framework)</li> --}}
                         <li>PHP</li>
+                            <blockquote>Dynamic backend/server side programming for database applications, dynamic content, processing of user and other types of input, procedural and object oriented PHP. Though I started with starting from scratch with PHP sites and developing Wordpress websites, my more recent projects have included the Laravel MVC framework for small to large scale applications, database interaction such as record keeping, user management, profile management and more.</blockquote>
                         <li>C#</li>
+                            <blockquote>I started with C# building Windows Form Applications within Microsoft's Visual Studio for small desktop software applications such as cabin rental quotes and more. Recently, I've moved ahead with C# (and some ASP.NET) while learning to use the Umbraco CMS.</blockquote>
                         <li>Java</li>
+                            <blockquote>I've used Java to work with small interactive applets using Swing as well as console-only/command-line processing programs for calculations, information processing, and more.</blockquote>
                     </ul>
             </ul>
         </section>
@@ -47,10 +53,13 @@
         <span class="history-header">Professional and Personal Development:</span><br />
             <span class="history-title">Insight Technologies</section>
                 <p class="history-details">Web Developer, October 2016 - Current</p>
+                <blockquote>I have been working at Insight Technologies with a wonderful Web Development/E-Business team since October of 2016. I've never before been challenged so much and enjoying complicated and highly customized development. My work at Insight introduced me to the Laravel PHP framework, Umbraco (C#/ASP.NET) framework, and powerful backend applications involving authentication, database and product management, as well as starting to develop with Vue.js.</blockquote>
             <span class="history-title">Dakota Supply Group</span>
                 <p class="history-details">Intranet/Internal Website (Temp/Contract), June 2016-Current (Maintenance Contract)</p>
+                <blockquote>I worked with Preference Personnel during a project-based contract to rebuild and merge DSG's two Intranet sites using Wordpress.</blockquote>
            <span class="history-title"><a href="http://musicbytes.us/" title="MusicBytes: Entertainment" alt="MusicBytes.us: Entertainment Website">MusicBytes.us</span></a>
-                <p class="history-details">Music Entertainment Website, Web Developer (2012 - Current)</p>
+                <p class="history-details">Music Entertainment Website, Web Developer (2015 - Current)</p>
+                <blockquote>I launched Musicbytes as a Wordpress-based music blog in January of 2015. I quickly started using it for more article and feature based content as well, edging it toward an Entertainment Website. I'm currently working on it as a project in my freetime by rebranding and redeveloping it as "The Music Pavilion" using Umbraco as for high customization and flexibility. I hope to finish developing it and launch it before the end of the year.</blockquote>
         </section>
 
         <section>

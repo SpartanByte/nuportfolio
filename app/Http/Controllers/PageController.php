@@ -34,4 +34,9 @@ class PageController extends BaseController
         $currentPage = url()->current();
         return view('code_pages.code-information', $currentPage);
     }
+
+    public function denyRegister(){
+
+        return redirect()->route('home');
+    }
 }
