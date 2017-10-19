@@ -1,0 +1,47 @@
+<?php
+// Object Oriented Programming Example
+// Band class: assigns members of traditional rock band structure
+
+class Band{
+	private $singer = 'singer';
+	private $guitarist = 'guitarist';
+	private $bassist = 'bassist';
+	private $drummer = 'drummer';
+
+	public function setSinger($singer){
+		$this->singer = $singer;
+		return  $this;
+	}
+	public function setGuitarist($guitarist){
+		$this->guitarist = $guitarist;
+		return $this;
+	}
+	public function setBassist($bassist){
+		$this->bassist = $bassist;
+		return $this;
+	}
+	public function setDrummer($drummer){
+		$this->drummer = $drummer;
+		return $this;
+	}
+	public function dump(){
+		var_dump($this->singer, $this->guitarist, $this->bassist, $this->drummer);
+	}
+}
+
+
+$aliceInChains = (new Band())
+	->setSinger('Layne Staley')
+	->setGuitarist('Jerry Cantrell')
+	->setBassist('Mike Inez')
+	->setDrummer('Sean Kinney')
+	->dump();
+
+// if in php artisan tinker (Laravel)
+$aliceInChains = new Band();
+$aliceInChains->setSinger('Layne Staley');
+$aliceInChains->setGuitarist('Jerry Cantrell');
+$aliceInChains->setBassist('Mike Inez');
+$aliceInChains->setDrummer('Sean Kinney');
+$aliceInChains->dump();
+
