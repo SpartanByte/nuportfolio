@@ -171,8 +171,13 @@ html{
     color:#FFF;
     background:#252525;
     font:10px/1 'Rleud', sans-serif; }
-body {
-    position:relative; }
+/* body {
+    position:relative; } */
+body{
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+}
 a {
     cursor:pointer;
     text-decoration:none;
@@ -371,9 +376,12 @@ nav.navbar.navbar-default{
     background-color: #0b0b0b !important;
     color: #FFFFFF;
     height: 100px;
+        position: absolute;
+    bottom: 0;
 }
 .footer{
     padding-top: 1%;
+
 }
     .footer-left{
         list-style-type: none;

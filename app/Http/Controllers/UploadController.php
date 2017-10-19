@@ -14,14 +14,6 @@
      */
     class UploadController extends Controller{
 
-       /* public function getUpload(ImageUploaderService $currentUpload){
-
-            $newUpload = new ImageUploaderService();
-            $currentUpload = $newUpload->upload();
-
-            return view('pages/success')->with(['currentUpload' => $currentUpload]);
-        } */
-
         public function upload(){
 
             // getting post data
