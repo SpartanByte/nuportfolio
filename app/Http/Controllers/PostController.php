@@ -52,7 +52,6 @@ class PostController extends Controller
             $post->save();
 
            return redirect()->route('admin.home');
-           //return view('admin.index');
         }
 
         // showing individual post (View Post)
@@ -61,9 +60,7 @@ class PostController extends Controller
             $post = Post::find($id);
             // return view('admin.show')->with('post', $post);
              return view('admin.show')->with(compact('post'));
-
         }
-
 
         // Still working on this function for public view 
         public function showPost($id)
@@ -88,7 +85,6 @@ class PostController extends Controller
         public function update(Request $request, $id)
         {
             // updating the post with the edit form
-
             $post = Post::find($id);
 
             $post->title  = Input::get('title');

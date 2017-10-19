@@ -20,7 +20,7 @@ class AdminController extends Controller
      // getting the admin dashboard/home
     public function home()
     {
-          $posts = Post::all();
-          return view ('admin/home')->with('posts', $posts);
+      $posts = Post::all();
+      return view ('admin/home')->with('posts', $posts);
     }
 }

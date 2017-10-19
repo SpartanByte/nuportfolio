@@ -69,6 +69,8 @@
       Route::get('pages/photoshop', 'GalleryController@makePhotoshopGallery'); // Generates gallery/shows view
       Route::get('pages/galleries', 'GalleryController@home');
 
+
+
  /** === IMAGE UPLOADER ROUTES ('/upload') ===
  * Note: This image uploader is not using Invervention Image */
 
@@ -144,18 +146,24 @@
           // Edit & Update
           Route::get('/admin/{id}/edit', 'PostController@edit')->name('admin.edit');
           Route::put('{id}',  'PostController@update')->name('admin.update');
+          Route::get('/admin/upload-image', 'GalleryController@create');
+
       });
 
-      Route::get('/register', 'PageController@denyRegister')->name('deny.register'); // denies unauthorized registration
+      Route::get('/admin/show', function(){
+        return view('/');
+      });
+
+      // Route::get('/register', 'PageController@denyRegister')->name('deny.register'); // denies unauthorized registration
 
 // Route::get('/', function(){
 //   return view('/programs/vuejs/vue-todo');
 // });
 
- Route::get('programs/vuejs/vue-todo', 'TaskController@taskList');
-Route::group(['prefix' => 'api'], function () {
-  Route::resource('tasks', 'TaskController');
-});
+//  Route::get('programs/vuejs/vue-todo', 'TaskController@taskList');
+// Route::group(['prefix' => 'api'], function () {
+//   Route::resource('tasks', 'TaskController');
+// });
 
 // Route::get('/tasks', function(){
 //   return view('vue');
