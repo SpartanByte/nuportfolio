@@ -1,7 +1,7 @@
 /**----------------------------------------
-* 
+*
 *  MEDIA QUERY: Max Width 360
-*  
+*
 * *----------------------------------------*/
 @media (max-width: 360px){
 /* Styles */
@@ -12,9 +12,9 @@
 }
 
 /**----------------------------------------
-* 
+*
 *  MEDIA QUERY: Max Width 667 - Min 359
-*  
+*
 * *----------------------------------------*/
 @media (max-width: 667px) and (min-width: 359px){
 
@@ -26,9 +26,9 @@
 }
 
 /**----------------------------------------
-* 
+*
 *  MEDIA QUERY: Max Width 1024 - Min 666
-*  
+*
 * *----------------------------------------*/
 @media (max-width: 1025px) and (min-width: 666px){
 
@@ -37,15 +37,21 @@
 
 
 /**----------------------------------------
-* 
+*
 *  MEDIA QUERY: Max Width 1280 - Min 1024
-*  
+*
 * *----------------------------------------*/
 @media (max-width: 1280px) and (min-width: 1024px){
 
-	/**----------------
-	*  HOMEPAGE STYLES
-	* *----------------*/
-	/* Between 1024 and 1280 */
-	
+/**----------------
+*  HOMEPAGE STYLES
+* *----------------*/
+/* Between 1024 and 1280 */
+
+/*=== Container Styles ===*/
+.static-content{
+    padding: 0;
+}
+.static-content.general-coding{
+	width: 100%;
 }
