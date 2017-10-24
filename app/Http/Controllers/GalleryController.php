@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -10,8 +9,7 @@ use Input;
 use App\Services\Gallery;
 
 class GalleryController extends Controller
-{    
-
+{
     public function create()
     {
         return view('admin/upload-image');
@@ -19,24 +17,27 @@ class GalleryController extends Controller
 	/**
 	 * Automatically pulls folders from the images/photography, displays
 	 */
-    public function makePhotographyGallery(){
+    public function makePhotographyGallery()
+    {
         $imagePath = 'images/photography';
-        $imageFiles = File::allFiles($imagePath); 
-        
+        $imageFiles = File::allFiles($imagePath);
+
         return view('pages/photography')->with(compact('imagePath', 'imageFiles'));
     }
 
     /**
      * Automatically pulls folders from the images/photoshop directory, displays
      */
-    public function makePhotoshopGallery(){
+    public function makePhotoshopGallery()
+    {
         $imagePath = 'images/photoshop';
         $imageFiles = File::allFiles($imagePath);
-        
+
         return view('pages/photoshop')->with(compact('imagePath', 'imageFiles'));
     }
 
-    public function home(){
+    public function home()
+    {
         return view('pages/galleries');
     }
 }
