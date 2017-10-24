@@ -8,14 +8,16 @@ use App\Http\Requests\ContactFormRequest;
 class ContactController extends Controller
 {
     //
-    public function create(){
+    public function create()
+    {
         // Working on creating a custom confermation message without showing the form again
         $confirm = 'Thank you. I will follow up with you soon!';
         $success = true;
         return view('pages.contact', ['confirm' => $confirm, 'success' => $success]);
     }
 
-    public function store(ContactFormRequest $request){
+    public function store(ContactFormRequest $request)
+    {
         // Getting information from request and sending email with array values
         \Mail::send('emails.contact',
             array(
