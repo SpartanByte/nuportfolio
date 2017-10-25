@@ -33,7 +33,7 @@
 
         <img src="/images/logos/python.png" class="img-80"/>
          <span class="section-header mid-size-font">Python</span>
-            <p>Enter Python information here (including Django and Flask). </p>
+            <p>Python is a general-purpose programming language, some refer to it as a scripted or interpreted language, that was developed by Dutch programmer, <a href="https://en.wikipedia.org/wiki/Guido_van_Rossum" title="Guido van Rossum biography" target="_blank">Guido van Rossum</a> in 1991. Python is used in both web applications and desktop applications for a range of very small to very complex projects. It comes with a standard library "out of the box" which contains many of the components needed for complex applications. Many programmers prefer this language for smaller applications that can be written and developed very quickly. However, it's also used in very large web applications such as <a href="https://www.reddit.com/" title="Reddit: The Front Page of the Internet" target="_blank">Reddit</a>, which is written entirely in Python. It is also used within development to script tests and other simple scripts to be run within applications.</p>
 
         <hr />
         <img src="/images/logos/c-sharp-programming.png" class="img-lang-logo"/>

@@ -68,8 +68,7 @@ Route::group(['prefix' => 'programs'], function()
   Route::get('pages/photoshop', 'GalleryController@makePhotoshopGallery'); // Generates gallery/shows view
   Route::get('pages/galleries', 'GalleryController@home');
 
- /** === IMAGE UPLOADER ROUTES ('/upload') ===
- * Note: This image uploader is not using Invervention Image */
+ /** === IMAGE UPLOADER ROUTES ('/upload') === */
 Route::get('upload', function(){
   return View::make('pages.upload');
 });
@@ -128,49 +127,23 @@ Route::group(['prefix' => 'posts'], function()
       Route::get('{id}', 'PostViewController@showPost'); //
 });
 
-  // setting up user to be required to sign in to access /admin
-  Auth::routes();
-  Route::group(['middleware' => ['auth']], function()
-  {
-      // Create & Store
-      Route::get('/admin/create', 'PostController@create')->name('admin.create');
-      Route::post('/', 'PostController@store')->name('admin.store');
-      // Index & Show
-      Route::get('/admin/index', 'PostController@home')->name('admin.home');
-      Route::get('/admin', 'PostController@home');
-      Route::get('admin/{id}', 'PostController@show')->name('admin.show');
-      // Edit & Update
-      Route::get('/admin/{id}/edit', 'PostController@edit')->name('admin.edit');
-      Route::put('{id}',  'PostController@update')->name('admin.update');
-      Route::get('/admin/upload-image', 'GalleryController@create');
-
-  });
+// setting up user to be required to sign in to access /admin
+Auth::routes();
+Route::group(['middleware' => ['auth']], function()
+{
+  // Create & Store
+  Route::get('/admin/create', 'PostController@create')->name('admin.create');
+  Route::post('/', 'PostController@store')->name('admin.store');
+  // Index & Show
+  Route::get('/admin/index', 'PostController@home')->name('admin.home');
+  Route::get('/admin', 'PostController@home');
+  Route::get('admin/{id}', 'PostController@show')->name('admin.show');
+  // Edit & Update
+  Route::get('/admin/{id}/edit', 'PostController@edit')->name('admin.edit');
+  Route::put('{id}',  'PostController@update')->name('admin.update');
+  Route::get('/admin/upload-image', 'GalleryController@create');
+});
 
 Route::get('/admin/show', function(){
     return view('/');
 });
-
-      // Route::get('/register', 'PageController@denyRegister')->name('deny.register'); // denies unauthorized registration
-
-// Route::get('/', function(){
-//   return view('/programs/vuejs/vue-todo');
-// });
-
-//  Route::get('programs/vuejs/vue-todo', 'TaskController@taskList');
-// Route::group(['prefix' => 'api'], function () {
-//   Route::resource('tasks', 'TaskController');
-// });
-
-// Route::get('/tasks', function(){
-//   return view('vue');
-// });
-// Route::group(['prefix' => '/vue'], function () {
-//     Route::post('/tasks', 'TaskController@store');
-
-//   Route::resource('tasks', 'TaskController');
-//   // Route::post('/tasks', 'TaskController@store');
-// });
-// Route::post('/api/tasks', 'TaskController@store');
-// Route::group(['prefix' => 'api'], function(){
-//   Route::resource('tasks', 'TaskController');
-// });

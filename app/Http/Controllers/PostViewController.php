@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -14,7 +13,7 @@ class PostViewController extends Controller
 {
     // Show list of posts with brief descriptions for users
     public function index()
-    {        
+    {
         $posts = Post::all();
         return view('posts.index')->with(compact('posts'));
     }
