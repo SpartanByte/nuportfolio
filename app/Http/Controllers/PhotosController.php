@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -10,15 +9,18 @@ use Input;
 
 class PhotosController extends Controller
 {
-    public function index(){
+    public function index()
+    {
     	return view('photos/index');
     }
 
-    public function create(){
+    public function create()
+    {
     	return view('photos/create');
     }
 
-    public function store(){
+    public function store()
+    {
     	$input = Input::all();
     	$path = user_photos_path();
     	$fileName = $input['fileName']->getClientOriginalName();
@@ -34,19 +36,19 @@ class PhotosController extends Controller
         return view('photos.index', ['fileName' => $fileName, 'uploadedImage' => $image, 'imageTitle' => $imageTitle]);
     }
 
-    public function show(){
-
+    public function show()
+    {
         $imagePath = 'uploads';
     	$imageFiles = File::allFiles($imagePath);
     	return view('photos/show', ['imagePath' => $imagePath, 'imageFiles' => $imageFiles]);
     }
 
-    public function interventionExample(){
+    public function interventionExample()
+    {
         // These are temporary static values until the "pull each image from folder and display" issue is solved
         $fileName = 'PastelTile.jpg';
         $image = Image::make('images/PastelTile.jpg');
         $imageTitle = 'Pastel Title';
         return view('photos/image_example', ['fileName' => $fileName, 'uploadedImage' => $image, 'imageTitle' => $imageTitle]);
     }
-    /* Create a worker class for image functionality and run it through the controller rather than the Controller doing the logic */
 }

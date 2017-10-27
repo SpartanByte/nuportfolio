@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -11,16 +10,15 @@ use Illuminate\Support\Facades\Redirect;
 
 class AdminController extends Controller
 {
+    // Creates a new auth controller instance
+    public function __construct(){
+    	$this->middleware('auth');
+    }
 
-     // Creates a new auth controller instance
-     public function __construct(){
-     	$this->middleware('auth');
-     }
-     
-     // getting the admin dashboard/home
+    // getting the admin dashboard/home
     public function home()
     {
-          $posts = Post::all();
-          return view ('admin/home')->with('posts', $posts);
+        $posts = Post::all();
+        return view ('admin/home')->with('posts', $posts);
     }
 }

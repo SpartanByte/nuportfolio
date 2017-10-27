@@ -1,6 +1,6 @@
 
 @extends('layouts.default')
-@section('title', 'Intervention Example')
+
 @section('content')
           <h1>Upload a New Photo</h1>
           {!! Form::open(['route' => 'photos.store', 'files' => true]) !!}
