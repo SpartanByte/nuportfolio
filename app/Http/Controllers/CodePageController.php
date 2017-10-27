@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -19,6 +18,7 @@ class CodePageController extends Controller
      * @return [type] [description]
      */
     public function general(){
+
         return view('coding.general');
     }
     public function javaPage()
@@ -44,6 +44,6 @@ class CodePageController extends Controller
     }
     public function umbracoPage(){
         return view('coding.umbraco');
-    } 
+    }
 
 }
