@@ -10,7 +10,7 @@
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-             {{-- Start of Navigation Elements --}}  
+             {{-- Start of Navigation Elements --}}
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
 
@@ -69,7 +69,7 @@
                                             <a href="{{ url('coding/csharp') }}" class="dropdown-toggle lang-row" data-toggle="dropdown">C# Programming</a>
                                             <ul class="dropdown-menu fade-in">
                                                 <li><a href="{{ route('csharp.guess-a-word') }}" title="Guess A Word C# Web Form Example">Guess A Word Example</a></li>
-                                                <li><a href="{{ route('csharp.prime-numbers') }}" title="Prime Numbers Within Range in C#">Prime Numbers Finder</a></li> 
+                                                <li><a href="{{ route('csharp.prime-numbers') }}" title="Prime Numbers Within Range in C#">Prime Numbers Finder</a></li>
                                             </ul>
                                         </li>
                                     <li><a href="{{ url('coding/umbraco') }}" title="Umbraco CMS">Umbraco CMS</a></li>
@@ -109,6 +109,7 @@
                                 <li><a href="http://stackexchange.com/users/9660538/nintensified" title="Stack Overflow, More" target="_blank">StackExchange</a></li>
                                 <li><a href="https://www.sitepoint.com/premium/users/urlbyte" title="SitePoint Coding Community" target="_blank">SitePoint</a></li>
                                 <li><a href="https://www.linkedin.com/in/briantwardwell" title="Brian Wardwell: LinkedIn" target="_blank">LinkedIn</a></li>
+                                <li><a href="http://jsfiddle.net/user/bwardwell/" title="Brian Wardwell: JS Fiddle" target="_blank">JS Fiddle</a></li>
                             </ul>
                         </li>
                     </ul>
