@@ -4,21 +4,16 @@
     @include('includes.adminhead')
 </head>
 <body>
-<div class="container">
-    <header class="row">
-        @include('includes.adminheader')
-    </header>
-
+    <div class="container">
+    @include('includes.adminheader')
         <!-- main content -->
         <div id="content" class="col-md-8">
             @yield('content')
         </div>
+        <!-- footer content -->
+        <footer class="row">
+            @include('includes.adminfooter')
+        </footer>
     </div>
-
-    <!-- footer content -->
-    <footer class="row">
-        @include('includes.adminfooter')
-    </footer>
-</div>
 </body>
 </html>

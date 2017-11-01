@@ -98,6 +98,6 @@ class PostController extends Controller
         // delete post
         $post = Post::find($id);
         $post->delete();
-        return redirect()->route('admin');
+        return redirect()->route('admin.index');
     }
 }
