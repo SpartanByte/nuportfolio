@@ -6,6 +6,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Intervention\Image\ImageManager;
+use Carbon\Carbon;
 use Image;
 use Response;
 use File;
@@ -15,7 +16,8 @@ class PageController extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function home(){
-        return view('pages.home');
+        $today = Carbon::now()->format('l, F jS Y');
+        return view('pages.home')->with(compact('today'));
     }
     public function about(){
         return view('pages/about');

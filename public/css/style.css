@@ -184,10 +184,8 @@ a {
     transition-duration:0.5s; }
 
 /**
- * AND OF BG'S BASE STYLES
+ * END OF BG'S BASE STYLES
  */
-
-
 html{background-color: transparent; font-size: 14px;}
 body{
     font-family: 'Open Sans', sans-serif;
@@ -395,12 +393,10 @@ nav.navbar.navbar-default{
 }
 .footer{
     padding-top: 1%;
-
 }
-    .footer-left{
+.footer-left{
         list-style-type: none;
         float: left;
-/*        position: relative;*/
         width:47%;}
 .footer-left, .footer-right{ letter-spacing: 0.1rem;
     background-color: transparent;
@@ -534,6 +530,7 @@ nav.navbar.navbar-default{
 /* === HOMEPAGE STYLES === */
 .home-pad{
     margin-top: 2%;
+    margin-bottom: 4%;
     letter-spacing:1px;
 }
 

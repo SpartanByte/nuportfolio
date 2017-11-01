@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 use App\Models\Post;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Input;
@@ -10,18 +11,21 @@ use Illuminate\Support\Facades\Redirect;
 
 class PostController extends Controller
 {
-    // indexing/listing posts
-    public function index()
-    {
-        $posts = Post::all();
-        return view ('admin.index')->with('posts', $posts);
-    }
+    // // indexing/listing posts
+    // public function index()
+    // {
+    //     $today = Carbon::now()->format('n/j/y');
+    //     $posts = Post::all();
+    //     // return view ('admin.index')->with('posts', $posts);
+    //     return view('admin.index')->with(compact('posts', 'today'));
+    // }
 
             // indexing/listing posts
     public function home()
     {
+        $today = Carbon::now()->format('l, F jS Y');
         $posts = Post::all();
-        return view ('admin/home')->with('posts', $posts);
+        return view('admin.home')->with(compact('posts', 'today'));
     }
 
     // serving create form for new post
