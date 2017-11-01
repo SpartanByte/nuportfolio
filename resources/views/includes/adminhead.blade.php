@@ -4,7 +4,7 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'BrianWardwell') }}</title>
 
-    <link href="/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/admin-style.css') }}" />
     <link rel="stylesheet" href="{{ URL::asset('css/reset.css') }}" />
     <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" />
