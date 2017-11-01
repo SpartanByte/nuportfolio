@@ -138,7 +138,7 @@ Route::group(['middleware' => ['auth']], function()
     Route::get('admin/{id}', 'PostController@show')->name('admin.show');
     // Edit & Update
     Route::get('/admin/{id}/edit', 'PostController@edit')->name('admin.edit');
-    Route::put('{id}',  'PostController@update')->name('admin.update');
+    Route::post('{id}',  'PostController@update')->name('admin.update');
 
     Route::get('/admin/{id}/delete', 'PostController@destroy')->name('admin.delete');
     Route::get('/admin/upload-image', 'GalleryController@create');

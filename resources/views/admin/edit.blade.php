@@ -1,41 +1,32 @@
 @extends('layouts.admin')
-
 @section('title', $post->title)
-
 @section('content')
-    <div class="static-content">
-  
-  	<h2 class="h3">Edit Post: <strong>{{ $post->title }}</strong></h2>
-
-  	{!! Form::model($post, array('route' => array('admin.update', $post->id), 'method' => 'PUT')) !!}
-
-  	<div class="form-group">
-  		{!! Form::label('title', 'Title: ') !!}
-  		{!! Form::text('title', null, array('class' => 'form-control'
-  			, 'placeholder' => $post->title)) !!}
-  	</div>
-
-  	<div class="form-group">
-  		{!! Form::label('author', 'Author: ') !!}
-  		{!! Form::text('author', null, array('class' => 'form-control', 'placeholder' => $post->author)) !!}
-
-  	</div>
-
-  	<div class="form-group">
-  		{!! Form::label('descriptions', 'Description: ') !!}
-  		{!! Form::text('descriptions', null, array('class' => 'form-control', 'placeholder' => $post->descriptions)) !!}
-  	</div>
-
-  	<div class="form-group">
-  		{!! Form::label('body', 'Body: ') !!}
-  		{!! Form::text('body', null, array('class' => 'form-control', 'placeholder' => $post->body)) !!}
-  	</div>
-
-  	<div class="form-group">
-            	{!! Form::submit('Update Post',
-                    		array('class' => 'btn btn-small btn-success post-btn')) !!}
-        	</div>
-        
-	{!! Form::close() !!}
-
+    <div class="post-form-container">
+        <p class="h4">Admin Center &#9654; Editing Post: {{$post->title}}</p>
+        <form class="post-form" method="POST" action="{{route('admin.update', $post->id)}}">
+            {{ csrf_field() }}
+            <div class="input-group">
+                <label for="author">Author:
+                    <input name="author" type="text" class="text-input" placeholder="{{ $post->author }}" value="{{$post->author}}"/>
+                </label>
+            </div>
+            <div class="input-group">
+                <label for="title">Title:
+                    <input name="title" type="text" class="text-input" placeholder="{{ $post->title }}" value="{{$post->title}}" />
+                </label>
+            </div>
+            <div class="input-group">
+                <label for="descriptions">Description: </label>
+                <input name="descriptions" type="text" class="text-input" placeholder="{{$post->descriptions}}" value="{{$post->descriptions}}" />
+            </div>
+            <div class="input-group">
+                <label for="body">Body:<br />
+                    <textarea name="body" class="body-input" name="body" rows="20" placeholder="{{$post->body}}" value="{{$post->body}}"></textarea>
+                </label>
+            </div>
+            <div class="form-btn-group">
+                <input type="submit" class="btn btn-small btn-success post-btn" value="Update Post" />
+            </div>
+    </form>
+</div>
 @endsection

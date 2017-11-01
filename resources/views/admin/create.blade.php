@@ -1,47 +1,33 @@
 @extends('layouts.admin')
 @section('title', 'Add New Blog Post')
 @section('content')
-  <h1>Add New Blog Post</h1>
-  <div class="col-sm-8 col-sm-offset-2">
-        {!! Form::open(array('route' => 'admin.store', 'class' => 'form')) !!}
-
-        <div class="form-group" style="height:auto;">
-            {!! Form::label('Author: ') !!}
-            {!! Form::text('author', null,
-                  array('required',
-                        'class' =>'form-control',
-                        'placeholder' => 'Your Name')) !!}
+    <div class="post-form-container">
+        <p class="h4">Admin Center &#9654; Create Post</p>
+        <form class="post-form" method="POST" action="{{ route('admin.store')}}">
+            {{ csrf_field() }}
+            <div class="input-group">
+                <label for="author">Author:<br />
+                    <input name="author" type="text" class="text-input" placeholder="Your Name" required />
+                </label>
             </div>
-
-              <div class="form-group" style="height:auto;">
-            {!! Form::label('Post Title: ') !!}
-            {!! Form::text('title', null,
-                    array('required',
-                            'class' => 'form-control',
-                            'placeholder' => 'Enter Post Title')) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('Description of Post: ') !!}
-            {!! Form::text('descriptions', null,
-                    array('required',
-                            'class' => 'form-control',
-                            'placeholder' => 'Enter Description')) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('Body: ') !!}
-            {!! Form::textarea('body', null,
-                    array('required',
-                            'class' => 'form-control',
-                            'placeholder' => 'Start Typing Here')) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::submit('Post',
-                    array('class' => 'btn btn-small btn-success post-btn')) !!}
-        </div>
-        {!! Form::close() !!}
-</div>
-
+            <div class="input-group">
+                <label for="title">Post Title:<br />
+                    <input name="title" type="text" class="text-input" placeholder="Enter Post Title" required />
+                </label>
+            </div>
+            <div class="input-group">
+                <label for="descriptions">Enter Description:<br />
+                    <input name="descriptions" type="text" class="text-input" placeholder="Enter Description" required />
+                </label>
+            </div>
+            <div class="input-group">
+                <label for="body">Body: <br />
+                    <textarea name="body" class="body-input" name="body" rows="20"></textarea>
+                </label>
+            </div>
+            <div class="form-btn-group">
+                <input type="submit" class="btn btn-small btn-success post-btn" value="Submit Post" />
+            </div>
+        </form>
+    </div>
 @endsection

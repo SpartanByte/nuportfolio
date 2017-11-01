@@ -69,3 +69,30 @@
     .del-post-warn-btn:hover{
         background-color: #3F0000;
         color: #FFF;}
+
+/* CREATE POST FORM */
+.post-form-container{
+    margin-left: 3%;
+    margin-bottom: 8%;
+    color: #221F13;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.text-input{
+    border: 1px solid #221F13;
+    border-radius: 2px;
+}
+.body-input .text-input{
+    height: 20rem;
+}
+.form-btn-group input{
+    background: #82734C;
+    border: 1px solid #82734C;
+}
+.body-input{
+    width: 50%;
+    border: 1px solid #221F13;
+    border-radius: 2px;
+}
