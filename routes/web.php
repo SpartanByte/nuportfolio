@@ -58,6 +58,9 @@ Route::group(['prefix' => 'programs'], function()
   Route::get('/csharp/prime-numbers', 'CodeSampleController@primeNumbers')->name('csharp.prime-numbers');
 });
 
+/* Code File Location Routes */
+Route::get('/files/python/py-calculations.html', 'CodeSampleController@testPython');
+
 /* === CONTACT FORM ROUTES === */
   Route::get('contact', 'ContactController@create')->name('contact');
   Route::post('contact', 'ContactController@store')->name('contact_store');
@@ -79,14 +82,12 @@ Route::get('photos/image_example', 'PhotosController@interventionExample');
 
 // RESTful Resource Controller for CRUD
 Route::resource('photos', 'PhotosController');
-/**
- * Routes to image uploads, index and gallery
- */
+/* Routes to image uploads, index and gallery */
 Route::group(['prefix' => 'photos'], function()
 {
-  Route::get('create', 'PhotosController@create'); // upload page
-  Route::get('show', 'PhotosController@show'); // show and index both list uploaded files (will only need one view)
-  Route::get('index', 'PhotosController@index');
+    Route::get('create', 'PhotosController@create'); // upload page
+    Route::get('show', 'PhotosController@show'); // show and index both list uploaded files (will only need one view)
+    Route::get('index', 'PhotosController@index');
 });
 
 // post functionality for photos
@@ -98,7 +99,6 @@ Route::post('photos/show', function(){
 });
 
 /**ROUTE RETURNING UPLOADED IMAGES ====================================== */
-// Making sure this is not being used before removing completely
 /*Route::get('intervention-resizeImage',['as'=>'intervention.getresizeimage','uses'=>'FileController@getResizeImage']);
 Route::post('intervention-resizeImage',['as'=>'intervention.postresizeimage','uses'=>'FileController@postResizeImage']); */
 
@@ -115,33 +115,33 @@ function user_photos_path()
     return public_path() . '/images/';
 }
 
-Route::get('/files/python/py-calculations.html', 'CodeSampleController@testPython');
-
 /* === POSTS ROUTING ===*/
 // Frontend Post Routes
 Route::resource('posts', 'PostViewController');
 Route::group(['prefix' => 'posts'], function()
 {
     Route::get('index', 'PostViewController@index')->name('posts'); // indexing posts
-      Route::get('show', 'PostViewController@show'); // showing posts
-      Route::get('{id}', 'PostViewController@showPost'); //
+    Route::get('show', 'PostViewController@show'); // showing posts
+    Route::get('{id}', 'PostViewController@showPost'); //
 });
 
 // setting up user to be required to sign in to access /admin
 Auth::routes();
 Route::group(['middleware' => ['auth']], function()
 {
-  // Create & Store
-  Route::get('/admin/create', 'PostController@create')->name('admin.create');
-  Route::post('/', 'PostController@store')->name('admin.store');
-  // Index & Show
-  Route::get('/admin/index', 'PostController@home')->name('admin.home');
-  Route::get('/admin', 'PostController@home');
-  Route::get('admin/{id}', 'PostController@show')->name('admin.show');
-  // Edit & Update
-  Route::get('/admin/{id}/edit', 'PostController@edit')->name('admin.edit');
-  Route::put('{id}',  'PostController@update')->name('admin.update');
-  Route::get('/admin/upload-image', 'GalleryController@create');
+    // Create & Store
+    Route::get('/admin/create', 'PostController@create')->name('admin.create');
+    Route::post('/', 'PostController@store')->name('admin.store');
+    // Index & Show
+    Route::get('/admin/index', 'PostController@home')->name('admin.home');
+    Route::get('/admin', 'PostController@home');
+    Route::get('admin/{id}', 'PostController@show')->name('admin.show');
+    // Edit & Update
+    Route::get('/admin/{id}/edit', 'PostController@edit')->name('admin.edit');
+    Route::put('{id}',  'PostController@update')->name('admin.update');
+
+    Route::get('/admin/{id}/delete', 'PostController@destroy')->name('admin.delete');
+    Route::get('/admin/upload-image', 'GalleryController@create');
 });
 
 Route::get('/admin/show', function(){
