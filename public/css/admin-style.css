@@ -14,33 +14,59 @@
         text-align: center;
         padding: 0.5%;}
     .admin-nav-wrapper a{
+        padding: 0.35%;
         color: #fff;
         text-transform: uppercase;}
     .admin-nav-ul{
         display: block;
         margin: 0 auto;
-        width: 50%;
-        text-align: center;
+        width: 95%;
+        text-align: right;
         list-style: none;}
+        .admin-nav-wrapper a:hover{
+            background: rgba(255,255,255,0.3);
+        }
         .admin-nav-ul .current-user{
             font-size: 1.3rem;
             font-weight: 600;
             letter-spacing: 1px;}
-            .logout-ul{
-                padding: 1%;}
+            .admin-items{
+                list-style:none;}
+            .admin-items li{
+                padding: 0.5%;
+                text-align: right;}
 
+#admin-backdrop{
+    margin-top: -2%;
+    margin-bottom: 0;
+    width: 100%;
+    height: 860px;
+    background: #252525; }
 
-#admin-backdrop {
-  background: #252525; margin-top: -2%;
-  width: 100%; height: 860px;
-  margin-bottom: 0;}
+#dashboardHeaders > h3{
+    margin-left: 1%;
+    color: #252525;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;}
+.dashboard-panel{
+    margin-left: -10em;
+    margin-right: -10em;
+    padding: 1em;
+    height: 850px;}
 
-#dashboardHeaders > h3{margin-left: 1%; font-size: 2em; text-transform: uppercase; color: #252525; letter-spacing: 2px;}
-.dashboard-panel{margin-left: -10em; margin-right: -10em; padding: 1em; height: 850px;}
-
-.updateList{ list-style-type: none; font-size: 1.2em;}
-.updateList > li > a{ color: #252525; text-decoration: none; transition-duration: 0.4s;}
-.updateList > li > a:hover{color: black; font-weight: bold; transition-duration: 0.4s; letter-spacing: 0.5px;}
+.updateList{
+    list-style-type: none;
+    font-size: 1.2em;}
+.updateList > li > a{
+    color: #252525;
+    text-decoration: none;
+    transition-duration: 0.4s;}
+    .updateList > li > a:hover{
+        color: #000;
+        font-weight: bold;
+        transition-duration: 0.4s;
+        letter-spacing: 0.5px;}
 
 /* ADMIN POSTS TABLE AND BUTTONS */
 .post-table form{
@@ -59,16 +85,19 @@
     .post-btn:hover{
         color: #fff !important;
         background-color: #313131;}
-.del-post-warn-btn{
-    padding: 0 1rem 0 1rem;
-    color: #FFF;
-    background-color: #d40000;
-    font-weight: normal;
-    text-transform: uppercase;
-    border: 1px solid #d40000;}
-    .del-post-warn-btn:hover{
-        background-color: #3F0000;
-        color: #FFF;}
+.form-btn-group input{
+    background: #82734C;
+    border: 1px solid #82734C;}
+    .del-post-warn-btn{
+        padding: 0 1rem 0 1rem;
+        color: #FFF;
+        background-color: #d40000;
+        font-weight: normal;
+        text-transform: uppercase;
+        border: 1px solid #d40000;}
+        .del-post-warn-btn:hover{
+            background-color: #3F0000;
+            color: #FFF;}
 
 /* CREATE POST FORM */
 .post-form-container{
@@ -77,22 +106,17 @@
     color: #221F13;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
-    line-height: 1.4;
-}
+    line-height: 1.4;}
 
 .text-input{
     border: 1px solid #221F13;
-    border-radius: 2px;
-}
-.body-input .text-input{
-    height: 20rem;
-}
-.form-btn-group input{
-    background: #82734C;
-    border: 1px solid #82734C;
-}
-.body-input{
+    border-radius: 2px;}
+    .body-input .text-input{
+        height: 20rem;}
+    .body-input{
     width: 50%;
     border: 1px solid #221F13;
-    border-radius: 2px;
-}
+    border-radius: 2px;}
+
+.footer-left.admin li > a{
+    font-size: 1rem !important;}

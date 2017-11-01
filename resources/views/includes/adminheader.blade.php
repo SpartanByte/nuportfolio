@@ -14,12 +14,15 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">&#9654; USER:
                     <span class="current-user">{{ Auth::user()->name }}</span><span class="caret"></span>
                 </a>
-                <ul class="logout-ul" role="menu">
+                <ul class="admin-items" role="menu">
+                    <li><a href="{{ route('posts.index')}}">&#9672; Frontend Blog Index</a></li>
+                    <li><a href="{{ route('posts.create')}}">&#9672; Create A Post</a></li>
+                    <li><a href="{{ route('admin.home')}}">&#9672; Admin Home</a></li>
                     <li>
                         <a href="{{ url('/logout') }}"
                             onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
-                            Logout
+                            &#9672; Logout
                         </a>
                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}

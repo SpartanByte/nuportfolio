@@ -3,6 +3,7 @@
 @section('content')
     <div class="static-content about">
         <p class="h4">Admin Center &#9654; Posts</p>
+        <p>Today is: {{$today}}</p>
         <table class="post-table col-100">
             <thead>
                 <th>id</th>
@@ -21,7 +22,7 @@
                         <td>{{ $post->descriptions }}</td>
                         <td>{{ $post->created_at }}</td>
                         <td><a class="post-btn" href="{{ $post->id}}">View Post</a></td>
-                        <td><a class="post-btn" href="{{ URL::to('/admin') }}/{{ $post->id}}/edit">Edit Post</a></td>
+                        <td><a class="post-btn" href="{{ route('admin.edit', $post->id) }}">Edit Post</a></td>
                         <td>
                             <form class="pull-right" method="DELETE" action="{{ route('admin.delete', $post->id) }}">
                                 <div class="btn">
