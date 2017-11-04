@@ -37,7 +37,7 @@ class UploadController extends Controller{
                     Input::file('image')->move($imgInputPath, $fileName); // adding image to directory folder
 
                     // returning view with file name for img tags and index
-                    return view('pages/success')->with(compact('fileName');
+                    return view('pages/success')->with(compact('fileName'));
                 }
             }
     }
