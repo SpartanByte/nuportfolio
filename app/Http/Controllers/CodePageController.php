@@ -18,6 +18,7 @@ class CodePageController extends Controller
      * @return [type] [description]
      */
     public function general(){
+
         return view('coding.general');
     }
     public function javaPage()

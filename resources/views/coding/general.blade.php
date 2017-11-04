@@ -6,7 +6,7 @@
     <div class="static-content general-coding">
         <span class="page-header uppercase-shadow mid-size-font">General Coding Information</span>
         <hr />
-            <img class="animated tada img-40" src="/images/logos/php.png" />
+            <img class="img-lang-logo" src="/images/logos/php-1.png" />
             <span class="section-header mid-size-font">PHP</span>
                 <p>PHP (Hypertext Preprocessor) is a server-side language that was specifically designed for web development in 1994 by Rasmus Lerdorf. While
                 PHP is often considered easier to learn as a first programming language, special consideration and best practices need to be followed

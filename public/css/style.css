@@ -22,7 +22,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
 
 
-a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, meter, nav, object, ol, output, p, pre, progress, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video { border:0;     margin:0;   padding:0;  outline:0; } article, aside, details, dt, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; } audio, canvas, video { display:inline-block; } button, input, select, textarea { font:inherit;  box-sizing:border-box;  -moz-box-sizing:border-box;     -webkit-box-sizing:border-box; } button, input[type="button"], input[type="reset"], input[type="submit"] { cursor:pointer;  padding-inline-end:0;   padding-inline-start:0; } button[disabled], input[disabled], textarea[disabled] { cursor:default; } button::-moz-focus-inner, input::-moz-focus-inner { border:0;   padding:0; } input[type="checkbox"], input[type="radio"] { padding:0; } textarea { overflow:auto;   vertical-align:top; } img { -ms-interpolation-mode:bicubic; } pre { white-space:pre-wrap;   word-wrap:break-word; } table { border-spacing:0;   border-collapse:collapse; } a:focus { outline:thin dotted; } h1 { font-size:2em;    margin:0.67em 0 0.335em; } h2 { font-size:1.5em;    margin:0.83em 0 0.415em; } h3 { font-size:1.17em;   margin:1em 0 0.5em; } h4 { font-size:1em;   margin:1.1em 0 0.55em; } h5 { font-size:0.83em;     margin:1.25em 0 0.6125em; } h6 { font-size:0.75em;  margin:1.33em 0 0.665em; } p, dl { margin:1em 0; } ul, ol { margin:0 0 1em 2em; }   ul ul, ol ul,   ul ol, ol ol {  margin:0 0 0 2em; } dd { margin:0 0 1em 0.5em; } blockquote, figure { margin:1em 2em; } small { font-size:75%; } sub, sup { font-size:75%;  line-height:0;  position:relative;  vertical-align:baseline; } sup { top:-0.5em; } sub { bottom:-0.25em; }
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, meter, nav, object, ol, output, p, pre, progress, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video { border:0;     margin:0;   padding:0;  outline:0; } article, aside, details, dt, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; } audio, canvas, video { display:inline-block; } button, input, select, textarea { font:inherit;  box-sizing:border-box;  -moz-box-sizing:border-box;     -webkit-box-sizing:border-box; } button, input[type="button"], input[type="reset"], input[type="submit"] { cursor:pointer;  /* padding-inline-end:0;   padding-inline-start:0; */ } button[disabled], input[disabled], textarea[disabled] { cursor:default; } button::-moz-focus-inner, input::-moz-focus-inner { border:0;   padding:0; } input[type="checkbox"], input[type="radio"] { padding:0; } textarea { overflow:auto;   vertical-align:top; } img { -ms-interpolation-mode:bicubic; } pre { white-space:pre-wrap;   word-wrap:break-word; } table { border-spacing:0;   border-collapse:collapse; } a:focus { outline:thin dotted; } h1 { font-size:2em;    margin:0.67em 0 0.335em; } h2 { font-size:1.5em;    margin:0.83em 0 0.415em; } h3 { font-size:1.17em;   margin:1em 0 0.5em; } h4 { font-size:1em;   margin:1.1em 0 0.55em; } h5 { font-size:0.83em;     margin:1.25em 0 0.6125em; } h6 { font-size:0.75em;  margin:1.33em 0 0.665em; } p, dl { margin:1em 0; } ul, ol { margin:0 0 1em 2em; }   ul ul, ol ul,   ul ol, ol ol {  margin:0 0 0 2em; } dd { margin:0 0 1em 0.5em; } blockquote, figure { margin:1em 2em; } small { font-size:75%; } sub, sup { font-size:75%;  line-height:0;  position:relative;  vertical-align:baseline; } sup { top:-0.5em; } sub { bottom:-0.25em; }
 
 .col-5,.col-10,.col-15,.col-20,.col-25,.col-26,.col-30,.col-33,.col-35,.col-40,.col-45,.col-50,
 .col-55,.col-60,.col-63,.col-65,.col-66,.col-70,.col-75,.col-80,.col-85,.col-90,.col-95,.col-100 {
@@ -184,12 +184,12 @@ a {
     transition-duration:0.5s; }
 
 /**
- * AND OF BG'S BASE STYLES
+ * END OF BG'S BASE STYLES
  */
-
-
 html{background-color: transparent; font-size: 14px;}
-body{font-family: 'proza_libreregular', sans-serif !important;}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
 blockquote{width: 90%;}
 
 
@@ -199,8 +199,16 @@ blockquote{width: 90%;}
 .h2{font-size: 3.5rem !important;}
 .h3{font-size: 3rem !important; }
 .h4{font-size: 2rem !important;}
-.mid-size-font{font-family: 'proza_libresemibold', sans-serif; font-size: 2.5rem;}
-.med-size-font{font-family: 'proza_libresemibold', sans-serif; font-size: 1.5rem;}
+.mid-size-font{
+    /* font-family: 'proza_libresemibold', sans-serif;  */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5rem;
+}
+.med-size-font{
+    /* font-family: 'proza_libresemibold', sans-serif;  */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+}
 .normal-size-font{font-size:1.5rem;}
 .small-header-font{font-size: 2rem;}
 .standard-ul{font-weight: bold;font-size: 1.75rem;}
@@ -319,7 +327,8 @@ nav.navbar.navbar-default{
     /* This controls stlyles that affects the entire background/block of the navigation bar from Bootstrap and overrides it where noted */
     /*background-color: #000000;*/
     background-color: #252525;
-    font-family: 'Open Sans', sans-serif;}
+    font-family: 'Open Sans', sans-serif;
+}
     #navbar-override a{
         border-radius: 0px;
         color: #e6e6e6;
@@ -384,12 +393,10 @@ nav.navbar.navbar-default{
 }
 .footer{
     padding-top: 1%;
-
 }
-    .footer-left{
+.footer-left{
         list-style-type: none;
         float: left;
-/*        position: relative;*/
         width:47%;}
 .footer-left, .footer-right{ letter-spacing: 0.1rem;
     background-color: transparent;
@@ -523,6 +530,7 @@ nav.navbar.navbar-default{
 /* === HOMEPAGE STYLES === */
 .home-pad{
     margin-top: 2%;
+    margin-bottom: 4%;
     letter-spacing:1px;
 }
 
@@ -860,30 +868,6 @@ nav.navbar.navbar-default{
 
 
 /**
- * STARTING OF POSTS/BLOG STYLES
- */
-.post-btn{
-    color: #FFFFFF !important;
-    background-color: #000000 !important;
-    font-weight: normal !important;
-    border: 1px solid black !important;
-    min-width: 10%;}
-    .post-btn:hover{
-        background-color: #313131 !important;}
-
-.del-post-warn-btn{
-    color: #FFFFFF !important;
-    background-color: #d40000 !important;
-    font-weight: normal !important;
-    border: 1px solid #d40000 !important;
-    margin-right: 10%;
-    min-width: 10%;}
-    .del-post-warn-btn:hover{
-        background-color: #3F0000 !important;
-        color: #FFFFFF !important;}
-
-
-/**
  * Front End Blog Styles
  */
 .post-title{font-size:2.5rem;font-weight:bold;}
@@ -900,8 +884,6 @@ nav.navbar.navbar-default{
     border-bottom: 1px solid black;}
 .post-table tr{
     line-height: 3.5;}
-.post-table td{
-   line-height: 1.5;}
 .post-table tbody{
     border-bottom: 1px solid black;}
 .post-body{
