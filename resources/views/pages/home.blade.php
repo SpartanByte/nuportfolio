@@ -15,7 +15,7 @@
             </div>
             <div id="right-home">
             <section>
-                <img src="/images/stock/code-screen.jpg" class="img-100"/><br />
+                <img src="/images/jacket.jpg" class="img-100"/><br />
                 <caption>Today is: {{$today}}</caption>
             </section>
         </div>

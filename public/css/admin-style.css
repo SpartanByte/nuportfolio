@@ -120,3 +120,38 @@
 
 .footer-left.admin li > a{
     font-size: 1rem !important;}
+
+/**
+* LOGIN / REGISTRATION STYLES
+*/
+.login-form-container{
+    margin: 0 auto;
+    padding: 3%;
+    width: 30%;
+    color: #fff;
+    background: #252525;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.login-form-container a{
+    color:#706c67;
+}
+.login-form-container input{
+    height:1.5rem;
+    line-height:1.4;
+    width:100%;
+}
+.auth-btn{
+    width:10rem;
+    font-size:1.2rem;
+    cursor:pointer;
+}
+.auth-btn:hover{
+    background:#ccc !important;
+    color:#252525;
+}
+.auth-wrapper{
+    background:#252525;
+    display:block;
+}
