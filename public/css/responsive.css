@@ -9,6 +9,13 @@
 	*  HOMEPAGE STYLES
 	* *----------------*/
 	/* smallest mobile sizes will be in here */
+    .footer-left, .footer-right{font-size:1rem; width:95%;}
+    .footer-left a::after{content: "";}
+    .footer-left a, .footer-right a{
+        float: left;
+    }
+
+    .footer-right > li > a > img{ width: 2em; height: 2em; }
 }
 
 /**----------------------------------------
@@ -22,7 +29,28 @@
 	*  HOMEPAGE STYLES
 	* *----------------*/
 	/* 667-359 */
-
+    .collapse.navbar-collapse{
+        display:block;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    #navbar-override a{
+        font-size: 1.7rem;
+        letter-spacing: 0.25em;
+    }
+    .static-content{
+        /* margin-top: 75%; */
+    }
+        header.row{
+        position: relative;
+    }
+    .footer-left, .footer-right{font-size:1rem; width:95%;}
+    .static-content.general-coding img{
+        width: 80%;
+    }
+    .footer-left > li > a::after{content:"";}
+    .footer-right > li {float:left;}
+    .footer-right > li > a > img{ padding:1%; width: 2em; height: 2em; }
 }
 
 /**----------------------------------------
@@ -30,9 +58,37 @@
 *  MEDIA QUERY: Max Width 1024 - Min 666
 *
 * *----------------------------------------*/
-@media (max-width: 1025px) and (min-width: 666px){
+@media (max-width: 1024px) and (min-width: 666px){
 
 	/* Screen sizes between 1025 and 666 */
+    .footer-left, .footer-right{width:95%;}
+    header.row{
+        position: relative;
+    }
+    .collapse.navbar-collapse{
+        display:block;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    #navbar-override a{
+        font-size: 1.7rem;
+        letter-spacing: 0.25em;
+        position: initial;
+    }
+    #navbar-dropdown-override{
+        text-align: center;
+    }
+    .static-content{
+        /* margin-top: 75%; */
+    }
+    .navbar-nav > li{
+        width: 100%;
+    }
+    .navbar-nav > ul > .dropdown {
+        width: 100%;}
+     ul.nav.navbar-nav {
+        width: 100%;
+    }
 }
 
 
@@ -41,7 +97,7 @@
 *  MEDIA QUERY: Max Width 1280 - Min 1024
 *
 * *----------------------------------------*/
-@media (max-width: 1280px) and (min-width: 1024px){
+@media (max-width: 1366px) and (min-width: 1023px){
 
 /**----------------
 *  HOMEPAGE STYLES
@@ -54,4 +110,10 @@
 }
 .static-content.general-coding{
 	width: 100%;
+}
+.static-content.general-coding img{
+    width: 80%;
+}
+.footer-container{
+    /* height: auto; */
 }
