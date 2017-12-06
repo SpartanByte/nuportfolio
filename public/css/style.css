@@ -387,7 +387,8 @@ nav.navbar.navbar-default{
     clear:both;
     background-color: #0b0b0b !important;
     color: #FFFFFF;
-    height: 100px;
+    /* height: 100px; */
+    height: auto;
         position: absolute;
     bottom: 0;
 }
@@ -449,12 +450,12 @@ nav.navbar.navbar-default{
 .static-content{
     margin: auto;
     padding-left: 1em;
-    padding-right: 10em;
+    /* padding-right: 10em; */
     margin-top: 10em;
     margin-bottom: 10em;
     background-color: rgba(255,255,255, .25);
     color: #000000;
-    width: 80%;}
+    width: 100%;}
     .static-content p{
         font-size: 1rem;
         letter-spacing: 0.3px;}
@@ -721,7 +722,7 @@ nav.navbar.navbar-default{
  * GENERAL CODING INFORMATION PAGE --- STYLES HERE
  */
 .static-content.general-coding{
-    width: 80%;}
+    width: 100%;}
     .static-content.general-coding h1{
         background-color: transparent;
         color: #252525;
@@ -730,6 +731,7 @@ nav.navbar.navbar-default{
         width: 80%;
         text-align: left;
         border: none;}
+    .general-coding img{width:50%;}
 
 /* General Coding Information page: Header for each programming language */
 .section-header{
