@@ -2,7 +2,7 @@
 // not using yet (requires authentication code)
 Route::get('/home', 'HomeController@index');
 // Homepage
-Route::get('/', 'PageController@home');
+// Route::get('/', 'PageController@home');
 Route::get('/', 'PageController@home')->name('home');
 
 /* === PAGE CONTROLLER ROUTES  === */
