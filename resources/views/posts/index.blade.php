@@ -3,7 +3,7 @@
 @section('title', 'All Posts')
 
 @section('content')
-    <div class="static-content general-coding">
+    <div class="static-content general-coding" style="min-height: 545px;">
         {{-- This is the list of posts that the front end user will see --}}
         <span class="page-header uppercase-shadow mid-size-font">Brian Wardwell's Posts</span>
         <hr />

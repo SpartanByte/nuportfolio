@@ -351,13 +351,17 @@ nav.navbar.navbar-default{
 /**
  * ANY STYLES REGARDING THE FOOTER ARE HERE
  */
+.footer-row{
+    background-color: #0b0b0b;
+}
 .footer-container{
     width: 100%;
     clear:both;
     background-color: #0b0b0b !important;
     color: #FFFFFF;
-    height: auto;
-        position: absolute;
+    height: 100px;
+    /* height: auto; */
+    /* position: absolute; */
     bottom: 0;
 }
 .footer{

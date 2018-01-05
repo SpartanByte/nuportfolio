@@ -15,12 +15,13 @@
 
     <div id="" class="">
         <!-- main content -->
-        <div id="content" class="col-md-8">
+        {{-- <div id="content" class="col-md-8"> --}}
+        <div id="content">
             @yield('content')
         </div>
         </div>
         <!-- footer content -->
-        <footer class="row">
+        <footer class="row footer-row">
             @include('includes.footer')
         </footer>
     </div>
