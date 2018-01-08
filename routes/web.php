@@ -1,9 +1,9 @@
 <?php
 // not using yet (requires authentication code)
-Route::get('/home', 'HomeController@index');
-// Homepage
-// Route::get('/', 'PageController@home');
-Route::get('/', 'PageController@home')->name('home');
+    Route::get('/home', 'HomeController@index');
+    // Homepage
+    // Route::get('/', 'PageController@home');
+    Route::get('/', 'PageController@home')->name('home');
 
 /* === PAGE CONTROLLER ROUTES  === */
 Route::group(['prefix' => 'pages'], function(){
@@ -59,26 +59,26 @@ Route::group(['prefix' => 'programs'], function()
 });
 
 /* Code File Location Routes */
-Route::get('/files/python/py-calculations.html', 'CodeSampleController@testPython');
+    Route::get('/files/python/py-calculations.html', 'CodeSampleController@testPython');
 
 /* === CONTACT FORM ROUTES === */
-  Route::get('contact', 'ContactController@create')->name('contact');
-  Route::post('contact', 'ContactController@store')->name('contact_store');
+    Route::get('contact', 'ContactController@create')->name('contact');
+    Route::post('contact', 'ContactController@store')->name('contact_store');
 
 /** === GALLERY ROUTES ===*/
-  Route::get('templates/gallery-template', 'PageController@galleryTemplate'); // just a static template for page structure copy/paste
-  Route::get('pages/photography', 'GalleryController@makePhotographyGallery'); // Generates gallery/shows view
-  Route::get('pages/photoshop', 'GalleryController@makePhotoshopGallery'); // Generates gallery/shows view
-  Route::get('pages/galleries', 'GalleryController@home');
+    Route::get('templates/gallery-template', 'PageController@galleryTemplate'); // just a static template for page structure copy/paste
+    Route::get('pages/photography', 'GalleryController@makePhotographyGallery'); // Generates gallery/shows view
+    Route::get('pages/photoshop', 'GalleryController@makePhotoshopGallery'); // Generates gallery/shows view
+    Route::get('pages/galleries', 'GalleryController@home');
 
  /** === IMAGE UPLOADER ROUTES ('/upload') === */
-Route::get('upload', function(){
-  return View::make('pages.upload');
-});
-Route::post('apply/upload', 'UploadController@upload');
+    Route::get('upload', function(){
+      return View::make('pages.upload');
+    });
+    Route::post('apply/upload', 'UploadController@upload');
 
 /**=== IMAGE INTERVENTION ROUTES === */
-Route::get('photos/image_example', 'PhotosController@interventionExample');
+    Route::get('photos/image_example', 'PhotosController@interventionExample');
 
 // RESTful Resource Controller for CRUD
 Route::resource('photos', 'PhotosController');

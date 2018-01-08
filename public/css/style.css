@@ -158,6 +158,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 html{
     color:#FFF;
     background:#252525;
+    font-family: 'Open Sans', sans-serif;
     font:10px/1 'Rleud', sans-serif; }
 
 body{
@@ -171,12 +172,9 @@ a {
     transition-duration:0.5s; }
 
 /**
- * END OF BG'S BASE STYLES
+ * END OF BASE STYLES
  */
-html{background-color: transparent; font-size: 14px;}
-body{
-    font-family: 'Open Sans', sans-serif;
-}
+/* html{background-color: transparent; font-size: 14px;} */
 blockquote{width: 90%;}
 
 
@@ -204,20 +202,14 @@ blockquote{width: 90%;}
 .grey-rgba{background-color:rgba(0,0,0,0.2);}
 
 /* Font Effects */
-.uppercase-shadow{text-transform: uppercase;
-    /*text-shadow: 4px 2px 6px #404040;*/
-}
-.shadow-uppercase{
-    /*text-shadow: 4px 2px 6px #404040;*/
-}
+.uppercase-shadow{text-transform: uppercase;}
+
 .center-text{text-align: center;}
 .sm-letter-spacing{letter-spacing:0.1rem;}
 .med-letter-spacing{letter-spacing:0.25rem;}
 .lrg-letter-spacing{letter-spacing:0.5rem;}
 
-/**
- * To be used for ALL outgoing/external links
- */
+/* for all outgoing/external links */
 .outgoing-link{color: #0c467f !important;}
 .outgoing-link:hover{color: #0c0c7f !important;}
 .internal-link{color: #287ACC !important;}
@@ -236,14 +228,12 @@ blockquote{width: 90%;}
 .img-25{width:25%;height:25%;}
 .img-20{width:20%;height:20%;}
 .img-10{width:10%; height:10%;}
-.width-50{width: 50%;
-}
-.img-lang-logo{width:80%;}
+.width-50{width: 50%;}
 
+.img-lang-logo{width:80%;}
 .half-img{width:50%;height:50%;}
 .quarter-img{width:25%;height:25%;}
 .onethird-img{width:33%;height:33%;}
-
 .img-caption{display:block; text-align: center;padding-bottom:1%;}
 
 /* Padding Styles */
@@ -270,9 +260,6 @@ blockquote{width: 90%;}
         background-color: #000000;
         color: #FFFFFF;}
 /* ================================================  START OF GLOBAL STYLES ======================================= */
-/**
- * GLOBAL STYLING HERE
- */
 .container{min-width: 100%; min-height: 100%; background-color: #FFFFFF;}
 .clear { clear:both; }
 
@@ -282,8 +269,6 @@ blockquote{width: 90%;}
 #gallery-clear-bottom{display: block !important;clear: both;}
 
 /* ================================================  END OF GLOBAL STYLES ======================================= */
-
-/*
 /* This overrides text-transform that is created by jQuery Mobile */
 .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{
     text-shadow: none !important;}
@@ -310,7 +295,6 @@ nav.navbar.navbar-default{
 
 #navbar-override{
     /* This controls stlyles that affects the entire background/block of the navigation bar from Bootstrap and overrides it where noted */
-    /*background-color: #000000;*/
     background-color: #252525;
     font-family: 'Open Sans', sans-serif;
 }
@@ -367,14 +351,17 @@ nav.navbar.navbar-default{
 /**
  * ANY STYLES REGARDING THE FOOTER ARE HERE
  */
+.footer-row{
+    background-color: #0b0b0b;
+}
 .footer-container{
     width: 100%;
     clear:both;
     background-color: #0b0b0b !important;
     color: #FFFFFF;
-    /* height: 100px; */
-    height: auto;
-        position: absolute;
+    height: 100px;
+    /* height: auto; */
+    /* position: absolute; */
     bottom: 0;
 }
 .footer{
@@ -395,8 +382,7 @@ nav.navbar.navbar-default{
         float: left;
         width: 47%;
         right: 5px;
-        top: 2%;
-    }
+        top: 2%;}
         .footer-right a {
             float: right;
             padding: 5px;}
@@ -876,7 +862,6 @@ nav.navbar.navbar-default{
 .post-body{
     text-transform: none;
     font-family: 'Open Sans', sans-serif;
-
 }
 .post-body p{
     font-size: 1.75rem;
@@ -891,12 +876,7 @@ nav.navbar.navbar-default{
     text-align:left;
     padding-left: 0px;
     letter-spacing:0px;
-
 }
-
-
-
-
 .post-description{
     padding-left: 2%;}
 .post-description p{
@@ -943,7 +923,6 @@ nav.navbar.navbar-default{
     display: block;
     width: 15%;}
 
-
 .input-group input[type="text"] {
     width: 50%;
     display: block;
@@ -969,9 +948,7 @@ nav.navbar.navbar-default{
 .error-container p{
     font-size:2rem;
 }
-.error-container .error-header{
-    /* text-align: center; */
-}
+
 .error-container .error-link > a{
     padding: 1%;
     background:#82734C;

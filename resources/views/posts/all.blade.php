@@ -14,7 +14,7 @@
               <p class="mid-size-font">{{$post->body}}. <a class="internal-link" href="posts-view/{{$post->id}}">Read More</a></p>
 
   @endforeach
-  
+
 {{--   <table class="post-table col-100">
     <thead>
       <th>id</th>
