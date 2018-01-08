@@ -361,7 +361,7 @@ nav.navbar.navbar-default{
     color: #FFFFFF;
     height: 100px;
     /* height: auto; */
-    /* position: absolute; */
+    position: absolute;
     bottom: 0;
 }
 .footer{
