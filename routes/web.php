@@ -142,8 +142,12 @@ Route::group(['middleware' => ['auth']], function()
 
     Route::get('/admin/{id}/delete', 'PostController@destroy')->name('admin.delete');
     Route::get('/admin/upload-image', 'GalleryController@create');
-});
 
+    // Route::group(['prefix' => 'admin/tags'], function(){
+    //     Route::get('/index', 'TagsController@index')->name('admin.tags.index');
+    // });
+});
+Route::get('tags/index', 'TagsController@index')->name('tags.index');
 Route::get('/admin/show', function(){
     return view('/');
 });
