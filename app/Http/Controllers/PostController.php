@@ -53,7 +53,8 @@ class PostController extends Controller
         // saving input to new post record
         $post->save();
 
-       return redirect()->route('admin.home');
+       // return redirect()->route('admin.home');
+       return redirect()->route('posts.index');
     }
 
     // showing individual post (View Post)

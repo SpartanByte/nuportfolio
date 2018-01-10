@@ -120,7 +120,7 @@ function user_photos_path()
 Route::resource('posts', 'PostViewController');
 Route::group(['prefix' => 'posts'], function()
 {
-    Route::get('index', 'PostViewController@index')->name('posts'); // indexing posts
+    Route::get('index', 'PostViewController@index')->name('index'); // indexing posts
     Route::get('show', 'PostViewController@show'); // showing posts
     Route::get('{id}', 'PostViewController@showPost'); //
 });

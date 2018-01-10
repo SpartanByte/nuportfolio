@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use App\Models\Post;
 
 class TagsController extends Controller
 {
@@ -14,6 +16,8 @@ class TagsController extends Controller
     public function index()
     {
         //
+        $tags = Tag::all();
+
     }
 
     /**
@@ -24,6 +28,7 @@ class TagsController extends Controller
     public function create()
     {
         //
+
     }
 
     /**
@@ -35,6 +40,19 @@ class TagsController extends Controller
     public function store(Request $request)
     {
         //
+        $tag = new Tag;
+
+        $tag->tag = $request->tagTitle;
+        $tag->save();
+
+        // this might be better to add to creating Post, need to be able to add multiple tags
+        $tagToPost = new Post;
+        $tagToPost->tag = $tag->tag;
+        $tagToPost->tag_id = $request->id;
+        $tagToPost->save();
+
+        $posts = Post::all();
+        // return redirect()->route('admin.home')->with(compact('posts'));
     }
 
     /**
@@ -80,5 +98,9 @@ class TagsController extends Controller
     public function destroy($id)
     {
         //
+        $tag = Tag::findOrFail($id);
+        $tag->delete();
+
+        return redirect()->route('admin.home');
     }
 }
