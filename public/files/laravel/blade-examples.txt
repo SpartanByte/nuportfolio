@@ -1,0 +1,34 @@
+Blade Commenting Syntax (does NOT show up in outputted HTML as <!-- --> (HTML) will)
+{{-- This is a Laravel Comment --}}
+
+Layouts:
+Laravel provices out of the box MVC "welcome" view setup. 
+
+Importing with procedural PHP:
+<?php include('includes.header.php'); ?>
+
+In the out of the box layout: "default.blade.php"
+@include('includes.head')
+
+In head, you can use the @yield directive to define things such as the page title and "description" (for SEO)
+content="@yield('description')"
+<title>@yield('title')</title>
+
+// CSS and JS files can also be pulled in more simply (which work globally) such as:
+<link href="{{ URL::asset('css/reset.css') }}" />
+// Good practice would note to load any JavaScript scripts you can into the bottom of the <body> tag rather than in the <head> portion but it would be very similar
+
+In content blade files such as one named "about.blade.php", like much of OOP Classes (Object Oriented Programming) you can "extand" the template:
+(as the first line in the template file)
+@extends('layouts.default')
+
+As layouts are only a folder, you could just as easily use @extends('layouts.gallery') or ('layouts.contentpage')
+
+To fill earlier fields from the parent template that use the "@yield" directive, the @section directive is used
+@section('description', 'An about page describing the company and/or individual')
+@section('title', 'About')
+// Parameter one is the text that fits what is defined in the @yield() directive, the second parameter is the value/text to use for this instance using that @yield directive.
+
+// Content is included within the layouts body tag as @yield('content') (or any other name you or a programmer would choose)
+@section('content') starts this "main content area" of the blade file such as "About", "Home", anything.
+// You end this directive with the quite simple directive @stop

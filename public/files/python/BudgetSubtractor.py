@@ -59,7 +59,6 @@ Budgeted: $ 3275.00
 Spent: $ 3245.00
 You are $ 30.00 under budget. WELL DONE!
 
-Deb Flaskerud
 Enter amount budgeted for the month: 2970
 Enter an amount spent(0 to quit): 1050
 Enter an amount spent(0 to quit): 522

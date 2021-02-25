@@ -11,16 +11,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class PostController extends Controller
 {
-    // // indexing/listing posts
-    // public function index()
-    // {
-    //     $today = Carbon::now()->format('n/j/y');
-    //     $posts = Post::all();
-    //     // return view ('admin.index')->with('posts', $posts);
-    //     return view('admin.index')->with(compact('posts', 'today'));
-    // }
-
-            // indexing/listing posts
+    // indexing/listing posts
     public function home()
     {
         $today = Carbon::now()->format('l, F jS Y');
@@ -49,7 +40,7 @@ class PostController extends Controller
         $post->title = $postTitle;
         $post->body = $postBody;
         $post->descriptions = $postDescription;
-        $post->author = $postAuthor;
+        // $post->author = $postAuthor;
         // saving input to new post record
         $post->save();
 
@@ -103,6 +94,9 @@ class PostController extends Controller
         // delete post
         $post = Post::find($id);
         $post->delete();
-        return redirect()->route('admin.index');
+        $today = Carbon::now()->format('l, F jS Y');
+        $posts = Post::all();
+        return view('admin.home')->with(compact('posts', 'today'));
+        // return redirect()->route('admin/home');
     }
 }

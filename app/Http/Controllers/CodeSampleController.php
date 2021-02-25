@@ -45,11 +45,6 @@ class CodeSampleController extends Controller
         return view('programs/php/timeanddates')->with(compact('daysRemaining'));
     }
 
-    public function testPython()
-    {
-        return view('/files/python/py-calculations.html');
-    }
-
     /**
      *  C# SAMPLES
      */

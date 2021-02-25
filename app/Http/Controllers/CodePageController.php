@@ -45,5 +45,15 @@ class CodePageController extends Controller
     public function umbracoPage(){
         return view('coding.umbraco');
     }
+    public function laravelPage(){
+        return view('coding.laravel');
+    }
+    public function examplesIndex(){
+        return view('coding.examples');
+    }
+    //Internet of Things and Augmented Reality
+    public function internetOfThingsAR(){
+        return view('coding.iot-ar');
+    }
 
 }

@@ -10,6 +10,7 @@ use Carbon\Carbon;
 use Image;
 use Response;
 use File;
+use App\Services\PageServices\SkillsRundownService;
 
 class PageController extends BaseController
 {
@@ -21,6 +22,31 @@ class PageController extends BaseController
     }
     public function about(){
         return view('pages/about');
+    }
+    public function experience(){
+        return view('pages/experience');
+    }
+    public function skillsRundown(){
+        $skillsList = new SkillsRundownService();
+        $languagesList = $skillsList->getLanguages();
+        $webTechnologiesList = $skillsList->getWebTechnologies();
+        $javascriptLibraries = $skillsList->getJavaScriptLibraries();
+        $databasesList = $skillsList->getDatabases();
+        $serversList = $skillsList->getServers();
+        $versionControlList = $skillsList->getVersionControl();
+        $commandLineToolsList = $skillsList->getCommandLineTools();
+        $ideTextEditorsList = $skillsList->getIDETextEditors();
+        $scriptingLanguagesList = $skillsList->getScriptingLanguages();
+        $iOTaRSoftwareList = $skillsList->getIOTARSoftware();
+        $osList = $skillsList->getOperatingSystems();
+        $otherSkillsList = $skillsList->getOtherSkills();
+
+        return view ('pages.skills-rundown')
+            ->with(compact('languagesList','webTechnologiesList', 'javascriptLibraries', 'databasesList', 'serversList','versionControlList','commandLineToolsList',
+            'ideTextEditorsList','scriptingLanguagesList','iOTaRSoftwareList','osList','otherSkillsList'));
+    }
+    public function projects(){
+        return view('pages/projects');
     }
     public function upload()
     {
@@ -39,5 +65,17 @@ class PageController extends BaseController
     public function denyRegister(){
 
         return redirect()->route('home');
+    }
+
+    public function lightbox(){
+        $imagePath = 'images/photoshop';
+        $imageFiles = File::allFiles($imagePath);
+        $idReference = 0;
+        return view('pages/lightbox-test')->with(compact('imagePath', 'imageFiles', 'idReference'));
+    }
+
+    // temp page for rsvp
+    public function rsvp(){
+        return view('pages/rsvp');
     }
 }

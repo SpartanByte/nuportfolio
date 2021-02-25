@@ -1,7 +1,7 @@
     @extends('layouts.default')
     @section('description', 'more information on PHP and time and countdown examples')
     
-    @section('title', 'PHP > Time and Dates')
+    @section('title', 'Vue.js: To Do List')
 
  @section('content')
 {{--         <meta name="csrf-token" content="{{ csrf_token() }}">

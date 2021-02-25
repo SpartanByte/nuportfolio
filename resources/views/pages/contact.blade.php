@@ -1,48 +1,43 @@
 @extends('layouts.default')
 @section('description', 'Contact Brian Wardwell for more information on web development, web design, user interface design, and more')
-@section('title', 'Contact')
-
-    {{-- I am testing comments in Blade that should not be seen in inspect page --}}
+@section('title', 'Contact Me')
 
 @section('content')
-<div class="static-content">
-    <h2>Contact Us!</h2>
+    <div class="static-content contact-page">
+        <h2>Contact Me</h2>
         <ul>
             @foreach($errors->all() as $error)
                 <li>{{ $error }}</li>
             @endforeach
         </ul>
+        <form style="width:50%;" class="form" method="POST" id="create" action="{{ route('contact_store') }}">
+            {{ csrf_field() }}
+            <div class="form-group" style="height:auto;">
+                <label for="name">Your Name</label>
+                <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" autocomplete="off" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email Address</label>
+                <input name="email" type="email" class="form-control" placeholder="Your email address" autocomplete="off" required />
+            </div>
 
-        {!! Form::open(array('route' => 'contact_store', 'class' => 'form')) !!}
-
-        <div class="form-group" style="height:auto;">
-            {!! Form::label('Your Name: ') !!}
-            {!! Form::text('name', null,
-                    array('required',
-                            'class' => 'form-control',
-                            'placeholder' => 'Your Name')) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('Your E-mail Address') !!}
-            {!! Form::text('email', null, 
-                    array('required', 
-                            'class' => 'form-control', 
-                            'placeholder' => 'Your e-mail address')) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('Your Message: | Note: No HTML is accepted in this form') !!}
-            {!! Form::textarea('message', null,
-                    array('required', 
-                            'class' => 'form-control',
-                            'placeholder' => 'Your message')) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::submit('Send Email',
-                    array('class' => 'btn btn-primary')) !!}
-        </div>
-        {!! Form::close() !!}
-</div>
+            <div class="form-group">
+                <label for="message">Your Message: | Note: No HTML is accepted in this form</label>
+                <textarea  name="message" row="5" class="form-control" autocomplete="off"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="col-15">Select Reason</label>
+                <select name="contact_reason" class="form-control" autocomplate="off">
+                    <option value="">Any Reason</option>
+                    <option value="laravel">Laravel Development</option>
+                    <option value="umbraco">Umbraco Development</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary contact" value="Send Email">Send Email</button>
+                <button type="reset" class="btn btn-primary contact" value="Reset Form">Reset Form</button>
+            </div>
+        </form>
+        {{-- <img src="/images/site-images/greyscale-laptop-600.jpg"> --}}
+    </div>
 @stop

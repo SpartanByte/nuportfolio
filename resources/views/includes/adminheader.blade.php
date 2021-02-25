@@ -16,7 +16,7 @@
                 </a>
                 <ul class="admin-items" role="menu">
                     <li><a href="{{ route('posts.index')}}">&#9672; Frontend Blog Index</a></li>
-                    <li><a href="{{ route('posts.create')}}">&#9672; Create A Post</a></li>
+                    <li><a href="{{ route('admin.create')}}">&#9672; Create A Post</a></li>
                     <li><a href="{{ route('admin.home')}}">&#9672; Admin Home</a></li>
                     <li>
                         <a href="{{ url('/logout') }}"

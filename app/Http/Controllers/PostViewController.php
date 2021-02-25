@@ -24,4 +24,5 @@ class PostViewController extends Controller
         $post = Post::find($id);
         return view('posts.show')->with(compact('post'));
     }
+
 }

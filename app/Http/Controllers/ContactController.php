@@ -23,6 +23,7 @@ class ContactController extends Controller
             array(
                 'name' => $request->get('name'),
                 'email' => $request->get('email'),
+                'reason' => $request->get('contact_reason'),
                 'user_message' => $request->get('message')
             ), function($message){
 

@@ -1,15 +1,24 @@
 <?php
-// not using yet (requires authentication code)
+
+    /**
+     * Last Updated: 12/2020
+     */
     Route::get('/home', 'HomeController@index');
+    Route::get('/register', 'HomeController@index');
     // Homepage
-    // Route::get('/', 'PageController@home');
     Route::get('/', 'PageController@home')->name('home');
+    Route::get('/vue', function(){
+        return view('vue');
+    });
 
 /* === PAGE CONTROLLER ROUTES  === */
 Route::group(['prefix' => 'pages'], function(){
     Route::get('about', 'PageController@about'); // About page
+    Route::get('experience', 'PageController@experience'); // My Experience page
+    Route::get('projects', 'PageController@projects'); // Projects Page
     Route::get('image-example', 'PageController@interventionExample'); // Image Intervention Example page
     Route::get('upload', 'PageController@upload'); // Image Upload page
+    Route::get('skills-rundown', 'PageController@skillSRundown')->name('skills-rundown');
 });
 
 /* === CODING PAGES ROUTES === */
@@ -31,31 +40,27 @@ Route::group(['prefix' => 'coding'], function()
     Route::get('css', 'CodePageController@cssPage')->name('css');
     // Umbraco
     Route::get('umbraco', 'CodePageController@umbracoPage')->name('umbraco');
+    // Laravel
+    Route::get('examples', 'CodePageController@examplesIndex')->name('examples');
+    Route::get('iot-ar', 'CodePageController@internetOfThingsAR')->name('iot-ar');
 });
+    // Laravel
+    Route::get('coding/laravel', 'CodePageController@laravelPage')->name('coding.laravel');
 
 /** === CODE SAMPLE ROUTES === */
-/* JavaScript */
-Route::group(['prefix' => 'programs'], function()
-{
-    // jQuery show/hide example
-    Route::get('/js/jquery-toggling', 'CodeSampleController@jqueryToggle')->name('js.jquery-toggle');
-    // JS slidehow
-    Route::get('/js/slideshow', 'CodeSampleController@jsSlideshow')->name('js.slideshow');
-    // JS Tuition Calculator
-    Route::get('/js/tuition-calculator', 'CodeSampleController@tuitionCalculator')->name('js.tuition-calculator');
-});
 
-/* PHP */
+
+/* Code Examples */
 Route::group(['prefix' => 'programs'], function(){
-  // Route::get('/php/timeanddates', 'CodeSampleController@phpTime')->name('php.timeanddates');
-  Route::get('/php/timeanddates', 'CodeSampleController@setHolidays')->name('php.timeanddates');
-});
-
-/* C# */
-Route::group(['prefix' => 'programs'], function()
-{
-  Route::get('/csharp/guess-a-word', 'CodeSampleController@guessAWord')->name('csharp.guess-a-word');
-  Route::get('/csharp/prime-numbers', 'CodeSampleController@primeNumbers')->name('csharp.prime-numbers');
+    // PHP
+    Route::get('/php/timeanddates', 'CodeSampleController@setHolidays')->name('php.timeanddates');
+    // JavaScript
+    Route::get('/js/jquery-toggling', 'CodeSampleController@jqueryToggle')->name('js.jquery-toggle');
+    Route::get('/js/slideshow', 'CodeSampleController@jsSlideshow')->name('js.slideshow');
+    Route::get('/js/tuition-calculator', 'CodeSampleController@tuitionCalculator')->name('js.tuition-calculator');
+    // C#
+    Route::get('/csharp/guess-a-word', 'CodeSampleController@guessAWord')->name('csharp.guess-a-word');
+    Route::get('/csharp/prime-numbers', 'CodeSampleController@primeNumbers')->name('csharp.prime-numbers');
 });
 
 /* Code File Location Routes */
@@ -98,10 +103,6 @@ Route::post('photos/show', function(){
 	return redirect('photos/index');
 });
 
-/**ROUTE RETURNING UPLOADED IMAGES ====================================== */
-/*Route::get('intervention-resizeImage',['as'=>'intervention.getresizeimage','uses'=>'FileController@getResizeImage']);
-Route::post('intervention-resizeImage',['as'=>'intervention.postresizeimage','uses'=>'FileController@postResizeImage']); */
-
 // post functionality for photos
 Route::post('photos/show', function(){
   $imageName = new ImageName;
@@ -116,7 +117,6 @@ function user_photos_path()
 }
 
 /* === POSTS ROUTING ===*/
-// Frontend Post Routes
 Route::resource('posts', 'PostViewController');
 Route::group(['prefix' => 'posts'], function()
 {
@@ -142,12 +142,17 @@ Route::group(['middleware' => ['auth']], function()
 
     Route::get('/admin/{id}/delete', 'PostController@destroy')->name('admin.delete');
     Route::get('/admin/upload-image', 'GalleryController@create');
-
-    // Route::group(['prefix' => 'admin/tags'], function(){
-    //     Route::get('/index', 'TagsController@index')->name('admin.tags.index');
-    // });
 });
+
 Route::get('tags/index', 'TagsController@index')->name('tags.index');
 Route::get('/admin/show', function(){
     return view('/');
 });
+
+Route::get('lightbox-test', function(){
+    return view('/pages/lightbox-test');
+});
+
+Route::get('lightbox-test', 'PageController@lightbox');
+
+Route::get('rsvp', 'PageController@rsvp'); // rsvp page

@@ -1,6 +1,6 @@
     @extends('layouts.default')
     @section('description', 'image toggling example using jQuery, JavaScript and Laravel')
-    @section('title', 'JavaScript Tuition Calculator')
+    @section('title', 'JavaScript: Tuition Calculator')
 
     @section('content')
     <script>
@@ -23,20 +23,16 @@
     return true;
     }
 </script>
-
-
-    <div class="static-content program-page">
+<div class="static-content program-page">
     <form  id="myform" action="#" onsubmit="return alertName();" style="width:50%;">
-    <h3>JavaScript Tuition Calculator</h3>
-    <h4>Directions</h4>
-    <p style="font-size:2rem;">Enter the username "Brian", then input the number of on campus and online courses (priced differently) and press "Enter" to view the total cost of tuition for the semester.</p>
-    <p>Username: <input class="form-control" id="nametext" name="username" type="text" /></p>
+        <h3>JavaScript Tuition Calculator</h3>
+        <h4>Directions</h4>
+        <p style="font-size:2rem;">Enter the username "Brian", then input the number of on campus and online courses (priced differently) and press "Enter" to view the total cost of tuition for the semester.</p>
+        <p>Username: <input class="form-control" id="nametext" name="username" type="text" /></p>
     </form>
-
     <ul style="margin-bottom:27%;">
-    <li><a href="/coding/javascript">Return to JavaScript</a></li>
-    <li><a href="/">Return to Homepage</a></li>
+        <li><a href="/coding/javascript">Return to JavaScript</a></li>
+        <li><a href="/">Return to Homepage</a></li>
     </ul>
-        
-    </div>
+</div>
 @stop
