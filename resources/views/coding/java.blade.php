@@ -35,8 +35,5 @@
             <code>}</code>
     </div><br />
     <p><strong>Java Applet examples coming soon</strong></p>
-{{--     <p><a href="#">Choose An Applet You Made And Liked</a></p>
-    <p><a href="#">Java Example 2</a></p>
-    <p><a href="#">Java Example 3</a></p><hr /> --}}
 </div>
 @stop
