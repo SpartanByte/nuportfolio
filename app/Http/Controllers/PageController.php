@@ -73,9 +73,4 @@ class PageController extends BaseController
         $idReference = 0;
         return view('pages/lightbox-test')->with(compact('imagePath', 'imageFiles', 'idReference'));
     }
-
-    // temp page for rsvp
-    public function rsvp(){
-        return view('pages/rsvp');
-    }
 }

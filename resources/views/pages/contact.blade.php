@@ -38,6 +38,5 @@
                 <button type="reset" class="btn btn-primary contact" value="Reset Form">Reset Form</button>
             </div>
         </form>
-        {{-- <img src="/images/site-images/greyscale-laptop-600.jpg"> --}}
     </div>
 @stop

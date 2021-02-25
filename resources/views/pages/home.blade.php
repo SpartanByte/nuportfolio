@@ -4,7 +4,6 @@
 @section('content')
     <div class="home-pad">
         <h1>Brian Wardwell &#10072; Web Developer/Software Engineer</h1>
-       {{--  <caption>Today is: {{$today}}</caption> --}}
             <div class="home-container">
                 <img src="/images/site-images/sublime-code.png">
                 <h3>Systematic web and software developer with experience creating and maintaining existing web applications using a variety of technologies.</h3>

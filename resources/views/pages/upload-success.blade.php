@@ -32,8 +32,6 @@
                         </div>
                     </div>
                     <div id="success"></div>
-
-                   
                 </div>
                 </div>
             </div>
