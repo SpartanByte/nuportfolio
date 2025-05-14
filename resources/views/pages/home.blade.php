@@ -4,13 +4,14 @@
 @section('content')
     <div class="home-pad">
         <h1>Brian Wardwell &#10072; Web Developer/Software Engineer</h1>
+       {{--  <caption>Today is: {{$today}}</caption> --}}
             <div class="home-container">
                 <img src="/images/site-images/sublime-code.png">
                 <h3>Systematic web and software developer with experience creating and maintaining existing web applications using a variety of technologies.</h3>
                 <blockquote>
-                	<em>This site is built using Laravel PHP framework. Visit my previous portfolio below, built in generic PHP.</em>
+                	<!--<em>This site is built using Laravel PHP framework. Visit my previous portfolio below, built in generic PHP.</em>-->
                 </blockquote>
-                <button type="button" class="btn btn-primary my-blue-btn"><a href="http://brianwardwell.net/" title="brianwardwell.net">Previous Portfolio Site</button>
+                <button type="button" class="btn btn-primary my-blue-btn"><a href="http://portfolio.brianwardwell.com/pages/experience" title="Professional Experience">Professional Experience</button>
             </div>
             <div id="right-home">
         </div>
