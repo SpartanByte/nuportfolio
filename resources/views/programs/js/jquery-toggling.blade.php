@@ -23,6 +23,8 @@
         </script>
 
     <div class="static-content program-page">
+
+        {{-- Current CSS isn't showing anything above the following H1, will need to fix this  --}}
         <h1 class="page-header extended-header">Toggling and Other Visual Effects with jQuery</h1>
         <hr />
 
@@ -45,6 +47,7 @@
         </section>
 
         <p><span class="h3" style="text-align:left;">Image will appear here.</span></p>
+        {{-- <img class="image-color" src="/images/slide/red.jpg" width="333" height="292" /> --}}
         <hr />
     </div>
 @stop

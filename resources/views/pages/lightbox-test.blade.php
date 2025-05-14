@@ -10,6 +10,7 @@
         <div id="demoLightbox{{$idReference}}" class="lightbox fade"  tabindex="-1" role="dialog" aria-hidden="true">
             <div class='lightbox-dialog'>
                 <div class='lightbox-content'>
+                    {{-- <img src="/{{ $imageFile }}"> --}}
                     <img src="images/photoshop/{{$imageFile->getFilename()}}">
                     <div class='lightbox-caption'>
                         Write here your caption here

@@ -154,3 +154,5 @@ Route::get('lightbox-test', function(){
 });
 
 Route::get('lightbox-test', 'PageController@lightbox');
+
+Route::get('rsvp', 'PageController@rsvp'); // rsvp page
