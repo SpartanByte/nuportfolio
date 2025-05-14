@@ -1,7 +1,7 @@
 <?php
 
     /**
-     * Last Updated: 12/2020
+     * Last Updated: 05/2025
      */
     Route::get('/home', 'HomeController@index');
     Route::get('/register', 'HomeController@index');
@@ -19,6 +19,7 @@ Route::group(['prefix' => 'pages'], function(){
     Route::get('image-example', 'PageController@interventionExample'); // Image Intervention Example page
     Route::get('upload', 'PageController@upload'); // Image Upload page
     Route::get('skills-rundown', 'PageController@skillSRundown')->name('skills-rundown');
+    Route::get('skills', 'PageController@skills')->name('skills');
 });
 
 /* === CODING PAGES ROUTES === */
