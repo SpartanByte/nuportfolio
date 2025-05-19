@@ -18,7 +18,8 @@
                             </ul>
                         </li>
                 <li><a href="{{ url('pages/projects') }}">Projects</a></li>
-                <li><a href="{{ url('/posts') }}">Posts</a></li>
+                {{--<li><a href="{{ url('/posts') }}">Posts</a></li>--}}
+                <li><a href="{{ url('/pages/skills') }}">Skills</a></li>
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coding<span class="caret"></span></a>
@@ -37,14 +38,14 @@
                             </ul>
                         </li>
                     </ul>
-                    <ul class="nav navbar-nav">
+                    {{--<ul class="nav navbar-nav">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">IoT/AR<span class="caret"></span></a>
                             <ul class="dropdown-menu" id="navbar-dropdown-override">
                                 <li><a href="{{ url('/coding/iot-ar') }}" title="Internet of Things & Augmented Reality">About IoT and AR</a></li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul>--}}
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galleries<span class="caret"></span>
