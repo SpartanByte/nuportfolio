@@ -698,6 +698,53 @@ nav.navbar.navbar-default{
 .professional-history{
     width:90%;}
 
+/**
+* SKLLS (NEW) PAGE
+*/
+.static-content.skills{
+    margin-bottom: 10%;}
+    .static-content.about h1{
+        background-color: transparent;
+        color: #252525; font-size: 4rem;
+        width: 80%;
+        text-align: left;
+        border: none;}
+    .static-content.skills h3{
+        font-size: 2.5rem;
+        color: #252525;
+        background-color: transparent;
+        border: none;
+        text-align: left;
+        border-bottom: 3px solid #36384C;
+        border-radius: 0px;}
+    .static-content.skills h4{
+        font-size: 2.25rem;
+        border-bottom: 2px solid #36384C;
+        text-transform: uppercase;}
+
+
+    .static-content.skills ul {
+        list-style-type: none;
+    }
+
+    .static-content.skills li{
+        position: relative;
+        padding-left: 2.5em;
+        line-height: 1.5;
+    }
+
+    .static-content.skills li::before{
+        content: "< />";
+        position: absolute; 
+        left: 0;
+        font-weight: 900;
+        color: grey;
+    }
+
+    .static-content.skills summary{
+        display: inline list-item;
+    }
+
 /* About page: Skillset section */
 .ul-header{
    padding: 0.5%;
@@ -1038,4 +1085,17 @@ nav.navbar.navbar-default{
 .img-link:hover img{
     opacity:0.5;
     transition-duration:0.3s;
+}
+
+/* @media only screen and (max-width: 900px) {
+    .home-notice p{
+        font-size: 5em;
+        border: 2px solid red !important;
+    }
+} */
+
+
+
+.navbar .container-fluid.mobile{
+    display:none;
 }
