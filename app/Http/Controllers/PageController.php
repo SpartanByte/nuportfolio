@@ -20,12 +20,19 @@ class PageController extends BaseController
         $today = Carbon::now()->format('l, F jS Y');
         return view('pages.home')->with(compact('today'));
     }
+    
     public function about(){
         return view('pages/about');
     }
+
     public function experience(){
         return view('pages/experience');
     }
+
+    public function skills(){
+        return view('pages/skills');
+    }
+
     public function skillsRundown(){
         $skillsList = new SkillsRundownService();
         $languagesList = $skillsList->getLanguages();
@@ -48,6 +55,7 @@ class PageController extends BaseController
     public function projects(){
         return view('pages/projects');
     }
+
     public function upload()
     {
         return view('pages/upload');
@@ -73,7 +81,6 @@ class PageController extends BaseController
         $idReference = 0;
         return view('pages/lightbox-test')->with(compact('imagePath', 'imageFiles', 'idReference'));
     }
-
     // temp page for rsvp
     public function rsvp(){
         return view('pages/rsvp');
