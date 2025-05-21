@@ -8,7 +8,7 @@
 <link rel="icon" href="/images/icons/bw-favicon.png" type="image/png" />
 
 {{-- CSS --}}
-<link rel="stylesheet" href="{{ URL::asset('css/reset.css') }}" />
+{{-- <link rel="stylesheet" href="{{ URL::asset('css/reset.css') }}" /> --}}
 <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" />
 <link rel="stylesheet" href="{{ URL::asset('css/animate.css') }}" />
 <link rel="stylesheet" href="{{ URL::asset('css/responsive.css') }}" />
