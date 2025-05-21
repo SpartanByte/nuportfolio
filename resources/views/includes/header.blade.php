@@ -4,8 +4,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
 
-<nav class="navbar navbar-default" id="navbar-override">
-    <div class="container-fluid">
+<nav class="navbar navbar-default desktop" id="navbar-override">
+    <div class="container-fluid desktop">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
@@ -74,3 +74,23 @@
                 </ul>
             </div>
         </div>
+
+
+
+            <div class="container-fluid mobile">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="{{ url('pages/about') }}">My Background</a></li>
+                        <li><a href="{{ url('pages/experience') }}">My Experience</a></li>
+                        <li><a href="{{ url('pages/projects') }}">Projects</a></li>
+                        <li><a href="{{ url('/pages/skills') }}">Skills</a></li>
+                        <li><a href="https://github.com/SpartanByte?tab=repositories" title="Brian Wardwell on GitHub" target="_blank">GitHub Repos</a></li>
+                        <li><a href="{{ url('coding/examples') }}" title="Code Examples">Code Samples</a></li>
+                        <li><a href="{{ url('pages/photoshop') }}">Photoshop Gallery</a></li>
+                        <li><a href="{{ url('pages/photography') }}">Photography Gallery</a></li>
+                        <li><a href="https://www.linkedin.com/in/briantwardwell" title="Brian Wardwell: LinkedIn" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.facebook.com/briantwardwell" title="Brian Wardwell: Facebook" target="_blank">Facebook</a></li>
+                        </ul>
+                    </div>
+                </div>
