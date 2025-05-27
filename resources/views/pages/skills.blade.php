@@ -1,6 +1,6 @@
 @extends('layouts.default')
-@section('description', 'About Brian Wardwell: web developer, musician, amateur photographer, writer, native of Fargo North Dakota')
-@section('title', 'My Background')
+@section('description', 'Skills list for Brian Wardwell, Software Developer in the greater Minneapolis, MN area')
+@section('title', 'My Skills')
 
 @section('content')
 <div class="static-content skills">
