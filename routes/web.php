@@ -10,12 +10,13 @@
     Route::get('/vue', function(){
         return view('vue');
     });
-
+ 
 /* === PAGE CONTROLLER ROUTES  === */
 Route::group(['prefix' => 'pages'], function(){
-    Route::get('about', 'PageController@about'); // About page
-    Route::get('experience', 'PageController@experience'); // My Experience page
-    Route::get('projects', 'PageController@projects'); // Projects Page
+    // Route::get('about', 'PageController@about'); // About page
+    Route::get('background', 'PageController@background')->name('background'); // My background page
+    Route::get('experience', 'PageController@experience')->name('experience'); // My Experience page
+    Route::get('projects', 'PageController@projects')->name('projects'); // Projects Page
     Route::get('image-example', 'PageController@interventionExample'); // Image Intervention Example page
     Route::get('upload', 'PageController@upload'); // Image Upload page
     Route::get('skills-rundown', 'PageController@skillSRundown')->name('skills-rundown');

@@ -33,6 +33,10 @@ class PageController extends BaseController
         return view('pages/skills');
     }
 
+    public function background(){
+        return view('pages/about');
+    }
+
     public function skillsRundown(){
         $skillsList = new SkillsRundownService();
         $languagesList = $skillsList->getLanguages();
