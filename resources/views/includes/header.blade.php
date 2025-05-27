@@ -12,16 +12,9 @@
                 <li><a href="{{ url('/pages/background') }}">Background</a></li>
                 <li><a href="{{ url('/pages/skills') }}">Skills</a></li>
                 <li><a href="{{ url('/pages/experience') }}">Experience</a></li>
-                {{-- <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" id="dropdown-toggle-override" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
-                            <ul class="dropdown-menu" id="navbar-dropdown-override">
-                                <li><a href="{{ url('pages/about') }}">My Background</a></li>
-                                <li><a href="{{ url('pages/experience') }}">My Experience</a></li> --}}
-                                {{-- <li><a href="{{ url('pages/skills-rundown') }}">Skills/Technology Rundown</a></li> --}}
-                            {{-- </ul>
-                        </li> --}}
                 <li><a href="{{ url('pages/projects') }}">Projects</a></li>
                 <li><a href="https://github.com/SpartanByte?tab=repositories" title="Brian Wardwell on GitHub" target="_blank">GitHub Repos</a></li>
+                <!-- Keep the following links hidden since it's being rebuilt -->
                 {{--<li><a href="{{ url('/posts') }}">Posts</a></li>--}}
                     {{-- <ul class="nav navbar-nav">
                         <li class="dropdown">
@@ -73,27 +66,23 @@
                         </li>
                         {{-- <li><a href="{{ url('contact') }}">Contact</a></li> --}}
                     </ul>
-
                 </ul>
             </div>
         </div>
 
-
-
-            <div class="container-fluid mobile">
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="home"><a href="/">Home</a></li>
-                        <li class="background" ><a href="{{ url('pages/about') }}">My Background</a></li>
-                        <li class="experience"><a href="{{ url('pages/experience') }}">My Experience</a></li>
-                        <li class="projects"><a href="{{ url('pages/projects') }}">Projects</a></li>
-                        <li class="skills"><a href="{{ url('/pages/skills') }}">Skills</a></li>
-                        <li class="github-repos"><a href="https://github.com/SpartanByte?tab=repositories" title="Brian Wardwell on GitHub" target="_blank">GitHub Repos</a></li>
-                        {{-- <li><a class="code-samples" href="{{ url('coding/examples') }}" title="Code Examples">Code Samples</a></li> --}}
-                        <li class="photoshop"><a href="{{ url('pages/photoshop') }}">Photoshop Gallery</a></li>
-                        <li class="photography"><a href="{{ url('pages/photography') }}">Photography Gallery</a></li>
-                        <li class="linked-in"><a href="https://www.linkedin.com/in/briantwardwell" title="Brian Wardwell: LinkedIn" target="_blank">LinkedIn</a></li>
-                        <li class="facebook"><a href="https://www.facebook.com/briantwardwell" title="Brian Wardwell: Facebook" target="_blank">Facebook</a></li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="container-fluid mobile">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="home"><a href="/">Home</a></li>
+                    <li class="background" ><a href="{{ url('pages/about') }}">My Background</a></li>
+                    <li class="experience"><a href="{{ url('pages/experience') }}">My Experience</a></li>
+                    <li class="projects"><a href="{{ url('pages/projects') }}">Projects</a></li>
+                    <li class="skills"><a href="{{ url('/pages/skills') }}">Skills</a></li>
+                    <li class="github-repos"><a href="https://github.com/SpartanByte?tab=repositories" title="Brian Wardwell on GitHub" target="_blank">GitHub Repos</a></li>
+                    <li class="photoshop"><a href="{{ url('pages/photoshop') }}">Photoshop Gallery</a></li>
+                    <li class="photography"><a href="{{ url('pages/photography') }}">Photography Gallery</a></li>
+                    <li class="linked-in"><a href="https://www.linkedin.com/in/briantwardwell" title="Brian Wardwell: LinkedIn" target="_blank">LinkedIn</a></li>
+                    <li class="facebook"><a href="https://www.facebook.com/briantwardwell" title="Brian Wardwell: Facebook" target="_blank">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
