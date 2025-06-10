@@ -6,7 +6,7 @@
         <h1>Brian Wardwell &#10072; Web Developer and Software Developer</h1>
             <div class="home-container">
                 <blockquote class="home-notice">
-                    <button type="button" class="btn btn-primary my-blue-btn"><a href="{{ route('about') }}" title="Professional Experience">Background</a></button>
+                    <button type="button" class="btn btn-primary my-blue-btn"><a href="{{ route('background') }}" title="Background">Background</a></button>
                     <button type="button" class="btn btn-primary my-blue-btn"><a href="{{ route('experience') }}" title="Professional Experience">Experience</a></button>
                     <button type="button" class="btn btn-primary my-blue-btn"><a href="{{ route('skills') }}" title="Skills List">Skills List</a></button>
                     <p class="uppercase-shadow mid-size-font">Today is: {{$today}}</caption>

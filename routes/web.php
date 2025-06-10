@@ -1,20 +1,26 @@
 <?php
+    use Illuminate\Http\Request;
+    use App\Models\ImageName;
 
-    use App\Http\Controllers\PageController;
     use App\Http\Controllers\CodePageController;
     use App\Http\Controllers\CodeSampleControllers;
+    use App\Http\Controllers\ContactController;
     use App\Http\Controllers\GalleryController;
+    use App\Http\Controllers\PageController;
+    use App\Http\Controllers\PhotosController;
+    use App\Http\Controllers\PostController;
+    use App\Http\Controllers\PostViewController;
 
     /**
      * Last Updated: 05/2025
      */
-    Route::get('/home', 'HomeController@index');
-    Route::get('/register', 'HomeController@index');
+    // Route::get('/home', 'HomeController@index');
+    // Route::get('/register', 'HomeController@index');
     // Homepage
     Route::get('/', [PageController::class, 'home'])->name('home');
-    Route::get('/vue', function(){
-        return view('vue');
-    });
+    // Route::get('/vue', function(){
+    //     return view('vue');
+    // });
  
 /* === PAGE CONTROLLER ROUTES  === */
 Route::prefix('pages')->controller(PageController::class)->group(function () {
@@ -29,7 +35,6 @@ Route::prefix('pages')->controller(PageController::class)->group(function () {
 
 /* === CODING PAGES ROUTES === */
 Route::prefix('coding')->controller(CodePageController::class)->group(function () {
-    // General
     Route::get('general', 'CodePageController@general')->name('general'); // General
     Route::get('java', 'CodePageController@javaPage')->name('java'); // Java
     Route::get('javascript', 'CodePageController@javascriptPage')->name('javascript'); // JavaScript
@@ -44,8 +49,6 @@ Route::prefix('coding')->controller(CodePageController::class)->group(function (
 });
 
 /** === CODE SAMPLE ROUTES === */
-
-
 /* Code Examples */
 Route::prefix('programs')->controller(CodeSampleControllers::class)->group(function () {
     // PHP
@@ -60,11 +63,11 @@ Route::prefix('programs')->controller(CodeSampleControllers::class)->group(funct
 });
 
 /* Code File Location Routes */
-    Route::get('/files/python/py-calculations.html', 'CodeSampleController@testPython');
+Route::get('/files/python/py-calculations.html', 'CodeSampleController@testPython');
 
 /* === CONTACT FORM ROUTES === */
-    Route::get('contact', 'ContactController@create')->name('contact');
-    Route::post('contact', 'ContactController@store')->name('contact_store');
+Route::get('contact', [ContactController::class, 'create'])->name('contact');
+Route::post('contact', [ContactController::class, 'store'])->name('contact_store');
 
 /** === GALLERY ROUTES ===*/
 Route::get('templates/gallery-template', [PageController::class, 'galleryTemplate']); // just a static template for page structure copy/paste
@@ -79,32 +82,32 @@ Route::get('pages/galleries', [GalleryController::class, 'home']);
     Route::post('apply/upload', 'UploadController@upload');
 
 /**=== IMAGE INTERVENTION ROUTES === */
-    Route::get('photos/image_example', 'PhotosController@interventionExample');
+// Route::get('photos/image_example', 'PhotosController@interventionExample');
 
 // RESTful Resource Controller for CRUD
-Route::resource('photos', 'PhotosController');
+Route::resource('photos', PhotosController::class);
+
 /* Routes to image uploads, index and gallery */
-Route::group(['prefix' => 'photos'], function()
-{
-    Route::get('create', 'PhotosController@create'); // upload page
-    Route::get('show', 'PhotosController@show'); // show and index both list uploaded files (will only need one view)
-    Route::get('index', 'PhotosController@index');
+Route::prefix('photos')->controller(PhotosController::class)->group(function () {
+    Route::get('create', 'create');
+    Route::get('show', 'show');
+    Route::get('index', 'index');
 });
 
 // post functionality for photos
-Route::post('photos/show', function(){
-	$imageName = new ImageName;
-	$imageName->fileName = $request->fileName;
-	$imageName->save();
-	return redirect('photos/index');
+Route::post('photos/show', function(Request $request) {
+    $imageName = new ImageName;
+    $imageName->fileName = $request->fileName;
+    $imageName->save();
+    return redirect('photos/index');
 });
 
 // post functionality for photos
-Route::post('photos/show', function(){
-  $imageName = new ImageName;
-  $imageName->fileName = $request->fileName;
-  $imageName->save();
-  return redirect('photos/index');
+Route::post('photos/show', function(Request $request) {
+    $imageName = new ImageName;
+    $imageName->fileName = $request->fileName;
+    $imageName->save();
+    return redirect('photos/index');
 });
 
 function user_photos_path()
@@ -113,42 +116,50 @@ function user_photos_path()
 }
 
 /* === POSTS ROUTING ===*/
-Route::resource('posts', 'PostViewController');
-Route::group(['prefix' => 'posts'], function()
-{
-    Route::get('index', 'PostViewController@index')->name('index'); // indexing posts
-    Route::get('show', 'PostViewController@show'); // showing posts
-    Route::get('{id}', 'PostViewController@showPost'); //
+// Resource route
+Route::resource('posts', PostViewController::class);
+
+// Additional custom routes with the 'posts' prefix
+Route::prefix('posts')->group(function () {
+    Route::get('index', [PostViewController::class, 'index'])->name('index'); // indexing posts
+    Route::get('show', [PostViewController::class, 'show']); // showing posts
+    Route::get('{id}', [PostViewController::class, 'showPost']); // show single post by id
 });
+
 
 // setting up user to be required to sign in to access /admin
 Auth::routes();
-Route::group(['middleware' => ['auth']], function()
-{
+// Admin Routes
+Route::middleware(['auth'])->group(function () {
     // Create & Store
-    Route::get('/admin/create', 'PostController@create')->name('admin.create');
-    Route::post('/', 'PostController@store')->name('admin.store');
+    Route::get('/admin/create', [PostController::class, 'create'])->name('admin.create');
+    Route::post('/', [PostController::class, 'store'])->name('admin.store');
+
     // Index & Show
-    Route::get('/admin/index', 'PostController@home')->name('admin.home');
-    Route::get('/admin', 'PostController@home');
-    Route::get('admin/{id}', 'PostController@show')->name('admin.show');
+    Route::get('/admin/index', [PostController::class, 'home'])->name('admin.home');
+    Route::get('/admin', [PostController::class, 'home']);
+    Route::get('/admin/{id}', [PostController::class, 'show'])->name('admin.show');
+
     // Edit & Update
-    Route::get('/admin/{id}/edit', 'PostController@edit')->name('admin.edit');
-    Route::post('{id}',  'PostController@update')->name('admin.update');
+    Route::get('/admin/{id}/edit', [PostController::class, 'edit'])->name('admin.edit');
+    Route::post('/{id}', [PostController::class, 'update'])->name('admin.update');
 
-    Route::get('/admin/{id}/delete', 'PostController@destroy')->name('admin.delete');
-    Route::get('/admin/upload-image', 'GalleryController@create');
+    // Delete
+    Route::get('/admin/{id}/delete', [PostController::class, 'destroy'])->name('admin.delete');
+
+    // Upload Image
+    Route::get('/admin/upload-image', [GalleryController::class, 'create']);
 });
 
-Route::get('tags/index', 'TagsController@index')->name('tags.index');
-Route::get('/admin/show', function(){
-    return view('/');
-});
 
-Route::get('lightbox-test', function(){
-    return view('/pages/lightbox-test');
-});
+// TODO: REMOVE THIS AFTER UPGRADE 
+// Route::get('tags/index', 'TagsController@index')->name('tags.index');
+// Route::get('/admin/show', function(){
+//     return view('/');
+// });
 
-Route::get('lightbox-test', 'PageController@lightbox');
+// Route::get('lightbox-test', function(){
+//     return view('/pages/lightbox-test');
+// });
 
-Route::get('rsvp', 'PageController@rsvp'); // rsvp page
+// Route::get('lightbox-test', 'PageController@lightbox');

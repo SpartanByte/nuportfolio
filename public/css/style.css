@@ -5,7 +5,6 @@
 *  Dark Blue = #36384c;
 * *----------------*/
 /* Fonts */
-/* @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One'); */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
 
@@ -429,6 +428,20 @@ nav.navbar.navbar-default{
     margin:auto;
     display:block;
     text-align:center;}
+
+.home-container img,
+.project-container img{
+    width: 90vw;
+}
+
+.home-notice .btn.my-blue-btn{
+    font-size: 20px; 
+    text-transform: uppercase;
+}
+
+.home-notice p:first-of-type{
+    padding: 20px;
+}
 
 .home-container blockquote{margin:0;}
 /* for notifications of upcoming features on the homepage */
@@ -1086,15 +1099,6 @@ nav.navbar.navbar-default{
     opacity:0.5;
     transition-duration:0.3s;
 }
-
-/* @media only screen and (max-width: 900px) {
-    .home-notice p{
-        font-size: 5em;
-        border: 2px solid red !important;
-    }
-} */
-
-
 
 .navbar .container-fluid.mobile{
     display:none;

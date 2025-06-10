@@ -282,7 +282,7 @@
     .gallery-description p{
         text-align:justify;
     }
-    .home-container img, .projects img{
+    .projects img{
         width:600px;
     }
     .project-container{
@@ -331,9 +331,15 @@
 }
 
 /**----------------------------------------
-*  MEDIA QUERY: Max Width 1100px
+*  MEDIA QUERY: Max Width 1200px
 * *----------------------------------------*/
-@media (max-width: 1100px){
+    .mobile .navbar-nav .skills,
+    .mobile .navbar-nav .experience,
+    .mobile .navbar-nav .background,
+    .mobile .navbar-nav .code-samples{
+        display: none;
+    }
+@media (max-width: 1200px){
 
     .navbar .container-fluid.desktop{
         display:none !important;
@@ -344,9 +350,17 @@
         padding-top: 30px;
     }
 
+    .nav.navbar-nav{
+        margin: 0 auto;
+        float: none;
+    }
+
     .navbar .container-fluid.mobile .navbar-nav li{
         height: 60px;
         margin: 10px 0;
+        float: none;
+        text-transform: uppercase;
+        text-align: center;
     }
 
     .navbar .container-fluid.mobile .navbar-nav li a{
