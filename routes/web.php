@@ -1,6 +1,9 @@
 <?php
 
     use App\Http\Controllers\PageController;
+    use App\Http\Controllers\CodePageController;
+    use App\Http\Controllers\CodeSampleControllers;
+    use App\Http\Controllers\GalleryController;
 
     /**
      * Last Updated: 05/2025
@@ -15,7 +18,6 @@
  
 /* === PAGE CONTROLLER ROUTES  === */
 Route::prefix('pages')->controller(PageController::class)->group(function () {
-    // Route::get('about', 'about'); // About page, uncomment if needed
     Route::get('background', 'background')->name('background'); // My background page
     Route::get('experience', 'experience')->name('experience'); // My Experience page
     Route::get('projects', 'projects')->name('projects'); // Projects Page
@@ -26,36 +28,26 @@ Route::prefix('pages')->controller(PageController::class)->group(function () {
 });
 
 /* === CODING PAGES ROUTES === */
-Route::group(['prefix' => 'coding'], function()
-{
+Route::prefix('coding')->controller(CodePageController::class)->group(function () {
     // General
-    Route::get('general', 'CodePageController@general')->name('general');
-    // Java
-    Route::get('java', 'CodePageController@javaPage')->name('java');
-    // JavaScript
-    Route::get('javascript', 'CodePageController@javascriptPage')->name('javascript');
-    // PHP
-    Route::get('php', 'CodePageController@phpPage')->name('php');
-    // Python
-    Route::get('python', 'CodePageController@pythonPage')->name('python');
-    // C#
-    Route::get('csharp', 'CodePageController@csharpPage')->name('csharp');
-    // CSS
-    Route::get('css', 'CodePageController@cssPage')->name('css');
-    // Umbraco
-    Route::get('umbraco', 'CodePageController@umbracoPage')->name('umbraco');
-    // Laravel
+    Route::get('general', 'CodePageController@general')->name('general'); // General
+    Route::get('java', 'CodePageController@javaPage')->name('java'); // Java
+    Route::get('javascript', 'CodePageController@javascriptPage')->name('javascript'); // JavaScript
+    Route::get('php', 'CodePageController@phpPage')->name('php'); // PHP
+    Route::get('python', 'CodePageController@pythonPage')->name('python'); // Python
+    Route::get('csharp', 'CodePageController@csharpPage')->name('csharp'); // CSharp
+    Route::get('css', 'CodePageController@cssPage')->name('css'); // CSS
+    Route::get('umbraco', 'CodePageController@umbracoPage')->name('umbraco'); // Umbraco
+    Route::get('laravel', 'CodePageController@laravelPage')->name('laravel'); // Laravel
     Route::get('examples', 'CodePageController@examplesIndex')->name('examples');
-    Route::get('iot-ar', 'CodePageController@internetOfThingsAR')->name('iot-ar');
+    Route::get('iot-ar', 'CodePageController@internetOfThingsAR')->name('iot-ar'); // IoT
 });
-    // Laravel
-    Route::get('coding/laravel', 'CodePageController@laravelPage')->name('coding.laravel');
 
 /** === CODE SAMPLE ROUTES === */
 
 
 /* Code Examples */
-Route::group(['prefix' => 'programs'], function(){
+Route::prefix('programs')->controller(CodeSampleControllers::class)->group(function () {
     // PHP
     Route::get('/php/timeanddates', 'CodeSampleController@setHolidays')->name('php.timeanddates');
     // JavaScript
@@ -75,10 +67,10 @@ Route::group(['prefix' => 'programs'], function(){
     Route::post('contact', 'ContactController@store')->name('contact_store');
 
 /** === GALLERY ROUTES ===*/
-    Route::get('templates/gallery-template', 'PageController@galleryTemplate'); // just a static template for page structure copy/paste
-    Route::get('pages/photography', 'GalleryController@makePhotographyGallery'); // Generates gallery/shows view
-    Route::get('pages/photoshop', 'GalleryController@makePhotoshopGallery'); // Generates gallery/shows view
-    Route::get('pages/galleries', 'GalleryController@home');
+Route::get('templates/gallery-template', [PageController::class, 'galleryTemplate']); // just a static template for page structure copy/paste
+Route::get('pages/photography', [GalleryController::class, 'makePhotographyGallery']); // Generates gallery/shows view
+Route::get('pages/photoshop', [GalleryController::class, 'makePhotoshopGallery']); // Generates gallery/shows view
+Route::get('pages/galleries', [GalleryController::class, 'home']);
 
  /** === IMAGE UPLOADER ROUTES ('/upload') === */
     Route::get('upload', function(){
