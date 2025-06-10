@@ -1,26 +1,28 @@
 <?php
 
+    use App\Http\Controllers\PageController;
+
     /**
      * Last Updated: 05/2025
      */
     Route::get('/home', 'HomeController@index');
     Route::get('/register', 'HomeController@index');
     // Homepage
-    Route::get('/', 'PageController@home')->name('home');
+    Route::get('/', [PageController::class, 'home'])->name('home');
     Route::get('/vue', function(){
         return view('vue');
     });
  
 /* === PAGE CONTROLLER ROUTES  === */
-Route::group(['prefix' => 'pages'], function(){
-    // Route::get('about', 'PageController@about'); // About page
-    Route::get('background', 'PageController@background')->name('background'); // My background page
-    Route::get('experience', 'PageController@experience')->name('experience'); // My Experience page
-    Route::get('projects', 'PageController@projects')->name('projects'); // Projects Page
-    Route::get('image-example', 'PageController@interventionExample'); // Image Intervention Example page
-    Route::get('upload', 'PageController@upload'); // Image Upload page
-    Route::get('skills-rundown', 'PageController@skillSRundown')->name('skills-rundown');
-    Route::get('skills', 'PageController@skills')->name('skills');
+Route::prefix('pages')->controller(PageController::class)->group(function () {
+    // Route::get('about', 'about'); // About page, uncomment if needed
+    Route::get('background', 'background')->name('background'); // My background page
+    Route::get('experience', 'experience')->name('experience'); // My Experience page
+    Route::get('projects', 'projects')->name('projects'); // Projects Page
+    Route::get('image-example', 'interventionExample'); // Image Intervention Example page
+    Route::get('upload', 'upload'); // Image Upload page
+    Route::get('skills-rundown', 'skillSRundown')->name('skills-rundown');
+    Route::get('skills', 'skills')->name('skills');
 });
 
 /* === CODING PAGES ROUTES === */
