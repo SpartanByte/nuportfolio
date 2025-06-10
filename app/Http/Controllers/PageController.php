@@ -12,7 +12,7 @@ use Response;
 use File;
 use App\Services\PageServices\SkillsRundownService;
 
-class PageController extends BaseController
+class PageController extends Controller
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
