@@ -14,13 +14,12 @@
     /**
      * Last Updated: 05/2025
      */
-    // Route::get('/home', 'HomeController@index');
-    // Route::get('/register', 'HomeController@index');
-    // Homepage
+    Route::get('/home', [HomeController::class, 'index']);
+    Route::get('/register', [HomeController::class, 'index']);
     Route::get('/', [PageController::class, 'home'])->name('home');
-    // Route::get('/vue', function(){
-    //     return view('vue');
-    // });
+    Route::get('/vue', function(){
+        return view('vue');
+    });
  
 /* === PAGE CONTROLLER ROUTES  === */
 Route::prefix('pages')->controller(PageController::class)->group(function () {
