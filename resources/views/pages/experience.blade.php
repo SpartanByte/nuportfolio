@@ -12,7 +12,7 @@
             <span class="mid-size-font">LuminFire</span>
             <p><em>Minneapolis, MN</em><br />
                 <strong>Software Developer</strong><br />
-                September 2021 - Current</p>
+                September 2021 - September 2024</p>
             <blockquote>
                 <ul style="list-style-type:circle;">
                     <li>Implemented regular maintenance and hotfix patches to ensure optimal application performance and security.</li>
